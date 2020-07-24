@@ -1,5 +1,6 @@
 import os
 
+#------------------Imports and File Reading----------------------------------------
 story_sections = []
 
 for i in range(0,8):
@@ -22,10 +23,8 @@ pName = "null"
 #---------------------------Chapters------------------------------------------------
 def queue_start_story():
     clear_screen()
-    # Transfer variables to real names here
-
-    print(story_content["arc1_0"])
-
+    to_display = replace_variables(story_content["arc1_0"])
+    print(to_display)
     input("Press Enter to continue...")
     arc1_1()
 
@@ -47,8 +46,8 @@ def arc1_1():
 
 def arc1_2():
     clear_screen()
-    # Transfer variables to real names here
-    print(story_content["arc1_2"])
+    to_display = replace_variables(story_content["arc1_2"])
+    print(to_display)
     global food
     food = "chocolate"
     input("Press Enter to continue...")
@@ -56,8 +55,8 @@ def arc1_2():
 
 def arc1_3():
     clear_screen()
-    # Transfer variables to real names here
-    print(story_content["arc1_3"])
+    to_display = replace_variables(story_content["arc1_3"])
+    print(to_display)
     global food
     food = "potato chips"
     input("Press Enter to continue...")
@@ -65,8 +64,8 @@ def arc1_3():
 
 def arc1_4():
     clear_screen()
-    # Transfer variables to real names here
-    print(story_content["arc1_4"])
+    to_display = replace_variables(story_content["arc1_4"])
+    print(to_display)
     global food
     food = "chocolate"
     input("Press Enter to continue...")
@@ -74,11 +73,14 @@ def arc1_4():
 
 def arc1_5():
     clear_screen()
-    # Transfer variables to real names here
-    print(story_content["arc1_5"])
+    to_display = replace_variables(story_content["arc1_5"])
+    print(to_display)
+
     prompt_text = "\nPlease Enter your Name:\n\n"
     user_input = input(prompt_text)
-    print(user_input)
+    if user_input in ("fuck", "bitch", "pussy","", " ", "_", "cunt", "faggot", "fucker",):
+        print("[Debbie] That's a really stupid name, try to be more creative.\n")
+        arc1_5()
     prompt_text = "\nThis is going to be your name for the rest of the game. Are you sure? \n\n Yes / No\n\n"
     sure = input(prompt_text)
     print(sure)
@@ -87,9 +89,6 @@ def arc1_5():
     if sure.lower() == "yes":
         global pName
         pName = user_input
-        print("done!")
-        print(food)
-        print(pName)
         arc1_6()
     else:
         print("I don't understand. Let's try again.")
@@ -97,16 +96,16 @@ def arc1_5():
 
 def arc1_6():
     clear_screen()
-    # Transfer variables to real names here
-    print(story_content["arc1_6"])
+    to_display = replace_variables(story_content["arc1_6"])
+    print(to_display)
 
     input("Press Enter to continue...")
     arc1_7()
 
 def arc1_7():
     clear_screen()
-    # Transfer variables to real names here
-    print(story_content["arc1_7"])
+    to_display = replace_variables(story_content["arc1_7"])
+    print(to_display)
 
     input("Press Enter to continue...")
     arc1_1()
@@ -116,8 +115,8 @@ def arc1_7():
 
 def queue_logic(section, prompt_text,  path_a, path_b, path_c, path_d, path_e):
     clear_screen()
-    # Transfer variables to real names here
-    print(story_content[section])
+    to_display = replace_variables(story_content[section])
+    print(to_display)
     user_input = input(prompt_text)
     if user_input == '1':
         path_a()
@@ -145,6 +144,12 @@ def queue_logic(section, prompt_text,  path_a, path_b, path_c, path_d, path_e):
         print("Please select a valid option \n")
         queue_logic(section, prompt_text,  path_a, path_b, path_c, path_d, path_e)
 
+def replace_variables(string):
+    global food
+    global pName
+    string = string.replace("$food", food)
+    string = string.replace("$pName", pName)
+    return string
 
 
 def clear_screen():

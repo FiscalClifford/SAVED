@@ -1,4 +1,4 @@
-The machine beeps in confirmation that you made your payment. The fact that card readers don’t usually thank you and state your name isn’t noticed. As Debbie presses the last few buttons on her register she attempts a bit of small talk.
+The machine beeps in confirmation that you made your payment, and Debbie lets loose a huge yawn. As she presses the last few buttons on her register she attempts a bit of small talk, which you are now totally ready for.
 [Debbie] You find everything alright?
 [$pName] Yep, thank you.
 It looks like she pressed one of those buttons in the wrong order because the system starts beeping at her.
