@@ -1,10 +1,13 @@
 import os
 
-story_sections = ['intro', 'enter-forest', 'reveal-shadow',
-                  'ignore-shadow', 'face-wizard', 'run-from-wizard',
-                  'incorrect-riddle-answer', 'hint-riddle', 'stay-sea',
-                  'into-the-water', 'run-to-land',
-                  'correct-answer-conclusion']
+story_sections = []
+
+for i in range(0,8):
+    num = i
+    story_sections.append("arc1_" + f"{num}")
+
+print(story_sections)
+
 story_content = {}
 hint = False
 for section in story_sections:
@@ -13,106 +16,140 @@ for section in story_sections:
         story_content[section] = file_reader.read()
 
 
+#---------------------Globals and Flags---------------------------------------------
+food = "null"
+pName = "null"
+#---------------------------Chapters------------------------------------------------
 def queue_start_story():
-    queue_logic(section="intro",
-                prompt_text=("\nIf you choose the forest, type in 'left' "
-                             "or 'l' or to continue alongside the sea, type "
-                             "'right' or 'r':\n\n"),
-                options=("left", "l"),
-                path_a=queue_enter_forest,
-                path_b=queue_stay_sea)
-
-
-def queue_enter_forest():
-    queue_logic(section="enter-forest",
-                prompt_text=("\nType 'reveal' or 'r' to reveal the shadow or "
-                             "'walk' or 'w' to continue walking:\n\n"),
-                options=("reveal", "r"),
-                path_a=queue_reveal_shadow,
-                path_b=queue_ignore_shadow)
-
-
-def queue_stay_sea():
-    queue_logic(section="stay-sea",
-                prompt_text=("\nType 'w' or 'water' to go into the water "
-                             "or 'l' or 'land' to get out:\n\n"),
-                options=("land", "l"),
-                path_a=queue_run_to_land,
-                path_b=queue_into_the_water)
-
-
-def queue_reveal_shadow():
-    queue_logic(section="reveal-shadow",
-                prompt_text=("\nType 'r' or 'run' to run from the wizard or "
-                             "'f' or 'face' to face it:\n\n"),
-                options=("face", "f"),
-                path_a=queue_riddle,
-                path_b=queue_run_from_wizard)
-
-
-def queue_ignore_shadow():
     clear_screen()
-    print(story_content['ignore-shadow'])
+    # Transfer variables to real names here
 
+    print(story_content["arc1_0"])
 
-def queue_into_the_water():
+    input("Press Enter to continue...")
+    arc1_1()
+
+def arc1_1():
+    queue_logic(section="arc1_1",
+
+                prompt_text=(
+                    "\n"
+                    "1: Chocolate\n"
+                    "2: Potato Chips\n"
+                    "3: Neither\n"
+                    "\n\n"),
+
+                path_a=arc1_2,
+                path_b=arc1_3,
+                path_c=arc1_4,
+                path_d="null",
+                path_e="null")
+
+def arc1_2():
     clear_screen()
-    print(story_content['into-the-water'])
+    # Transfer variables to real names here
+    print(story_content["arc1_2"])
+    global food
+    food = "chocolate"
+    input("Press Enter to continue...")
+    arc1_5()
 
-
-def queue_run_to_land():
-    queue_logic(section="run-to-land",
-                prompt_text=("\nType 'r' or 'run' to run from the wizard or "
-                             "'f' or 'face' to face it:\n\n"),
-                options=("face", "f"),
-                path_a=queue_riddle,
-                path_b=queue_run_from_wizard)
-
-
-def queue_run_from_wizard():
+def arc1_3():
     clear_screen()
-    print(story_content['run-from-wizard'])
+    # Transfer variables to real names here
+    print(story_content["arc1_3"])
+    global food
+    food = "potato chips"
+    input("Press Enter to continue...")
+    arc1_5()
 
+def arc1_4():
+    clear_screen()
+    # Transfer variables to real names here
+    print(story_content["arc1_4"])
+    global food
+    food = "chocolate"
+    input("Press Enter to continue...")
+    arc1_5()
 
-def queue_riddle():
-    global hint
-    if hint is False:
-        clear_screen()
-        print(story_content['face-wizard'])
-        user_input = input("\nType your answer here or type 'h' "
-                               "for a hint:\n\n")
+def arc1_5():
+    clear_screen()
+    # Transfer variables to real names here
+    print(story_content["arc1_5"])
+    prompt_text = "\nPlease Enter your Name:\n\n"
+    user_input = input(prompt_text)
+    print(user_input)
+    prompt_text = "\nThis is going to be your name for the rest of the game. Are you sure? \n\n Yes / No\n\n"
+    sure = input(prompt_text)
+    print(sure)
+    if sure.lower() == "no":
+        arc1_5()
+    if sure.lower() == "yes":
+        global pName
+        pName = user_input
+        print("done!")
+        print(food)
+        print(pName)
+        arc1_6()
     else:
-        user_input = input("\nType your answer here:\n\n")
-    if user_input.lower() in ("footsteps", "steps", "footstep", "step", "footprints", "footprint", "prints"):
-        clear_screen()
-        print(story_content['correct-answer-conclusion'])
-    elif user_input.lower() in ("hint", "h"):
-        if hint is False:
-            clear_screen()
-            print(story_content["hint-riddle"])
-            hint = True
-            queue_riddle()
-        else:
-            print("\nSorry, no more hints...\n\n")
-            queue_riddle()
-    else:
-        clear_screen()
-        print(story_content['incorrect-riddle-answer'])
+        print("I don't understand. Let's try again.")
+        arc1_5()
 
-
-def queue_logic(section, prompt_text, options, path_a, path_b):
+def arc1_6():
     clear_screen()
+    # Transfer variables to real names here
+    print(story_content["arc1_6"])
+
+    input("Press Enter to continue...")
+    arc1_7()
+
+def arc1_7():
+    clear_screen()
+    # Transfer variables to real names here
+    print(story_content["arc1_7"])
+
+    input("Press Enter to continue...")
+    arc1_1()
+
+
+#----------------------Logic----------------------------------------------------
+
+def queue_logic(section, prompt_text,  path_a, path_b, path_c, path_d, path_e):
+    clear_screen()
+    # Transfer variables to real names here
     print(story_content[section])
     user_input = input(prompt_text)
-    if user_input.lower() in options:
+    if user_input == '1':
         path_a()
-    else:
+    if user_input == '2':
         path_b()
+    if user_input == '3':
+        if path_c != "null":
+            path_c()
+        else:
+            print("Please select a valid option \n")
+            queue_logic(section, prompt_text, path_a, path_b, path_c, path_d, path_e)
+    if user_input == '4':
+        if path_d != "null":
+            path_d()
+        else:
+            print("Please select a valid option \n")
+            queue_logic(section, prompt_text, path_a, path_b, path_c, path_d, path_e)
+    if user_input == '5':
+        if path_e != "null":
+            path_e()
+        else:
+            print("Please select a valid option \n")
+            queue_logic(section, prompt_text, path_a, path_b, path_c, path_d, path_e)
+    else:
+        print("Please select a valid option \n")
+        queue_logic(section, prompt_text,  path_a, path_b, path_c, path_d, path_e)
+
 
 
 def clear_screen():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
+    clear = lambda: os.system('cls' if os.name == 'nt' else 'clear')
+    clear()
 
 def main():
     queue_start_story()

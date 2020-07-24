@@ -1,0 +1,25 @@
+The machine beeps in confirmation that you made your payment. The fact that card readers don’t usually thank you and state your name isn’t noticed. As Debbie presses the last few buttons on her register she attempts a bit of small talk.
+[Debbie] You find everything alright?
+[$pName] Yep, thank you.
+It looks like she pressed one of those buttons in the wrong order because the system starts beeping at her.
+[Debbie] Whoops, one second…
+Absentmindedly, you browse the shelves next to you filled with gum and tabloids. Three magazines stand out, one of a Deer, one of a shark, and one of a Bear. You aren’t really interested in buying any of them, but if you had to choose which one would you want?
+Deer
+Shark
+Bear
+
+Are you sure?
+Yes /no
+
+Interesting. Next to these magazines are chewing gum flavors. One box is covered in an appealing glittery blue, another with dark sage green, and the last a solemn black but with bold white lettering. You want the gum as much as you wanted one of the magazines, but if you had to pick one which would it be?
+Blue
+Green
+Black
+
+Are you sure?
+Yes /no
+
+[Debbie] Damn thing…
+
+Debbie mutters her frustration under her breath as she pokes around on the machine. You are starting to get to the end of your patience now so you look around some more to distract yourself. Unfortunately for you, it’s a store and not a ‘Where’s Waldo’ book.
+While you were busy doing nothing Debbie finally manages to finish the order and hands you your receipt. Triumphantly, you grab the $food and exit the store. The sunset is finishing its grand performance, exiting gracefully with a swirl of Dark Blues and purples.
