@@ -9,7 +9,7 @@ story_content = {}
 hint = False
 for section in story_sections:
     file_path = "script/" + section + ".txt"
-    with open(file_path) as file_reader:
+    with open(file_path, encoding="utf8") as file_reader:
         story_content[section] = file_reader.read()
 
 
@@ -79,10 +79,10 @@ def queue_riddle():
     if hint is False:
         clear_screen()
         print(story_content['face-wizard'])
-        user_input = raw_input("\nType your answer here or type 'h' "
+        user_input = input("\nType your answer here or type 'h' "
                                "for a hint:\n\n")
     else:
-        user_input = raw_input("\nType your answer here:\n\n")
+        user_input = input("\nType your answer here:\n\n")
     if user_input.lower() in ("footsteps", "steps", "footstep", "step", "footprints", "footprint", "prints"):
         clear_screen()
         print(story_content['correct-answer-conclusion'])
@@ -103,7 +103,7 @@ def queue_riddle():
 def queue_logic(section, prompt_text, options, path_a, path_b):
     clear_screen()
     print(story_content[section])
-    user_input = raw_input(prompt_text)
+    user_input = input(prompt_text)
     if user_input.lower() in options:
         path_a()
     else:

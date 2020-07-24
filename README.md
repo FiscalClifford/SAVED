@@ -21,7 +21,7 @@ cd choose-your-story
 
 ## Credits
 
-Sreedevi Krishnan
+Brennan Giles
 
 ## License
 
