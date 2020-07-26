@@ -5,8 +5,11 @@ import time
 
 #--------------------------------------------------------Globals--------------------------------------------------------
 
+#input parsing
+badInput = ["fuck", "bitch", "pussy", "", " ", "  ", "_", "cunt", "faggot", "fucker", "dick", "penis", "!", ".", "$"]
+inputResponse = "null"
 #global values for the speed and size of the text
-txtSpeed = 0.05
+txtSpeed = 0.01
 txtSize = 16
 
 food = "null"
@@ -42,46 +45,38 @@ def changeSettings(newSpeed, newSize):
     textWindow.config(font=("Calibri", txtSize))
 
 def click_choice(choice):
-    disp_txt(str(txtSpeed), txtSpeed)
+    #delete all buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
 
-def disp_txt(string, speed):
+    print("click choice " + str(choice))
+    eval(choice + "()")
+
+def disp_txt(string):
     for char in string:
+        global txtSpeed
+        textWindow.see(tk.END)
         textWindow.insert(tk.INSERT, char)
+        if char == '\n':
+            textWindow.insert(tk.INSERT, '\n')
+        textWindow.update()
+        time.sleep(txtSpeed)
+
+def disp_txt_at_speed(string, speed):
+    for char in string:
+        textWindow.see(tk.END)
+        textWindow.insert(tk.INSERT, char)
+        if char == '\n':
+            textWindow.insert(tk.INSERT, '\n')
         textWindow.update()
         time.sleep(speed)
-    global txtdone
-    txtdone=1
 
-def queue_logic(section, prompt_text,  path_a, path_b, path_c, path_d, path_e):
+def room_run(section):
     clear_screen()
     to_display = replace_variables(story_content[section])
-    print(to_display)
-    user_input = input(prompt_text)
-    if user_input == '1':
-        path_a()
-    if user_input == '2':
-        path_b()
-    if user_input == '3':
-        if path_c != "null":
-            path_c()
-        else:
-            print("Please select a valid option \n")
-            queue_logic(section, prompt_text, path_a, path_b, path_c, path_d, path_e)
-    if user_input == '4':
-        if path_d != "null":
-            path_d()
-        else:
-            print("Please select a valid option \n")
-            queue_logic(section, prompt_text, path_a, path_b, path_c, path_d, path_e)
-    if user_input == '5':
-        if path_e != "null":
-            path_e()
-        else:
-            print("Please select a valid option \n")
-            queue_logic(section, prompt_text, path_a, path_b, path_c, path_d, path_e)
-    else:
-        print("Please select a valid option \n")
-        queue_logic(section, prompt_text,  path_a, path_b, path_c, path_d, path_e)
+    disp_txt(to_display)
 
 def replace_variables(string):
     global food
@@ -90,10 +85,35 @@ def replace_variables(string):
     string = string.replace("$pName", pName)
     return string
 
-
 def clear_screen():
     textWindow.delete(1.0, END)
     textWindow.update()
+
+def acceptEntry(entry, pWindow):
+    global inputResponse
+    global badInput
+    if entry.lower() in badInput:
+        pWindow.destroy()
+        getInput("That was a stupid answer. Try again")
+    else:
+        inputResponse = entry
+        pWindow.destroy()
+
+def getInput(prompt):
+    # creating settings window
+    pWindow = Toplevel()
+    pWindow.title(prompt)
+    pWindow.iconbitmap('./treelarge_CKX_icon.ico')
+    pWindow.geometry("400x80")
+    pWindow.resizable(False, False)
+    pWindow.config(bg = "#333333")
+
+    entryField = Entry(pWindow, width=300, fg = "#333333", bg = "#EEEEEE", font=("Calibri", 20))
+    entryField.pack(fill="x")
+    send = Button(pWindow, text="Send", command=lambda: acceptEntry(entryField.get(), pWindow), bg = "#333333", fg = "#EEEEEE")
+    send.pack(side=TOP)
+    win.wait_window(pWindow)
+
 
 #--------------------------------------------------------GUI------------------------------------------------------------
 def settingsconfig():
@@ -130,33 +150,19 @@ def settingsconfig():
     radio1 = Radiobutton(settings_window, text="Slow", variable=speed, value="slow").grid(row=4, column=0)
     radio2 = Radiobutton(settings_window, text="Standard", variable=speed, value="standard").grid(row=4, column=1)
     radio3 = Radiobutton(settings_window, text="Fast", variable=speed, value="fast").grid(row=4, column=2)
-    sizeLabel = Label(settings_window, text="Text Size (My Require you resize Window)").grid(row=5, column=1)
+    sizeLabel = Label(settings_window, text="Text Size (May require you resize Window)").grid(row=5, column=1)
     radio4 = Radiobutton(settings_window, text="Small", variable=textSize, value="small").grid(row=6, column=0)
     radio5 = Radiobutton(settings_window, text="Standard", variable=textSize, value="standard").grid(row=6, column=1)
     radio6 = Radiobutton(settings_window, text="Large", variable=textSize, value="large").grid(row=6, column=2)
     finishButton = Button(settings_window, text="Apply Changes", command=lambda: changeSettings(speed.get(), textSize.get()))
     finishButton.grid(row=8, column=1)
 
-def create_choices(number):
+def create_choices(choiceList, pathList):
     #create buttons for the amount of options available, represtented by 'number'
-    if number == 0:
-        option0 = Button(frame2, text="Continue...", command=lambda: click_choice(0),bg = "#333333", fg = "#EEEEEE")
-        option0.pack(fill='both', expand='yes')
-    if number > 0:
-        option1 = Button(frame2, text="fillme", command=lambda: click_choice(1),bg = "#333333", fg = "#EEEEEE")
-        option1.pack(fill='both', expand='yes')
-    if number > 1:
-        option2 = Button(frame2, text="fillme", command=lambda: click_choice(2),bg = "#333333", fg = "#EEEEEE")
-        option2.pack(fill='both', expand='yes')
-    if number > 2:
-        option3 = Button(frame2, text="fillme", command=lambda: click_choice(3),bg = "#333333", fg = "#EEEEEE")
-        option3.pack(fill='both', expand='yes')
-    if number > 3:
-        option4 = Button(frame2, text="fillme", command=lambda: click_choice(4),bg = "#333333", fg = "#EEEEEE")
-        option4.pack(fill='both', expand='yes')
-    if number > 4:
-        option5 = Button(frame2, text="fillme", command=lambda: click_choice(5),bg = "#333333", fg = "#EEEEEE")
-        option5.pack(fill='both', expand='yes')
+    for i in range(0, len(choiceList)):
+        button = Button(frame2, text=choiceList[i], command=lambda i=i: click_choice(pathList[i]), bg="#333333", fg="#EEEEEE")
+        button.pack(fill='both', expand='yes')
+
 
 #build main GUI
 win = tk.Tk()
@@ -190,97 +196,69 @@ settings.pack(side=RIGHT, fill=Y)
 
 #----------------------------------------------Story Sections----------------------------------------------------------
 def queue_start_story():
-    clear_screen()
-    to_display = replace_variables(story_content["arc1_0"])
-    print(to_display)
-    input("Press Enter to continue...")
-    arc1_1()
+    room_run("arc1_0")
+    choices = ["Continue..."]
+    paths = ["arc1_1"]
+    create_choices(choices, paths)
+
 
 def arc1_1():
-    queue_logic(section="arc1_1",
-
-                prompt_text=(
-                    "\n"
-                    "1: Chocolate\n"
-                    "2: Potato Chips\n"
-                    "3: Neither\n"
-                    "\n\n"),
-
-                path_a=arc1_2,
-                path_b=arc1_3,
-                path_c=arc1_4,
-                path_d="null",
-                path_e="null")
+    room_run("arc1_1")
+    choices = ["Take Chocolate", "Take Potato Chips", "Do Nothing"]
+    paths = ["arc1_2", "arc1_3", "arc1_4"]
+    create_choices(choices, paths)
 
 def arc1_2():
-    clear_screen()
-    to_display = replace_variables(story_content["arc1_2"])
-    print(to_display)
     global food
     food = "chocolate"
-    input("Press Enter to continue...")
-    arc1_5()
+    room_run("arc1_2")
+    choices = ["Continue..."]
+    paths = ["arc1_5"]
+    create_choices(choices, paths)
 
 def arc1_3():
-    clear_screen()
-    to_display = replace_variables(story_content["arc1_3"])
-    print(to_display)
     global food
     food = "potato chips"
-    input("Press Enter to continue...")
-    arc1_5()
+    room_run("arc1_3")
+    choices = ["Continue..."]
+    paths = ["arc1_5"]
+    create_choices(choices, paths)
 
 def arc1_4():
-    clear_screen()
-    to_display = replace_variables(story_content["arc1_4"])
-    print(to_display)
     global food
     food = "chocolate"
-    input("Press Enter to continue...")
-    arc1_5()
+    room_run("arc1_4")
+    choices = ["Continue..."]
+    paths = ["arc1_5"]
+    create_choices(choices, paths)
 
 def arc1_5():
-    clear_screen()
-    to_display = replace_variables(story_content["arc1_5"])
-    print(to_display)
+    global inputResponse
+    global pName
+    room_run("arc1_5")
+    getInput("Please Enter your Name:")
+    pName = inputResponse
 
-    prompt_text = "\nPlease Enter your Name:\n\n"
-    user_input = input(prompt_text)
-    if user_input in ("fuck", "bitch", "pussy","", " ", "_", "cunt", "faggot", "fucker",):
-        print("[Debbie] That's a really stupid name, try to be more creative.\n")
-        arc1_5()
-    prompt_text = "\nThis is going to be your name for the rest of the game. Are you sure? \n\n Yes / No\n\n"
-    sure = input(prompt_text)
-    print(sure)
-    if sure.lower() == "no":
-        arc1_5()
-    if sure.lower() == "yes":
-        global pName
-        pName = user_input
-        arc1_6()
-    else:
-        print("I don't understand. Let's try again.")
-        arc1_5()
+    choices = ["Continue..."]
+    paths = ["arc1_6"]
+    create_choices(choices, paths)
 
 def arc1_6():
-    clear_screen()
-    to_display = replace_variables(story_content["arc1_6"])
-    print(to_display)
+    room_run("arc1_6")
 
-    input("Press Enter to continue...")
-    arc1_7()
+    choices = ["Continue..."]
+    paths = ["arc1_7"]
+    create_choices(choices, paths)
 
 def arc1_7():
-    clear_screen()
-    to_display = replace_variables(story_content["arc1_7"])
-    print(to_display)
+    room_run("arc1_7")
 
     input("Press Enter to continue...")
     arc1_1()
 #-----------------------------------------------Program Start----------------------------------------------------------
 
 story_sections = []
-for i in range(0,8):
+for i in range(0, 8):
     num = i
     story_sections.append("arc1_" + f"{num}")
 
@@ -293,8 +271,6 @@ for section in story_sections:
 #-----------------------------------------------------MAIN-------------------------------------------------------------
 
 
-stringy = "this is an example used for testing purposes"
-create_choices(0)
-disp_txt(stringy, txtSpeed)
+queue_start_story()
 
 win.mainloop()
