@@ -2,27 +2,80 @@ from tkinter import *
 import tkinter as tk
 import tkinter.scrolledtext as tkst
 import time
-
+import pickle
+from datetime import datetime
+import os
 #--------------------------------------------------------Globals--------------------------------------------------------
 
 #input parsing
 badInput = ["fuck", "bitch", "pussy", "", " ", "  ", "_", "cunt", "faggot", "fucker", "dick", "penis", "!", ".", "$"]
 inputResponse = "null"
-#global values for the speed and size of the text
+#global values
 txtSpeed = 0.01
 txtSize = 16
 
 food = "null"
 pName = "null"
+currentRoom = "null"
 
 #!!!Flags!!!
-txtdone = 0
-#-------------------------------------------------------Functions-------------------------------------------------------
-def loadGame():
-    return
 
-def saveGame():
-    return
+#-------------------------------------------------------Functions-------------------------------------------------------
+def loadGame(window):
+    global pName
+    global currentRoom
+    global food
+    global txtSpeed
+    global txtSize
+
+    with open('./savefile', 'rb') as f:
+        data = pickle.load(f)
+
+    pName = data["pName"]
+    currentRoom = data["currentRoom"]
+    food = data["food"]
+    txtSpeed = data["txtSpeed"]
+    txtSize = data["txtSize"]
+
+    #delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+
+    disp_txt("\nLoading Game...\n")
+    window.destroy()
+    eval(currentRoom + "()")
+
+
+def saveGame(window):
+    global pName
+    global currentRoom
+    global food
+    global txtSpeed
+    global txtSize
+
+    now = datetime.now()
+    # dd/mm/YY H:M:S
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+
+    data = {
+        'pName':pName,
+        'currentRoom':currentRoom,
+        'food':food,
+        'txtSpeed':txtSpeed,
+        'txtSize':txtSize,
+        'dateTime':dt_string,
+
+        }
+    if os.path.exists('./savefile'):
+        os.remove('./savefile')
+    with open('./savefile', 'wb') as f:
+        pickle.dump(data, f)
+
+
+    disp_txt("\nYou are surrounded by a warm light. You are SAVED.\n")
+    window.destroy()
 
 def changeSettings(newSpeed, newSize):
     global txtSpeed
@@ -51,7 +104,7 @@ def click_choice(choice):
         if str(x) != str(list[0]):
             x.destroy()
 
-    print("click choice " + str(choice))
+    print("clicked choice " + str(choice))
     eval(choice + "()")
 
 def disp_txt(string):
@@ -75,6 +128,8 @@ def disp_txt_at_speed(string, speed):
 
 def room_run(section):
     clear_screen()
+    global currentRoom
+    currentRoom = section
     to_display = replace_variables(story_content[section])
     disp_txt(to_display)
 
@@ -123,6 +178,7 @@ def settingsconfig():
     settings_window.iconbitmap('./treelarge_CKX_icon.ico')
     settings_window.geometry("360x200")
     settings_window.resizable(False, False)
+    settings_window.config(bg="#333333")
 
     # putting in the defaults
     global txtSize
@@ -143,18 +199,28 @@ def settingsconfig():
         textSize.set("standard")
     if txtSize == 10:
         textSize.set("small")
+
+    #loadbutton logic
+
+    if os.path.exists('./savefile'):
+        with open('./savefile', 'rb') as f:
+            data = pickle.load(f)
+
+        loadButton = Button(settings_window, text="Load Game: " + str(data["dateTime"]), command=lambda: loadGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=1)
+    else:
+        loadButton = Button(settings_window, state=DISABLED, text="No Save File", command=lambda: loadGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=1)
     #menu
-    loadButton = Button(settings_window, text="Load Game + load info", command=loadGame).grid(row=1, column=1)
-    saveButton = Button(settings_window, text="Save Game", command=saveGame).grid(row=2, column=1)
-    speedLabel = Label(settings_window, text="Text Scroll Speed").grid(row=3, column=1)
-    radio1 = Radiobutton(settings_window, text="Slow", variable=speed, value="slow").grid(row=4, column=0)
-    radio2 = Radiobutton(settings_window, text="Standard", variable=speed, value="standard").grid(row=4, column=1)
-    radio3 = Radiobutton(settings_window, text="Fast", variable=speed, value="fast").grid(row=4, column=2)
-    sizeLabel = Label(settings_window, text="Text Size (May require you resize Window)").grid(row=5, column=1)
-    radio4 = Radiobutton(settings_window, text="Small", variable=textSize, value="small").grid(row=6, column=0)
-    radio5 = Radiobutton(settings_window, text="Standard", variable=textSize, value="standard").grid(row=6, column=1)
-    radio6 = Radiobutton(settings_window, text="Large", variable=textSize, value="large").grid(row=6, column=2)
-    finishButton = Button(settings_window, text="Apply Changes", command=lambda: changeSettings(speed.get(), textSize.get()))
+
+    saveButton = Button(settings_window, text="Save Game", command=lambda: saveGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=2, column=1)
+    speedLabel = Label(settings_window, text="Text Scroll Speed", bg = "#333333", fg = "#EEEEEE").grid(row=3, column=1)
+    radio1 = Radiobutton(settings_window, text="Slow", variable=speed, value="slow", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=0)
+    radio2 = Radiobutton(settings_window, text="Standard", variable=speed, value="standard", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=1)
+    radio3 = Radiobutton(settings_window, text="Fast", variable=speed, value="fast", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=2)
+    sizeLabel = Label(settings_window, text="Text Size (May require you resize Window)", bg = "#333333", fg = "#EEEEEE").grid(row=5, column=1)
+    radio4 = Radiobutton(settings_window, text="Small", variable=textSize, value="small", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=0)
+    radio5 = Radiobutton(settings_window, text="Standard", variable=textSize, value="standard", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=1)
+    radio6 = Radiobutton(settings_window, text="Large", variable=textSize, value="large", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=2)
+    finishButton = Button(settings_window, text="Apply Changes",bg = "#333333", fg = "#EEEEEE", command=lambda: changeSettings(speed.get(), textSize.get()))
     finishButton.grid(row=8, column=1)
 
 def create_choices(choiceList, pathList):
