@@ -1,148 +1,140 @@
+from tkinter import *
+import tkinter as tk
+import tkinter.scrolledtext as tkst
+import time
+import pickle
+from datetime import datetime
 import os
+from winsound import *
 
-#------------------Imports and File Reading----------------------------------------
-story_sections = []
+#--------------------------------------------------------Globals--------------------------------------------------------
 
-for i in range(0,8):
-    num = i
-    story_sections.append("arc1_" + f"{num}")
+#input parsing
+badInput = ["fuck", "bitch", "pussy", "", " ", "  ", "_", "cunt", "faggot", "fucker", "dick", "penis", "!", ".", "$"]
+inputResponse = "null"
+#global values
+txtSpeed = 0.01
+txtSize = 16
 
-print(story_sections)
-
-story_content = {}
-hint = False
-for section in story_sections:
-    file_path = "script/" + section + ".txt"
-    with open(file_path, encoding="utf8") as file_reader:
-        story_content[section] = file_reader.read()
-
-
-#---------------------Globals and Flags---------------------------------------------
 food = "null"
 pName = "null"
-#---------------------------Chapters------------------------------------------------
-def queue_start_story():
-    clear_screen()
-    to_display = replace_variables(story_content["arc1_0"])
-    print(to_display)
-    input("Press Enter to continue...")
-    arc1_1()
+currentRoom = "null"
 
-def arc1_1():
-    queue_logic(section="arc1_1",
+#!!!Flags!!!
 
-                prompt_text=(
-                    "\n"
-                    "1: Chocolate\n"
-                    "2: Potato Chips\n"
-                    "3: Neither\n"
-                    "\n\n"),
-
-                path_a=arc1_2,
-                path_b=arc1_3,
-                path_c=arc1_4,
-                path_d="null",
-                path_e="null")
-
-def arc1_2():
-    clear_screen()
-    to_display = replace_variables(story_content["arc1_2"])
-    print(to_display)
+#-------------------------------------------------------Functions-------------------------------------------------------
+def loadGame(window):
+    win.deiconify()
+    global pName
+    global currentRoom
     global food
-    food = "chocolate"
-    input("Press Enter to continue...")
-    arc1_5()
+    global txtSpeed
+    global txtSize
 
-def arc1_3():
-    clear_screen()
-    to_display = replace_variables(story_content["arc1_3"])
-    print(to_display)
+    with open('./savefile', 'rb') as f:
+        data = pickle.load(f)
+
+    pName = data["pName"]
+    currentRoom = data["currentRoom"]
+    food = data["food"]
+    txtSpeed = data["txtSpeed"]
+    txtSize = data["txtSize"]
+
+    #delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+
+    disp_txt("\nLoading Game...\n")
+    window.destroy()
+    PlaySound(None, SND_ASYNC)
+    eval(currentRoom + "()")
+
+
+def saveGame(window):
+    global pName
+    global currentRoom
     global food
-    food = "potato chips"
-    input("Press Enter to continue...")
-    arc1_5()
+    global txtSpeed
+    global txtSize
 
-def arc1_4():
+    now = datetime.now()
+    # dd/mm/YY H:M:S
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+
+    data = {
+        'pName':pName,
+        'currentRoom':currentRoom,
+        'food':food,
+        'txtSpeed':txtSpeed,
+        'txtSize':txtSize,
+        'dateTime':dt_string
+        }
+    if os.path.exists('./savefile'):
+        os.remove('./savefile')
+    with open('./savefile', 'wb') as f:
+        pickle.dump(data, f)
+
+
+    disp_txt("\nYou are surrounded by a warm light. You are SAVED.\n")
+    window.destroy()
+
+def changeSettings(newSpeed, newSize):
+    global txtSpeed
+    global txtSize
+
+    if newSpeed == "slow":
+        txtSpeed = 0.2
+    if newSpeed == "standard":
+        txtSpeed = 0.05
+    if newSpeed == "fast":
+        txtSpeed = 0.01
+
+    if newSize == "small":
+        txtSize = 10
+    if newSize == "standard":
+        txtSize = 16
+    if newSize == "large":
+        txtSize = 24
+
+    textWindow.config(font=("Calibri", txtSize))
+
+def click_choice(choice):
+    #delete all buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+
+    print("clicked choice " + str(choice))
+    eval(choice + "()")
+
+def disp_txt(string):
+    for char in string:
+        global txtSpeed
+        textWindow.see(tk.END)
+        textWindow.insert(tk.INSERT, char)
+        if char == '\n':
+            textWindow.insert(tk.INSERT, '\n')
+        textWindow.update()
+        time.sleep(txtSpeed)
+
+def disp_txt_at_speed(string, speed):
+    for char in string:
+        textWindow.see(tk.END)
+        textWindow.insert(tk.INSERT, char)
+        if char == '\n':
+            textWindow.insert(tk.INSERT, '\n')
+        textWindow.update()
+        time.sleep(speed)
+
+def room_run(section):
     clear_screen()
-    to_display = replace_variables(story_content["arc1_4"])
-    print(to_display)
-    global food
-    food = "chocolate"
-    input("Press Enter to continue...")
-    arc1_5()
-
-def arc1_5():
-    clear_screen()
-    to_display = replace_variables(story_content["arc1_5"])
-    print(to_display)
-
-    prompt_text = "\nPlease Enter your Name:\n\n"
-    user_input = input(prompt_text)
-    if user_input in ("fuck", "bitch", "pussy","", " ", "_", "cunt", "faggot", "fucker",):
-        print("[Debbie] That's a really stupid name, try to be more creative.\n")
-        arc1_5()
-    prompt_text = "\nThis is going to be your name for the rest of the game. Are you sure? \n\n Yes / No\n\n"
-    sure = input(prompt_text)
-    print(sure)
-    if sure.lower() == "no":
-        arc1_5()
-    if sure.lower() == "yes":
-        global pName
-        pName = user_input
-        arc1_6()
-    else:
-        print("I don't understand. Let's try again.")
-        arc1_5()
-
-def arc1_6():
-    clear_screen()
-    to_display = replace_variables(story_content["arc1_6"])
-    print(to_display)
-
-    input("Press Enter to continue...")
-    arc1_7()
-
-def arc1_7():
-    clear_screen()
-    to_display = replace_variables(story_content["arc1_7"])
-    print(to_display)
-
-    input("Press Enter to continue...")
-    arc1_1()
-
-
-#----------------------Logic----------------------------------------------------
-
-def queue_logic(section, prompt_text,  path_a, path_b, path_c, path_d, path_e):
-    clear_screen()
+    global currentRoom
+    currentRoom = section
     to_display = replace_variables(story_content[section])
-    print(to_display)
-    user_input = input(prompt_text)
-    if user_input == '1':
-        path_a()
-    if user_input == '2':
-        path_b()
-    if user_input == '3':
-        if path_c != "null":
-            path_c()
-        else:
-            print("Please select a valid option \n")
-            queue_logic(section, prompt_text, path_a, path_b, path_c, path_d, path_e)
-    if user_input == '4':
-        if path_d != "null":
-            path_d()
-        else:
-            print("Please select a valid option \n")
-            queue_logic(section, prompt_text, path_a, path_b, path_c, path_d, path_e)
-    if user_input == '5':
-        if path_e != "null":
-            path_e()
-        else:
-            print("Please select a valid option \n")
-            queue_logic(section, prompt_text, path_a, path_b, path_c, path_d, path_e)
-    else:
-        print("Please select a valid option \n")
-        queue_logic(section, prompt_text,  path_a, path_b, path_c, path_d, path_e)
+    disp_txt(to_display)
 
 def replace_variables(string):
     global food
@@ -151,14 +143,239 @@ def replace_variables(string):
     string = string.replace("$pName", pName)
     return string
 
-
 def clear_screen():
-    clear = lambda: os.system('cls' if os.name == 'nt' else 'clear')
-    clear()
+    textWindow.delete(1.0, END)
+    textWindow.update()
 
-def main():
-    queue_start_story()
+def acceptEntry(entry, pWindow):
+    global inputResponse
+    global badInput
+    if entry.lower() in badInput:
+        pWindow.destroy()
+        getInput("That was a stupid answer. Try again")
+    else:
+        inputResponse = entry
+        pWindow.destroy()
+
+def getInput(prompt):
+    # creating settings window
+    pWindow = Toplevel()
+    pWindow.title(prompt)
+    pWindow.iconbitmap('./treelarge_CKX_icon.ico')
+    pWindow.geometry("400x80")
+    pWindow.resizable(False, False)
+    pWindow.config(bg = "#333333")
+
+    entryField = Entry(pWindow, width=300, fg = "#333333", bg = "#EEEEEE", font=("Calibri", 20))
+    entryField.pack(fill="x")
+    send = Button(pWindow, text="Send", command=lambda: acceptEntry(entryField.get(), pWindow), bg = "#333333", fg = "#EEEEEE")
+    send.pack(side=TOP)
+    win.wait_window(pWindow)
 
 
-if __name__ == '__main__':
-    main()
+#--------------------------------------------------------GUI------------------------------------------------------------
+def settingsconfig():
+    #creating settings window
+    settings_window = tk.Tk()
+    settings_window.title("Settings Configuration")
+    settings_window.iconbitmap('./treelarge_CKX_icon.ico')
+    settings_window.geometry("360x200")
+    settings_window.resizable(False, False)
+    settings_window.config(bg="#333333")
+
+    # putting in the defaults
+    global txtSize
+    global txtSpeed
+    speed = StringVar()
+    textSize = StringVar()
+
+    if txtSpeed == 0.01:
+        speed.set("fast")
+    if txtSpeed == 0.05:
+        speed.set("standard")
+    if txtSpeed == 0.2:
+        speed.set("slow")
+
+    if txtSize == 24:
+        textSize.set("large")
+    if txtSize == 16:
+        textSize.set("standard")
+    if txtSize == 10:
+        textSize.set("small")
+
+    #loadbutton logic
+    if os.path.exists('./savefile'):
+        with open('./savefile', 'rb') as f:
+            data = pickle.load(f)
+
+        loadButton = Button(settings_window, text="Load Game: " + str(data["dateTime"]), command=lambda: loadGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=1)
+    else:
+        loadButton = Button(settings_window, state=DISABLED, text="Load Game", command=lambda: loadGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=1)
+    #menu
+
+    saveButton = Button(settings_window, text="Save Game", command=lambda: saveGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=2, column=1)
+    speedLabel = Label(settings_window, text="Text Scroll Speed", bg = "#333333", fg = "#EEEEEE").grid(row=3, column=1)
+    radio1 = Radiobutton(settings_window, text="Slow", variable=speed, value="slow", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=0)
+    radio2 = Radiobutton(settings_window, text="Standard", variable=speed, value="standard", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=1)
+    radio3 = Radiobutton(settings_window, text="Fast", variable=speed, value="fast", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=2)
+    sizeLabel = Label(settings_window, text="Text Size (May require you resize Window)", bg = "#333333", fg = "#EEEEEE").grid(row=5, column=1)
+    radio4 = Radiobutton(settings_window, text="Small", variable=textSize, value="small", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=0)
+    radio5 = Radiobutton(settings_window, text="Standard", variable=textSize, value="standard", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=1)
+    radio6 = Radiobutton(settings_window, text="Large", variable=textSize, value="large", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=2)
+    finishButton = Button(settings_window, text="Apply Changes",bg = "#333333", fg = "#EEEEEE", command=lambda: changeSettings(speed.get(), textSize.get()))
+    finishButton.grid(row=8, column=1)
+
+def create_choices(choiceList, pathList):
+    #create buttons for the amount of options available, represtented by 'number'
+    for i in range(0, len(choiceList)):
+        button = Button(frame2, text=choiceList[i], command=lambda i=i: click_choice(pathList[i]), bg="#333333", fg="#EEEEEE")
+        button.pack(fill='both', expand='yes')
+
+
+def queue_start_story(window):
+    window.destroy()
+    PlaySound(None, SND_ASYNC)
+    win.deiconify()
+    room_run("arc1_0")
+    choices = ["Continue..."]
+    paths = ["arc1_1"]
+    create_choices(choices, paths)
+
+
+
+#build main GUI
+win = tk.Tk()
+win.geometry("600x800")
+win.title("SAVED")
+win.iconbitmap('./treelarge_CKX_icon.ico')
+#Text Frame
+frame1 = tk.Frame(
+    master = win,
+    bg = "#696969"
+)
+frame1.pack(fill='both', expand='yes')
+#Text Window
+textWindow = tkst.ScrolledText(
+    master = frame1,
+    wrap   = tk.WORD,
+    bg = "#333333",
+    fg = "#EEEEEE"
+)
+textWindow.config(font=("Calibri", txtSize))
+textWindow.pack(padx=5, pady=5, fill=tk.BOTH, expand=True,)
+
+#Button Frame
+frame2 = tk.Frame(
+    master = win,
+    bg = "#333333",
+)
+frame2.pack(fill='both', expand='yes')
+settings = Button(frame2, text="Settings", command=settingsconfig,bg = "#333333", fg = "#EEEEEE")
+settings.pack(side=RIGHT, fill=Y)
+
+win.withdraw()
+
+#build Main Menu
+
+
+menu = Toplevel()
+menu.geometry("600x880")
+menu.title("SAVED")
+menu.iconbitmap('./treelarge_CKX_icon.ico')
+menu.resizable(False, False)
+
+PlaySound('./crystalAir.wav', SND_ALIAS | SND_ASYNC)
+
+screen = tk.Canvas(
+    master=menu,
+    bg="#696969"
+)
+screen.pack(fill='both', expand='yes')
+title = Label(screen, text="SAVED", bg = "#ffffff", fg = "#333333",pady=30, font=("Calibri", 35)).pack(fill='x', expand='yes')
+photo = PhotoImage(file = './tree.gif')
+photoLabel = Label(screen, image = photo).pack()
+button = Button(screen, text="New Game", command=lambda: queue_start_story(menu),bg = "#ffffff", fg = "#333333",pady=20, padx=80)
+button_window = screen.create_window(480, 400, window=button)
+
+if os.path.exists('./savefile'):
+    with open('./savefile', 'rb') as f:
+        data = pickle.load(f)
+
+    loadButton = Button(screen, text="Load Game: " + str(data["dateTime"]),command=lambda: loadGame(menu), bg = "#ffffff", fg = "#333333",pady=20, padx=25)
+    loadWindow = screen.create_window(480,480, window=loadButton)
+else:
+    loadButton = Button(screen, state=DISABLED, text="Load Game", command=lambda: loadGame(menu),bg = "#ffffff", fg = "#333333",pady=20, padx=25)
+    loadWindow = screen.create_window(480,480, window=loadButton)
+
+#----------------------------------------------Story Sections----------------------------------------------------------
+
+def arc1_1():
+    room_run("arc1_1")
+    choices = ["Take Chocolate", "Take Potato Chips", "Do Nothing"]
+    paths = ["arc1_2", "arc1_3", "arc1_4"]
+    create_choices(choices, paths)
+
+def arc1_2():
+    global food
+    food = "chocolate"
+    room_run("arc1_2")
+    choices = ["Continue..."]
+    paths = ["arc1_5"]
+    create_choices(choices, paths)
+
+def arc1_3():
+    global food
+    food = "potato chips"
+    room_run("arc1_3")
+    choices = ["Continue..."]
+    paths = ["arc1_5"]
+    create_choices(choices, paths)
+
+def arc1_4():
+    global food
+    food = "chocolate"
+    room_run("arc1_4")
+    choices = ["Continue..."]
+    paths = ["arc1_5"]
+    create_choices(choices, paths)
+
+def arc1_5():
+    global inputResponse
+    global pName
+    room_run("arc1_5")
+    getInput("Please Enter your Name:")
+    pName = inputResponse
+
+    choices = ["Continue..."]
+    paths = ["arc1_6"]
+    create_choices(choices, paths)
+
+def arc1_6():
+    room_run("arc1_6")
+
+    choices = ["Continue..."]
+    paths = ["arc1_7"]
+    create_choices(choices, paths)
+
+def arc1_7():
+    room_run("arc1_7")
+
+    input("Press Enter to continue...")
+    arc1_1()
+#-----------------------------------------------Program Start----------------------------------------------------------
+
+story_sections = []
+for i in range(0, 8):
+    num = i
+    story_sections.append("arc1_" + f"{num}")
+
+story_content = {}
+for section in story_sections:
+    file_path = "script/" + section + ".txt"
+    with open(file_path, encoding="utf8") as file_reader:
+        story_content[section] = file_reader.read()
+
+#-----------------------------------------------------MAIN-------------------------------------------------------------
+
+
+win.mainloop()
