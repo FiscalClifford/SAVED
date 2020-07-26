@@ -21,7 +21,7 @@ pName = "null"
 currentRoom = "null"
 
 #!!!Flags!!!
-
+firstTimeArc2 = 1
 #-------------------------------------------------------Functions-------------------------------------------------------
 def loadGame(window):
     win.deiconify()
@@ -30,6 +30,7 @@ def loadGame(window):
     global food
     global txtSpeed
     global txtSize
+    global firstTimeArc2
 
     with open('./savefile', 'rb') as f:
         data = pickle.load(f)
@@ -39,6 +40,7 @@ def loadGame(window):
     food = data["food"]
     txtSpeed = data["txtSpeed"]
     txtSize = data["txtSize"]
+    firstTimeArc2 = data["firstTimeArc2"]
 
     #delete buttons
     list = frame2.pack_slaves()
@@ -49,6 +51,8 @@ def loadGame(window):
     disp_txt("\nLoading Game...\n")
     window.destroy()
     PlaySound(None, SND_ASYNC)
+    if currentRoom == "arc1_0":
+        currentRoom = "arc1_1"
     eval(currentRoom + "()")
 
 
@@ -58,6 +62,7 @@ def saveGame(window):
     global food
     global txtSpeed
     global txtSize
+    global firstTimeArc2
 
     now = datetime.now()
     # dd/mm/YY H:M:S
@@ -69,7 +74,8 @@ def saveGame(window):
         'food':food,
         'txtSpeed':txtSpeed,
         'txtSize':txtSize,
-        'dateTime':dt_string
+        'dateTime':dt_string,
+        'firstTimeArc2':firstTimeArc2
         }
     if os.path.exists('./savefile'):
         os.remove('./savefile')
@@ -161,7 +167,7 @@ def getInput(prompt):
     # creating settings window
     pWindow = Toplevel()
     pWindow.title(prompt)
-    pWindow.iconbitmap('./treelarge_CKX_icon.ico')
+    pWindow.iconbitmap('./assets/treelarge_CKX_icon.ico')
     pWindow.geometry("400x80")
     pWindow.resizable(False, False)
     pWindow.config(bg = "#333333")
@@ -172,13 +178,18 @@ def getInput(prompt):
     send.pack(side=TOP)
     win.wait_window(pWindow)
 
+def createTxtFiles(limit):
+    for i in range(0, limit):
+        name=("script/arc2_" + f"{i}"+ ".txt")
+        file = open(name,"w+")
+        file.close()
 
 #--------------------------------------------------------GUI------------------------------------------------------------
 def settingsconfig():
     #creating settings window
     settings_window = tk.Tk()
     settings_window.title("Settings Configuration")
-    settings_window.iconbitmap('./treelarge_CKX_icon.ico')
+    settings_window.iconbitmap('./assets/treelarge_CKX_icon.ico')
     settings_window.geometry("360x200")
     settings_window.resizable(False, False)
     settings_window.config(bg="#333333")
@@ -231,7 +242,7 @@ def create_choices(choiceList, pathList):
         button = Button(frame2, text=choiceList[i], command=lambda i=i: click_choice(pathList[i]), bg="#333333", fg="#EEEEEE")
         button.pack(fill='both', expand='yes')
 
-
+#Unique Room for starting the game
 def queue_start_story(window):
     window.destroy()
     PlaySound(None, SND_ASYNC)
@@ -243,11 +254,11 @@ def queue_start_story(window):
 
 
 
-#build main GUI
+#build main GUI------------------------------------------------------------------
 win = tk.Tk()
 win.geometry("600x800")
 win.title("SAVED")
-win.iconbitmap('./treelarge_CKX_icon.ico')
+win.iconbitmap('./assets/treelarge_CKX_icon.ico')
 #Text Frame
 frame1 = tk.Frame(
     master = win,
@@ -281,10 +292,10 @@ win.withdraw()
 menu = Toplevel()
 menu.geometry("600x880")
 menu.title("SAVED")
-menu.iconbitmap('./treelarge_CKX_icon.ico')
+menu.iconbitmap('./assets/treelarge_CKX_icon.ico')
 menu.resizable(False, False)
 
-PlaySound('./crystalAir.wav', SND_ALIAS | SND_ASYNC)
+PlaySound('./music/crystalAir.wav', SND_ALIAS | SND_ASYNC)
 
 screen = tk.Canvas(
     master=menu,
@@ -292,7 +303,7 @@ screen = tk.Canvas(
 )
 screen.pack(fill='both', expand='yes')
 title = Label(screen, text="SAVED", bg = "#ffffff", fg = "#333333",pady=30, font=("Calibri", 35)).pack(fill='x', expand='yes')
-photo = PhotoImage(file = './tree.gif')
+photo = PhotoImage(file = './assets/tree.gif')
 photoLabel = Label(screen, image = photo).pack()
 button = Button(screen, text="New Game", command=lambda: queue_start_story(menu),bg = "#ffffff", fg = "#333333",pady=20, padx=80)
 button_window = screen.create_window(480, 400, window=button)
@@ -360,22 +371,56 @@ def arc1_6():
 def arc1_7():
     room_run("arc1_7")
 
-    input("Press Enter to continue...")
-    arc1_1()
-#-----------------------------------------------Program Start----------------------------------------------------------
+    choices = ["Continue..."]
+    paths = ["arc2_0"]
+    create_choices(choices, paths)
 
+def arc2_0():
+    room_run("arc2_0")
+    global firstTimeArc2
+    choices = ["Continue..."]
+
+    if firstTimeArc2 == 1:
+        paths = ["arc2_1"]
+    else:
+        paths = ["arc2_51"]
+    create_choices(choices, paths)
+
+def arc2_1():
+    room_run("arc2_1")
+    global firstTimeArc2
+    firstTimeArc2 = 0
+
+    choices = ["Head over the brook towards Kingsbridge","Head the opposite direction along the path"]
+    paths = ["arc2_2", "arc2_32"]
+
+    create_choices(choices, paths)
+#-----------------------------------------------Program Start----------------------------------------------------------
+#arc 1
 story_sections = []
 for i in range(0, 8):
     num = i
     story_sections.append("arc1_" + f"{num}")
+#arc 2
+for i in range(0, 58):
+    num = i
+    story_sections.append("arc2_" + f"{num}")
 
 story_content = {}
+i=0
 for section in story_sections:
-    file_path = "script/" + section + ".txt"
+    if i<8:
+        file_path = "script/arc1/" + section + ".txt"
+    #58+8
+    elif i<66:
+        file_path = "script/arc2/" + section + ".txt"
+
     with open(file_path, encoding="utf8") as file_reader:
         story_content[section] = file_reader.read()
+    i=i+1
 
 #-----------------------------------------------------MAIN-------------------------------------------------------------
 
+#createTxtFiles(56)
 
 win.mainloop()
