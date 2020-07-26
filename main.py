@@ -5,6 +5,7 @@ import time
 import pickle
 from datetime import datetime
 import os
+from winsound import *
 
 #--------------------------------------------------------Globals--------------------------------------------------------
 
@@ -47,6 +48,7 @@ def loadGame(window):
 
     disp_txt("\nLoading Game...\n")
     window.destroy()
+    PlaySound(None, SND_ASYNC)
     eval(currentRoom + "()")
 
 
@@ -232,6 +234,7 @@ def create_choices(choiceList, pathList):
 
 def queue_start_story(window):
     window.destroy()
+    PlaySound(None, SND_ASYNC)
     win.deiconify()
     room_run("arc1_0")
     choices = ["Continue..."]
@@ -279,8 +282,11 @@ menu = Toplevel()
 menu.geometry("600x880")
 menu.title("SAVED")
 menu.iconbitmap('./treelarge_CKX_icon.ico')
+menu.resizable(False, False)
 
-screen = tk.Frame(
+PlaySound('./crystalAir.wav', SND_ALIAS | SND_ASYNC)
+
+screen = tk.Canvas(
     master=menu,
     bg="#696969"
 )
@@ -288,16 +294,18 @@ screen.pack(fill='both', expand='yes')
 title = Label(screen, text="SAVED", bg = "#ffffff", fg = "#333333",pady=30, font=("Calibri", 35)).pack(fill='x', expand='yes')
 photo = PhotoImage(file = './tree.gif')
 photoLabel = Label(screen, image = photo).pack()
-button = Button(screen, text="New Game", command=lambda: queue_start_story(menu),bg = "#ffffff", fg = "#333333",pady=30)
-button.pack(fill='x', expand='yes')
+button = Button(screen, text="New Game", command=lambda: queue_start_story(menu),bg = "#ffffff", fg = "#333333",pady=20, padx=80)
+button_window = screen.create_window(480, 400, window=button)
 
 if os.path.exists('./savefile'):
     with open('./savefile', 'rb') as f:
         data = pickle.load(f)
 
-    loadButton = Button(screen, text="Load Game: " + str(data["dateTime"]),command=lambda: loadGame(menu), bg = "#ffffff", fg = "#333333",pady=30).pack(fill='x', expand='yes')
+    loadButton = Button(screen, text="Load Game: " + str(data["dateTime"]),command=lambda: loadGame(menu), bg = "#ffffff", fg = "#333333",pady=20, padx=25)
+    loadWindow = screen.create_window(480,480, window=loadButton)
 else:
-    loadButton = Button(screen, state=DISABLED, text="Load Game", command=lambda: loadGame(menu),bg = "#ffffff", fg = "#333333",pady=30).pack(fill='x', expand='yes')
+    loadButton = Button(screen, state=DISABLED, text="Load Game", command=lambda: loadGame(menu),bg = "#ffffff", fg = "#333333",pady=20, padx=25)
+    loadWindow = screen.create_window(480,480, window=loadButton)
 
 #----------------------------------------------Story Sections----------------------------------------------------------
 
