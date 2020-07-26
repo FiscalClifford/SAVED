@@ -5,6 +5,7 @@ import time
 import pickle
 from datetime import datetime
 import os
+
 #--------------------------------------------------------Globals--------------------------------------------------------
 
 #input parsing
@@ -22,6 +23,7 @@ currentRoom = "null"
 
 #-------------------------------------------------------Functions-------------------------------------------------------
 def loadGame(window):
+    win.deiconify()
     global pName
     global currentRoom
     global food
@@ -65,8 +67,7 @@ def saveGame(window):
         'food':food,
         'txtSpeed':txtSpeed,
         'txtSize':txtSize,
-        'dateTime':dt_string,
-
+        'dateTime':dt_string
         }
     if os.path.exists('./savefile'):
         os.remove('./savefile')
@@ -173,7 +174,7 @@ def getInput(prompt):
 #--------------------------------------------------------GUI------------------------------------------------------------
 def settingsconfig():
     #creating settings window
-    settings_window = Toplevel()
+    settings_window = tk.Tk()
     settings_window.title("Settings Configuration")
     settings_window.iconbitmap('./treelarge_CKX_icon.ico')
     settings_window.geometry("360x200")
@@ -201,14 +202,13 @@ def settingsconfig():
         textSize.set("small")
 
     #loadbutton logic
-
     if os.path.exists('./savefile'):
         with open('./savefile', 'rb') as f:
             data = pickle.load(f)
 
         loadButton = Button(settings_window, text="Load Game: " + str(data["dateTime"]), command=lambda: loadGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=1)
     else:
-        loadButton = Button(settings_window, state=DISABLED, text="No Save File", command=lambda: loadGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=1)
+        loadButton = Button(settings_window, state=DISABLED, text="Load Game", command=lambda: loadGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=1)
     #menu
 
     saveButton = Button(settings_window, text="Save Game", command=lambda: saveGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=2, column=1)
@@ -230,10 +230,20 @@ def create_choices(choiceList, pathList):
         button.pack(fill='both', expand='yes')
 
 
+def queue_start_story(window):
+    window.destroy()
+    win.deiconify()
+    room_run("arc1_0")
+    choices = ["Continue..."]
+    paths = ["arc1_1"]
+    create_choices(choices, paths)
+
+
+
 #build main GUI
 win = tk.Tk()
 win.geometry("600x800")
-win.title("testing")
+win.title("SAVED")
 win.iconbitmap('./treelarge_CKX_icon.ico')
 #Text Frame
 frame1 = tk.Frame(
@@ -260,13 +270,36 @@ frame2.pack(fill='both', expand='yes')
 settings = Button(frame2, text="Settings", command=settingsconfig,bg = "#333333", fg = "#EEEEEE")
 settings.pack(side=RIGHT, fill=Y)
 
-#----------------------------------------------Story Sections----------------------------------------------------------
-def queue_start_story():
-    room_run("arc1_0")
-    choices = ["Continue..."]
-    paths = ["arc1_1"]
-    create_choices(choices, paths)
+win.withdraw()
 
+#build Main Menu
+
+
+menu = Toplevel()
+menu.geometry("600x880")
+menu.title("SAVED")
+menu.iconbitmap('./treelarge_CKX_icon.ico')
+
+screen = tk.Frame(
+    master=menu,
+    bg="#696969"
+)
+screen.pack(fill='both', expand='yes')
+title = Label(screen, text="SAVED", bg = "#ffffff", fg = "#333333",pady=30, font=("Calibri", 35)).pack(fill='x', expand='yes')
+photo = PhotoImage(file = './tree.gif')
+photoLabel = Label(screen, image = photo).pack()
+button = Button(screen, text="New Game", command=lambda: queue_start_story(menu),bg = "#ffffff", fg = "#333333",pady=30)
+button.pack(fill='x', expand='yes')
+
+if os.path.exists('./savefile'):
+    with open('./savefile', 'rb') as f:
+        data = pickle.load(f)
+
+    loadButton = Button(screen, text="Load Game: " + str(data["dateTime"]),command=lambda: loadGame(menu), bg = "#ffffff", fg = "#333333",pady=30).pack(fill='x', expand='yes')
+else:
+    loadButton = Button(screen, state=DISABLED, text="Load Game", command=lambda: loadGame(menu),bg = "#ffffff", fg = "#333333",pady=30).pack(fill='x', expand='yes')
+
+#----------------------------------------------Story Sections----------------------------------------------------------
 
 def arc1_1():
     room_run("arc1_1")
@@ -336,7 +369,5 @@ for section in story_sections:
 
 #-----------------------------------------------------MAIN-------------------------------------------------------------
 
-
-queue_start_story()
 
 win.mainloop()
