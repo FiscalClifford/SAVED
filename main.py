@@ -6,6 +6,7 @@ import pickle
 from datetime import datetime
 import os
 from winsound import *
+import random
 
 #--------------------------------------------------------Globals--------------------------------------------------------
 
@@ -15,32 +16,61 @@ inputResponse = "null"
 #global values
 txtSpeed = 0.01
 txtSize = 16
-
 food = "null"
 pName = "null"
 currentRoom = "null"
+aName = "null"
+bName = "null"
+liName = "null"
+banditName = "null"
+mercName = "null"
+guardName = "null"
+magicianName = "null"
+bardName = "null"
+thiefName = "null"
+ToughName = "null"
+medicName = "null"
+kingdomName = "null"
+neighborName = "null"
+worldName = "null"
+merchantName= "null"
 
 #!!!Flags!!!
 firstTimeArc2 = 1
 #-------------------------------------------------------Functions-------------------------------------------------------
 def loadGame(window):
     win.deiconify()
-    global pName
-    global currentRoom
-    global food
-    global txtSpeed
-    global txtSize
-    global firstTimeArc2
+    global pName, currentRoom, food, txtSpeed, txtSize
+    global firstTimeArc2, aName, bName, liName, banditName
+    global mercName, guardName, magicianName, bardName
+    global thiefName, toughName, medicName
+    global kingdomName, neighborName, worldName, merchantName
+
 
     with open('./savefile', 'rb') as f:
         data = pickle.load(f)
 
-    pName = data["pName"]
-    currentRoom = data["currentRoom"]
-    food = data["food"]
-    txtSpeed = data["txtSpeed"]
-    txtSize = data["txtSize"]
-    firstTimeArc2 = data["firstTimeArc2"]
+    pName = data['pName']
+    currentRoom = data['currentRoom']
+    food = data['food']
+    txtSpeed = data['txtSpeed']
+    txtSize = data['txtSize']
+    firstTimeArc2 = data['firstTimeArc2']
+    aName = data['aName']
+    bName = data['bName']
+    liName = data['liName']
+    banditName = data['banditName']
+    mercName = data['mercName']
+    guardName = data['guardName']
+    magicianName = data['magicianName']
+    bardName = data['bardName']
+    thiefName = data['thiefName']
+    toughName = data['toughName']
+    medicName = data['medicName']
+    kingdomName = data['kingdomName']
+    neighborName = data['neighborName']
+    worldName = data['worldName']
+    merchantName = data['merchantName']
 
     #delete buttons
     list = frame2.pack_slaves()
@@ -57,25 +87,39 @@ def loadGame(window):
 
 
 def saveGame(window):
-    global pName
-    global currentRoom
-    global food
-    global txtSpeed
-    global txtSize
-    global firstTimeArc2
+    global pName, currentRoom, food, txtSpeed, txtSize
+    global firstTimeArc2, aName, bName, liName, banditName
+    global mercName, guardName, magicianName, bardName
+    global thiefName, toughName, medicName
+    global kingdomName, neighborName, worldName, merchantName
 
     now = datetime.now()
     # dd/mm/YY H:M:S
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 
     data = {
-        'pName':pName,
-        'currentRoom':currentRoom,
-        'food':food,
-        'txtSpeed':txtSpeed,
-        'txtSize':txtSize,
-        'dateTime':dt_string,
-        'firstTimeArc2':firstTimeArc2
+        'pName': pName,
+        'currentRoom': currentRoom,
+        'food': food,
+        'txtSpeed': txtSpeed,
+        'txtSize': txtSize,
+        'dateTime': dt_string,
+        'firstTimeArc2': firstTimeArc2,
+        'aName': aName,
+        'bName': bName,
+        'liname': liName,
+        'banditName': banditName,
+        'mercName': mercName,
+        'guardName': guardName,
+        'magicianName': magicianName,
+        'bardName': bardName,
+        'thiefName': thiefName,
+        'toughName': toughName,
+        'medicName': medicName,
+        'kingdomName': kingdomName,
+        'neighborName': neighborName,
+        'worldName': worldName,
+        'merchantName': merchantName
         }
     if os.path.exists('./savefile'):
         os.remove('./savefile')
@@ -145,8 +189,28 @@ def room_run(section):
 def replace_variables(string):
     global food
     global pName
+    global aName, bName, liName, banditName
+    global mercName, guardName, magicianName, bardName
+    global thiefName, toughName, medicName
+    global kingdomName, neighborName, worldName
+
     string = string.replace("$food", food)
     string = string.replace("$pName", pName)
+    string = string.replace("$aName", aName)
+    string = string.replace("$bName", bName)
+    string = string.replace("$liName", liName)
+    string = string.replace("$banditName", banditName)
+    string = string.replace("$mercName", mercName)
+    string = string.replace("$guardName", guardName)
+    string = string.replace("$magicianName", magicianName)
+    string = string.replace("$bardName", bardName)
+    string = string.replace("$thiefName", thiefName)
+    string = string.replace("$toughName", toughName)
+    string = string.replace("$medicName", medicName)
+    string = string.replace("$kingdomName", kingdomName)
+    string = string.replace("$neighborName", neighborName)
+    string = string.replace("$worldName", worldName)
+    string = string.replace("$merchantName", merchantName)
     return string
 
 def clear_screen():
@@ -183,6 +247,46 @@ def createTxtFiles(limit):
         name=("script/arc2_" + f"{i}"+ ".txt")
         file = open(name,"w+")
         file.close()
+
+def rollCharacters():
+    aNames = ['Alexia', 'Aphrodite', 'Domino', 'Jade', 'Karma', 'Destiny', 'Lyra', 'Quinn', 'Ripley', 'Trinity', 'Valkyrie']
+    bNames = ['Phoebe', 'Valentina', 'Rose', 'Beatrice', 'Sophia', 'Charlotte', 'Emilia', 'Hazel', 'Faith', 'Iris', 'Ariel']
+    liNames= ['Lacey', 'Chloe', 'Delila', 'Ashe', 'Lucy', 'Violet', 'Autumn', 'Nova', 'Elizabeth', 'Melody', 'Elise']
+    banditNames = ['Axel', 'Wulrick', 'Jason', 'Tyrion']
+    mercNames   = ['Karen', 'Britt', 'Candice', 'Maud']
+    guardNames  = ['Garett', 'Gregory', 'George', 'Geoff']
+    magicianNames=['Pluto', 'Mercury', 'Venus', 'Mars']
+    bardNames   = ['Paganini', 'Vivaldi', 'Sarasate', 'Bach']
+    thiefNames  = ['Tex', 'Lucas', 'Isaac', 'Noland']
+    toughNames  = ['Brom', 'Diesel', 'Wulfe', 'Bruce']
+    medicNames  = ['Daisy', 'Arya', 'Minneie', 'Sophia']
+
+    kingdomNames = ['Luxidium', 'Grandossia', 'Typhon', 'Belium']
+    neighborNames= ['Arsenia', 'Dulchio', 'Syndio', 'Kleptorn']
+    worldNames   = ["The Edge Lands", "The Forgotten Hills", "The Midnight Plains", "The Burned Paradise"]
+
+    global aName, bName, liName, banditName
+    global mercName, guardName, magicianName, bardName
+    global thiefName, toughName, medicName
+    global kingdomName, neighborName, worldName
+
+    aName = random.choice(aNames)
+    bName = random.choice(bNames)
+    liName = random.choice(liNames)
+    banditName = random.choice(banditNames)
+    mercName = random.choice(mercNames)
+    guardName = random.choice(guardNames)
+    magicianName = random.choice(magicianNames)
+    bardName = random.choice(bardNames)
+    thiefName = random.choice(thiefNames)
+    toughName = random.choice(toughNames)
+    medicName = random.choice(medicNames)
+    kingdomName = random.choice(kingdomNames)
+    neighborName = random.choice(neighborNames)
+    worldName = random.choice(worldNames)
+
+    print(aName)
+
 
 #--------------------------------------------------------GUI------------------------------------------------------------
 def settingsconfig():
@@ -246,12 +350,12 @@ def create_choices(choiceList, pathList):
 def queue_start_story(window):
     window.destroy()
     PlaySound(None, SND_ASYNC)
+    rollCharacters()
     win.deiconify()
     room_run("arc1_0")
     choices = ["Continue..."]
     paths = ["arc1_1"]
     create_choices(choices, paths)
-
 
 
 #build main GUI------------------------------------------------------------------
