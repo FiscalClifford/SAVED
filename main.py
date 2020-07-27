@@ -1130,7 +1130,7 @@ for section in story_sections:
     if i<8:
         file_path = "script/arc1/" + section + ".txt"
     #arc 1 plus arc 2...
-    elif i<71:
+    elif i<72:
         file_path = "script/arc2/" + section + ".txt"
 
     with open(file_path, encoding="utf8") as file_reader:
