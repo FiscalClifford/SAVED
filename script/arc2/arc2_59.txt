@@ -1,0 +1,19 @@
+You pull out the $food from your pocket and hold it out to them. They look at it in confusion as if they have never seen something like it before, and the woman in the white cloak leans forward and pokes it with her finger. You put on a brave face.
+[$pName] I have come from a far away land seeking adventure. My clothing and this incredible delicacy from my homeland we call $food are proof of that. After seeing you in the street I knew we were destined to work together, and so I followed you until I could introduce myself properly.
+The two women look at eachother incredulously. The swordswoman on your left grabs the $food and holds it near her nose for a second, until biting into the plastic.
+[Woman in White] Tastes awful to be honest.
+Giving up, she tosses it back onto the table and leans back, sipping on her beer.
+[$pName] You aren’t supposed to eat that part, that’s like… the rind of an orange or watermelon except worse. You’ve got to open it up, look…
+You reach over and open the wrapper. Reaching in, you grab a little and pop it in your mouth. The instant it hits your tongue your mouth waters tremendously and you remember that despite walking around so much today you have barely had anything to eat. Your stomach rumbles loudly but you pretend not to notice it. You gesture with the $food, offering it to each of your strange companions. All three oblige and hesitatingly pop a bit into their mouths.
+[Woman in White] Unlike anything I’ve ever…
+[Woman in Yellow] Wooooooooow!
+[Woman in Lavender] Yum!
+Mrs. White Cloak sits in quiet amazement, staring at the $food deep in thought while rubbing at the mole on the right of her chin. The other two however start bouncing around in their seats in excitement, and quickly wolf the rest of the $food down.
+[Woman in Yellow] Ok, first of all, WOW. Second of all, my name is $aName. My friend next to me in the wonderful lavender dress is $liName, and like you we are adventurers of sorts. What’s your name?
+[$pName] $pName, nice to meet you.
+$aName looks to her right at the woman in white
+[$aName] what about you Miss?
+The woman in White looks at her for a second, still deep in thought and rubbing away. Finally, she drops her hand and takes a deep swig of her beer before replying.
+[Woman in White] $bName.
+$bName abruptly ends her introduction with $aName and turns back to penetrate you with her $bEyeColor eyes.
+[$bName] Is $pName your real name? What are you really doing here?

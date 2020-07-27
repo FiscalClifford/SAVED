@@ -1,0 +1,16 @@
+You look the woman in the eyes, and speak with a steady voice.
+[$pName] I can’t help you, but don’t worry I am sure he is fine. I’m going to continue passing through, good luck.
+[woman] oh…
+You walk past her before she can say anything more and continue on. The path that led to the cluster of buildings passes right through and continues out the other side, eventually leading away from the forest yet again and into an open field of tall grass. Walking along, you feel a hint of guilt. Are you running away from conflict? Did you really give up on her? It’s not like you knew the carpenter’s wife or owed her anything, but still…
+You make your way through the open field and walk for a long time, until eventually after cresting a small hill you see a town way off in the distance. You reckon you must have travelled at least ten miles since you last saw the carpenter’s wife, which you spent strolling along in silence. The countryside more or less stayed the same, and so did the heat radiating from the blazing sun above. Now that you finally can see the town, you breathe out with a sigh of relief.
+[$pName] Finally made it to Dottle…
+You continue down the hill and towards the town, a little faster now that the end is in sight. As you move along, you notice several farms and ranches along the road and surrounding the town. It seems many of the people that live here enjoy raising livestock, with the majority keeping at least four or five different horses. At one point the fence of one of these properties runs along the road, and a horse trots up to say hello.
+[$pName] Hey there buddy!
+[Horse] Neigh!
+You tousle his mane and give him a friendly pet, and continue towards the town. By the time you finally get close, you are quite a bit tired. All said and done it has been at least 4 hours since you started by that rickety wooden sign, most of that spent walking towards here. As you start to enter the town you take a note of your surroundings. The houses are relatively well made, the majority of which are wooden frame buildings with uneven planks slapped across the sides and mud pressed in between. The roofs are almost all thatched, although a few have that same turf design that you saw at the carpenter’s house. Eventually you approach the center of the town, which doesn’t really stand out in any way. You were hoping there would be a town hall or something but instead there is the wooden skeleton of what will eventually become a large building. The construction has clearly just started, and a couple men with tools wander around the foundations as if in a daze. Curious, you walk closer and admire the framing with your hands on your hips. It doesn’t take long before someone notices you.
+[Man] Hey you!
+Uh oh. You turn to face him, startled.
+[$pName] ah sorry didn’t mean to…
+[Man] It’s about time ya got here! We’ve been waitin’ for ages, where are yer tools?
+[$pName] … tools?
+[Man] Wait, yer tah carpenter from Kingsbridge we asked fer right?
