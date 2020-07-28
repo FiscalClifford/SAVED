@@ -391,14 +391,14 @@ def rollCharacters():
 
     aHairColors = ['brunette', 'dark brown', "black"]
     bHairColors = ['pearl white', 'silver', "fiery red", 'blonde']
-    liHairColors = ['strawberry blonde', 'brunette', "light pink", "light blue"]
+    liHairColors = ['strawberry blonde', 'caramel blonde', "light pink", "light blue"]
 
-    aSkinColors = ['olive', 'brown', "dark brown", 'black']
-    bSkinColors = ['pale', 'white', "light"]
-    liSkinColors = ['light', 'olive', "tanned", 'white']
+    aSkinColors = ['olive', 'brown', "dark", 'black', 'pale', 'white', "light", "light","tanned", 'bronze']
+    bSkinColors = ['olive', 'brown', "dark", 'black', 'pale', 'white', "light", "light","tanned", 'bronze']
+    liSkinColors = ['olive', 'brown', "dark", 'black', 'pale', 'white', "light", "light","tanned", 'bronze']
 
-    aEyeColors = ['amber', 'brown', "hazel"]
-    bEyeColors = ['sapphire', 'amethyst', "emerald"]
+    aEyeColors = ['amber', 'light brown', "hazel", "dark brown"]
+    bEyeColors = ['sapphire', 'amethyst', "emerald", "aquamarine", "ruby", "topaz"]
     liEyeColors = ['blue', 'light blue', "dark blue", 'blue-grey']
 
     aLocations = ['Pondwall','Cliffham','Moonburgh', 'Pinehorn', 'Newrock', 'Pinewood', 'Oldview', 'Limeacre' ]
@@ -955,7 +955,8 @@ def arc2_62(): #Placed here because it is a continuation of arc 29 for simplicit
     room_run("arc2_62")
 
     #next is choose which death or victory you get
-    global knowsDeath, loosenedPlanks
+    global knowsDeath, loosenedPlanks, firstMeeting
+    firstMeeting = "false"
     if knowsDeath == "false" and loosenedPlanks == "false":
         choices = ["Join " + str(aName) + " and " + str(liName), "Join " + str(bName)]
         paths = ["arc2_31", "arc2_30"]
