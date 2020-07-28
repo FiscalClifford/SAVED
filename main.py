@@ -5,10 +5,12 @@ import time
 import pickle
 from datetime import datetime
 import os
-from winsound import *
 import random
+from pygame import mixer
 
 #--------------------------------------------------------Globals--------------------------------------------------------
+
+mixer.init()
 
 #input parsing
 badInput = ["fuck", "bitch", "pussy", "", " ", "  ", "_", "cunt", "faggot", "fucker", "dick", "penis", "!", ".", "$"]
@@ -58,7 +60,48 @@ muggerMissing = "false"
 metB = "false"
 firstMeeting = "true"
 seenForest = "false"
+playlist = []
+readyForBackground = "false"
 #-------------------------------------------------------Functions-------------------------------------------------------
+
+def startBackgroundMusic():
+    mixer.music.fadeout(1000)
+    global playlist, readyForBackground
+    file_index = 0
+    for filename in os.listdir("./music"):
+        if filename.endswith(".mp3"):
+            playlist.append("./music/" + filename)
+
+    random.shuffle(playlist)
+    readyForBackground = "true"
+
+    # i = 0
+    # while i < len(playlist):
+    #     print(playlist[i])
+    #     pygame.mixer.music.load(playlist[i])
+    #     pygame.mixer.music.queue(playlist[i])
+    #
+    #     i = i+1
+    # pygame.mixer.music.play()
+
+def checktoPlay(i):
+    if mixer.music.get_busy() == 'false':
+        mixer.music.load(playlist[i])
+        mixer.music.play()
+        i += 1
+        return i
+    return i
+
+def playSong(song):
+    global readyForBackground
+    readyForBackground = "false"
+    if mixer.music.get_busy():
+        mixer.music.fadeout(1000)
+        mixer.music.load(song)
+        mixer.music.play()
+    else:
+        mixer.music.load(song)
+        mixer.music.play()
 
 def postDeathPassage(toPrint, next):
     room_run(toPrint)
@@ -135,7 +178,10 @@ def loadGame(window):
 
     disp_txt("\nLoading Game...\n")
     window.destroy()
-    PlaySound(None, SND_ASYNC)
+
+    #PUT PLAYLIST HERE
+    startBackgroundMusic()
+
     if currentRoom == "arc1_0":
         currentRoom = "arc1_1"
 
@@ -503,11 +549,14 @@ def create_choices(choiceList, pathList):
 #Unique Room for starting the game
 def queue_start_story(window):
     window.destroy()
-    PlaySound(None, SND_ASYNC)
+
+    #PUT PLAYLIST HERE
+    startBackgroundMusic()
     rollCharacters()
     win.deiconify()
     # CHANGE THIS AFTER TESTING
     arc2_0()
+
     room_run("arc1_0")
     choices = ["Continue..."]
     paths = ["arc1_1"]
@@ -555,7 +604,7 @@ menu.title("SAVED")
 menu.iconbitmap('./assets/treelarge_CKX_icon.ico')
 menu.resizable(False, False)
 
-PlaySound('./music/crystalAir.wav', SND_ALIAS | SND_ASYNC)
+playSong('./music/title/crystalAir.mp3')
 
 screen = tk.Canvas(
     master=menu,
@@ -1138,8 +1187,15 @@ for section in story_sections:
         story_content[section] = file_reader.read()
     i=i+1
 
+
+
+
+
+
+
 #-----------------------------------------------------MAIN-------------------------------------------------------------
 
 #createTxtFiles(56)
-
+if readyForBackground == "true":
+    i = checktoPlay(i)
 win.mainloop()
