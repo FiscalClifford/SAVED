@@ -11,6 +11,7 @@ from vlc import Instance
 #--------------------------------------------------------Globals--------------------------------------------------------
 
 #input parsing
+<<<<<<< Updated upstream
 badInput = ["fuck", "bitch", "pussy", "", " ", "  ", "_", "cunt", "faggot", "fucker", "dick", "penis", "!", ".", "$", "$bName", "$liName", "$aName"]
 inputResponse = "null"
 #global values
@@ -59,6 +60,61 @@ metB = "false"
 firstMeeting = "true"
 seenForest = "false"
 
+=======
+badInput = ["fuck", "bitch", "pussy", "", " ", "  ", "_", "cunt", "faggot", "fucker", "dick", "penis", "!", ".",
+            "$", "$bName", "$liName", "$aName", "$pName"]
+
+
+class g:
+    inputResponse = "null"
+    # global values
+    
+    currentRoom = "null"
+    savedRoom = "null"
+    txtSpeed = 0.000000001
+    txtSize = 16
+
+    food = "null"
+    pName = "null"
+    aName = "null"
+    bName = "null"
+    liName = "null"
+    banditName = "null"
+    mercName = "null"
+    guardName = "null"
+    magicianName = "null"
+    bardName = "null"
+    thiefName = "null"
+    toughName = "null"
+    medicName = "null"
+    kingdomName = "null"
+    neighborName = "null"
+    worldName = "null"
+    merchantName = "null"
+    aHairColor = "null"
+    aEyeColor = "null"
+    aSkinColor = "null"
+    bHairColor = "null"
+    bEyeColor = "null"
+    bSkinColor = "null"
+    liHairColor = "null"
+    liEyeColor = "null"
+    liSkinColor = "null"
+    deathReturn = "null"
+    pLocation = "null"
+    aLocation = "null"
+    bLocation = "null"
+
+    # !!!Flags!!!
+    firstTimeArc2 = "true"
+    knowsDeath = "false"
+    loosenedPlanks = "false"
+    hasPotato = "false"
+    muggerMissing = "false"
+    metB = "false"
+    firstMeeting = "true"
+    seenForest = "false"
+>>>>>>> Stashed changes
 
 class VLC:
     def __init__(self):
