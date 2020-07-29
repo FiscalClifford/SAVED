@@ -11,17 +11,21 @@ from vlc import Instance
 #--------------------------------------------------------Globals--------------------------------------------------------
 
 #input parsing
-badInput = ["fuck", "bitch", "pussy", "", " ", "  ", "_", "cunt", "faggot", "fucker", "dick", "penis", "!", ".", "$", "$bName", "$liName", "$aName", "$pName"]
+badInput = ["fuck", "bitch", "pussy", "", " ", "  ", "_", "cunt", "faggot", "fucker", "dick", "penis", "!", ".",
+            "$", "$bName", "$liName", "$aName", "$pName"]
 
-#globals
-class globals:
+#g
+class g:
     inputResponse = "null"
     # global values
+    
+    currentRoom = "null"
+    savedRoom = "null"
     txtSpeed = 0.000000001
     txtSize = 16
+
     food = "null"
     pName = "null"
-    currentRoom = "null"
     aName = "null"
     bName = "null"
     liName = "null"
@@ -92,9 +96,8 @@ class VLC:
         self.listPlayer.set_media_list(self.mediaList)
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(70)
-
 music = VLC()
-g = globals()
+
 #-------------------------------------------------------Functions-------------------------------------------------------
 
 def startBackgroundMusic():
@@ -104,69 +107,70 @@ def startBackgroundMusic():
     music.next()
     music.play()
 
-def postDeathPassage(toPrint, next):
+def postDeathPassage(toPrint):
     room_run(toPrint)
 
     choices = ["Continue..."]
-    paths = [next]
+    paths = [g.savedRoom]
     create_choices(choices, paths)
 
 def loadGame(window):
     win.deiconify()
-
     with open('./savefile', 'rb') as f:
         data = pickle.load(f)
-
-    list = vars(globals)
+    list = vars(g)
     listy = list.items()
-
     for left, right in listy:
         if left.startswith("__") == False:
             left = data[left]
-
-
     #delete buttons
     list = frame2.pack_slaves()
     for x in list:
         if str(x) != str(list[0]):
             x.destroy()
-
     print("Game Loaded")
     disp_txt("\nLoading Game...\n")
     window.destroy()
 
-    #PUT PLAYLIST HERE
-    startBackgroundMusic()
 
+
+    #If you physically altered the world, we need to Undo that here
+    g.loosenedPlanks = "false"
+    g.metB = "false"
+
+
+
+
+    startBackgroundMusic()
     if g.currentRoom == "arc1_0":
         g.currentRoom = "arc1_1"
 
     #if you just died this is a special message for you :)
     if g.deathReturn == "arc2_17" or g.deathReturn == "arc2_42":
         g.deathReturn = "null"
-        postDeathPassage('arc2_52', g.currentRoom)
+        postDeathPassage('arc2_52')
 
     elif g.deathReturn == "arc2_18" or g.deathReturn == "arc2_35" or g.deathReturn == "arc2_36":
         g.deathReturn = "null"
-        postDeathPassage('arc2_56', g.currentRoom)
+        postDeathPassage('arc2_56')
 
     elif g.deathReturn == "arc2_30" or g.deathReturn=="arc2_48":
         g.deathReturn = "null"
-        postDeathPassage('arc2_54', g.currentRoom)
+        postDeathPassage('arc2_54')
 
     elif g.deathReturn == "arc2_31" or g.deathReturn=="arc2_47":
         g.deathReturn = "null"
-        postDeathPassage('arc2_53', g.currentRoom)
+        postDeathPassage('arc2_53')
 
     elif g.deathReturn == "arc2_43":
         g.deathReturn = "null"
-        postDeathPassage('arc2_57', g.currentRoom)
+        postDeathPassage('arc2_57')
 
     elif g.deathReturn == "arc2_44":
         g.deathReturn = "null"
-        postDeathPassage('arc2_55', g.currentRoom)
+        postDeathPassage('arc2_55')
     else:
-        eval(g.currentRoom + "()")
+        eval(g.savedRoom + "()")
 
 
 def saveGame(window):
@@ -174,9 +178,9 @@ def saveGame(window):
     # dd/mm/YY H:M:S
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     data = {}
-    list = vars(globals)
+    list = vars(g)
     listy = list.items()
-
+    g.savedRoom = g.currentRoom
     for left, right in listy:
         if left.startswith("__") == False:
             data[left] = right
@@ -245,13 +249,14 @@ def room_run(section):
     disp_txt(to_display)
 
 def replace_variables(string):
-    list = vars(globals)
+    list = vars(g)
     listy = list.items()
 
     for globy, value in listy:
         if globy.startswith("__") == False:
-            string = string.replace(str("$"+str(globy)), str(value))
-
+            print(str(globy) + " ---- " + str(value))
+            string = string.replace("$"+globy, str(value))
+    print("##################################")
     return string
 
 def clear_screen():
@@ -497,6 +502,7 @@ else:
 #----------------------------------------------Story Sections----------------------------------------------------------
 
 def arc1_1():
+    print(g.merchantName)
     room_run("arc1_1")
     choices = ["Take Chocolate", "Take Potato Chips", "Do Nothing"]
     paths = ["arc1_2", "arc1_3", "arc1_4"]
@@ -965,7 +971,7 @@ def arc2_44():
 
 def arc2_45():
     room_run("arc2_45")
-
+    g.loosenedPlanks = "true"
     choices = ["Follow the woman in yellow", "Ignore her and continue exploring"]
     paths = ["arc2_29", "arc2_16"]
     create_choices(choices, paths)
