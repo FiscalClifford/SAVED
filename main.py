@@ -931,7 +931,7 @@ def arc2_37():
 
 def arc2_38():
     room_run("arc2_38")
-
+    g.loosenedPlanks = "true"
     choices = ["Stay and ambush the killer", "Head into Kingsbridge"]
     paths = ["arc2_44", "arc2_45"]
     create_choices(choices, paths)
@@ -970,7 +970,6 @@ def arc2_44():
 
 def arc2_45():
     room_run("arc2_45")
-    g.loosenedPlanks = "true"
     choices = ["Follow the woman in yellow", "Ignore her and continue exploring"]
     paths = ["arc2_29", "arc2_16"]
     create_choices(choices, paths)
