@@ -5,13 +5,13 @@ import time
 import pickle
 from datetime import datetime
 import os
-from winsound import *
 import random
+from vlc import Instance
 
 #--------------------------------------------------------Globals--------------------------------------------------------
 
 #input parsing
-badInput = ["fuck", "bitch", "pussy", "", " ", "  ", "_", "cunt", "faggot", "fucker", "dick", "penis", "!", ".", "$"]
+badInput = ["fuck", "bitch", "pussy", "", " ", "  ", "_", "cunt", "faggot", "fucker", "dick", "penis", "!", ".", "$", "$bName", "$liName", "$aName"]
 inputResponse = "null"
 #global values
 txtSpeed = 0.01
@@ -58,7 +58,59 @@ muggerMissing = "false"
 metB = "false"
 firstMeeting = "true"
 seenForest = "false"
+
+
+class VLC:
+    def __init__(self):
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+
+    def fillPlaylist(self):
+        path = "./music/"
+        songs = os.listdir(path)
+        random.shuffle(songs)
+        for s in songs:
+            print(os.path.join(path,s))
+            self.mediaList.add_media(self.Player.media_new(os.path.join(path,s)))
+
+        #
+        self.listPlayer.set_media_list(self.mediaList)
+
+    def play(self):
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(70)
+    def next(self):
+        self.listPlayer.next()
+    def pause(self):
+        self.listPlayer.pause()
+    def previous(self):
+        self.listPlayer.previous()
+    def stop(self):
+        self.listPlayer.stop()
+    def playIntro(self):
+        path = './music/title/crystalAir.mp3'
+        self.mediaList.add_media(self.Player.media_new(path))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(70)
+
+music = VLC()
 #-------------------------------------------------------Functions-------------------------------------------------------
+
+def startBackgroundMusic():
+    music.stop()
+    music.fillPlaylist()
+    music.next()
+    music.next()
+    music.play()
+
+    # for filename in os.listdir("./music"):
+    #     if filename.endswith(".mp3"):
+    #         playlist.append("./music/" + filename)
+    #
+    # random.shuffle(playlist)
+
 
 def postDeathPassage(toPrint, next):
     room_run(toPrint)
@@ -135,7 +187,10 @@ def loadGame(window):
 
     disp_txt("\nLoading Game...\n")
     window.destroy()
-    PlaySound(None, SND_ASYNC)
+
+    #PUT PLAYLIST HERE
+    startBackgroundMusic()
+
     if currentRoom == "arc1_0":
         currentRoom = "arc1_1"
 
@@ -391,14 +446,14 @@ def rollCharacters():
 
     aHairColors = ['brunette', 'dark brown', "black"]
     bHairColors = ['pearl white', 'silver', "fiery red", 'blonde']
-    liHairColors = ['strawberry blonde', 'brunette', "light pink", "light blue"]
+    liHairColors = ['strawberry blonde', 'caramel blonde', "light pink", "light blue"]
 
-    aSkinColors = ['olive', 'brown', "dark brown", 'black']
-    bSkinColors = ['pale', 'white', "light"]
-    liSkinColors = ['light', 'olive', "tanned", 'white']
+    aSkinColors = ['olive', 'brown', "dark", 'black', 'pale', 'white', "light", "light","tanned", 'bronze']
+    bSkinColors = ['olive', 'brown', "dark", 'black', 'pale', 'white', "light", "light","tanned", 'bronze']
+    liSkinColors = ['olive', 'brown', "dark", 'black', 'pale', 'white', "light", "light","tanned", 'bronze']
 
-    aEyeColors = ['amber', 'brown', "hazel"]
-    bEyeColors = ['sapphire', 'amethyst', "emerald"]
+    aEyeColors = ['amber', 'light brown', "hazel", "dark brown"]
+    bEyeColors = ['sapphire', 'amethyst', "emerald", "aquamarine", "ruby", "topaz"]
     liEyeColors = ['blue', 'light blue', "dark blue", 'blue-grey']
 
     aLocations = ['Pondwall','Cliffham','Moonburgh', 'Pinehorn', 'Newrock', 'Pinewood', 'Oldview', 'Limeacre' ]
@@ -445,18 +500,26 @@ def rollCharacters():
 #--------------------------------------------------------GUI------------------------------------------------------------
 def settingsconfig():
     #creating settings window
-    settings_window = tk.Tk()
-    settings_window.title("Settings Configuration")
+    settings_window = tk.Toplevel()
+    settings_window.title("Settings")
     settings_window.iconbitmap('./assets/treelarge_CKX_icon.ico')
-    settings_window.geometry("360x200")
+    settings_window.geometry("230x230")
     settings_window.resizable(False, False)
     settings_window.config(bg="#333333")
 
     # putting in the defaults
     global txtSize
     global txtSpeed
+
+    size = StringVar()
     speed = StringVar()
-    textSize = StringVar()
+
+    if txtSize == 24:
+        size.set("large")
+    if txtSize == 16:
+        size.set("standard")
+    if txtSize == 10:
+        size.set("small")
 
     if txtSpeed == 0.01:
         speed.set("fast")
@@ -465,34 +528,32 @@ def settingsconfig():
     if txtSpeed == 0.2:
         speed.set("slow")
 
-    if txtSize == 24:
-        textSize.set("large")
-    if txtSize == 16:
-        textSize.set("standard")
-    if txtSize == 10:
-        textSize.set("small")
 
     #loadbutton logic
     if os.path.exists('./savefile'):
         with open('./savefile', 'rb') as f:
             data = pickle.load(f)
 
-        loadButton = Button(settings_window, text="Load Game: " + str(data["dateTime"]), command=lambda: loadGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=1)
+        loadButton = Button(settings_window, text="Load Game: " + str(data["dateTime"]), command=lambda: loadGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=0, columnspan=3)
     else:
-        loadButton = Button(settings_window, state=DISABLED, text="Load Game", command=lambda: loadGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=1)
+        loadButton = Button(settings_window, state=DISABLED, text="Load Game", command=lambda: loadGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=0, columnspan=3)
     #menu
 
-    saveButton = Button(settings_window, text="Save Game", command=lambda: saveGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=2, column=1)
+    saveButton = Button(settings_window, text="     Save Game     ", command=lambda: saveGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=2, column=0, columnspan=3)
     speedLabel = Label(settings_window, text="Text Scroll Speed", bg = "#333333", fg = "#EEEEEE").grid(row=3, column=1)
-    radio1 = Radiobutton(settings_window, text="Slow", variable=speed, value="slow", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=0)
-    radio2 = Radiobutton(settings_window, text="Standard", variable=speed, value="standard", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=1)
-    radio3 = Radiobutton(settings_window, text="Fast", variable=speed, value="fast", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=2)
-    sizeLabel = Label(settings_window, text="Text Size (May require you resize Window)", bg = "#333333", fg = "#EEEEEE").grid(row=5, column=1)
-    radio4 = Radiobutton(settings_window, text="Small", variable=textSize, value="small", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=0)
-    radio5 = Radiobutton(settings_window, text="Standard", variable=textSize, value="standard", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=1)
-    radio6 = Radiobutton(settings_window, text="Large", variable=textSize, value="large", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=2)
-    finishButton = Button(settings_window, text="Apply Changes",bg = "#333333", fg = "#EEEEEE", command=lambda: changeSettings(speed.get(), textSize.get()))
-    finishButton.grid(row=8, column=1)
+    radio1 = Radiobutton(settings_window, text="    Slow    ",indicatoron=0, variable=speed, value="slow", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=0,sticky="nsew")
+    radio2 = Radiobutton(settings_window, text="Standard",indicatoron=0, variable=speed, value="standard", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=1,sticky="nsew")
+    radio3 = Radiobutton(settings_window, text="    Fast    ",indicatoron=0, variable=speed, value="fast", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=2,sticky="nsew")
+    sizeLabel = Label(settings_window, text="Text Size", bg = "#333333", fg = "#EEEEEE").grid(row=5, column=1)
+    radio4 = Radiobutton(settings_window, text="    Small    ",indicatoron=0, variable=size, value="small", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=0,sticky="ew")
+    radio5 = Radiobutton(settings_window, text="Standard",indicatoron=0, variable=size, value="standard", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=1,sticky="ew")
+    radio6 = Radiobutton(settings_window, text="    Large    ",indicatoron=0, variable=size, value="large", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=2,sticky="ew")
+    musicLabel = Label(settings_window, text="Music Options", bg="#333333", fg="#EEEEEE").grid(row=7, column=1)
+    pauseButton = Button(settings_window, text="Pause", bg="#333333", fg="#EEEEEE",command=lambda: music.pause()).grid(row=8, column=0,sticky="ew")
+    playButton = Button(settings_window, text="Play", bg="#333333", fg="#EEEEEE", command=lambda: music.play()).grid(row=8, column=1,sticky="ew")
+    skipButton = Button(settings_window, text="Skip", bg="#333333", fg="#EEEEEE", command=lambda: music.next()).grid(row=8, column=2,sticky="ew")
+    finishButton = Button(settings_window, text="  Apply Changes  ", bg="#333333", fg="#EEEEEE",
+                          command=lambda: changeSettings(speed.get(), size.get())).grid(row=9, column=1)
 
 def create_choices(choiceList, pathList):
     #create buttons for the amount of options available, represtented by 'number'
@@ -503,11 +564,14 @@ def create_choices(choiceList, pathList):
 #Unique Room for starting the game
 def queue_start_story(window):
     window.destroy()
-    PlaySound(None, SND_ASYNC)
+
+    #PUT PLAYLIST HERE
+    startBackgroundMusic()
     rollCharacters()
     win.deiconify()
     # CHANGE THIS AFTER TESTING
     arc2_0()
+
     room_run("arc1_0")
     choices = ["Continue..."]
     paths = ["arc1_1"]
@@ -555,7 +619,7 @@ menu.title("SAVED")
 menu.iconbitmap('./assets/treelarge_CKX_icon.ico')
 menu.resizable(False, False)
 
-PlaySound('./music/crystalAir.wav', SND_ALIAS | SND_ASYNC)
+music.playIntro()
 
 screen = tk.Canvas(
     master=menu,
@@ -955,7 +1019,8 @@ def arc2_62(): #Placed here because it is a continuation of arc 29 for simplicit
     room_run("arc2_62")
 
     #next is choose which death or victory you get
-    global knowsDeath, loosenedPlanks
+    global knowsDeath, loosenedPlanks, firstMeeting
+    firstMeeting = "false"
     if knowsDeath == "false" and loosenedPlanks == "false":
         choices = ["Join " + str(aName) + " and " + str(liName), "Join " + str(bName)]
         paths = ["arc2_31", "arc2_30"]
@@ -1136,6 +1201,12 @@ for section in story_sections:
     with open(file_path, encoding="utf8") as file_reader:
         story_content[section] = file_reader.read()
     i=i+1
+
+
+
+
+
+
 
 #-----------------------------------------------------MAIN-------------------------------------------------------------
 
