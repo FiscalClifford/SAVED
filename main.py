@@ -11,54 +11,55 @@ from vlc import Instance
 #--------------------------------------------------------Globals--------------------------------------------------------
 
 #input parsing
-badInput = ["fuck", "bitch", "pussy", "", " ", "  ", "_", "cunt", "faggot", "fucker", "dick", "penis", "!", ".", "$", "$bName", "$liName", "$aName"]
-inputResponse = "null"
-#global values
-txtSpeed = 0.01
-txtSize = 16
-food = "null"
-pName = "null"
-currentRoom = "null"
-aName = "null"
-bName = "null"
-liName = "null"
-banditName = "null"
-mercName = "null"
-guardName = "null"
-magicianName = "null"
-bardName = "null"
-thiefName = "null"
-ToughName = "null"
-medicName = "null"
-kingdomName = "null"
-neighborName = "null"
-worldName = "null"
-merchantName = "null"
-aHairColor = "null"
-aEyeColor = "null"
-aSkinColor = "null"
-bHairColor = "null"
-bEyeColor = "null"
-bSkinColor = "null"
-liHairColor = "null"
-liEyeColor = "null"
-liSkinColor = "null"
-deathReturn = "null"
-pLocation = "null"
-aLocation = "null"
-bLocation = "null"
+badInput = ["fuck", "bitch", "pussy", "", " ", "  ", "_", "cunt", "faggot", "fucker", "dick", "penis", "!", ".", "$", "$bName", "$liName", "$aName", "$pName"]
 
+#globals
+class globals:
+    inputResponse = "null"
+    # global values
+    txtSpeed = 0.000000001
+    txtSize = 16
+    food = "null"
+    pName = "null"
+    currentRoom = "null"
+    aName = "null"
+    bName = "null"
+    liName = "null"
+    banditName = "null"
+    mercName = "null"
+    guardName = "null"
+    magicianName = "null"
+    bardName = "null"
+    thiefName = "null"
+    toughName = "null"
+    medicName = "null"
+    kingdomName = "null"
+    neighborName = "null"
+    worldName = "null"
+    merchantName = "null"
+    aHairColor = "null"
+    aEyeColor = "null"
+    aSkinColor = "null"
+    bHairColor = "null"
+    bEyeColor = "null"
+    bSkinColor = "null"
+    liHairColor = "null"
+    liEyeColor = "null"
+    liSkinColor = "null"
+    deathReturn = "null"
+    pLocation = "null"
+    aLocation = "null"
+    bLocation = "null"
 
-#!!!Flags!!!
-firstTimeArc2 = "true"
-knowsDeath = "false"
-loosenedPlanks = "false"
-hasPotato = "no"
-muggerMissing = "false"
-metB = "false"
-firstMeeting = "true"
-seenForest = "false"
-
+    # !!!Flags!!!
+    firstTimeArc2 = "true"
+    knowsDeath = "false"
+    loosenedPlanks = "false"
+    hasPotato = "false"
+    muggerMissing = "false"
+    metB = "false"
+    firstMeeting = "true"
+    seenForest = "false"
 
 class VLC:
     def __init__(self):
@@ -71,10 +72,7 @@ class VLC:
         songs = os.listdir(path)
         random.shuffle(songs)
         for s in songs:
-            print(os.path.join(path,s))
             self.mediaList.add_media(self.Player.media_new(os.path.join(path,s)))
-
-        #
         self.listPlayer.set_media_list(self.mediaList)
 
     def play(self):
@@ -96,6 +94,7 @@ class VLC:
         self.listPlayer.get_media_player().audio_set_volume(70)
 
 music = VLC()
+g = globals()
 #-------------------------------------------------------Functions-------------------------------------------------------
 
 def startBackgroundMusic():
@@ -104,13 +103,6 @@ def startBackgroundMusic():
     music.next()
     music.next()
     music.play()
-
-    # for filename in os.listdir("./music"):
-    #     if filename.endswith(".mp3"):
-    #         playlist.append("./music/" + filename)
-    #
-    # random.shuffle(playlist)
-
 
 def postDeathPassage(toPrint, next):
     room_run(toPrint)
@@ -121,63 +113,17 @@ def postDeathPassage(toPrint, next):
 
 def loadGame(window):
     win.deiconify()
-    global pName, currentRoom, food, txtSpeed, txtSize
-    global firstTimeArc2, aName, bName, liName, banditName
-    global mercName, guardName, magicianName, bardName
-    global thiefName, toughName, medicName
-    global kingdomName, neighborName, worldName, merchantName
-    global aHairColor, aEyeColor, aSkinColor
-    global bHairColor, bEyeColor, bSkinColor
-    global liHairColor, liEyeColor, liSkinColor
-    global deathReturn, hasPotato, muggerMissing, metB, firstMeeting
-    global pLocation, aLocation, bLocation
-    global knowsDeath, loosenedPlanks, seenForest
-
 
     with open('./savefile', 'rb') as f:
         data = pickle.load(f)
 
-    pName = data['pName']
-    currentRoom = data['currentRoom']
-    food = data['food']
-    txtSpeed = data['txtSpeed']
-    txtSize = data['txtSize']
-    firstTimeArc2 = data['firstTimeArc2']
-    aName = data['aName']
-    bName = data['bName']
-    liName = data['liName']
-    banditName = data['banditName']
-    mercName = data['mercName']
-    guardName = data['guardName']
-    magicianName = data['magicianName']
-    bardName = data['bardName']
-    thiefName = data['thiefName']
-    toughName = data['toughName']
-    medicName = data['medicName']
-    kingdomName = data['kingdomName']
-    neighborName = data['neighborName']
-    worldName = data['worldName']
-    merchantName = data['merchantName']
-    aHairColor = data['aHairColor']
-    bHairColor = data['bHairColor']
-    liHairColor = data['liHairColor']
-    aEyeColor = data['aEyeColor']
-    bEyeColor = data['bEyeColor']
-    liEyeColor = data['liEyeColor']
-    aSkinColor = data['aSkinColor']
-    bSkinColor = data['bSkinColor']
-    liSkinColor = data['liSkinColor']
-    hasPotato = data['hasPotato']
-    muggerMissing = data['muggerMissing']
-    metB = data['metB']
-    firstMeeting = data['firstMeeting']
-    pLocation = data['pLocation']
-    aLocation = data['aLocation']
-    bLocation = data['bLocation']
-    knowsDeath = data['knowsDeath']
-    loosenedPlanks = data['loosenedPlanks']
-    seenForest = data['seenForest']
-    deathReturn = data['deathReturn']
+    list = vars(globals)
+    listy = list.items()
+
+    for left, right in listy:
+        if left.startswith("__") == False:
+            left = data[left]
+
 
     #delete buttons
     list = frame2.pack_slaves()
@@ -185,132 +131,83 @@ def loadGame(window):
         if str(x) != str(list[0]):
             x.destroy()
 
+    print("Game Loaded")
     disp_txt("\nLoading Game...\n")
     window.destroy()
 
     #PUT PLAYLIST HERE
     startBackgroundMusic()
 
-    if currentRoom == "arc1_0":
-        currentRoom = "arc1_1"
+    if g.currentRoom == "arc1_0":
+        g.currentRoom = "arc1_1"
 
     #if you just died this is a special message for you :)
-    if deathReturn == "arc2_17" or deathReturn == "arc2_42":
-        deathReturn = "null"
-        postDeathPassage('arc2_52', currentRoom)
+    if g.deathReturn == "arc2_17" or g.deathReturn == "arc2_42":
+        g.deathReturn = "null"
+        postDeathPassage('arc2_52', g.currentRoom)
 
-    elif deathReturn == "arc2_18" or deathReturn == "arc2_35" or deathReturn == "arc2_36":
-        deathReturn = "null"
-        postDeathPassage('arc2_56', currentRoom)
+    elif g.deathReturn == "arc2_18" or g.deathReturn == "arc2_35" or g.deathReturn == "arc2_36":
+        g.deathReturn = "null"
+        postDeathPassage('arc2_56', g.currentRoom)
 
-    elif deathReturn == "arc2_30" or deathReturn=="arc2_48":
-        deathReturn = "null"
-        postDeathPassage('arc2_54', currentRoom)
+    elif g.deathReturn == "arc2_30" or g.deathReturn=="arc2_48":
+        g.deathReturn = "null"
+        postDeathPassage('arc2_54', g.currentRoom)
 
-    elif deathReturn == "arc2_31" or deathReturn=="arc2_47":
-        deathReturn = "null"
-        postDeathPassage('arc2_53', currentRoom)
+    elif g.deathReturn == "arc2_31" or g.deathReturn=="arc2_47":
+        g.deathReturn = "null"
+        postDeathPassage('arc2_53', g.currentRoom)
 
-    elif deathReturn == "arc2_43":
-        deathReturn = "null"
-        postDeathPassage('arc2_57', currentRoom)
+    elif g.deathReturn == "arc2_43":
+        g.deathReturn = "null"
+        postDeathPassage('arc2_57', g.currentRoom)
 
-    elif deathReturn == "arc2_44":
-        deathReturn = "null"
-        postDeathPassage('arc2_55', currentRoom)
+    elif g.deathReturn == "arc2_44":
+        g.deathReturn = "null"
+        postDeathPassage('arc2_55', g.currentRoom)
     else:
-        eval(currentRoom + "()")
+        eval(g.currentRoom + "()")
 
 
 def saveGame(window):
-    global pName, currentRoom, food, txtSpeed, txtSize
-    global firstTimeArc2, aName, bName, liName, banditName
-    global mercName, guardName, magicianName, bardName
-    global thiefName, toughName, medicName
-    global kingdomName, neighborName, worldName, merchantName
-    global aHairColor, aEyeColor, aSkinColor
-    global bHairColor, bEyeColor, bSkinColor
-    global liHairColor, liEyeColor, liSkinColor
-    global hasPotato, muggerMissing, metB, firstMeeting
-    global pLocation, aLocation, bLocation
-    global knowsDeath, loosenedPlanks, seenForest, deathReturn
-
     now = datetime.now()
     # dd/mm/YY H:M:S
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    data = {}
+    list = vars(globals)
+    listy = list.items()
 
-    data = {
-        'pName': pName,
-        'currentRoom': currentRoom,
-        'food': food,
-        'txtSpeed': txtSpeed,
-        'txtSize': txtSize,
-        'dateTime': dt_string,
-        'firstTimeArc2': firstTimeArc2,
-        'aName': aName,
-        'bName': bName,
-        'liName': liName,
-        'banditName': banditName,
-        'mercName': mercName,
-        'guardName': guardName,
-        'magicianName': magicianName,
-        'bardName': bardName,
-        'thiefName': thiefName,
-        'toughName': toughName,
-        'medicName': medicName,
-        'kingdomName': kingdomName,
-        'neighborName': neighborName,
-        'worldName': worldName,
-        'merchantName': merchantName,
-        'aHairColor': aHairColor,
-        'bHairColor': bHairColor,
-        'liHairColor': liHairColor,
-        'aEyeColor': aEyeColor,
-        'bEyeColor': bEyeColor,
-        'liEyeColor': liEyeColor,
-        'aSkinColor': aSkinColor,
-        'bSkinColor': bSkinColor,
-        'liSkinColor': liSkinColor,
-        'hasPotato': hasPotato,
-        'muggerMissing': muggerMissing,
-        'metB': metB,
-        'firstMeeting': firstMeeting,
-        'pLocation': pLocation,
-        'aLocation': aLocation,
-        'bLocation': bLocation,
-        'loosenedPlanks': loosenedPlanks,
-        'knowsDeath': knowsDeath,
-        'seenForest': seenForest,
-        'deathReturn': deathReturn
-        }
+    for left, right in listy:
+        if left.startswith("__") == False:
+            data[left] = right
+    data['dateTime'] = dt_string
+
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     with open('./savefile', 'wb') as f:
         pickle.dump(data, f)
-
+    print("Game saved")
 
     disp_txt("\nYou are surrounded by a warm light. You are SAVED.\n")
     window.destroy()
 
 def changeSettings(newSpeed, newSize):
-    global txtSpeed
-    global txtSize
-
+    
     if newSpeed == "slow":
-        txtSpeed = 0.2
+        g.txtSpeed = 0.2
     if newSpeed == "standard":
-        txtSpeed = 0.05
+        g.txtSpeed = 0.05
     if newSpeed == "fast":
-        txtSpeed = 0.01
+        g.txtSpeed = 0.01
 
     if newSize == "small":
-        txtSize = 10
+        g.txtSize = 10
     if newSize == "standard":
-        txtSize = 16
+        g.txtSize = 16
     if newSize == "large":
-        txtSize = 24
+        g.txtSize = 24
 
-    textWindow.config(font=("Calibri", txtSize))
+    textWindow.config(font=("Calibri", g.txtSize))
 
 def click_choice(choice):
     #delete all buttons
@@ -319,18 +216,18 @@ def click_choice(choice):
         if str(x) != str(list[0]):
             x.destroy()
 
-    print("clicked choice " + str(choice))
+    print("Player Chose: " + str(choice))
     eval(choice + "()")
 
 def disp_txt(string):
     for char in string:
-        global txtSpeed
+        
         textWindow.see(tk.END)
         textWindow.insert(tk.INSERT, char)
         if char == '\n':
             textWindow.insert(tk.INSERT, '\n')
         textWindow.update()
-        time.sleep(txtSpeed)
+        time.sleep(g.txtSpeed)
 
 def disp_txt_at_speed(string, speed):
     for char in string:
@@ -343,52 +240,18 @@ def disp_txt_at_speed(string, speed):
 
 def room_run(section):
     clear_screen()
-    global currentRoom
-    currentRoom = section
+    g.currentRoom = section
     to_display = replace_variables(story_content[section])
     disp_txt(to_display)
 
 def replace_variables(string):
-    global food
-    global pName
-    global aName, bName, liName, banditName
-    global mercName, guardName, magicianName, bardName
-    global thiefName, toughName, medicName
-    global kingdomName, neighborName, worldName
-    global aHairColor, aEyeColor, aSkinColor
-    global bHairColor, bEyeColor, bSkinColor
-    global liHairColor, liEyeColor, liSkinColor
-    global pLocation, aLocation, bLocation
+    list = vars(globals)
+    listy = list.items()
 
-    string = string.replace("$food", food)
-    string = string.replace("$pName", pName)
-    string = string.replace("$aName", aName)
-    string = string.replace("$bName", bName)
-    string = string.replace("$liName", liName)
-    string = string.replace("$banditName", banditName)
-    string = string.replace("$mercName", mercName)
-    string = string.replace("$guardName", guardName)
-    string = string.replace("$magicianName", magicianName)
-    string = string.replace("$bardName", bardName)
-    string = string.replace("$thiefName", thiefName)
-    string = string.replace("$toughName", toughName)
-    string = string.replace("$medicName", medicName)
-    string = string.replace("$kingdomName", kingdomName)
-    string = string.replace("$neighborName", neighborName)
-    string = string.replace("$worldName", worldName)
-    string = string.replace("$merchantName", merchantName)
-    string = string.replace("$aHairColor", aHairColor)
-    string = string.replace("$bHairColor", bHairColor)
-    string = string.replace("$liHairColor", liHairColor)
-    string = string.replace("$aEyeColor", aEyeColor)
-    string = string.replace("$bEyeColor", bEyeColor)
-    string = string.replace("$liEyeColor", liEyeColor)
-    string = string.replace("$aSkinColor", aSkinColor)
-    string = string.replace("$bSkinColor", bSkinColor)
-    string = string.replace("$liSkinColor", liSkinColor)
-    string = string.replace("$pLocation", pLocation)
-    string = string.replace("$aLocation", aLocation)
-    string = string.replace("$bLocation", bLocation)
+    for globy, value in listy:
+        if globy.startswith("__") == False:
+            string = string.replace(str("$"+str(globy)), str(value))
+
     return string
 
 def clear_screen():
@@ -396,13 +259,12 @@ def clear_screen():
     textWindow.update()
 
 def acceptEntry(entry, pWindow):
-    global inputResponse
     global badInput
     if entry.lower() in badInput:
         pWindow.destroy()
         getInput("That was a stupid answer. Try again")
     else:
-        inputResponse = entry
+        g.inputResponse = entry
         pWindow.destroy()
 
 def getInput(prompt):
@@ -420,6 +282,7 @@ def getInput(prompt):
     send.pack(side=TOP)
     win.wait_window(pWindow)
 
+#this is used for creating .txt files before importing the literature
 def createTxtFiles(limit):
     for i in range(0, limit):
         name=("script/arc2_" + f"{i}"+ ".txt")
@@ -459,42 +322,32 @@ def rollCharacters():
     aLocations = ['Pondwall','Cliffham','Moonburgh', 'Pinehorn', 'Newrock', 'Pinewood', 'Oldview', 'Limeacre' ]
     bLocations = ['Roseham', 'Emberport', 'Greencross', 'Clearbarrow', 'Rustpeak', 'Oxshell', 'Fayview', 'Edgehold']
 
-    global aName, bName, liName, banditName
-    global mercName, guardName, magicianName, bardName
-    global thiefName, toughName, medicName
-    global kingdomName, neighborName, worldName
-    global aHairColor, aEyeColor, aSkinColor
-    global bHairColor, bEyeColor, bSkinColor
-    global liHairColor, liEyeColor, liSkinColor
-    global aLocation, bLocation, merchantName
-
-    aName = random.choice(aNames)
-    bName = random.choice(bNames)
-    liName = random.choice(liNames)
-    banditName = random.choice(banditNames)
-    mercName = random.choice(mercNames)
-    guardName = random.choice(guardNames)
-    magicianName = random.choice(magicianNames)
-    bardName = random.choice(bardNames)
-    thiefName = random.choice(thiefNames)
-    toughName = random.choice(toughNames)
-    medicName = random.choice(medicNames)
-    kingdomName = random.choice(kingdomNames)
-    neighborName = random.choice(neighborNames)
-    worldName = random.choice(worldNames)
-    aHairColor = random.choice(aHairColors)
-    bHairColor = random.choice(bHairColors)
-    liHairColor = random.choice(liHairColors)
-    aEyeColor = random.choice(aEyeColors)
-    bEyeColor = random.choice(bEyeColors)
-    liEyeColor = random.choice(liEyeColors)
-    aSkinColor = random.choice(aSkinColors)
-    bSkinColor = random.choice(bSkinColors)
-    liSkinColor = random.choice(liSkinColors)
-    aLocation = random.choice(aLocations)
-    bLocation = random.choice(bLocations)
-    merchantName = random.choice(merchantNames)
-
+    g.aName = random.choice(aNames)
+    g.bName = random.choice(bNames)
+    g.liName = random.choice(liNames)
+    g.banditName = random.choice(banditNames)
+    g.mercName = random.choice(mercNames)
+    g.guardName = random.choice(guardNames)
+    g.magicianName = random.choice(magicianNames)
+    g.bardName = random.choice(bardNames)
+    g.thiefName = random.choice(thiefNames)
+    g.toughName = random.choice(toughNames)
+    g.medicName = random.choice(medicNames)
+    g.kingdomName = random.choice(kingdomNames)
+    g.neighborName = random.choice(neighborNames)
+    g.worldName = random.choice(worldNames)
+    g.aHairColor = random.choice(aHairColors)
+    g.bHairColor = random.choice(bHairColors)
+    g.liHairColor = random.choice(liHairColors)
+    g.aEyeColor = random.choice(aEyeColors)
+    g.bEyeColor = random.choice(bEyeColors)
+    g.liEyeColor = random.choice(liEyeColors)
+    g.aSkinColor = random.choice(aSkinColors)
+    g.bSkinColor = random.choice(bSkinColors)
+    g.liSkinColor = random.choice(liSkinColors)
+    g.aLocation = random.choice(aLocations)
+    g.bLocation = random.choice(bLocations)
+    g.merchantName = random.choice(merchantNames)
 
 
 #--------------------------------------------------------GUI------------------------------------------------------------
@@ -508,24 +361,21 @@ def settingsconfig():
     settings_window.config(bg="#333333")
 
     # putting in the defaults
-    global txtSize
-    global txtSpeed
-
     size = StringVar()
     speed = StringVar()
 
-    if txtSize == 24:
+    if g.txtSize == 24:
         size.set("large")
-    if txtSize == 16:
+    if g.txtSize == 16:
         size.set("standard")
-    if txtSize == 10:
+    if g.txtSize == 10:
         size.set("small")
 
-    if txtSpeed == 0.01:
+    if g.txtSpeed == 0.01:
         speed.set("fast")
-    if txtSpeed == 0.05:
+    if g.txtSpeed == 0.05:
         speed.set("standard")
-    if txtSpeed == 0.2:
+    if g.txtSpeed == 0.2:
         speed.set("slow")
 
 
@@ -569,8 +419,10 @@ def queue_start_story(window):
     startBackgroundMusic()
     rollCharacters()
     win.deiconify()
-    # CHANGE THIS AFTER TESTING
-    arc2_0()
+
+    # CHANGE THIS AFTER TESTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    #arc2_58()
 
     room_run("arc1_0")
     choices = ["Continue..."]
@@ -596,7 +448,7 @@ textWindow = tkst.ScrolledText(
     bg = "#333333",
     fg = "#EEEEEE"
 )
-textWindow.config(font=("Calibri", txtSize))
+textWindow.config(font=("Calibri", g.txtSize))
 textWindow.pack(padx=5, pady=5, fill=tk.BOTH, expand=True,)
 
 #Button Frame
@@ -651,36 +503,31 @@ def arc1_1():
     create_choices(choices, paths)
 
 def arc1_2():
-    global food
-    food = "chocolate"
+    g.food = "chocolate"
     room_run("arc1_2")
     choices = ["Continue..."]
     paths = ["arc1_5"]
     create_choices(choices, paths)
 
 def arc1_3():
-    global food
-    food = "potato chips"
+    g.food = "potato chips"
     room_run("arc1_3")
     choices = ["Continue..."]
     paths = ["arc1_5"]
     create_choices(choices, paths)
 
 def arc1_4():
-    global food
-    food = "chocolate"
+    g.food = "chocolate"
     room_run("arc1_4")
     choices = ["Continue..."]
     paths = ["arc1_5"]
     create_choices(choices, paths)
 
 def arc1_5():
-    global inputResponse
-    global pName
     room_run("arc1_5")
     getInput("Please Enter your Name:")
-    pName = inputResponse
-
+    g.pName = g.inputResponse
+    g.inputResponse = "null"
     choices = ["Continue..."]
     paths = ["arc1_6"]
     create_choices(choices, paths)
@@ -707,13 +554,12 @@ def arc2_0():
     create_choices(choices, paths)
 
 def arc2_1():
-    global firstTimeArc2
-    if firstTimeArc2 == "true":
+    if g.firstTimeArc2 == "true":
         room_run("arc2_1")
     else:
         room_run("arc2_51")
 
-    firstTimeArc2 = "false"
+    g.firstTimeArc2 = "false"
     choices = ["Head over the brook towards Kingsbridge","Head the opposite direction along the path"]
     paths = ["arc2_2", "arc2_32"]
 
@@ -791,8 +637,7 @@ def arc2_11():
 
 def arc2_12():
     room_run("arc2_12")
-    global metB
-    metB = "true"
+    g.metB = "true"
     choices = ["Beg Shopkeeper for a weapon", "Talk to Woman", "Leave"]
     paths = ["arc2_14", "arc2_15", "arc2_13"]
     create_choices(choices, paths)
@@ -827,13 +672,11 @@ def arc2_16():
 
 def arc2_17():
     room_run("arc2_17")
-    global deathReturn
-    deathReturn = "arc2_17"
+    g.deathReturn = "arc2_17"
 
 def arc2_18():
     room_run("arc2_18")
-    global deathReturn
-    deathReturn = "arc2_18"
+    g.deathReturn = "arc2_18"
 
 def arc2_19():
     room_run("arc2_19")
@@ -851,24 +694,21 @@ def arc2_20():
 
 def arc2_22():
     room_run("arc2_22")
-    global hasPotato
-    hasPotato = "yes"
+    g.hasPotato = "true"
     choices = ["Head back the way you came to the central plaza", "Enter Tavern", "Continue along the path"]
     paths = ["arc2_24", "arc2_25", "arc2_26"]
     create_choices(choices, paths)
 
 def arc2_23():
     room_run("arc2_23")
-    global hasPotato
-    hasPotato = "yes"
+    g.hasPotato = "true"
     choices = ["Head back the way you came to the central plaza", "Enter Tavern", "Continue along the path"]
     paths = ["arc2_24", "arc2_25", "arc2_26"]
     create_choices(choices, paths)
 
 def arc2_24():
-    global hasPotato
-    if hasPotato == "yes":
-        hasPotato = "no"
+    if g.hasPotato == "true":
+        g.hasPotato = "false"
         clear_screen()
         disp_txt("You’ve had enough of this route and begin walking back the way you came. By the time you return back "
                  "to where the road split and you detoured, the chunk of potato in your pocket has become quite painful "
@@ -883,8 +723,7 @@ def arc2_24():
 
 def arc2_25():
     room_run("arc2_25")
-    global hasPotato
-    if hasPotato == "true":
+    if g.hasPotato == "true":
         choices = ["Head back the way you came to the central plaza" "Continue along the path"]
         paths = ["arc2_24", "arc2_26"]
         create_choices(choices, paths)
@@ -896,11 +735,10 @@ def arc2_25():
 
 def arc2_26():
     room_run("arc2_26")
-    global hasPotato
-    if hasPotato == "yes":
+    if g.hasPotato == "true":
         choices = ["Run away!", "Share your potato with the starving man"]
         paths = ["arc2_28", "arc2_27"]
-        hasPotato = "no"
+        g.hasPotato = "false"
         create_choices(choices, paths)
     else:
         choices = ["Run away!"]
@@ -909,8 +747,7 @@ def arc2_26():
 
 def arc2_27():
     room_run("arc2_27")
-    global muggerMissing
-    muggerMissing = "true"
+    g.muggerMissing = "true"
     choices = ["Follow the woman in yellow", "Ignore her and continue exploring"]
     paths = ["arc2_29", "arc2_16"]
     create_choices(choices, paths)
@@ -925,9 +762,8 @@ def arc2_28():
              "head for the plaza. You are careful to give wide berth to any area that even remotely resembles the scene "
              "of the attempted mugging, and you check every alleyway as you move along. ")
     time.sleep(2)
-    global hasPotato
-    if hasPotato == "yes":
-        hasPotato = "no"
+    if g.hasPotato == "true":
+        g.hasPotato = "false"
         disp_txt("\nYou’ve had enough of this route and begin walking back the way you came. By the time you return back "
                  "to where the road split and you detoured, the chunk of potato in your pocket has become quite painful "
                  "rubbing against your leg so you decide to cut ties and toss it to the side. The potato hadn’t even "
@@ -941,14 +777,13 @@ def arc2_28():
     create_choices(choices, paths)
 
 def arc2_29():
-    global muggerMissing, metB
-    if muggerMissing == "true":
-        muggerMissing = "false"
+    if g.muggerMissing == "true":
+        g.muggerMissing = "false"
         arc2_46()
     room_run("arc2_29")
 
-    if metB == "true":
-        metB = "false"
+    if g.metB == "true":
+        g.metB = "false"
         disp_txt("\nHer white cloak gleams in the feeble sunlight that slips into the alleyway and you recognize "
                  "her as the woman from the adventurer’s gear shop. \n"
                  "[swordswoman] Ah, you. Hello again.\n")
@@ -963,8 +798,7 @@ def arc2_29():
 
 def arc2_58(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_58")
-    global firstMeeting
-    if firstMeeting == "true":
+    if g.firstMeeting == "true":
         disp_txt("\nYou feel a hint of sweat gathering on your temple and try not to look guilty. What you need "
                  "is a way to get out of this awkward conversation while simultaneously not ostracizing "
                  "yourself from the group. This may be your only chance to convince them to help you, and "
@@ -977,10 +811,9 @@ def arc2_58(): #Placed here because it is a continuation of arc 29 for simplicit
 
 def arc2_59(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_59")
-    global firstMeeting,food
-    if firstMeeting == "true":
+    if g.firstMeeting == "true":
         disp_txt("\nYou feel frozen, it is as if she has seen right through you. You shift uncomfortably again, "
-                 "trying to think of a way to get her off your back. But how? The " + str(food) + " worked for a little"
+                 "trying to think of a way to get her off your back. But how? The " + str(g.food) + " worked for a little"
                  " bit so maybe something similar could get her to back off. You feel in your pocket your "
                  "wallet and in the other your phone. Your phone! These people seem to come from a time before"
                  " electricity and surely they will respect you and be amazed by your tiny and seemingly"
@@ -992,10 +825,8 @@ def arc2_59(): #Placed here because it is a continuation of arc 29 for simplicit
 
 def arc2_60(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_60")
-    global inputResponse
-    global pLocation
     getInput("what city/town are you from?")
-    pLocation = inputResponse
+    g.pLocation = g.inputResponse
 
     choices = ["Continue..."]
     paths = ["arc2_61"]
@@ -1003,10 +834,9 @@ def arc2_60(): #Placed here because it is a continuation of arc 29 for simplicit
 
 def arc2_61(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_61")
-    global firstMeeting, liName
-    if firstMeeting == "true":
+    if g.firstMeeting == "true":
         disp_txt("\nYou aren’t really sure why but you know you have to join these people on their quest. "
-                 "You also know that everything " + str(liName) + " just said is true, you truly offer little value. "
+                 "You also know that everything " + str(g.liName) + " just said is true, you truly offer little value. "
                  "The trick then will have to be convincing them to allow you to join, and then prove your "
                  "worth along the way. But how to convince them? The key to this is probably in this whole "
                  "‘Ancient Dragon’ thing…   ")
@@ -1019,32 +849,29 @@ def arc2_62(): #Placed here because it is a continuation of arc 29 for simplicit
     room_run("arc2_62")
 
     #next is choose which death or victory you get
-    global knowsDeath, loosenedPlanks, firstMeeting
-    firstMeeting = "false"
-    if knowsDeath == "false" and loosenedPlanks == "false":
-        choices = ["Join " + str(aName) + " and " + str(liName), "Join " + str(bName)]
+    g.firstMeeting = "false"
+    if g.knowsDeath == "false" and g.loosenedPlanks == "false":
+        choices = ["Join " + str(g.aName) + " and " + str(g.liName), "Join " + str(g.bName)]
         paths = ["arc2_31", "arc2_30"]
         create_choices(choices, paths)
-    elif knowsDeath == "true" and loosenedPlanks == "false":
-        choices = ["Join " + str(aName) + " and " + str(liName), "Join " + str(bName)]
+    elif g.knowsDeath == "true" and g.loosenedPlanks == "false":
+        choices = ["Join " + str(g.aName) + " and " + str(g.liName), "Join " + str(g.bName)]
         paths = ["arc2_47", "arc2_48"]
         create_choices(choices, paths)
     else:
-        choices = ["Join " + str(aName) + " and " + str(liName), "Join " + str(bName)]
+        choices = ["Join " + str(g.aName) + " and " + str(g.liName), "Join " + str(g.bName)]
         paths = ["arc2_49", "arc2_50"]
         create_choices(choices, paths)
 
 def arc2_30():
     room_run("arc2_30")
-    global deathReturn, knowsDeath
-    deathReturn = "arc2_30"
-    knowsDeath = "true"
+    g.deathReturn = "arc2_30"
+    g.knowsDeath = "true"
 
 def arc2_31():
     room_run("arc2_31")
-    global deathReturn, knowsDeath
-    deathReturn = "arc2_31"
-    knowsDeath = "true"
+    g.deathReturn = "arc2_31"
+    g.knowsDeath = "true"
 
 def arc2_32():
     room_run("arc2_32")
@@ -1055,8 +882,7 @@ def arc2_32():
 
 def arc2_33():
     room_run("arc2_33")
-    global seenForest
-    if seenForest == "false":
+    if g.seenForest == "false":
         choices = ["follow path left along the outskirts", "enter the forest"]
         paths = ["arc2_37", "arc2_35"]
         create_choices(choices, paths)
@@ -1067,8 +893,7 @@ def arc2_33():
 
 def arc2_34():
     room_run("arc2_34")
-    global seenForest
-    if seenForest == "false":
+    if g.seenForest == "false":
         choices = ["follow path left along the outskirts", "enter the forest"]
         paths = ["arc2_37", "arc2_35"]
         create_choices(choices, paths)
@@ -1079,20 +904,17 @@ def arc2_34():
 
 def arc2_35():
     room_run("arc2_35")
-    global deathReturn, seenForest
-    deathReturn = "arc2_35"
-    seenForest = "true"
+    g.deathReturn = "arc2_35"
+    g.seenForest = "true"
 
 def arc2_36():
     room_run("arc2_36")
-    global deathReturn, seenForest
-    deathReturn = "arc2_36"
-    seenForest = "true"
+    g.deathReturn = "arc2_36"
+    g.seenForest = "true"
 
 def arc2_37():
     room_run("arc2_37")
-    global seenForest
-    if seenForest == "true":
+    if g.seenForest == "true":
         choices = [" 'I'm afraid your husband is dead' ", " 'I promise to try to find him' ", " 'I'm afraid I can't help you, I'm just passing through' "]
         paths = ["arc2_38", "arc2_39", "arc2_41"]
         create_choices(choices, paths)
@@ -1112,8 +934,7 @@ def arc2_38():
 def arc2_39():
     room_run("arc2_39")
 
-    global seenForest
-    if seenForest == "false":
+    if g.seenForest == "false":
         choices = ["Enter the forest"]
         paths = ["arc2_35"]
         create_choices(choices, paths)
@@ -1131,19 +952,16 @@ def arc2_41():
 
 def arc2_42():
     room_run("arc2_42")
-    global deathReturn
-    deathReturn = "arc2_42"
+    g.deathReturn = "arc2_42"
 
 def arc2_43():
     room_run("arc2_43")
-    global deathReturn
-    deathReturn = "arc2_43"
+    g.deathReturn = "arc2_43"
 
 def arc2_44():
     room_run("arc2_44")
-    global deathReturn, knowsDeath
-    knowsDeath = "true"
-    deathReturn = "arc2_44"
+    g.knowsDeath = "true"
+    g.deathReturn = "arc2_44"
 
 def arc2_45():
     room_run("arc2_45")
@@ -1161,15 +979,13 @@ def arc2_46():
 
 def arc2_47():
     room_run("arc2_47")
-    global deathReturn, knowsDeath
-    deathReturn = "arc2_47"
-    knowsDeath = "true"
+    g.deathReturn = "arc2_47"
+    g.knowsDeath = "true"
 
 def arc2_48():
     room_run("arc2_48")
-    global deathReturn, knowsDeath
-    deathReturn = "arc2_48"
-    knowsDeath = "true"
+    g.deathReturn = "arc2_48"
+    g.knowsDeath = "true"
 
 def arc2_49():
     room_run("arc2_49")
