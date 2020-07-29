@@ -7,9 +7,10 @@ from datetime import datetime
 import os
 import random
 from vlc import Instance
-
+import ctypes
+import geocoder
 #--------------------------------------------------------Globals--------------------------------------------------------
-
+badInput = ["!","@","#","$","%","^","&","*","^_^",":)"," ","",".",",","-","_","$pName","$aName","$bName","$liName"]
 
 class g:
     inputResponse = "null"
@@ -98,6 +99,21 @@ class VLC:
 music = VLC()
 
 #-------------------------------------------------------Functions-------------------------------------------------------
+
+def getLocation():
+    g = geocoder.ip('me')
+    return(g.city)
+
+def get_display_name():
+    GetUserNameEx = ctypes.windll.secur32.GetUserNameExW
+    NameDisplay = 3
+
+    size = ctypes.pointer(ctypes.c_ulong(0))
+    GetUserNameEx(NameDisplay, None, size)
+
+    nameBuffer = ctypes.create_unicode_buffer(size.contents.value)
+    GetUserNameEx(NameDisplay, nameBuffer, size)
+    return nameBuffer.value
 
 def startBackgroundMusic():
     music.stop()
@@ -264,6 +280,7 @@ def clear_screen():
 
 def acceptEntry(entry, pWindow):
     global badInput
+    entry.strip()
     if entry.lower() in badInput:
         pWindow.destroy()
         getInput("That was a stupid answer. Try again")
@@ -429,8 +446,11 @@ def queue_start_story(window):
     #arc2_58()
 
     room_run("arc1_0")
+    getInput("Please Enter Character Name:")
+    g.pName = g.inputResponse
+    g.inputResponse = "null"
     choices = ["Continue..."]
-    paths = ["arc1_1"]
+    paths = ["arc1_8"]
     create_choices(choices, paths)
 
 
@@ -499,9 +519,14 @@ else:
     loadWindow = screen.create_window(480,480, window=loadButton)
 
 #----------------------------------------------Story Sections----------------------------------------------------------
+#I needed to move the name input to the beginning
+def arc1_8():
+    room_run("arc1_8")
+    choices = ["Continue..."]
+    paths = ["arc1_1"]
+    create_choices(choices, paths)
 
 def arc1_1():
-    print(g.merchantName)
     room_run("arc1_1")
     choices = ["Take Chocolate", "Take Potato Chips", "Do Nothing"]
     paths = ["arc1_2", "arc1_3", "arc1_4"]
@@ -530,9 +555,6 @@ def arc1_4():
 
 def arc1_5():
     room_run("arc1_5")
-    getInput("Please Enter your Name:")
-    g.pName = g.inputResponse
-    g.inputResponse = "null"
     choices = ["Continue..."]
     paths = ["arc1_6"]
     create_choices(choices, paths)
@@ -1001,7 +1023,7 @@ def arc2_50():
 #-----------------------------------------------Program Start----------------------------------------------------------
 #arc 1
 story_sections = []
-for i in range(0, 8):
+for i in range(0, 9):
     num = i
     story_sections.append("arc1_" + f"{num}")
 #arc 2
@@ -1012,10 +1034,10 @@ for i in range(0, 63):
 story_content = {}
 i=0
 for section in story_sections:
-    if i<8:
+    if i<9:
         file_path = "script/arc1/" + section + ".txt"
     #arc 1 plus arc 2...
-    elif i<72:
+    elif i<73:
         file_path = "script/arc2/" + section + ".txt"
 
     with open(file_path, encoding="utf8") as file_reader:

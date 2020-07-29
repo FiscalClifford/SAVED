@@ -13,8 +13,8 @@ $aName and $liName stand up, gathering their things and preparing to leave. You 
 She turns again so that she can look ahead and walks beside you on your left. $liName matches your speed and walks on your right, but is distracted by looking up at the first stars in the sky that are starting to poke out.
 [$pName] Well, it is kinda hard to describe. I guess you could say I can… see into the future.
 [$aName] What!?
-[$liName] What!?
-They both stop walking and stare at you in amazement. You wish you could find better words to describe the situation but the most important thing is that you warn them of what lays ahead.
+[$liName] Pff.
+They both stop walking and stare at you expectantly. You wish you could find better words to describe the situation but the most important thing is that you warn them of what lays ahead.
 [$pName] It’s not magic though. Not like yours. It’s a… gut feeling you could say. And it only works in specific situations… But listen there’s something important I need to tell you guys.
 $liName and $aName look at you with intense concentration. It is a relief they are taking you seriously despite hardly knowing you.
 [$pName] Up ahead, there is an Oak Tree. It stands by itself along the path we are taking to Dottle. Inside that Oak Tree is a man that wants to hurt us, probably with a ranged attack. I don’t know why, but he is going to attack us as we approach without even trying to say anything first. Let’s just say in my visions… Things don’t end well for us. We need a plan.
@@ -27,9 +27,12 @@ $liName looks exasperated, and throws her hands into the air.
 [$liName] Is this some kind of joke? Why even bother…
 [$aName] $liName!
 [$liName] … telling … us…
-$liName gives up on her tirade halfway through and crosses her arms.
-[$liName] Ok well whatever then, how are we gonna beat this guy? It’s been a long time since I practiced arrow deflections and if this guy is some kind of assassin it’s gonna be hard to keep up.
-[$aName] Luckily for you, I brushed up on my deflections only last week while you were spending all day in the hot springs! You remember that?
+$liName gives up on her rant halfway through, thinks for a moment, and then continues.
+[$liName] …What kind of bullshit is this? You can tell the future and we are going to get ambushed? By who?  I don’t believe you!
+[$pName] You don’t have to trust or believe me yet, just be ready! If I’m right, then you won’t die, and if I’m wrong, no harm done.
+[$aName] He’s got a point!
+[$liName] It’s been a long time since I practiced arrow deflections and if this guy is some kind of assassin it’s gonna be hard to deal with him...
+[$aName] Luckily for you, I brushed up on my deflections only last week while you were spending all day laying around! You remember that?
 $liName gives $aName a guilty look before staring down at the ground sheepishly.
 [$aName] Oh-Kaaaaay, so here is the plan then. We will march straight towards the Oak tree in a line, with me at the front. As soon as he starts firing we break into a run and rush him down while I deflect for us. We rush him down, disarm him, and ask him what his problem is. Sound good?
 You and $liName nod in approval. And with that, the three of you continue on your way. By the time you make it to the brook the silence has become a little uncomfortable, so you break the lull.
@@ -66,7 +69,7 @@ $aName looks at you with an exasperated look on her face.
 [$aName] … never dulls or breaks either, and I think something about it being able to slice through and deflect magic?
 [$liName] Yeah I’ve heard that too.
 [$aName] So basically this sword is crazy awesome, but the guy is clever and melts it down, creating two smaller blades instead of one GIANT blade like it was before. He gives each blade to a son of his, who then become master swordsmen and gain a big following. Before you know it you’ve got $kingdomName and $neighborName, each one founded by a royal son. That was a VERY long time ago now though, and over the centuries the swords were lost and recovered and smelted down and reforged many times. Since smelting with even a small marble’s worth of Dragonium results in an incredible sword, all the nobles want one and it has become extremely valuable. Aaaaaand that is about it, did I forget anything?
-[$liName] Nope, that about covers it. So the moral of the story is don’t mess with us and our blades! Oh, one last note. Dragonium alloy blades are special and because of that are always named. My sword is named Gasp, and $aName’s sword is named Whisper. Not really that important but you seem so amazed by everything I couldn’t help but share.
+[$liName] Nope, that about covers it. So the moral of the story is don’t mess with us, something you would do well to remember. Oh, and one last note; my sword is named Gasp, and $aName’s sword is named Whisper. It’s considered bad luck to wear a blade of this caliber and not name it.
 And so the three of you continue along the path, the two women scanning their surroundings the entire time. In the blink of an eye the three of you pass the rickety wooden sign where you started what feels like ages ago, and you continue to make your way along the hilly countryside. The tension in the air is so thick you find it hard to breathe.
 Ahead Looms the Oak Tree.
 Your small party makes excellent progress, and the moonlight makes it easy enough to traverse the dirt path that winds across the hills. Once the Tree is about a 100 feet away, $aName and $liName draw their blades with a flourish, and prepare themselves.

@@ -7,8 +7,8 @@ Giving up, she tosses it back onto the table and leans back, sipping on her beer
 You reach over and open the wrapper. Reaching in, you grab a little and pop it in your mouth. The instant it hits your tongue your mouth waters tremendously and you remember that despite walking around so much today you have barely had anything to eat. Your stomach rumbles loudly but you pretend not to notice it. You gesture with the $food, offering it to each of your strange companions. All three oblige and hesitatingly pop a bit into their mouths.
 [Woman in White] Unlike anything I’ve ever…
 [Woman in Yellow] Wooooooooow!
-[Woman in Lavender] Yum!
-Mrs. White Cloak sits in quiet amazement, staring at the $food deep in thought while rubbing at the mole on the right of her chin. The other two however start bouncing around in their seats in excitement, and quickly wolf the rest of the $food down.
+[Woman in Lavender] What?
+Mrs. White Cloak sits in quiet fascination, staring at the $food deep in thought while rubbing at the mole on the right of her chin. $aName on the other hand seems quite excited and $liName can’t quite hide her interest at the exotic flavor. It takes all of 30 seconds for the pair to wolf the rest of the $food down.
 [Woman in Yellow] Ok, first of all, WOW. Second of all, my name is $aName. My friend next to me in the wonderful lavender dress is $liName, and like you we are adventurers of sorts. What’s your name?
 [$pName] $pName, nice to meet you.
 $aName looks to her right at the woman in white

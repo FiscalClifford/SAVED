@@ -1,14 +1,15 @@
 You pull out your phone with a flourish, and set it solemnly on the table. $aName and $liName look at it with intense curiosity, eager to see what other foreign toy you have brought for them. Allowing the anticipation to build, you slowly move your hand to the screen, and unlock it. With a bright flash the screen wakes up to your wallpaper and completely incorrect time of day, and the three girls all recoil back in wonder.
 [$bName] … what?
 [$aName] WOOOOOW!
-[$liName] Woah, magic?
+[$liName] hmm…
 You quickly turn it back off and return it to your pocket.
 [$pName] You ask what I am really doing here? The answer is simple. I want to help you on your adventures to complete a quest. I don’t understand a lot about my situation or what is going on but one thing I do know is that you three are main characters and I need to join forces with you…
 [$bName] Main characters?...
 [$pName] … And maybe along the way or by getting to the end of the adventure I will know what is going on. So what do you say?
 You rushed it a bit more than you would have liked but at least the message got across. $aName and $liName lean towards each other and start whispering, glancing at you every so often. $bName relaxes back in her chair, and starts rubbing her mole again. Uneasily you look back and forth between everyone until finally the lull is broken.
 [$aName] $liName and I have decided that we will buy you dinner and get to know you a bit more, as well as tell you what our mission is. While your strange device is interesting and we could definitely use the help of magic on our team, we don’t want to rush into any agreements before getting to know you better.
-With that she gets up and heads for the bartender, presumably to place an order for food. While she is gone, $bName continues looking you up and down with a look of distrust. It seems it will take a bit more effort to convince her to let her guard down.
+[$liName] For the record, I don’t trust you and I certainly don’t think you deserve our charity. But you look so pitiful right now that I let $aName convince me.
+With that $aName gets up and heads for the bartender, presumably to place an order for food. While she is gone, $bName continues looking you up and down with a look of distrust. It seems it will take a bit more effort to convince her to let her guard down.
 [$bName] So then Mr. $pName, where exactly are you from?
 [$pName] Far to the east of here, you wouldn’t have heard of it before. It’s a little village where clothing like mine and magical devices such as this are common.
 [$bName] You mean Dottle?
