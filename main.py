@@ -51,6 +51,7 @@ class g:
     pLocation = "null"
     aLocation = "null"
     bLocation = "null"
+    loadTimes = 0
 
     # !!!Flags!!!
     firstTimeArc2 = "true"
@@ -122,9 +123,38 @@ def startBackgroundMusic():
     music.next()
     music.play()
 
-def postDeathPassage(toPrint):
-    room_run(toPrint)
+def checkLoadTimes():
 
+    #if changing how many loads it takes to go crazy, don't forget to change the text on create_choices as well
+    if g.loadTimes > 3 and g.loadTimes < 8:
+        clear_screen()
+        string = "Your brain stings, your very soul aches in pain. It feels as if a small part of yourself was lost.\n\n"
+        disp_txt(string)
+        time.sleep(2)
+
+    if g.loadTimes > 7 and g.loadTimes < 12:
+        clear_screen()
+        string = "Your spirit screams in agony. Your soul wails in despair. You have dealt irreparable damage to yourself, but the consequences" \
+                 " are yet to seen.\n\n"
+        disp_txt(string)
+        time.sleep(2)
+    if g.loadTimes > 11 and g.loadTimes < 16:
+        clear_screen()
+        string = "You feel your very sanity slipping, your soul withers away. Something core to who you are has been lost to the void forever. You start to chuckle.\n[" \
+                 + g.pName + "] haha... HAHAHAHA...\n\n"
+        disp_txt(string)
+        time.sleep(2)
+    if g.loadTimes > 15 and g.loadTimes < 20:
+        clear_screen()
+        string = "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA.\n[" \
+                 "HAHAHA] HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n\n HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n\n"
+        disp_txt(string)
+        time.sleep(2)
+
+
+def postDeathPassage(toPrint):
+    checkLoadTimes()
+    room_run(toPrint)
     choices = ["Continue..."]
     paths = [g.savedRoom]
     create_choices(choices, paths)
@@ -146,7 +176,7 @@ def loadGame(window):
     print("Game Loaded")
     disp_txt("\nLoading Game...\n")
     window.destroy()
-
+    g.loadTimes += 1
 
 
     #If you physically altered the world, we need to Undo that here
@@ -185,6 +215,7 @@ def loadGame(window):
         g.deathReturn = "null"
         postDeathPassage('arc2_55')
     else:
+        checkLoadTimes()
         eval(g.savedRoom + "()")
 
 
@@ -272,6 +303,28 @@ def replace_variables(string):
             print(str(globy) + " ---- " + str(value))
             string = string.replace("$"+globy, str(value))
     print("##################################")
+
+    if g.loadTimes > 11 and g.loadTimes < 16:
+        string = string.replace('a', 'ha')
+
+    if g.loadTimes > 15 and g.loadTimes < 20:
+        string = string.replace(g.pName, 'HAHAHA')
+        string = string.replace('r', 'HA')
+        string = string.replace('s', 'HA')
+        string = string.replace('t', 'HA')
+        string = string.replace('l', 'HA')
+        string = string.replace('n', 'HA')
+        string = string.replace('e', 'HA')
+
+    if g.loadTimes > 19:
+        string = "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
+                 "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
+                 "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
+                 "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
+                 "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
+                 "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
+                 "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
+                 "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA"
     return string
 
 def clear_screen():
@@ -429,8 +482,12 @@ def settingsconfig():
 def create_choices(choiceList, pathList):
     #create buttons for the amount of options available, represtented by 'number'
     for i in range(0, len(choiceList)):
-        button = Button(frame2, text=choiceList[i], command=lambda i=i: click_choice(pathList[i]), bg="#333333", fg="#EEEEEE")
-        button.pack(fill='both', expand='yes')
+        if g.loadTimes > 19:
+            button = Button(frame2, text="HAHAHAHA", command=lambda i=i: click_choice(pathList[i]), bg="#333333", fg="#EEEEEE")
+            button.pack(fill='both', expand='yes')
+        else:
+            button = Button(frame2, text=choiceList[i], command=lambda i=i: click_choice(pathList[i]), bg="#333333", fg="#EEEEEE")
+            button.pack(fill='both', expand='yes')
 
 #Unique Room for starting the game
 def queue_start_story(window):
@@ -1043,11 +1100,6 @@ for section in story_sections:
     with open(file_path, encoding="utf8") as file_reader:
         story_content[section] = file_reader.read()
     i=i+1
-
-
-
-
-
 
 
 #-----------------------------------------------------MAIN-------------------------------------------------------------
