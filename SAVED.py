@@ -69,11 +69,6 @@ class g:
 
 
 class VLC:
-    # def __init__(self):
-    #     self.Player = Instance('--loop')
-    #     self.mediaList = self.Player.media_list_new()
-    #     self.listPlayer = self.Player.media_list_player_new()
-
     def fillPlaylist(self):
         self.Player = Instance('--loop')
         self.mediaList = self.Player.media_list_new()
@@ -139,6 +134,11 @@ class VLC:
         self.listPlayer.set_media_list(self.mediaList)
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(100)
+    def startBackgroundMusic(self):
+        self.stop()
+        self.fillPlaylist()
+        self.play()
+        self.listPlayer.get_media_player().audio_set_volume(60)
 music = VLC()
 
 
@@ -161,12 +161,6 @@ def get_display_name():
     GetUserNameEx(NameDisplay, nameBuffer, size)
     return nameBuffer.value
 
-def startBackgroundMusic():
-    music.stop()
-    music.fillPlaylist()
-    music.next()
-    music.next()
-    music.play()
 
 def checkLoadTimes():
 
@@ -231,7 +225,7 @@ def loadGame(window):
 
 
 
-    startBackgroundMusic()
+    music.startBackgroundMusic()
     if g.currentRoom == "arc1_0":
         g.currentRoom = "arc1_1"
 
@@ -539,7 +533,7 @@ def queue_start_story(window):
     window.destroy()
 
     #PUT PLAYLIST HERE
-    startBackgroundMusic()
+    music.startBackgroundMusic()
     rollCharacters()
     win.deiconify()
 
