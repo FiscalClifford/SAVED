@@ -9,6 +9,8 @@ import random
 from vlc import Instance
 import ctypes
 import geocoder
+from threading import Thread
+
 #--------------------------------------------------------Globals--------------------------------------------------------
 badInput = ["!","@","#","$","%","^","&","*","^_^",":)"," ","",".",",","-","_","$pName","$aName","$bName","$liName"]
 
@@ -18,7 +20,7 @@ class g:
     
     currentRoom = "null"
     savedRoom = "null"
-    txtSpeed = 0.000000001
+    txtSpeed = 0.00000001
     txtSize = 16
 
     food = "null"
@@ -67,12 +69,15 @@ class g:
 
 
 class VLC:
-    def __init__(self):
+    # def __init__(self):
+    #     self.Player = Instance('--loop')
+    #     self.mediaList = self.Player.media_list_new()
+    #     self.listPlayer = self.Player.media_list_player_new()
+
+    def fillPlaylist(self):
         self.Player = Instance('--loop')
         self.mediaList = self.Player.media_list_new()
         self.listPlayer = self.Player.media_list_player_new()
-
-    def fillPlaylist(self):
         path = "./music/"
         songs = os.listdir(path)
         random.shuffle(songs)
@@ -82,7 +87,7 @@ class VLC:
 
     def play(self):
         self.listPlayer.play()
-        self.listPlayer.get_media_player().audio_set_volume(70)
+        self.listPlayer.get_media_player().audio_set_volume(60)
     def next(self):
         self.listPlayer.next()
     def pause(self):
@@ -92,14 +97,54 @@ class VLC:
     def stop(self):
         self.listPlayer.stop()
     def playIntro(self):
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
         path = './music/title/crystalAir.mp3'
         self.mediaList.add_media(self.Player.media_new(path))
         self.listPlayer.set_media_list(self.mediaList)
         self.listPlayer.play()
-        self.listPlayer.get_media_player().audio_set_volume(70)
+        self.listPlayer.get_media_player().audio_set_volume(60)
+    def playSadSong1(self):
+        print("starting sleep")
+        if g.txtSpeed == 0.05:
+            time.sleep(647)
+        elif g.txtSpeed == 0.01:
+            time.sleep(35)
+        else:
+            return
+        print("ending sleep")
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./music/title/op85.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(100)
+    def playSadSong2(self):
+        print("starting sleep")
+        if g.txtSpeed == 0.05:
+            time.sleep(749)
+        elif g.txtSpeed == 0.01:
+            time.sleep(57)
+        else:
+            return
+        print("ending sleep")
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./music/title/op85.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(100)
 music = VLC()
 
+
 #-------------------------------------------------------Functions-------------------------------------------------------
+
+
 
 def getLocation():
     g = geocoder.ip('me')
@@ -244,7 +289,7 @@ def saveGame(window):
 def changeSettings(newSpeed, newSize):
     
     if newSpeed == "slow":
-        g.txtSpeed = 0.2
+        g.txtSpeed = 0.1
     if newSpeed == "standard":
         g.txtSpeed = 0.05
     if newSpeed == "fast":
@@ -300,7 +345,7 @@ def replace_variables(string):
 
     for globy, value in listy:
         if globy.startswith("__") == False:
-            print(str(globy) + " ---- " + str(value))
+            #print(str(globy) + " ---- " + str(value))
             string = string.replace("$"+globy, str(value))
     print("##################################")
 
@@ -366,7 +411,7 @@ def createTxtFiles(limit):
 def rollCharacters():
     bNames = ['Alexia', 'Aphrodite', 'Domino', 'Jade', 'Karma', 'Destiny', 'Lyra', 'Quinn', 'Ripley', 'Trinity', 'Valkyrie']
     aNames = ['Phoebe', 'Valentina', 'Rose', 'Beatrice', 'Sophia', 'Charlotte', 'Emilia', 'Hazel', 'Faith', 'Iris', 'Ariel']
-    liNames= ['Lacey', 'Chloe', 'Delila', 'Ashe', 'Lucy', 'Violet', 'Autumn', 'Nova', 'Elizabeth', 'Melody', 'Elise']
+    liNames= ['Chloe', 'Delila', 'Ashe', 'Lucy', 'Violet', 'Autumn', 'Nova', 'Elizabeth', 'Melody', 'Mai', 'Lilith']
     banditNames = ['Axel', 'Wulrick', 'Jason', 'Tyrion']
     mercNames   = ['Karen', 'Britt', 'Candice', 'Maud']
     guardNames  = ['Garett', 'Gregory', 'George', 'Geoff']
@@ -449,7 +494,7 @@ def settingsconfig():
         speed.set("fast")
     if g.txtSpeed == 0.05:
         speed.set("standard")
-    if g.txtSpeed == 0.2:
+    if g.txtSpeed == 0.1:
         speed.set("slow")
 
 
@@ -482,7 +527,7 @@ def settingsconfig():
 def create_choices(choiceList, pathList):
     #create buttons for the amount of options available, represtented by 'number'
     for i in range(0, len(choiceList)):
-        if g.loadTimes > 19:
+        if g.loadTimes > 15:
             button = Button(frame2, text="HAHAHAHA", command=lambda i=i: click_choice(pathList[i]), bg="#333333", fg="#EEEEEE")
             button.pack(fill='both', expand='yes')
         else:
@@ -507,7 +552,7 @@ def queue_start_story(window):
     g.pName = g.inputResponse
     g.inputResponse = "null"
     choices = ["Continue..."]
-    paths = ["arc1_8"]
+    paths = ["arc2_62"]
     create_choices(choices, paths)
 
 
@@ -948,11 +993,17 @@ def arc2_62(): #Placed here because it is a continuation of arc 29 for simplicit
         create_choices(choices, paths)
 
 def arc2_30():
+
+    t1 = Thread(target=music.playSadSong1)
+    t1.start()
     room_run("arc2_30")
+
     g.deathReturn = "arc2_30"
     g.knowsDeath = "true"
 
 def arc2_31():
+    t1 = Thread(target=music.playSadSong2)
+    t1.start()
     room_run("arc2_31")
     g.deathReturn = "arc2_31"
     g.knowsDeath = "true"
