@@ -1,0 +1,30 @@
+[$pName] I am from the town of $pLocation. Like I said, you’ve probably never heard of it…
+$bName stares at you wordlessly, until finally relaxing her expression of doubt. 
+[$bName] $pName from the town of $pLocation… Never heard of it.
+[$liName] Me neither, what kind of bumpkin town are you from anyways? You must be waaaay out in the country.
+[$bName] I suppose we cannot all choose our origins… Alright then, well as you now know I’m $bName and I am from the Town of $bLocation, which is pretty far northwest of here. I am on a quest to find the Ancient Dragon.
+$liName’s expression turns to shock, and she silently waggles her fingers over her chest while staring at $bName. Despite looking like she wants to say something, she holds back and lets $bName continue.
+[$bName] I heard many stories growing up of a magical fruit with incredible properties. It can give instant good health and physical ability to those that eat it’s skin, the curing of any ailment to those that eat it’s flesh, and a drastic improvement of intellect to those that chew on it’s seeds. I hope to one day either find this fruit on my travels or find the dragon, whichever comes first. I will ask him to grant me the wish of owning such a plant, and with it I will change the world. By selling the plant I will become fabulously wealthy, by sharing the plant I will save thousands of lives, and by developing farms for the plant I will bring work, wealth, and prosperity to my declining homeland $bLocation… 
+She trails off at the end as if distracted by the mention of $bLocation, and becomes lost in thought. During this brief interlude $aName returns to the table, with several hunks of cheese and baked potatoes in her arms. She has a hard time managing the food and lets it all fall onto the table messily, then grabs a potato for herself and sits down. Before she has time to eat, $liName turns to her excitedly.
+[$liName] $bName is looking for The Dragon as well!
+$aName stops moving her food to her mouth and stops in shock. She glances at $bName, before looking back at $liName in surprise.
+[$aName] Really?
+[$liName] Yes really! Small world huh? Maybe she should join us?
+You reach for a mashed potato hungrily and insert a piece of cheese into it, copying what you see $aName and $liName are doing. While you chow down, $bName rolls her eyes.
+[$bName] I’ve been travelling alone for over a year now and the last thing I want to do is suddenly join a big group of people. No thanks.
+[$liName] Oh. Suit yourself…
+$liName takes a big bite of her food and $aName looks between you and $bName with a neutral expression. 
+[$aName] So, it turns out we are doing the same thing actually. Looking for the dragon, I mean. Different reason entirely but same outcome in the end I guess. Um, lets see… $liName and I are both from $aLocation which is southwest from Kingsbridge and rests right on the border between $kingdomName and $neighborName. Growing up our town was near battles between the two kingdoms all the time and every now and then rogue mercenaries from either side would attack. As you can guess it got pretty rough sometimes… Anyways I am one of the lucky few blessed children of the Ancient Dragon…
+She waggles her fingers across her chest
+[$aName]  …that can use magic. Like the vast majority of magic users however I only know the control word my family has passed down for generations and don’t have hardly any power. Look!
+She points her finger at $bName’s mug and sings a note similar to the sound one would make if they were imitating a car driving by.
+[$aName] Yeeeorm!
+A small jet of water streams out of her pointed fingertip for about a second, gracefully pouring into $bName’s cup of beer
+[$bName] HEY!
+[$aName] Do you have any magic users in $pLocation $pName? Magic users aren’t very common, and even amongst those the majority of ‘em have very little power just like me. The very, very few who do have significant power are usually from high nobility and serve in the King’s court as royal mages and advisors. They also don’t like using magic very often because they are afraid other mages will copy their coveted control words, but I don’t really mind because mine only makes a little bit of water. The way magic works is pretty simple: the longer the control word the more powerful the spell. There isn’t a limit to how many times you can cast spells but it tires you out pretty fast, and if you try to use a control word you aren’t powerful enough to handle you will fail the cast and pass out from exhaustion. I’d like to learn a cooler control word one day but even then I probably couldn’t do much with it…
+She looks at $liName with a wistful expression, who raises her eyebrows back in expectation.
+[$aName] Oh right! Anyways, we left our town so that we could find the Dragon as well. If I find him I will ask him to grant me my wish of becoming the most powerful sorceress in all of $kingdomName. That way I can finally go back home and take care of all those outlaws and rogues that have terrorized my family for so long. I guess I could like, end the war and all that stuff too but my first priority is keeping my people safe for good.
+[$liName] That’s right. The problem is figuring out where The Dragon has been hiding all this time. He’s been gone for at least a hundred years you know.
+$liName leans forward and looks at you intently, pushing her hair back behind her ear before continuing.
+[$liName] Now $pName, you say you want an adventure, but what I don’t see is how you offer any value to us. You wear weird looking clothing, you are completely unarmed, and based on the way you scoffed down that meal you probably don’t have any money either. What do you have to say for yourself?
+You gulp the last bite of food down with satisfaction, and admit to yourself that she is right. What would make you a valuable part of the team?

@@ -1,0 +1,154 @@
+The Die has been cast.
+[$pName] No offense to you, but I’m going to stick with $aName and $liName.
+[$bName] ah… Unfortunate. Well, good luck to the three of you then.
+With a look of mild bemusement, $bName gets up and chugs down the last of her now watered-down beer. She doesn’t even bother to look back as she heads for the door, and leaves without saying another word.
+[$liName] Bit weird, that one…
+[$aName] Yay for us! So glad to have someone that can give us a real advantage for once!
+$aName is beaming at you with a triumphant smile on her face so genuine you can’t help but grin back.
+[$aName] Let’s try and get to Dottle before it gets too dark to see. I was originally planning on waiting until morning to leave but now I’m too excited!
+[$pName] Hey, are you sure? We could just wait a few days first…
+[$aName] Wait a few days stuck in this dump of a town? If you fancy eating nothing but potatoes for a week then go for it, but I simply refuse to waste away here!
+$aName and $liName stand up, gathering their things and preparing to leave. You follow suit, and grab one last piece of cheese off the table to snack on before heading out the front entrance. $aName leads the way to the plaza with a cheerful bounce in her step, and it isn’t long before the three of you are on the road to exit Kingsbridge out the east side where you had originally come in. Suddenly $aName turns to face you, and without looking walks backwards along the road.
+[$aName] So Mr. Mysterious, what is your secret power? I’m sure only the most amazing magicians from $pLocation can use that weird looking device you got there, and you were simply holding back out of humility!
+She turns again so that she can look ahead and walks beside you on your left. $liName matches your speed and walks on your right, but is distracted by looking up at the first stars in the sky that are starting to poke out.
+[$pName] Well, it is kinda hard to describe. I guess you could say I can… see into the future.
+[$aName] What!?
+[$liName] Pff.
+They both stop walking and stare at you expectantly. You wish you could find better words to describe the situation but the most important thing is that you warn them of what lays ahead.
+[$pName] It’s not magic though. Not like yours. It’s a… gut feeling you could say. And it only works in specific situations… But listen there’s something important I need to tell you guys.
+$liName and $aName look at you with intense concentration. It is a relief they are taking you seriously despite hardly knowing you.
+[$pName] Up ahead, there is an Oak Tree. It stands by itself along the path we are taking to Dottle. Inside that Oak Tree is a man that wants to hurt us, probably with a ranged attack. I don’t know why, but he is going to attack us as we approach without even trying to say anything first. Let’s just say in my visions… Things don’t end well for us. We need a plan.
+[$aName] ….
+[$liName] ….
+The pair look at you as if they are still deciding whether or not they want to trust you. After glancing at eachother however, they give a little nod and turn back to ask you:
+[$aName] Ok then Mister Fortune teller, if you can see the future what do we need to do in order to defeat him?
+[$pName] That’s the problem… in all of my visions… we haven’t beaten him yet. I have no idea.
+$liName looks exasperated, and throws her hands into the air.
+[$liName] Is this some kind of joke? Why even bother…
+[$aName] $liName!
+[$liName] … telling … us…
+$liName gives up on her rant halfway through, thinks for a moment, and then continues.
+[$liName] …What kind of bullshit is this? You can tell the future and we are going to get ambushed? By who?  I don’t believe you!
+[$pName] You don’t have to trust or believe me yet, just be ready! If I’m right, then you won’t die, and if I’m wrong, no harm done.
+[$aName] He’s got a point!
+[$liName] It’s been a long time since I practiced arrow deflections and if this guy is some kind of assassin it’s gonna be hard to deal with him...
+[$aName] Luckily for you, I brushed up on my deflections only last week while you were spending all day laying around! You remember that?
+$liName gives $aName a guilty look before staring down at the ground sheepishly.
+[$aName] Oh-Kaaaaay, so here is the plan then. We will march straight towards the Oak tree in a line, with me at the front. As soon as he starts firing we break into a run and rush him down while I deflect for us. We rush him down, disarm him, and ask him what his problem is. Sound good?
+You and $liName nod in approval. And with that, the three of you continue on your way. By the time you make it to the brook the silence has become a little uncomfortable, so you break the lull.
+[$pName] Can you tell me a little more about magic?
+[$aName] I told you the most important stuff earlier already. To cast a spell you just have to visualize the effect and utter the control word. The visualization is just as important as the pronunciation. The reason why mages don’t just randomly spout out gibberish all the time in order to discover new control words is that you have to combine it with the visualization or else it doesn’t work.
+[$liName] …
+The three of you wash your faces and take a drink from the brook, and you relish in the refreshing taste. Unfortunately it seems like your new friends are pretty tense about the upcoming fight still, so you try to relax their nerves by asking another question.
+[$pName] So… Whats up with your swords? They look pretty unique.
+$liName rolls her eyes and $aName grins back at you. Turning back to you, $liName does a little bow, before bending her knees slightly in preparation. With the same flourish you had seen earlier in the alleyway, $liName draws her sword and waves it in the air as if she is fighting an imaginary foe. It is remarkably long at about 5 feet in length, and its hardened steel glows with a unique iridescence similar to that of an opal. It is ever so slightly curved and near the top it flattens out, like a katana. 
+[$liName] Do you know what kind of sword this is?
+You say nothing.
+[$liName] It’s an extremely rare kind of sword called a Fisherman’s blade, named so because it is as long as a fishing pole. The reason it is so rare is because swords this long and thin are supposed to break extremely easily…
+She runs her finger gently across the side of the blade, up and down.
+[$liName] But this one is made with a steel-Dragonium Alloy. Because of this, the blade never dulls and is 100 times stronger than any normal sword. The result is that we get the adaptability of a sword with the range of a spear, without the disadvantage of a wobbly brittle blade. As long as you are properly trained, which we are, a swordswoman who wields a Fisherman’s blade is the most dangerous there is.
+[$aName] My father ordered twin Fisherman blades for $liName and I a few years ago when he found 6 marbles worth of Dragonium on a battlefield. Can you believe how lucky that is? Some rich knight had an entire shield loaded with the stuff, but ended up getting shot in the back by an arrow. Anyways, my father sold two of the six, had one marble made into each of our swords, kept one and gave the last to me.
+$aName pulls at a necklace hidden underneath her dress that you couldn’t see before. The chain is made of tiny rings of metal, and the pendant is a large marble of incredibly luminescent Opal. As the moonlight starts to shine on the field around you and dance in the waves of the brook, so too does it give the marble an incredible glow that makes it seem like it is from another world entirely. 
+[$aName] I don’t know if you had any Dragonium where you are from, but these are crazy rare and valuable. If I were to sell this thing, It would probably be worth like… worth about… ah…
+[$pName] The Town of Kingsbridge?
+$aName gives you a surprised look, and smiles.
+[$aName] yeah exactly! If you found the right buyer I bet one of these marbles could get you a whole town’s worth of Aureus.
+She rotates the marble so that it catches the light, it really is quite dazzling. The three of you continue along the path.
+[$aName] Do you know where Dragonium comes from, $pName?
+[$pName] I get the feeling you are about to tell me.
+[$aName] You’re right about that! Dragonium is a metal that has been melted down from the Original Hero’s blade from centuries ago. As you SURELY remember, the hero was created by the Ancient Dragon…
+$aName and liName waggle their fingers across their chests
+[$aName] … to smite evil from the world. Back in those days The Ancient Dragon always fulfilled the wish of any soul brave enough to pass his test, no matter how dastardly the wish would be. So the Hero’s job was to hunt down and defeat these people if they used their wish for bad things. Considering people would often wish for ridiculous things like ultimate power or immortality, that’s a pretty tall order! So the dragon forged a blade of pure Dragonium so that he could level the playing field, and gave it to the Original Hero. So then the hero spent decades going around and kicking ass, there’s like a whole book on it somewhere that tells you all the…
+[$liName] A Hero’s ballad.
+[$aName] … what?
+[$liName] A hero’s ballad, that’s the name of the book with all his stories.
+[$aName] Oh, um, ok so the book is called “A Hero’s ballad” and it tells all about his adventures but anyways he’s gotta retire one day and his son takes the sword in his stead, but the son died to some sort of hydra or crazy monster…
+[$liName] Chimera! $aName how did you forget this stuff already!?
+$aName looks at you with an exasperated look on her face.
+[$aName] Ok so it turns out I’m not a professional history genius, but I’m doing my best! Sooooooo, he dies to a chimera which luckily don’t exist anymore and another adventurer randomly finds the sword and realizes the thing is AMAZING. Like, crazy good. It’s so light it feels like an extension of your arm…
+[$liName] … So sharp it cuts through anything …
+[$aName] … never dulls or breaks either, and I think something about it being able to slice through and deflect magic?
+[$liName] Yeah I’ve heard that too.
+[$aName] So basically this sword is crazy awesome, but the guy is clever and melts it down, creating two smaller blades instead of one GIANT blade like it was before. He gives each blade to a son of his, who then become master swordsmen and gain a big following. Before you know it you’ve got $kingdomName and $neighborName, each one founded by a royal son. That was a VERY long time ago now though, and over the centuries the swords were lost and recovered and smelted down and reforged many times. Since smelting with even a small marble’s worth of Dragonium results in an incredible sword, all the nobles want one and it has become extremely valuable. Aaaaaand that is about it, did I forget anything?
+[$liName] Nope, that about covers it. So the moral of the story is don’t mess with us, something you would do well to remember. Oh, and one last note; my sword is named Gasp, and $aName’s sword is named Whisper. It’s considered bad luck to wear a blade of this caliber and not name it.
+And so the three of you continue along the path, the two women scanning their surroundings the entire time. In the blink of an eye the three of you pass the rickety wooden sign where you started what feels like ages ago, and you continue to make your way along the hilly countryside. The tension in the air is so thick you find it hard to breathe.
+Ahead Looms the Oak Tree.
+Your small party makes excellent progress, and the moonlight makes it easy enough to traverse the dirt path that winds across the hills. Once the Tree is about a 100 feet away, $aName and $liName draw their blades with a flourish, and prepare themselves.
+[$aName] It’s important we figure out why this assassin is trying to attack us. Taking care of him here instead of waiting for him to ambush us later is the best course of action. Let’s march forward to victory, and may the Ancient Dragon protect us.
+She finishes with a shaky voice, and both she and $liName waggle their fingers across their chests. The three of you line up with $aName in the lead, and march towards the tree. With weapons drawn the assassin will surely realize he’s been outed, and start firing the moment you get within range. This prediction comes true shortly afterwards as the whistle of an arrow sounds through the air.
+Wheeoow!
+Clang!
+With an incredible show of coordination $aName swipes her blade across her body, perfectly deflecting the arrow and sending the broken pieces flying into the grass.
+[$aName] Here we go! Rush him down!
+The three of you charge, and you feel particularly useless and vulnerable sprinting forward without any weapon.
+Wheeeow! Ting!
+Without breaking her stride, $aName manages to block another projectile as it comes rushing forward in a truly remarkable display of skill. Despite your amazement, her face looks worried; these arrows are shot with such incredible force and speed she can barely keep up. Just when you think the next arrow might be the one to slip past her defenses, something remarkable happens.
+Eeerrrrrr… Snap!
+The sound of wood groaning and finally breaking rings out like a bell in the night, and you realize the weakened platform can’t handle the strain of the assassin’s weight. With a deafening crash, the platform finally rips free of the tree and falls apart, tumbling and clattering across the branches of the oak tree until finally smashing into the ground below. Along with it goes the hooded assassin, who was caught completely by surprise and smashes into branches and eventually the dirt with a loud thud. Quick as a flash he stands back up, but he is clearly wounded and clutches his right arm with his left as if something broke. His left ankle appears smashed to pieces as well, and as he stumbles forward you see that his left foot appears not only almost backwards, but practically sideways as well. 
+Despite these traumatic injuries, he looks ready for a fight and deadlier than ever. Letting his right arm hang loosely at his side, he draws a sharp looking shortsword that was sheathed behind his back and points it at your group.
+$aName and $liName notice the unexpected advantage, and don’t let it go to waste. With a battle cry each move in to attack on opposite sides of the man, and proceed with a flurry of attacks. What happens next is nearly indescribable; with $aName in front of him and $liName behind, the man proceeds to block every single attack they throw at him in quick succession, even managing to squeeze in a small lunge or two during the split seconds between the onslaught. Sparks fly as the blades meet, and the movement of all three combatants is so quick it seems to blur before your eyes. Next, $liName and $aName hesitate for a second and then perform a perfectly choreographed attack where $liName swings low and $aName swings high. The attack looks like it will be impossible to dodge… but the hooded figure seems to defy the impossible with every turn. Seeing the coordinated attack coming, he leaps up using only his right leg as a spring and twists his body, turning himself completely horizontal. Spinning in the air now, he weaves his body in between the low and high attacks and lands back on the ground upright, crouched low. Wordlessly, the mysterious stranger then brings his short sword back up and throws it at incredible speed straight towards $aName.
+[$liName] Watch it!
+[$aName] Tsk!
+$aName dodges right, and the spinning dagger slices past a hairs width away from the side of her ribcage but doesn’t manage to actually cut her. Catching her breath, $aName looks shaken up by the close call and hesitates to rejoin the battle. Meanwhile, the man has turned to confront $liName, having drawn yet another weapon from his leg. This one is a dagger, and is zig zagged in a wicked looking shape. With a loud clang, he blocks another attack from $liName in the nick of time and stumbles towards her, trying to close the gap. 
+Seeing him distracted, you take off your shoe and throw it at the back of his head as hard as you can. Without even looking, he whips the dagger around behind his head and slices the shoe in half, sending each piece harmlessly to the ground. This guy is inhuman. And you are… useless.
+$liName and the man continue fighting in a dance of death for several minutes longer, and neither side seems to be able to overcome the other. Surely if the masked man wasn’t injured and could get within range of hurting her it would be over rather quickly, but $liName plays it smart and never allows him to even get close. The enormous length of Gasp allows her to attack time and time again without putting herself at risk, and the man is forced to do nothing more than block and hope that she makes a mistake. A few times he throws a hidden knife or tries to distract her, but $liName blocks each attempt and keeps the pressure up. A few meters away, $aName watches frozen. She looks like she desperately wants to join in and help, but something holds her back and she doesn’t move an inch. Finally, the stalemate is broken when the masked man leaps backwards from the two women and with a sickening crunch of his ankle lands several meters away.
+[???] rrrrrrrrrrrr…
+The man starts making a strange guttural sound that you’ve never heard before. It comes from back of his throat and sounds almost like gravel scraping on pavement.
+[???] rrrrrrrrrrr AAAACCCHHH!
+He follows the gravely sound with an exaggerated noise that could only be him loudly clearing his throat. Wiithout warning, the man erupts into inky black smoke in an enormous explosion that pours black clouds out of every pore of his body. The shockwave is so strong it knocks you back, and you fall flat on your back. In the corner of your vision, you see $aName go tumbling backwards as well, and $liName being flung back but managing to land on her feet.
+On guard, the three of you try to see through the smoke but it expanded rapidly and clouded your entire vision. The man has disappeared, and could attack at any angle.
+[$aName] Come to me! Quick!
+Joining $liName, the pair of you run over to $aName and stand back to back in the shape of a triangle. For a few tense moments you fear that the man in black could attack at any moment, but the dagger never comes. Eventually, the smoke clears and the three of you find yourselves completely alone.
+[$liName] He’s… Gone?
+[$aName] …
+$aName looks extremely shaken up. Trembling violently, she falls to the ground and covers her face as tears silently pour down.
+[$liName] $aName?
+$liName makes sure the coast is properly clear first before sitting down next to $aName and hugging her back. You find yourself so relieved to have made it out alive that you join her, and the three of you huddled together look like children in a thunderstorm.
+[$aName] I’m… *sob*, I’m sorry. I’m so sorry. I let you *sob* down…
+$liName gently wipes a tear from her face with the back of her hand, and soothes her.
+[$liName] You did your best and that’s all that matters. It’s all ok now.
+Abruptly, $aName stands up, still shaking and wiping tears from her eyes. She squares off against you and $liName, who still on your knees look up at her surprised.
+[$aName] All ok? ALL OK? Do you know who that was? Do you know what we just survived?
+You shoot a questioning look at $liName, who seems just as confused as you.
+[$aName] That was DEATH! What the fuck is a horseman doing here? We should be dead! No one has ever survived an encounter with DEATH before, yet here we stand! 
+She turns to you now, and bends over to grab your shirt. Pulling up, she forces you to your feet, and begins shaking you violently back and forth.
+[$aName] WHAT THE FUCK DID YOU DO TO MAKE DEATH COME FOR US!?!?
+$liName shoves herself between the two of you, causing $aName to let you go. Stumbling back, you look at her with a bewildered look.
+[$pName] I have no idea! I’ve never met that guy before in my life! Well, technically it would be more accurate to say he has never met me before in his life…
+[$aName] What the fuck are you talking about!?!? What did you do!?!? What did you just drag me and $liName into!?!?
+[$liName] That’s enough $aName. I understand that was a close call, but now is not the time to let our emotions get in the way of things.
+[$aName] Get in the way of things! Get in the way of things? Don’t you understand? That is DEATH, $liName! DEATH waits for no one, and no one can escape it! We are dead women walking!
+[$liName] What are you talking about? Who is DEATH?
+$aName stares at $liName incredulously for a second before closing her eyes and taking a deep breath. After finally getting herself under control, she opens her eyes again and the $aEyeColor of her iris gleams faintly in the moonlight.
+[$aName] There is more to the story of the Ancient Dragon that most people don’t know about. That most don’t want to know about.
+You hold your breath.
+[a$Name] Take a short break first. I’ll tell you on the way to Dottle.
+The three of you rest against the Oak tree for a few minutes, silently reflecting on the battle. Unfortunately, one of your shoes is ruined and you shudder at the thought of having to walk all the way to another town halfway barefoot. After a bit of rest, your small group stands back up and walks along the path, which is thankfully mostly downhill. Having not said a word since she asked for the break, $aName finally breaks the silence and explains the gravity of the situation.
+[$aName] Centuries ago, the Dragon created our world and all the people, and all the other things you have heard about. He created the Original Hero, the potatoes, and all those other good things. But there’s one thing people hate to admit more than anything else…
+You look over at $aName, who is staring up at the night sky. The stars twinkle behind her as if whispering secrets to eachother.
+[$aName] I thought what I am about to say was all just conspiracy but… The Dragon was, and is, selfish. He created the world to keep himself amused, and just as often as he created good things, he would create bad things so that he could entertain himself with the ensuing conflict. Sometimes in order to keep the drama going, he would need henchmen to influence the world in a way an enormous 3 story tall dragon couldn’t, and so he created the Four Horsemen of the Apocalypse.
+[$pName] The four Horsemen of the Apocalypse?
+[$aName] Yes. You’ve probably heard rumors about them before, but the church does it’s best to hide and squash the tales of their misdeeds. If people knew of how nefarious the Dragon and his henchmen could be, then of course the church who represents them would be shunned by the community…
+[$liName] Yes I suppose I’ve heard some conspiracy theories about them once or twice before. And you are saying DEATH is one of them?
+[$aName] Yes, and I believe we just met him. The four Horsemen of the Apocalypse are DEATH, FAMINE, WAR, and CONQUEST. These four were granted an unimaginable power by the Dragon, and cause no limit of pain and suffering for the people of this world. To be honest, since the dragon hasn’t been seen for so long I expected the horseman to be missing as well but this is terrible news…
+[$liName] Sooooo… You are saying we just defeated one of the most powerful beings in the world!? 
+[$aName] don’t fool yourself $liName. We couldn’t beat him even when he had a broken ankle and his arm was snapped in half. Do you really think we could have beaten him in a straight up battle? Speaking of which, we would have for sure perished if $pName hadn’t warned about his ambush in advance. $pName, you need to start explaining what the hell is going on.
+You take a Deep breath.
+[$pName] Like I said, I saw him in a vision and that is the best explanation I have. Just like you I want to find the dragon and have him grant me a wish. I want nothing more than to join you and go on an adventure. 
+$liName turns to you and points an accusing finger.
+[$liName] You are the most suspicious person I have ever met. How do we know you weren’t working with DEATH to kill us? And your plan backfired so now you are trying to cover up…
+[$pName] cut me some slack, I warned you about the attack didn’t I?
+[$aName] Ok so maybe I buy your story about visions, but the thing I don’t get is why you want to join us to see the dragon. What will you wish for?
+[$pName] … I haven’t figured that out yet. I suppose by the time we find him, I will know it in my heart.
+[$liName] That’s a stupid answer.
+[$pName] Well it’s all I got! 
+[$aName] Not gonna lie $pName, you have given us a lot more questions than answers lately and I’m not sure if I trust you yet. However, the fact you warned us about the attack and that you don’t strike me as a bad person means I’m gonna let you continue to tag along with us for now. But don’t forget, if we are paying for your meals you better make sure you do everything you can to make yourself worth it!
+[$liName] You look pretty stupid tromping around with only one shoe and those weird clothes. We’re gonna have to replace those too…
+[$aName] I’m thinking he could be our pack mule as repayment. What do you think?
+[$liName] I think considering the danger he just put us in, that sounds perfectly fair.
+And so, the three of you continue along draped in moonlight until finally reaching Dottle. The next day, $aName bought you some boots and clothes, as well as horses all three of you could ride on. The riding was a little bumpy at first, but it didn’t take long for you to get the hang of it. After carving a wooden sword out of a stick $liName found, she began giving you some basic fencing lessons so that eventually you could use a sword. But her real intentions during that lesson were to confront you.
+[$liName] Listen $pName, $aName is a kind soul but a little naïve and that is the only reason you are still around. If I get even a shred of a suspicion you are plotting something against her, you are going to become very familiar with Gasp’s edge, got it?
+You gulp.
+[$pName] Got it…
+Soon after the training session ended, and after regrouping with $aName three of you trotted off into the sunset. The adventure you so desperately wished for finally began.
+END OF ARC 2, THE TOWN

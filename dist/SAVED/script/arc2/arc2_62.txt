@@ -1,0 +1,19 @@
+[$pName] Behold… My answer!
+You pull your phone out of your pocket a second time and hold it up for everyone to see. After you unlock it, you make sure to swipe around the screen and open some apps so that they gasp at the moving graphics. You lock it yet again, lay it to rest on the table in front of you, and speak as solemnly as you can.
+[$pName] You say the Dragon hasn’t been seen in over a hundred years, but that will be no problem for an adventuring team with me included.
+You pause for dramatic effect.
+[$pName] With this device, I will know when we get close to the Dragon! It has sensors in it that pick up on his mystical signal, and will allow only me to be able to track him down! The only caveat is that we have to be within 10 miles of his location in order for it to work. Thus, we will have to adventure together for a while to locate him but as soon as we figure out what woods or caves he is hiding in I can take care of the rest!
+$bName rubs her mole and says nothing. $liName tilts her head a little to the side and hums a little to herself, also thinking. $aName’s $aEyeColor eyes light up however, and she starts bouncing in her seat.
+[$aName] Yes its peeeerfeeeeect!
+She sings the syllables of ‘perfect’ with vibrato in a singsong voice, clearly enjoying herself.
+[$aName] I want you to join us! Right away! We need any little advantage possible, plus worse case scenario we could use you as bait if we run into some bandits or something. What a wonderful… uh…
+She appears lost in thought, but $liName quickly chimes in
+[$liName] Coincidence?
+[$aName] Yes! What a wonderful coincidence, how lucky! Plus maybe you could solve our other problem…
+She winks at $liName, who rolls her eyes
+[$liName] Ok $aName, you don’t have to…
+[$aName] But really though cause it’s not like…
+[$liName] $aName!
+$liName looks down at her feet and looks flustered. Before you can ask what is going on, $bName interrupts.
+[$bName] I think I’d like to use you as well. But there’s a condition. I don’t want everyone joining into one big group, its too slow and clunky and not my style at all. I’ll allow you to join me to find the Dragon but it would only be us. So basically you will have to choose if you want to join me or the two girls.
+You glance between the two parties, and realize it’s time to make an important decision. You managed to convince them you were worth taking, but now you have to decide which path to take based on gut feeling alone. Do you follow the intimidating, white cloaked swordswoman $bName? Or do you go along with the colorful and well armed pair of intrepid adventurers, $aName and $liName?

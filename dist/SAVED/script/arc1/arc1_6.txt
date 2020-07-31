@@ -1,0 +1,9 @@
+The machine beeps in confirmation that you made your payment, and Debbie lets loose a huge yawn. As she presses the last few buttons on her register she attempts a bit of small talk, which you are now totally ready for.
+[Debbie] You find everything alright?
+[$pName] Yep, thank you.
+It looks like she pressed one of those buttons in the wrong order because the system starts beeping at her.
+[Debbie] Whoops, one second…
+Absentmindedly, you browse the shelves next to you filled with tabloids. One of them promises to give you the latest scoop on a famous celebrity, and another promises a list of “top 20 ways you can satisfy your partner… In crime”. Who knew splitting the loot after a big heist was so good for criminal relationships? 
+[Debbie] Damn thing…
+Debbie mutters her frustration under her breath as she pokes around on the machine. You are starting to get to the end of your patience now so you look around some more to distract yourself, but unfortunately for you it’s a store and not a ‘Where’s Waldo’ book.
+While you were busy doing nothing Debbie finally manages to finish the order and hands you your receipt. Triumphantly, you grab the $food and exit the store. On the horizon, the sunset is finishing its grand performance and exits gracefully with a swirl of Dark Blues and purples.

@@ -1,0 +1,11 @@
+[$pName] Do those books really allow me to cast spells?
+If you really have been teleported into a fantasy world, its important that you begin to understand the way it works as soon as possible. Main characters usually are gifted in magic or have some sort of special power, so a spellbook would be a good place to start.
+[$merchantName the Merchant] Well, that depends…
+His eyes dart around behind you, making sure that he isn’t wasting his time on you while an actual customer waits in line.
+[$merchantName the Merchant] As I’m sure you know, not very many people control the power of magic. Perhaps one in a hundred thousand, probably. These people activate their powers by uttering a control word, and these are all closely guarded secrets. Despite this, I have compounded a list of over 7 of these magical utterances, and will begrudgingly share this incredible secret with you for only 14 Aureus! Perhaps you have such power hidden within you now, and all you need is to access my top secret compilation!
+[$pName] can I just glance inside it to make sure its legit?
+You run your finger under the lip of the book’s cover, but before you can get under it and flip it open $merchantName smacks your hand away.
+[$merchantName the Merchant] Absolutely not! To give away a control word for free is doing a disservice to myself and the mystical craft as well!
+[$pName] Ah, well, I don’t have any money anyways.
+[$merchantName the Merchant] I figured, judging by that abominable clothing you wear. Don’t you have any respect? Begone from mine stall!
+$merchantName flicks his hand at you in a shooing motion, and you leave the stall.

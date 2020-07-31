@@ -1,0 +1,8 @@
+[$pName] I promise I will find your husband for you.
+[woman] What!? Would you do that for me!?
+[$pName] I’m no hero but… I’ll do my best.
+The woman sobs with gratitude, hugging you and crying all over your clothing. The relief on her face is plain as day and her smile warms your heart.
+[woman] I didn’t know people could be so kind in this world, thank you!
+[$pName] Stay vigilant in case whoever abducted your husband tries to attack you as well. I suggest hiding in your house for a while.
+[woman] I will! Be careful! 
+The woman calls out one last time as you walk away, and her words of gratitude give you hope. You retrace your steps along the path and it doesn’t take long before you get back to the fork in the road. Yet again you get that eerie feeling of danger coming from the path that leads into the forest. Based on the woman’s words and your feeling of dread coming from within the trees you have a strong feeling the carpenter’s abductor, and the carpenter, is hiding somewhere within the forest ahead.
