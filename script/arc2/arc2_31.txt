@@ -70,7 +70,7 @@ What. Just. happened?
 $liName begins sobbing bitterly, looking around her wildly for the culprit that shot the arrow. Realizing that whoever shot $aName is surely reloading even now, you force your legs into action and run for the nearest cover you can find; the Oak Tree. You make it about 10 feet before you hear a whistling in the air.
 wheeow, SHUNK!
 you stumble over something and fall down. You try to take another step to break your fall, but your right leg doesn’t respond and you collapse heavily into the dirt. Confused, you push yourself up onto your left knee and inspect the right; There is an arrow sticking out of it and is lodged halfway through your thigh just above the kneecap. You stare at it dumbly for a split second before the pain hits you like a truck and your leg feels as if it has erupted into fire. Grimacing, you fall over in disbelief and clutch your leg in agony. You scream as hard as you can. 
-[$liName] Out of the you useless…
+[$liName] Out of the way you useless…
 Through your tears of anguish you watch as $liName swiftly jumps over you, sword brandished.
 [$liName] COME OUT FROM THAT TREE!
 With a sinking feeling you realize you weren’t running away from the attacker but rather towards them, and gave them as easy a shot as they could ask for. The only thing distracting you from the nearly unbearable burning sensation in your leg is the morbid curiosity you have for whether or not $liName will overcome the attacker and save your life. You feel more helpless now than ever before.

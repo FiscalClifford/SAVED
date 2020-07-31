@@ -20,7 +20,7 @@ class g:
     
     currentRoom = "null"
     savedRoom = "null"
-    txtSpeed = 0.00000001
+    txtSpeed = 0.05
     txtSize = 16
 
     food = "null"
@@ -552,7 +552,7 @@ def queue_start_story(window):
     g.pName = g.inputResponse
     g.inputResponse = "null"
     choices = ["Continue..."]
-    paths = ["arc2_62"]
+    paths = ["arc1_1"]
     create_choices(choices, paths)
 
 
