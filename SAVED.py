@@ -31,7 +31,7 @@ class g:
     banditName = "null"
     mercName = "null"
     guardName = "null"
-    magicianName = "null"
+    mName = "null"
     bardName = "null"
     thiefName = "null"
     toughName = "null"
@@ -441,7 +441,7 @@ def rollCharacters():
     g.banditName = random.choice(banditNames)
     g.mercName = random.choice(mercNames)
     g.guardName = random.choice(guardNames)
-    g.magicianName = random.choice(magicianNames)
+    g.mName = random.choice(magicianNames)
     g.bardName = random.choice(bardNames)
     g.thiefName = random.choice(thiefNames)
     g.toughName = random.choice(toughNames)
@@ -532,21 +532,17 @@ def create_choices(choiceList, pathList):
 def queue_start_story(window):
     window.destroy()
 
-    #PUT PLAYLIST HERE
     music.startBackgroundMusic()
     rollCharacters()
     win.deiconify()
 
-    # CHANGE THIS AFTER TESTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    #arc2_58()
 
     room_run("arc1_0")
     getInput("Please Enter Character Name:")
     g.pName = g.inputResponse
     g.inputResponse = "null"
     choices = ["Continue..."]
-    paths = ["arc1_1"]
+    paths = ["arc1_8"] # if resetting, send to 1_8
     create_choices(choices, paths)
 
 
@@ -615,7 +611,7 @@ else:
     loadWindow = screen.create_window(480,480, window=loadButton)
 
 #----------------------------------------------Story Sections----------------------------------------------------------
-#I needed to move the name input to the beginning
+#I neededed to move the name input to the beginning
 def arc1_8():
     room_run("arc1_8")
     choices = ["Continue..."]
