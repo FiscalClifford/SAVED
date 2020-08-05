@@ -54,6 +54,8 @@ class g:
     aLocation = "null"
     bLocation = "null"
     loadTimes = 0
+    hName = "null"
+    horseColor = "null"
 
     # !!!Flags!!!
     firstTimeArc2 = "true"
@@ -95,11 +97,11 @@ class VLC:
         self.Player = Instance('--loop')
         self.mediaList = self.Player.media_list_new()
         self.listPlayer = self.Player.media_list_player_new()
-        path = './music/title/crystalAir.mp3'
+        path = './title/crystalAir.mp3'
         self.mediaList.add_media(self.Player.media_new(path))
         self.listPlayer.set_media_list(self.mediaList)
         self.listPlayer.play()
-        self.listPlayer.get_media_player().audio_set_volume(60)
+        self.listPlayer.get_media_player().audio_set_volume(50)
     def playSadSong1(self):
         print("starting sleep")
         if g.txtSpeed == 0.05:
@@ -113,7 +115,7 @@ class VLC:
         self.Player = Instance('--loop')
         self.mediaList = self.Player.media_list_new()
         self.listPlayer = self.Player.media_list_player_new()
-        self.mediaList.add_media(self.Player.media_new('./music/title/op85.mp3'))
+        self.mediaList.add_media(self.Player.media_new('./title/op85.mp3'))
         self.listPlayer.set_media_list(self.mediaList)
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(100)
@@ -130,7 +132,7 @@ class VLC:
         self.Player = Instance('--loop')
         self.mediaList = self.Player.media_list_new()
         self.listPlayer = self.Player.media_list_player_new()
-        self.mediaList.add_media(self.Player.media_new('./music/title/op85.mp3'))
+        self.mediaList.add_media(self.Player.media_new('./title/op85.mp3'))
         self.listPlayer.set_media_list(self.mediaList)
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(100)
@@ -434,6 +436,7 @@ def rollCharacters():
 
     aLocations = ['Pondwall','Cliffham','Moonburgh', 'Pinehorn', 'Newrock', 'Pinewood', 'Oldview', 'Limeacre' ]
     bLocations = ['Roseham', 'Emberport', 'Greencross', 'Clearbarrow', 'Rustpeak', 'Oxshell', 'Fayview', 'Edgehold']
+    horsecolors = ['Brown', 'Yellow', 'White', 'Black']
 
     g.aName = random.choice(aNames)
     g.bName = random.choice(bNames)
@@ -461,6 +464,7 @@ def rollCharacters():
     g.aLocation = random.choice(aLocations)
     g.bLocation = random.choice(bLocations)
     g.merchantName = random.choice(merchantNames)
+    g.horseColor = random.choice(horsecolors)
 
 
 #--------------------------------------------------------GUI------------------------------------------------------------

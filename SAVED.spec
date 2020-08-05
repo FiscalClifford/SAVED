@@ -37,6 +37,7 @@ def extra_datas(mydir):
 a.datas += extra_datas('./assets')
 a.datas += extra_datas('./music')
 a.datas += extra_datas('./script')
+a.datas += extra_datas('./title')
 
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)

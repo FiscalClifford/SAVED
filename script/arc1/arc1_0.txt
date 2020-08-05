@@ -1,6 +1,5 @@
-Welcome to SAVED. In the lower right corner you can see the settings button, which will allow you to change settings, load, and SAVE your game. There are NO CHECKPOINTS, and if you are not careful you will die and be forced to load your last save or start a new game. You can SAVE and load your adventure any time you wish; however every now and then you will get a save point recommendation to help you along. Try to make sure you have at least an hour of reading time before starting so that you aren’t forced to abandon progress.
-The game sometimes plays music or sounds so it is recommended you keep the volume on your computer on. You can mute the background music in the settings menu but Important audio will still play. If you wish to play a custom playlist, place any music you like into ./music
+Welcome to SAVED. In the lower right corner you can see the settings button, which will allow you to change settings, load, and SAVE your game. There are NO CHECKPOINTS, and if you are not careful you will be forced to load your last save or start a new game. You can SAVE and load your adventure any time you wish; however every now and then you will get a save point recommendation to help you along. Try to make sure you have at least an hour of reading time before starting so that you aren’t forced to abandon progress.
+The game sometimes plays music or sounds so it is recommended you keep the volume on your computer on. You can mute the background music in the settings menu but Important audio will still play.
 This game is not recommended for those easily disturbed or have a sensitivity to violence. Good Luck, and choose well.
 
 First thing’s first: What is your character’s Name?
-
