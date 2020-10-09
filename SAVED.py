@@ -104,6 +104,7 @@ class VLC:
         self.listPlayer.get_media_player().audio_set_volume(50)
     def playSadSong1(self):
         print("starting sleep")
+        #This is for playing op85 during town death scenes. They need a unique timer on a thread to work.
         if g.txtSpeed == 0.05:
             time.sleep(647)
         elif g.txtSpeed == 0.01:
@@ -121,6 +122,7 @@ class VLC:
         self.listPlayer.get_media_player().audio_set_volume(100)
     def playSadSong2(self):
         print("starting sleep")
+        # This is for playing op85 during town death scenes. They need a unique timer on a thread to work.
         if g.txtSpeed == 0.05:
             time.sleep(749)
         elif g.txtSpeed == 0.01:
@@ -149,10 +151,12 @@ music = VLC()
 
 
 def getLocation():
+    #returns your city
     g = geocoder.ip('me')
     return(g.city)
 
-def get_display_name():
+def getDisplayName():
+    #make sure to make name all caps
     GetUserNameEx = ctypes.windll.secur32.GetUserNameExW
     NameDisplay = 3
 
@@ -535,11 +539,9 @@ def create_choices(choiceList, pathList):
 #Unique Room for starting the game
 def queue_start_story(window):
     window.destroy()
-
     music.startBackgroundMusic()
     rollCharacters()
     win.deiconify()
-
 
     room_run("arc1_0")
     getInput("Please Enter Character Name:")
@@ -549,9 +551,15 @@ def queue_start_story(window):
     paths = ["arc1_8"] # if resetting, send to 1_8
     create_choices(choices, paths)
 
+def quit_me():
+    print('quit')
+    win.quit()
+    win.destroy()
+
 
 #build main GUI------------------------------------------------------------------
 win = tk.Tk()
+win.protocol("WM_DELETE_WINDOW", quit_me)
 win.geometry("600x800")
 win.title("SAVED")
 win.iconbitmap('./assets/treelarge_CKX_icon.ico')
