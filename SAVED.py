@@ -1,16 +1,24 @@
-from tkinter import *
-import tkinter as tk
-import tkinter.scrolledtext as tkst
-import time
-import pickle
-from datetime import datetime
-import os
-import random
-from vlc import Instance
-import ctypes
-import geocoder
-from threading import Thread
-
+import sys
+try:
+    from tkinter import *
+    import tkinter as tk
+    import tkinter.scrolledtext as tkst
+    import time
+    import pickle
+    from datetime import datetime
+    import os
+    import random
+    from vlc import Instance
+    import ctypes
+    import geocoder
+    from threading import Thread
+except Exception as error:
+    with open('~/Desktop/ERRORLOG', 'wb') as f:
+        f.write(error)
+        f.write(sys.exc_type)
+        f.write("\n\nError Importing. Make sure computer OS and VLC are updated and installed.")
+    f.close()
+    print("ERROR")
 #--------------------------------------------------------Globals--------------------------------------------------------
 badInput = ["!","@","#","$","%","^","&","*","^_^",":)"," ","",".",",","-","_","$pName","$aName","$bName","$liName"]
 
@@ -28,9 +36,6 @@ class g:
     aName = "null"
     bName = "null"
     liName = "null"
-    banditName = "null"
-    mercName = "null"
-    guardName = "null"
     mName = "null"
     bardName = "null"
     thiefName = "null"
@@ -103,15 +108,9 @@ class VLC:
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(50)
     def playSadSong1(self):
-        print("starting sleep")
         #This is for playing op85 during town death scenes. They need a unique timer on a thread to work.
-        if g.txtSpeed == 0.05:
-            time.sleep(647)
-        elif g.txtSpeed == 0.01:
-            time.sleep(35)
-        else:
-            return
-        print("ending sleep")
+        time.sleep(647)
+
         self.stop()
         self.Player = Instance('--loop')
         self.mediaList = self.Player.media_list_new()
@@ -121,15 +120,9 @@ class VLC:
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(100)
     def playSadSong2(self):
-        print("starting sleep")
         # This is for playing op85 during town death scenes. They need a unique timer on a thread to work.
-        if g.txtSpeed == 0.05:
-            time.sleep(749)
-        elif g.txtSpeed == 0.01:
-            time.sleep(57)
-        else:
-            return
-        print("ending sleep")
+        time.sleep(749)
+
         self.stop()
         self.Player = Instance('--loop')
         self.mediaList = self.Player.media_list_new()
@@ -204,6 +197,36 @@ def postDeathPassage(toPrint):
     paths = [g.savedRoom]
     create_choices(choices, paths)
 
+def deadChecker():
+    # if you just died this is a special message for you :)
+    if g.deathReturn == "arc2_17" or g.deathReturn == "arc2_42":
+        g.deathReturn = "null"
+        postDeathPassage('arc2_52')
+
+    elif g.deathReturn == "arc2_18" or g.deathReturn == "arc2_35" or g.deathReturn == "arc2_36":
+        g.deathReturn = "null"
+        postDeathPassage('arc2_56')
+
+    elif g.deathReturn == "arc2_30" or g.deathReturn == "arc2_48":
+        g.deathReturn = "null"
+        postDeathPassage('arc2_54')
+
+    elif g.deathReturn == "arc2_31" or g.deathReturn == "arc2_47":
+        g.deathReturn = "null"
+        postDeathPassage('arc2_53')
+
+    elif g.deathReturn == "arc2_43":
+        g.deathReturn = "null"
+        postDeathPassage('arc2_57')
+
+    elif g.deathReturn == "arc2_44":
+        g.deathReturn = "null"
+        postDeathPassage('arc2_55')
+    else:
+        checkLoadTimes()
+        eval(g.savedRoom + "()")
+
+
 def loadGame(window):
     win.deiconify()
     with open('./savefile', 'rb') as f:
@@ -235,33 +258,7 @@ def loadGame(window):
     if g.currentRoom == "arc1_0":
         g.currentRoom = "arc1_1"
 
-    #if you just died this is a special message for you :)
-    if g.deathReturn == "arc2_17" or g.deathReturn == "arc2_42":
-        g.deathReturn = "null"
-        postDeathPassage('arc2_52')
-
-    elif g.deathReturn == "arc2_18" or g.deathReturn == "arc2_35" or g.deathReturn == "arc2_36":
-        g.deathReturn = "null"
-        postDeathPassage('arc2_56')
-
-    elif g.deathReturn == "arc2_30" or g.deathReturn=="arc2_48":
-        g.deathReturn = "null"
-        postDeathPassage('arc2_54')
-
-    elif g.deathReturn == "arc2_31" or g.deathReturn=="arc2_47":
-        g.deathReturn = "null"
-        postDeathPassage('arc2_53')
-
-    elif g.deathReturn == "arc2_43":
-        g.deathReturn = "null"
-        postDeathPassage('arc2_57')
-
-    elif g.deathReturn == "arc2_44":
-        g.deathReturn = "null"
-        postDeathPassage('arc2_55')
-    else:
-        checkLoadTimes()
-        eval(g.savedRoom + "()")
+    deadChecker()
 
 
 def saveGame(window):
@@ -293,7 +290,7 @@ def changeSettings(newSpeed, newSize):
     if newSpeed == "standard":
         g.txtSpeed = 0.05
     if newSpeed == "fast":
-        g.txtSpeed = 0.01
+        g.txtSpeed = 0.0001
 
     if newSize == "small":
         g.txtSize = 10
@@ -314,15 +311,19 @@ def click_choice(choice):
     print("Player Chose: " + str(choice))
     eval(choice + "()")
 
-def disp_txt(string):
+def textOutput(string):
     for char in string:
-        
-        textWindow.see(tk.END)
+        if g.txtSpeed != 0.0001:
+            textWindow.see(tk.END)
         textWindow.insert(tk.INSERT, char)
         if char == '\n':
             textWindow.insert(tk.INSERT, '\n')
         textWindow.update()
         time.sleep(g.txtSpeed)
+
+def disp_txt(string):
+    textThread = Thread(target=textOutput(string))
+    textThread.start()
 
 def disp_txt_at_speed(string, speed):
     for char in string:
@@ -410,13 +411,10 @@ def createTxtFiles(limit):
 
 def rollCharacters():
     bNames = ['Alexia', 'Aphrodite', 'Domino', 'Jade', 'Karma', 'Destiny', 'Lyra', 'Quinn', 'Ripley', 'Trinity', 'Valkyrie']
-    aNames = ['Phoebe', 'Valentina', 'Rose', 'Beatrice', 'Sophia', 'Charlotte', 'Emilia', 'Hazel', 'Faith', 'Iris', 'Ariel']
+    aNames = ['Phoebe', 'Valentine', 'Rose', 'Beatrice', 'Sophia', 'Charlotte', 'Emilia', 'Hazel', 'Faith', 'Iris', 'Ariel']
     liNames= ['Chloe', 'Delila', 'Ashe', 'Lucy', 'Violet', 'Autumn', 'Nova', 'Elizabeth', 'Melody', 'Mai', 'Lilith']
-    banditNames = ['Axel', 'Wulrick', 'Jason', 'Tyrion']
-    mercNames   = ['Karen', 'Britt', 'Candice', 'Maud']
-    guardNames  = ['Garett', 'Gregory', 'George', 'Geoff']
-    magicianNames=['Pluto', 'Mercury', 'Venus', 'Mars']
-    bardNames   = ['Paganini', 'Vivaldi', 'Sarasate', 'Bach']
+    mNames=['Pluto', 'Mercury', 'Venus', 'Mars']
+    bardNames   = ['Paganini', 'Vivaldi', 'Sarasate']
     thiefNames  = ['Tex', 'Lucas', 'Isaac', 'Noland']
     toughNames  = ['Brom', 'Diesel', 'Wulfe', 'Bruce']
     medicNames  = ['Daisy', 'Arya', 'Minneie', 'Sophia']
@@ -445,10 +443,7 @@ def rollCharacters():
     g.aName = random.choice(aNames)
     g.bName = random.choice(bNames)
     g.liName = random.choice(liNames)
-    g.banditName = random.choice(banditNames)
-    g.mercName = random.choice(mercNames)
-    g.guardName = random.choice(guardNames)
-    g.mName = random.choice(magicianNames)
+    g.mName = random.choice(mNames)
     g.bardName = random.choice(bardNames)
     g.thiefName = random.choice(thiefNames)
     g.toughName = random.choice(toughNames)
@@ -492,7 +487,7 @@ def settingsconfig():
     if g.txtSize == 10:
         size.set("small")
 
-    if g.txtSpeed == 0.01:
+    if g.txtSpeed == 0.0001:
         speed.set("fast")
     if g.txtSpeed == 0.05:
         speed.set("standard")
@@ -514,7 +509,7 @@ def settingsconfig():
     speedLabel = Label(settings_window, text="Text Scroll Speed", bg = "#333333", fg = "#EEEEEE").grid(row=3, column=1)
     radio1 = Radiobutton(settings_window, text="    Slow    ",indicatoron=0, variable=speed, value="slow", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=0,sticky="nsew")
     radio2 = Radiobutton(settings_window, text="Standard",indicatoron=0, variable=speed, value="standard", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=1,sticky="nsew")
-    radio3 = Radiobutton(settings_window, text="    Fast    ",indicatoron=0, variable=speed, value="fast", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=2,sticky="nsew")
+    radio3 = Radiobutton(settings_window, text="    fast    ",indicatoron=0, variable=speed, value="fast", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=2,sticky="nsew")
     sizeLabel = Label(settings_window, text="Text Size", bg = "#333333", fg = "#EEEEEE").grid(row=5, column=1)
     radio4 = Radiobutton(settings_window, text="    Small    ",indicatoron=0, variable=size, value="small", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=0,sticky="ew")
     radio5 = Radiobutton(settings_window, text="Standard",indicatoron=0, variable=size, value="standard", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=1,sticky="ew")
