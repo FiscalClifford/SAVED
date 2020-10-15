@@ -1,0 +1,14 @@
+[$pName] A man who acts like a monster deserves to be slain like one. Do it $liName.
+Without a moment of hesitation $liName pulls the trigger and sends a bolt straight through the Baron’s head, pinning him to the base of the bed.
+[Baron’s Wife] NOOOOOOOOOOOO!!!
+[Baron’s Son] DADDYYYYYYY!!!!
+His family screams and cries in the corner hysterically, but don’t move a muscle. They watch helplessly as the man they love more than anyone else bleeds all over the place they once slept together.
+[$pName] Lets go.
+With that the four of you exit back out the way you came, down the stairs, and then through a storage room entrance in the back of the fortress. Without any incident you make it outside the walls, and regroup just outside of town. For a long time, nobody says a thing. Then:
+[$aName] Looks like we are all clear. Our next stop is going to be Durango, huh?
+[$liName] I believe so. He seemed so scared it didn’t strike me as a lie. Do you think you can handle exploring some ancient ruins, $pName?
+[$pName] Only one way find out. You’re coming along with us, right $mName?
+[$mName] So I get to stick with you guys? Of course I’m coming along!
+Victorious, the four of you set off west for the town of Durango. 
+After travelling for a few days, you heard the news about what happened in the Barony after you had moved on. Apparently, with the Baron dead the townsfolk were able to quickly kick out his remaining forces and take control of the barony for themselves. Eventually the Royal investigators arrived to see that their original target was no longer around, and left without incident. In the end, the townsfolk were able to elect one of their elders as mayor and they tore down all the old rules and tyranny the Baron had established during his short reign. Within only a few months the region managed to get back on track and even prosper. Legend has it they were able to save the town thanks to the efforts of a clever street magician and his eccentric friends, but perhaps that is simply a rumor…
+END OF ARC 3, THE BARON

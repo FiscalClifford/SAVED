@@ -1,0 +1,58 @@
+After a few more hours of peaceful travelling your fearsome foursome arrived at the outskirts of $baronName’s Barony. Along the way, several things stuck out to you: the first, was that many of the farms and fields of crops you passed by along the way were in terrible shape. Many of them were only half used and overrun by weeds. A significant amount had people trying to harvest the crops and plow the dirt by hand instead of with animals, and everyone looked tired and hungry. The small shacks you passed by were in disrepair, and it looked like the tools the farmers used hadn’t been fixed or improved in years. Worse, at one point you walked past a farmer who was beaten into a bloody pulp and left lying at the side of the road. After $aName and $liName gave him some water and helped him sit upright, he explained that the Baron’s men had hurt him so bad because he failed to pay his rent.
+[Farmer] He asks for rent so high that we couldn’t possibly afford it, and we get stuck in a lose-lose situation. It’s the worst! If we refuse the rent and taxes then his goons come and rough us up badly. If we pay it, then we don’t have enough money to buy more seed, or tools, or animals. Then the next month those losses pile up and it only gets harder to pay! Just a month ago I had to sell our last plowing horse in order to take care of the piling up expenses. In the end it hurts the barony worse because none of the farmers can afford to farm anything anymore and a famine will soon be upon us… but the Baron doesn’t care. He just wants his stinking Aureus…
+After bandaging a nasty gash on his head, he thanked you and hobbled back to his farm. With nothing else you could do for him, the four of you pressed on towards the main town. By the time you managed to get within a mile of it, the sky had transformed into a mess of dark grey clouds that threatened to rain. And now…
+Ahead of you a crude wall of assorted wooden furniture, wheelbarrows, tables and stakes looms along the outskirts of the town. The barricade wouldn’t be enough to stop a real attacking force, but for small crews such as yours it provides a reasonable advantage to the defenders. Speaking of defenders, there are numerous: peeking over the top of the barricade are dozens and dozens of curious looking townsfolk, gawking at you with guarded expressions. Some even stand on stools, and hold their pointy looking wooden spears menacingly over the barrier. After finally getting within speaking distance, $mName marches ahead of you with confidence and yells out to the guards.
+[$mName] Townsfolk! I know you are suspicious, but you know me and that I would never intend harm! These are simply my friends that would like to help visit the town, there is no need for violence!
+One of the townsfolk yells back from behind the barrier with a gruff voice.
+[man] How do we know you aren’t the royal investigators? If we let them through, $baronName would have our heads for sure!
+[$mName] David my friend, is that you? David you know me well enough, you know I have neither the stature nor wit to befriend the likes of a royal investigative party! Furthermore, officials always travel with a huge entourage, but it is merely us four!
+[man] $mName, I didn’t recognize you! You old dog, I thought you left because nobody was tipping you for your tricks and you got all huffy about it?
+[$mName] Well David you aren’t wrong, but I’ve got more important things to do now. Would you let us in?
+[David] yes, yes of course. C’mon Jerry, open ‘er up. $mName is harmless and his friends probably are too.
+In the center of the road is an enormous wooden plank blocking the way, which two of the townsfolk grab at either side and move out of the way. With the road cleared, the four of you venture cautiously inside. The guards don’t look good, and most of them wear ragged clothing and no protection. All of them have cheap looking wooden spears and most look like they have been missing meals lately. The overcast sky casts a sallow look upon their features, which only makes them look even more feeble. Despite them technically being an immediate threat to you, you almost pity them.
+[David] Well $mName, welcome back. Don’t suppose you can magic in a cartload of potatoes for us now can ya?
+[$mName] Unfortunately no, but if you happen to know the control word for potato summoning I would be happy to try!
+[David] The day I get my hands on a wonderful control word like that is the day I finally can afford to get my family out of this dump. Not sure why you lot would want to come here at a time like this, but all the same welcome.
+After thanking him for entry, you make your way past and the four of you get your bearings in the center of town.
+[$liName] So the Baron has forced all of them to act as his soldiers huh?
+[$mName] The Baron has a few real and well armed soldiers in his fort, but if a royal party came to stop his dealings with the cult then they wouldn’t stand a chance. I suppose he hopes the townsfolk will be able to slow down any royal force that shows up while he and his men escape.
+[$aName] That’s messed up! Sounds like this $baronName is a real dick. I’d like to go up to him and give him a piece of my mind…
+[$pName] before we get too far ahead of ourselves, can I get a sword first?
+$aName and $mName look at you with surprise, and $liName bursts out into laughter.
+[$liName] a Sword!? What on earth would you be able to use a sword for?
+[$pName] Well I’d like to be able to defend myself is all.
+[$liName] Let me give you a harsh bit of reality. Someone with a cheap, shitty wooden spear like we saw the townsfolk using will defeat a swordsman almost every time if they both have similar training. It takes years to get good with a sword, and even longer to overcome any stupid monkey with a long pointy stick. If anything, you should be asking for a spear!
+[$pName] Yeah but spears aren’t as cool…
+$liName marches up to you and flicks you squarely in the center of the forehead.
+[$pName] OW! Stop doing that!
+[$liName] Being cool means nothing when you are dead! You think this is some kind of fantasy land?
+[$aName] Stop it you two! How about we get a cheap dagger for $pName that he can use for emergencies and we call it good?
+Clutching your forehead, you sheepishly nod in agreement and everyone makes their way to the local weapons shop. Upon entering, you are disappointed to find that there aren’t any weapons here at all other than wooden spears.
+[Shopkeeper] Welcome! Another conscript in need of a spear huh?
+[$pName] Actually I was hoping to get a dagger…
+[Shopkeeper] Wow, an actual customer! I haven’t had one of those in ages. Well I had to sell all my real weapons about a month ago at a discount to a traveling merchant in order to make rent, and I’m forced by the baron to only make spears now. So in the end I guess I don’t have anything for you other than a wooden spear… Unless you want the little wood carver I use to make the spears with? I have an extra lying around if you want.
+He fumbles around in a nearby cupboard  for a moment before reemerging and placing a small knife on the counter. It is the length of your hand, and has a plain wooden handle. The metal is rusty, and the edge of the blade is sharp near the tip but dull at the rest. The sheath that covers it is made of beat up leather than looks like it was probably made for a different knife a long time ago.
+[Shopkeeper] How does 20 Aureus sound?
+[$aName] We can do 10.
+[Shopkeeper] That’s 10 more aureus than I’ve made all week, sale!
+$aName slides the money across the counter to the shopkeeper and you string the sheath into a belt loop on your pants. It is probably the most pitiful weapon anyone has ever wielded, but its better than nothing and you feel a little less helpless than before.
+The Four of you approach the Baron’s fortress, which sits inside the town on the eastern edge. While surrounded by small hovels that peasants live inside, there is at least a 50 foot gap between the walls and the houses so that nobody can use the houses as a means to get over easily. The walls themselves are made up of enormous logs sharpened into points, which rest next to each other pointing straight up and are bound together by numerous ropes. Large wooden supports ensure it remains sturdy, but the logs are buried so deep into the ground they probably don’t need it. The entrance is small and has no gate but it likely would be easy to defend with only 10 or so spearmen. Behind the walls is a single huge building, completely round and with a pointed roof. The small area inside and between the fort and the walls is used by the guards for patrolling, storage, and lounging about. As your group heads for the gap in the wall, you feel the eyes of the guards on all of you. It is clear they don’t trust strangers, and your colorful friends certainly attract a lot of attention. Once you reach the gap, a guard approaches.
+[Guard] Halt! State your business.
+[$aName] We wish to speak with the Baron.
+[Guard] Everyone wants to complain these days, tsk. He’s not accepting guests right now, begone!
+[$aName] We just want to ask about…
+The guard pushes $aName back roughly, and a couple other guards approach with their spears brandished.
+[$aName] Why you…
+$aName quickly reaches over her shoulder for her blade, but after hesitating for a moment returns her tensed arm to her side. Swallowing her pride, she turns her back on the guards and walks back along the road from the way you came visibly frustrated. You decide to follow, and wordlessly the four of you regroup behind some houses close to the fortress.
+[$aName] Grrr…. Well that was a great start, we are never going to get close to him like this. What do we do?
+Everyone stares blankly at the ground in thought, until $mName seems to light up with a new idea.
+[$mName] You know, the tax collectors return with their ill-gotten wealth this evening. It usually arrives in carts filled with crops, goods, and of course Aureus. We could figure out a way to sneak into one of those wagons…
+[$liName] Too risky. If we get found out we will be at a serious disadvantage, and even if we did sneak all the way in and talked to the Baron he might not be intimidated enough to tell us about the cult. I say we just attack from the front since there are only around 30 guards here. We slice through them like it’s nothing, and by the time we get to the Baron he will know we mean business and tell us anything we want.
+[$pName] 30 guards is a lot! 
+[$liName] For a newbie like you maybe. If $aName and I use the entrance to the fort as a chokepoint, their own defenses can be used against them. They won’t be able to have more than five people attack us at a time.
+[$mName] I still think sneaking through is better. Fighting that many guards sounds way riskier than getting caught…
+[$liName] Right but if we get discovered we can’t use the entrance as a chokepoint, and we could be sitting ducks if found while sitting in that cart. What do you think $aName?
+[$aName] I don’t know! Do we really need to resort to violence so soon?
+[$pName] If we don’t get to $baronName before the Royal Investigators do, which could happen any day now, we probably never will.
+[$aName] Ah, that’s a good point. Alright then $pName, what do YOU think we should do? Choose carefully!
+[$pName] I’m thinking the best option is…

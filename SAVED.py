@@ -246,20 +246,15 @@ def loadGame(window):
     window.destroy()
     g.loadTimes += 1
 
-
     #If you physically altered the world, we need to Undo that here
     g.loosenedPlanks = "false"
     g.metB = "false"
-
-
-
 
     music.startBackgroundMusic()
     if g.currentRoom == "arc1_0":
         g.currentRoom = "arc1_1"
 
     deadChecker()
-
 
 def saveGame(window):
     now = datetime.now()
@@ -355,12 +350,9 @@ def replace_variables(string):
 
     if g.loadTimes > 15 and g.loadTimes < 20:
         string = string.replace(g.pName, 'HAHAHA')
-        string = string.replace('r', 'HA')
-        string = string.replace('s', 'HA')
-        string = string.replace('t', 'HA')
-        string = string.replace('l', 'HA')
-        string = string.replace('n', 'HA')
-        string = string.replace('e', 'HA')
+        string = string.replace(g.aName, 'HAHAHA')
+        string = string.replace(g.bName, 'HAHAHA')
+        string = string.replace(g.liName, 'HAHAHA')
 
     if g.loadTimes > 19:
         string = "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
@@ -405,7 +397,7 @@ def getInput(prompt):
 #this is used for creating .txt files before importing the literature
 def createTxtFiles(limit):
     for i in range(0, limit):
-        name=("script/arc2_" + f"{i}"+ ".txt")
+        name=("script/arc7_" + f"{i}"+ ".txt")
         file = open(name,"w+")
         file.close()
 
@@ -413,7 +405,7 @@ def rollCharacters():
     bNames = ['Alexia', 'Aphrodite', 'Domino', 'Jade', 'Karma', 'Destiny', 'Lyra', 'Quinn', 'Ripley', 'Trinity', 'Valkyrie']
     aNames = ['Phoebe', 'Valentine', 'Rose', 'Beatrice', 'Sophia', 'Charlotte', 'Emilia', 'Hazel', 'Faith', 'Iris', 'Ariel']
     liNames= ['Chloe', 'Delila', 'Ashe', 'Lucy', 'Violet', 'Autumn', 'Nova', 'Elizabeth', 'Melody', 'Mai', 'Lilith']
-    mNames=['Pluto', 'Mercury', 'Venus', 'Mars']
+    mNames=['Blain', 'Copper', 'Harry', 'Penn']
     bardNames   = ['Paganini', 'Vivaldi', 'Sarasate']
     thiefNames  = ['Tex', 'Lucas', 'Isaac', 'Noland']
     toughNames  = ['Brom', 'Diesel', 'Wulfe', 'Bruce']
@@ -1120,10 +1112,69 @@ def arc2_48():
 
 def arc2_49():
     room_run("arc2_49")
+    choices = ["Continue..."]
+    paths = ["arc3_0"]
+    create_choices(choices, paths)
 
 def arc2_50():
     room_run("arc2_49")
 
+def arc3_0():
+    room_run("arc3_0")
+    choices = ["Continue..."]
+    paths = ["arc3_1"]
+    create_choices(choices, paths)
+
+def arc3_1():
+    room_run("arc3_1")
+    choices = ["Continue..."]
+    paths = ["arc3_2"]
+    getInput("Please Enter Horse's Name:")
+    g.hName = g.inputResponse
+    g.inputResponse = "null"
+    create_choices(choices, paths)
+
+def arc3_2():
+    room_run("arc3_2")
+    choices = ["Continue..."]
+    paths = ["arc3_3"]
+    create_choices(choices, paths)
+
+def arc3_3():
+    room_run("arc3_3")
+    choices = ["Sneak In", "Attack Directly"]
+    paths = ["arc3_4", "arc3_5"]
+    create_choices(choices, paths)
+
+def arc3_4():
+    room_run("arc3_4")
+    choices = ["Continue..."]
+    paths = ["arc3_6"]
+    create_choices(choices, paths)
+
+def arc3_5():
+    room_run("arc3_5")
+    choices = ["Continue..."]
+    paths = ["arc3_6"]
+    create_choices(choices, paths)
+
+def arc3_6():
+    room_run("arc3_6")
+    choices = ["Spare Him", "Kill Him"]
+    paths = ["arc3_7", "arc3_8"]
+    create_choices(choices, paths)
+
+def arc3_7():
+    room_run("arc3_7")
+    choices = ["Continue..."]
+    paths = ["arc4_0"]
+    create_choices(choices, paths)
+
+def arc3_8():
+    room_run("arc3_8")
+    choices = ["Continue..."]
+    paths = ["arc4_0"]
+    create_choices(choices, paths)
 
 #-----------------------------------------------Program Start----------------------------------------------------------
 #arc 1
@@ -1135,16 +1186,46 @@ for i in range(0, 9):
 for i in range(0, 63):
     num = i
     story_sections.append("arc2_" + f"{num}")
+#arc 3
+for i in range(0, 9):
+    num = i
+    story_sections.append("arc3_" + f"{num}")
+#arc 4
+for i in range(0, 31):
+    num = i
+    story_sections.append("arc4_" + f"{num}")
+#arc 5
+for i in range(0, 16):
+    num = i
+    story_sections.append("arc5_" + f"{num}")
+#arc 6
+for i in range(0, 31):
+    num = i
+    story_sections.append("arc6_" + f"{num}")
+#arc 7
+for i in range(0, 45):
+    num = i
+    story_sections.append("arc7_" + f"{num}")
 
 story_content = {}
 i=0
 for section in story_sections:
+    #your new arc length plus all the other arc lengths plus one
     if i<9:
         file_path = "script/arc1/" + section + ".txt"
-    #arc 1 plus arc 2...
-    elif i<73:
+    elif i<72:
         file_path = "script/arc2/" + section + ".txt"
-
+    elif i<81:
+        file_path = "script/arc3/" + section + ".txt"
+    elif i<112:
+        file_path = "script/arc4/" + section + ".txt"
+    elif i<128:
+        file_path = "script/arc5/" + section + ".txt"
+    elif i<159:
+        file_path = "script/arc6/" + section + ".txt"
+    elif i<204:
+        file_path = "script/arc7/" + section + ".txt"
+    #203 + arc8 length including 0 then + 1
     with open(file_path, encoding="utf8") as file_reader:
         story_content[section] = file_reader.read()
     i=i+1
@@ -1152,6 +1233,6 @@ for section in story_sections:
 
 #-----------------------------------------------------MAIN-------------------------------------------------------------
 
-#createTxtFiles(56)
+#createTxtFiles(45)
 
 win.mainloop()

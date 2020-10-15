@@ -1,0 +1,73 @@
+Two hours have passed, and the soft light of the evening sun plays gently across the quiet landscape. You are hiding behind a bush next to $liName, and that bush is situated next to a road leading into town. 20 Feet further down the road $mName and $aName hide behind different bushes, waiting for the ambush to begin. After what feels like a lifetime of waiting, the creaky sounds of a cart’s wheels moan past you, until finally reaching $mName who leaps out into the road and blocks the tax cart’s path.
+[$mName] Care to see a magic trick?
+The guard yells out and yanks on the reins, halting the cart. It is drawn by two healthy looking horses, which anxiously look about after being startled by $mName. On the cart rides two guards, each of which wear luxurious full plate armor. Their faces are concealed by Barbute helmets which give them an intimidating look, and both draw longswords from their hips.
+[Guard1] Who goes there!? Out of the way!
+One of the guards stands up out of his seat, and leaps down to the road. Bending over, he picks up a baseball sized rock and holds it menacingly towards $mName.
+[Guard2] Are you deaf? Move it!
+$mName looks a little nervous but he holds his ground.
+[$liName] Let’s move.
+Following close to $liName, the two of you sneak up behind the cart crouched as low as you can go. In her hand she wields a thick tree branch with the twigs cut off so that it can be used as a club. As you approach, you hear the guard getting more and more frustrated.
+[Guard2] I’m serious! Fine, eat this!
+The guard throws the stone at $mName as hard as he can, who doesn’t move an inch. Instead, $mName holds his left palm out as if he is going to catch the rock with it. 
+[$mName] Whoop!
+The rock hurtles towards $mName but instead of smashing into his hand, it disappears. The next instant, it reappears where his right palm is pointing, and hurtles with the exact same speed in the opposite direction and back towards the guard.
+[Guard2] Wha!?
+SMACK
+The stone smashes into his helmet, and throws his head backward with great force. Concussed, he falls backwards onto the road, limp.
+[Guard1] Frank! You motherfu…
+WHAM
+$liName, who had snuck up behind him, smashes him in the back of the head with her club and knocks him unconscious. His unresponsive body falls out of the seat and hits the dirt with a loud crash. The horses are panicked by the violence and whinny agitatedly but don’t move.
+The next instant, $aName jumps out and straddles the guard $mName took care of. Pulling up on his helmet to expose the neck, she pulls out a dagger sheathed in her boot and slits his throat. Simultaneously, $liName does the same to the man she knocked out mere moments ago.
+[$pName] Woah! What’s up with the killing them when they are already knocked out!?
+[$liName] Naïve as ever $pName. People are rarely knocked out for more than 30 seconds, and even if they are then they have irreparable brain damage anyways. Do you want them waking up and alerting the others?
+[$pName] Well no…
+[$liName] Great, then shut it. Phase one is complete, next up is phase two. Time to suit up $pName.
+You help $mName painstakingly remove each piece of armor off the two guards and after much effort manage to put it on. The armor is wet with blood in some places, extremely heavy, and even with the gentle evening breeze attempting to soothe you it feels like you could overheat at any moment. Luckily it isn’t all bad; you get to strap on the dead guard’s sword and be properly armed for once. It is a simple longsword with a black leather handle, and the sheath is well worn black leather. The belt wraps around your waist and the weight of the sword is oddly comforting.
+[$liName] $pName, do you remember what I said about sword fighting?
+[$pName] Don’t bother until I am trained?
+[$liName] Exactly. If we get into a scuffle later on, you better be pulling out that dagger instead of that sword.
+[$mName] If it makes you feel any better, I won’t use mine either. I’ve never been good with one of these toothpicks anyhow.
+$liName heads to the back of the cart, and pushes around some of the crops and bags of money that the collectors had gathered up. The cargo is eventually shaped into a hollow square, which $liName and $aName can hide inside. Meanwhile, $aName had gone to the bush she was hiding in earlier and retrieved a large canvas blanket. She had bought it in town earlier, and now she uses it to cover all the cargo in the cart. Nestling into the empty space along with $liName, the two blend in seamlessly and are completely hidden by the blanket. Anyone pulling up at the blanket would only see crops and cargo, at least until the blanket is completely removed. $mName has finished putting on his set of armor as well, and joins you at the seat located at the front of the cart. Hidden to the side of the road in a bush, two corpses silently rest.
+[$mName] This’ll make for a good bar story one day. Let’s head off then.
+$mName grabs the reins and gives short rap of the leather against the horses, spurring them into motion. The cart slowly gains speed, and it isn’t long before everyone is travelling back towards town at a decent pace.
+[$pName] So what was that little move with the rock earlier?
+[$mName] Oh that? Something a mentor of mine taught me years ago. Its kind of like teleportation, but its only for things that can fit in the palm of my hand. It retains it’s speed and appears at the other palm. In the end it is only good for card tricks but every now and then I can send a rock back the way it came from if I’m quick enough. Kind of like an Uno reverse card!
+[$pName] Ha, yeah no kidding! Wait, how…
+[$liName] Shhhh! We’re getting close to the town.
+Your cart approaches the makeshift wooden barrier you saw when you first entered town, and the townsfolk recognize the armor of the tax collectors right away. With a groan they heave at the plank blocking the road and allow you in, without saying a single word. Through the helmet you can barely see them, but you can tell their expressions are of pure hatred and fear.
+Groaning wearily, the cart ambles forwards along the road and takes a turn, heading straight for the Baron’s fortress. This is about to be the most important part of the entire operation, and is where you are at your most vulnerable. $mName steers the cart towards the fortress entrance, and only a few feet before entering a guard walks up to greet you.
+[Guard] Well if it isn’t Frank and Georgie! Those peasants give you any trouble this evening?
+Not wanting to give his disguise away, $mName grunts back neutrally and silently hopes that is enough.
+[Guard] That bad huh? Well, it happens man. Hey, don’t forget to pick up little Sarah from my place after you’re done unloading everything, she really misses you!
+$mName gives the horses another whip of the reins and the cart lurches forwards. Steering it through the gate and towards the back where a few other carts rest, the cart finally stops and the two of you climb down. You look over your shoulder warily but no one has suspected a thing. You try to forget the comment about Frank’s now fatherless daughter.
+[$pName] let’s move.
+$mName follows behind you as you stroll around the back of the compound. It is filled with all kinds of boxes and cargo and treasure, likely unsorted spoils of the Baron’s iron fisted rule. No matter how far you explore you can’t see any alternative routes inside however, and with a sinking feeling you surmise it might be necessary to attack head on after all. Then:
+[$mName] Look here!
+$mName points out a small backdoor leading into the fort with many large piles of crops stacked in front of it, blocking the way. It is likely an emergency escape or some other forgotten doorway, and it is perfect for your infiltration.
+[$pName] Ok, you know the plan. We clear this crap out of the way so that $aName and $liName are exposed for as little as possible, and then we all head inside.
+[$mName] Right.
+The two of you get to work, picking up sack after sack of vegetables and grains of all shapes and sizes. One after another you plop them to the side against the wall, getting closer and closer to clearing the way to the backdoor.
+[$mName] Psst, $pName. Question for ya: How do you get a squirrel to like you?
+[$pName] What?
+[$mName] Act like a nut!
+[$pName] … Is this really the time for that!?
+[$mName] Sorry I’m just nervous!
+Finally, the two of you clear just enough of the assorted vegetables out of the way to be able to open the door. Quickly as you can, you head back to the cart where $liName and $aName are hiding… but it is too late.
+[$pName] Shit…
+As you round the side of the fortress to be able to view the cart, you see three guards walking up to it chatting casually. Taking cover behind some boxes, you and $mName watch in horror as they grab the blanket and fling it upwards. It’s over.
+[$mName] Shit!
+You wait for the call to raise the alarm, but it never comes. Instead, the three guards pick through the goods absentmindedly and continue their conversation. Inside of the cart… Is nobody. $aName and $liName aren’t there! Where did they…
+[$liName] Aww, were you worried about us?
+With a start, you whip around to find $liName and $aName hiding behind another set of boxes and giggling to themselves.
+[$aName] Hiding in that cart all night wouldn’t be very comfortable you know, of course we had to get out of there! C’mon now, lets get inside the fort.
+Relieved, you follow the pair towards the door you and $mName had just cleared. Overhead, the sky finally begins to get properly dark and the last shreds of light play across the clouds.
+[$aName] In we go.
+Drawing the dagger she had used earlier from her waist, $aName braces herself and slowly opens the door. Following her, you allow your eyes to get accustomed to the darkness and try to figure out where you are. It appears that you are in some kind of supply closet, and it is filled with brooms, buckets, and cobwebs.
+[$aName] Keep up.
+Without faltering she heads to the next door, which opens up into a hallway. To the right, the hallway extends for a while before opening up into some kind of huge dining room where dozens of the Baron’s knights are eating and joking around with each other. The ground is covered in lavish rugs and there are golden candle holders lighting up the entire area. On each wall of the dining area, you can see there are tapestries and other fancy looking artworks. This is a truly lavish fortress. To the left is a staircase, which leads to the next floor.
+[$liName] I’m thinking up.
+[$mName] I don’t trust staircases.
+You look at him in confusion.
+[$pName] What? Why?
+[$mName] They are always up to something. 
+The smack of $liName flicking $mName in the forehead is so loud you feel certain someone in the dining area would hear, but luckily nobody looks in your direction. Without saying another word, the four of you silently tread up the staircase.
