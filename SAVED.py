@@ -22,16 +22,17 @@ except Exception as error:
 #--------------------------------------------------------Globals--------------------------------------------------------
 badInput = ["!","@","#","$","%","^","&","*","^_^",":)"," ","",".",",","-","_","$pName","$aName","$bName","$liName"]
 maudAnswers = ["0", 0, "zero", "none", "nothing", "no fingers", "there aren't any"]
-class g:
+
+
+class globals:
     inputResponse = "null"
     # global values
-    
+
     currentRoom = "null"
     savedRoom = "null"
     txtSpeed = 0.000001#0.05
     txtSize = 16
 
-    food = "null"
     pName = "null"
     aName = "null"
     bName = "null"
@@ -54,14 +55,15 @@ class g:
     liHairColor = "null"
     liEyeColor = "null"
     liSkinColor = "null"
-    deathReturn = "null"
     pLocation = "null"
     aLocation = "null"
     bLocation = "null"
-    loadTimes = 0
     hName = "null"
     horseColor = "null"
-    failCounter = 0
+    food = "null"
+
+
+class flags:
 
     # !!!Flags!!!
     firstTimeArc2 = "true"
@@ -77,7 +79,12 @@ class g:
     firstAmbush = "false"
     talkedTo = "null"
     watchedTorture = "false"
+    failCounter = 0
+    loadTimes = 0
+    deathReturn = "null"
 
+g = globals()
+flag = flags()
 #=======
 
 
@@ -161,8 +168,8 @@ music = VLC()
 
 def getLocation():
     #returns your city
-    g = geocoder.ip('me')
-    return(g.city)
+    place = geocoder.ip('me')
+    return(place.city)
 
 def getDisplayName():
     #make sure to make name all caps
@@ -180,25 +187,25 @@ def getDisplayName():
 def checkLoadTimes():
 
     #if changing how many loads it takes to go crazy, don't forget to change the text on create_choices as well
-    if g.loadTimes > 3 and g.loadTimes < 8:
+    if 3 < flag.loadTimes < 8:
         clear_screen()
         string = "Your brain stings, your very soul aches in pain. It feels as if a small part of yourself was lost.\n\n"
         disp_txt(string)
         time.sleep(2)
 
-    if g.loadTimes > 7 and g.loadTimes < 12:
+    if 7 < flag.loadTimes < 14:
         clear_screen()
         string = "Your spirit screams in agony. Your soul wails in despair. You have dealt irreparable damage to yourself, but the consequences" \
                  " are yet to seen.\n\n"
         disp_txt(string)
         time.sleep(2)
-    if g.loadTimes > 11 and g.loadTimes < 16:
+    if 13 < flag.loadTimes < 18:
         clear_screen()
         string = "You feel your very sanity slipping, your soul withers away. Something core to who you are has been lost to the void forever. You start to chuckle.\n[" \
                  + g.pName + "] haha... HAHAHAHA...\n\n"
         disp_txt(string)
         time.sleep(2)
-    if g.loadTimes > 15 and g.loadTimes < 20:
+    if 17 < flag.loadTimes < 20:
         clear_screen()
         string = "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA.\n[" \
                  "HAHAHA] HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n\n HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n\n"
@@ -218,28 +225,28 @@ def deadChecker():
     if g.currentRoom == "arc5_13":
         checkLoadTimes()
         eval('arc5_14()')
-    if g.deathReturn == "arc2_17" or g.deathReturn == "arc2_42":
-        g.deathReturn = "null"
+    if flag.deathReturn == "arc2_17" or flag.deathReturn == "arc2_42":
+        flag.deathReturn = "null"
         postDeathPassage('arc2_52')
 
-    elif g.deathReturn == "arc2_18" or g.deathReturn == "arc2_35" or g.deathReturn == "arc2_36":
-        g.deathReturn = "null"
+    elif flag.deathReturn == "arc2_18" or flag.deathReturn == "arc2_35" or flag.deathReturn == "arc2_36":
+        flag.deathReturn = "null"
         postDeathPassage('arc2_56')
 
-    elif g.deathReturn == "arc2_30" or g.deathReturn == "arc2_48":
-        g.deathReturn = "null"
+    elif flag.deathReturn == "arc2_30" or flag.deathReturn == "arc2_48":
+        flag.deathReturn = "null"
         postDeathPassage('arc2_54')
 
-    elif g.deathReturn == "arc2_31" or g.deathReturn == "arc2_47":
-        g.deathReturn = "null"
+    elif flag.deathReturn == "arc2_31" or flag.deathReturn == "arc2_47":
+        flag.deathReturn = "null"
         postDeathPassage('arc2_53')
 
-    elif g.deathReturn == "arc2_43":
-        g.deathReturn = "null"
+    elif flag.deathReturn == "arc2_43":
+        flag.deathReturn = "null"
         postDeathPassage('arc2_57')
 
-    elif g.deathReturn == "arc2_44":
-        g.deathReturn = "null"
+    elif flag.deathReturn == "arc2_44":
+        flag.deathReturn = "null"
         postDeathPassage('arc2_55')
     else:
         checkLoadTimes()
@@ -251,45 +258,97 @@ def loadGame(window):
     win.deiconify()
     with open('./savefile', 'rb') as f:
         data = pickle.load(f)
-    list = vars(g)
-    listy = list.items()
-    for left, right in listy:
-        if left.startswith("__") == False:
-            g.left = data[left]
+    list1 = vars(g)
+    list2 = vars(flags)
+    print(list1)
+    print("---")
+    print(list2)
+    print(data)
+    for v in list1:
+        if v.startswith("__") == False:
+            setattr(g, v, data[v])
+    for v in list2:
+        if v.startswith("__") == False:
+            setattr(flag, v, data[v])
+
     #delete buttons
     list = frame2.pack_slaves()
     for x in list:
         if str(x) != str(list[0]):
             x.destroy()
+
     print("Game Loaded")
     disp_txt("\nLoading Game...\n")
     window.destroy()
-    g.loadTimes += 1
-
-    #If you physically altered the world, we need to Undo that here
-    g.loosenedPlanks = "false"
-    g.metB = "false"
 
     music.startBackgroundMusic()
     if g.currentRoom == "arc1_0":
         g.currentRoom = "arc1_1"
+        g.savedRoom = "arc1_1"
     if g.currentRoom == "arc5_13":
         g.currentRoom = "arc5_14"
         g.savedRoom = "arc5_14"
+
+    print(g.savedRoom)
+    eval(g.savedRoom + "()")
+
+def fakeLoad(window):
+    win.deiconify()
+    with open('./savefile', 'rb') as f:
+        data = pickle.load(f)
+    list1 = vars(g)
+    for v in list1:
+        if v.startswith("__") == False:
+            setattr(g, v, data[v])
+
+    #delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+
+    print("Game Loaded")
+    disp_txt("\nLoading Game...\n")
+    window.destroy()
+    flag.loadTimes = flag.loadTimes + 1
+
+    #If you physically altered the world, we need to Undo that here
+    flag.loosenedPlanks = "false"
+    flag.metB = "false"
+
+    music.startBackgroundMusic()
+    if g.currentRoom == "arc1_0":
+        g.currentRoom = "arc1_1"
+        g.savedRoom = "arc1_1"
+    if g.currentRoom == "arc5_13":
+        g.currentRoom = "arc5_14"
+        g.savedRoom = "arc5_14"
+
     deadChecker()
 
 def saveGame(window):
     now = datetime.now()
-    # dd/mm/YY H:M:S
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     data = {}
-    list = vars(g)
-    listy = list.items()
     g.savedRoom = g.currentRoom
-    for left, right in listy:
-        if left.startswith("__") == False:
-            data[left] = right
+    list1 = vars(g).items()
+    list2 = vars(flags).items()
+    print(g.currentRoom)
+    print("save info")
+    print(list1)
+    print(list2)
 
+    for left, right in list1:
+        if not left.startswith("__"):
+            data[left] = right
+            print(right)
+            print('+')
+    for left, right in list2:
+        if not left.startswith("__"):
+            data[left] = right
+            print(right)
+            print('+')
+    print("-------")
     data['dateTime'] = dt_string
 
     if os.path.exists('./savefile'):
@@ -302,7 +361,7 @@ def saveGame(window):
     window.destroy()
 
 def changeSettings(newSpeed, newSize):
-    
+
     if newSpeed == "slow":
         g.txtSpeed = 0.1
     if newSpeed == "standard":
@@ -366,18 +425,19 @@ def replace_variables(string):
         if globy.startswith("__") == False:
             #print(str(globy) + " ---- " + str(value))
             string = string.replace("$"+globy, str(value))
-    print("##################################")
+    print("################")
 
-    if g.loadTimes > 11 and g.loadTimes < 16:
+    if 15 < flag.loadTimes < 19:
         string = string.replace('a', 'ha')
 
-    if g.loadTimes > 15 and g.loadTimes < 20:
+    if 18 < flag.loadTimes < 21:
         string = string.replace(g.pName, 'HAHAHA')
         string = string.replace(g.aName, 'HAHAHA')
         string = string.replace(g.bName, 'HAHAHA')
         string = string.replace(g.liName, 'HAHAHA')
+        string = string.replace('a', 'ha')
 
-    if g.loadTimes > 19:
+    if flag.loadTimes > 20:
         string = "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
                  "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
                  "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
@@ -515,9 +575,9 @@ def settingsconfig():
         with open('./savefile', 'rb') as f:
             data = pickle.load(f)
 
-        loadButton = Button(settings_window, text="Load Game: " + str(data["dateTime"]), command=lambda: loadGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=0, columnspan=3)
+        loadButton = Button(settings_window, text="Load Game: " + str(data["dateTime"]), command=lambda: fakeLoad(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=0, columnspan=3)
     else:
-        loadButton = Button(settings_window, state=DISABLED, text="Load Game", command=lambda: loadGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=0, columnspan=3)
+        loadButton = Button(settings_window, state=DISABLED, text="Load Game", command=lambda: fakeLoad(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=1, column=0, columnspan=3)
     #menu
 
     saveButton = Button(settings_window, text="     Save Game     ", command=lambda: saveGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=2, column=0, columnspan=3)
@@ -539,7 +599,7 @@ def settingsconfig():
 def create_choices(choiceList, pathList):
     #create buttons for the amount of options available, represtented by 'number'
     for i in range(0, len(choiceList)):
-        if g.loadTimes > 15:
+        if flag.loadTimes > 15:
             button = Button(frame2, text="HAHAHAHA", command=lambda i=i: click_choice(pathList[i]), bg="#333333", fg="#EEEEEE")
             button.pack(fill='both', expand='yes')
         else:
@@ -567,18 +627,19 @@ def quit_me():
     win.destroy()
 
 def makeTears():
-    if g.talkedTo == "chef":
+    if flag.talkedTo == "chef":
         return ["arc6_23"]
-    elif g.talkedTo == "aName":
+    elif flag.talkedTo == "aName":
         return ["arc6_21"]
-    elif g.talkedTo == "liName":
+    elif flag.talkedTo == "liName":
         return ["arc6_20"]
-    elif g.talkedTo == "bardName":
+    elif flag.talkedTo == "bardName":
         return ["arc6_22"]
-    elif g.talkedTo == "mName":
+    elif flag.talkedTo == "mName":
         return ["arc6_24"]
     else:
         print("error finding sad part")
+        print(flag.talkedTo)
         return "arc6_20"
 
 
@@ -711,12 +772,12 @@ def arc2_0():
     create_choices(choices, paths)
 
 def arc2_1():
-    if g.firstTimeArc2 == "true":
+    if flag.firstTimeArc2 == "true":
         room_run("arc2_1")
     else:
         room_run("arc2_51")
 
-    g.firstTimeArc2 = "false"
+    flag.firstTimeArc2 = "false"
     choices = ["Head over the brook towards Kingsbridge","Head the opposite direction along the path"]
     paths = ["arc2_2", "arc2_32"]
 
@@ -794,7 +855,7 @@ def arc2_11():
 
 def arc2_12():
     room_run("arc2_12")
-    g.metB = "true"
+    flag.metB = "true"
     choices = ["Beg Shopkeeper for a weapon", "Talk to Woman", "Leave"]
     paths = ["arc2_14", "arc2_15", "arc2_13"]
     create_choices(choices, paths)
@@ -829,11 +890,11 @@ def arc2_16():
 
 def arc2_17():
     room_run("arc2_17")
-    g.deathReturn = "arc2_17"
+    flag.deathReturn = "arc2_17"
 
 def arc2_18():
     room_run("arc2_18")
-    g.deathReturn = "arc2_18"
+    flag.deathReturn = "arc2_18"
 
 def arc2_19():
     room_run("arc2_19")
@@ -851,21 +912,21 @@ def arc2_20():
 
 def arc2_22():
     room_run("arc2_22")
-    g.hasPotato = "true"
+    flag.hasPotato = "true"
     choices = ["Head back the way you came to the central plaza", "Enter Tavern", "Continue along the path"]
     paths = ["arc2_24", "arc2_25", "arc2_26"]
     create_choices(choices, paths)
 
 def arc2_23():
     room_run("arc2_23")
-    g.hasPotato = "true"
+    flag.hasPotato = "true"
     choices = ["Head back the way you came to the central plaza", "Enter Tavern", "Continue along the path"]
     paths = ["arc2_24", "arc2_25", "arc2_26"]
     create_choices(choices, paths)
 
 def arc2_24():
-    if g.hasPotato == "true":
-        g.hasPotato = "false"
+    if flag.hasPotato == "true":
+        flag.hasPotato = "false"
         clear_screen()
         disp_txt("You’ve had enough of this route and begin walking back the way you came. By the time you return back "
                  "to where the road split and you detoured, the chunk of potato in your pocket has become quite painful "
@@ -880,7 +941,7 @@ def arc2_24():
 
 def arc2_25():
     room_run("arc2_25")
-    if g.hasPotato == "true":
+    if flag.hasPotato == "true":
         choices = ["Head back the way you came to the central plaza" "Continue along the path"]
         paths = ["arc2_24", "arc2_26"]
         create_choices(choices, paths)
@@ -892,10 +953,10 @@ def arc2_25():
 
 def arc2_26():
     room_run("arc2_26")
-    if g.hasPotato == "true":
+    if flag.hasPotato == "true":
         choices = ["Run away!", "Share your potato with the starving man"]
         paths = ["arc2_28", "arc2_27"]
-        g.hasPotato = "false"
+        flag.hasPotato = "false"
         create_choices(choices, paths)
     else:
         choices = ["Run away!"]
@@ -904,7 +965,7 @@ def arc2_26():
 
 def arc2_27():
     room_run("arc2_27")
-    g.muggerMissing = "true"
+    flag.muggerMissing = "true"
     choices = ["Follow the woman in yellow", "Ignore her and continue exploring"]
     paths = ["arc2_29", "arc2_16"]
     create_choices(choices, paths)
@@ -919,8 +980,8 @@ def arc2_28():
              "head for the plaza. You are careful to give wide berth to any area that even remotely resembles the scene "
              "of the attempted mugging, and you check every alleyway as you move along. ")
     time.sleep(2)
-    if g.hasPotato == "true":
-        g.hasPotato = "false"
+    if flag.hasPotato == "true":
+        flag.hasPotato = "false"
         disp_txt("\nYou’ve had enough of this route and begin walking back the way you came. By the time you return back "
                  "to where the road split and you detoured, the chunk of potato in your pocket has become quite painful "
                  "rubbing against your leg so you decide to cut ties and toss it to the side. The potato hadn’t even "
@@ -934,13 +995,13 @@ def arc2_28():
     create_choices(choices, paths)
 
 def arc2_29():
-    if g.muggerMissing == "true":
-        g.muggerMissing = "false"
+    if flag.muggerMissing == "true":
+        flag.muggerMissing = "false"
         arc2_46()
     room_run("arc2_29")
 
-    if g.metB == "true":
-        g.metB = "false"
+    if flag.metB == "true":
+        flag.metB = "false"
         disp_txt("\nHer white cloak gleams in the feeble sunlight that slips into the alleyway and you recognize "
                  "her as the woman from the adventurer’s gear shop. \n"
                  "[swordswoman] Ah, you. Hello again.\n")
@@ -955,7 +1016,7 @@ def arc2_29():
 
 def arc2_58(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_58")
-    if g.firstMeeting == "true":
+    if flag.firstMeeting == "true":
         disp_txt("\nYou feel a hint of sweat gathering on your temple and try not to look guilty. What you need "
                  "is a way to get out of this awkward conversation while simultaneously not ostracizing "
                  "yourself from the group. This may be your only chance to convince them to help you, and "
@@ -968,7 +1029,7 @@ def arc2_58(): #Placed here because it is a continuation of arc 29 for simplicit
 
 def arc2_59(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_59")
-    if g.firstMeeting == "true":
+    if flag.firstMeeting == "true":
         disp_txt("\nYou feel frozen, it is as if she has seen right through you. You shift uncomfortably again, "
                  "trying to think of a way to get her off your back. But how? The " + str(g.food) + " worked for a little"
                  " bit so maybe something similar could get her to back off. You feel in your pocket your "
@@ -991,7 +1052,7 @@ def arc2_60(): #Placed here because it is a continuation of arc 29 for simplicit
 
 def arc2_61(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_61")
-    if g.firstMeeting == "true":
+    if flag.firstMeeting == "true":
         disp_txt("\nYou aren’t really sure why but you know you have to join these people on their quest. "
                  "You also know that everything " + str(g.liName) + " just said is true, you truly offer little value. "
                  "The trick then will have to be convincing them to allow you to join, and then prove your "
@@ -1006,12 +1067,12 @@ def arc2_62(): #Placed here because it is a continuation of arc 29 for simplicit
     room_run("arc2_62")
 
     #next is choose which death or victory you get
-    g.firstMeeting = "false"
-    if g.knowsDeath == "false" and g.loosenedPlanks == "false":
+    flag.firstMeeting = "false"
+    if flag.knowsDeath == "false" and flag.loosenedPlanks == "false":
         choices = ["Join " + str(g.aName) + " and " + str(g.liName), "Join " + str(g.bName)]
         paths = ["arc2_31", "arc2_30"]
         create_choices(choices, paths)
-    elif g.knowsDeath == "true" and g.loosenedPlanks == "false":
+    elif flag.knowsDeath == "true" and flag.loosenedPlanks == "false":
         choices = ["Join " + str(g.aName) + " and " + str(g.liName), "Join " + str(g.bName)]
         paths = ["arc2_47", "arc2_48"]
         create_choices(choices, paths)
@@ -1026,15 +1087,15 @@ def arc2_30():
     t1.start()
     room_run("arc2_30")
 
-    g.deathReturn = "arc2_30"
-    g.knowsDeath = "true"
+    flag.deathReturn = "arc2_30"
+    flag.knowsDeath = "true"
 
 def arc2_31():
     t1 = Thread(target=music.playSadSong2)
     t1.start()
     room_run("arc2_31")
-    g.deathReturn = "arc2_31"
-    g.knowsDeath = "true"
+    flag.deathReturn = "arc2_31"
+    flag.knowsDeath = "true"
 
 def arc2_32():
     room_run("arc2_32")
@@ -1045,7 +1106,7 @@ def arc2_32():
 
 def arc2_33():
     room_run("arc2_33")
-    if g.seenForest == "false":
+    if flag.seenForest == "false":
         choices = ["follow path left along the outskirts", "enter the forest"]
         paths = ["arc2_37", "arc2_35"]
         create_choices(choices, paths)
@@ -1056,7 +1117,7 @@ def arc2_33():
 
 def arc2_34():
     room_run("arc2_34")
-    if g.seenForest == "false":
+    if flag.seenForest == "false":
         choices = ["follow path left along the outskirts", "enter the forest"]
         paths = ["arc2_37", "arc2_35"]
         create_choices(choices, paths)
@@ -1067,17 +1128,17 @@ def arc2_34():
 
 def arc2_35():
     room_run("arc2_35")
-    g.deathReturn = "arc2_35"
-    g.seenForest = "true"
+    flag.deathReturn = "arc2_35"
+    flag.seenForest = "true"
 
 def arc2_36():
     room_run("arc2_36")
-    g.deathReturn = "arc2_36"
-    g.seenForest = "true"
+    flag.deathReturn = "arc2_36"
+    flag.seenForest = "true"
 
 def arc2_37():
     room_run("arc2_37")
-    if g.seenForest == "true":
+    if flag.seenForest == "true":
         choices = [" 'I'm afraid your husband is dead' ", " 'I promise to try to find him' ", " 'I'm afraid I can't help you, I'm just passing through' "]
         paths = ["arc2_38", "arc2_39", "arc2_41"]
         create_choices(choices, paths)
@@ -1089,7 +1150,7 @@ def arc2_37():
 
 def arc2_38():
     room_run("arc2_38")
-    g.loosenedPlanks = "true"
+    flag.loosenedPlanks = "true"
     choices = ["Stay and ambush the killer", "Head into Kingsbridge"]
     paths = ["arc2_44", "arc2_45"]
     create_choices(choices, paths)
@@ -1097,7 +1158,7 @@ def arc2_38():
 def arc2_39():
     room_run("arc2_39")
 
-    if g.seenForest == "false":
+    if flag.seenForest == "false":
         choices = ["Enter the forest"]
         paths = ["arc2_35"]
         create_choices(choices, paths)
@@ -1115,16 +1176,16 @@ def arc2_41():
 
 def arc2_42():
     room_run("arc2_42")
-    g.deathReturn = "arc2_42"
+    flag.deathReturn = "arc2_42"
 
 def arc2_43():
     room_run("arc2_43")
-    g.deathReturn = "arc2_43"
+    flag.deathReturn = "arc2_43"
 
 def arc2_44():
     room_run("arc2_44")
-    g.knowsDeath = "true"
-    g.deathReturn = "arc2_44"
+    flag.knowsDeath = "true"
+    flag.deathReturn = "arc2_44"
 
 def arc2_45():
     room_run("arc2_45")
@@ -1141,13 +1202,13 @@ def arc2_46():
 
 def arc2_47():
     room_run("arc2_47")
-    g.deathReturn = "arc2_47"
-    g.knowsDeath = "true"
+    flag.deathReturn = "arc2_47"
+    flag.knowsDeath = "true"
 
 def arc2_48():
     room_run("arc2_48")
-    g.deathReturn = "arc2_48"
-    g.knowsDeath = "true"
+    flag.deathReturn = "arc2_48"
+    flag.knowsDeath = "true"
 
 def arc2_49():
     room_run("arc2_49")
@@ -1275,10 +1336,10 @@ def arc4_7():
 
 def arc4_8():
     room_run("arc4_8")
-    if g.takenTrial == "true":
+    if flag.takenTrial == "true":
         choices = ["Continue..."]
         paths = ["arc4_10"]
-    if g.takenTrial == "false":
+    else:
         choices = ["Continue..."]
         paths = ["arc4_9"]
     create_choices(choices, paths)
@@ -1338,56 +1399,56 @@ def arc4_17():
     create_choices(choices, paths)
 
 def arc4_18():
-    g.takenTrial = "true"
+    flag.takenTrial = "true"
     room_run("arc4_18")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_19():
-    g.takenTrial = "true"
+    flag.takenTrial = "true"
     room_run("arc4_19")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_20():
-    g.takenTrial = "true"
+    flag.takenTrial = "true"
     room_run("arc4_20")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_21():
-    g.takenTrial = "true"
+    flag.takenTrial = "true"
     room_run("arc4_21")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_22():
-    g.takenTrial = "true"
+    flag.takenTrial = "true"
     room_run("arc4_22")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_23():
-    g.takenTrial = "true"
+    flag.takenTrial = "true"
     room_run("arc4_23")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_24():
-    g.takenTrial = "true"
+    flag.takenTrial = "true"
     room_run("arc4_24")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_25():
-    g.takenTrial = "true"
+    flag.takenTrial = "true"
     room_run("arc4_25")
     choices = ["Continue..."]
     paths = ["arc4_26"]
@@ -1501,7 +1562,7 @@ def arc5_11():
 
 def arc5_12():
     room_run("arc5_12")
-    if g.bishopMelt == "false":
+    if flag.bishopMelt == "false":
         choices = ["Continue..."]
         paths = ["arc5_13"]
     else:
@@ -1511,7 +1572,7 @@ def arc5_12():
 
 def arc5_13():
     room_run("arc5_13")
-    g.bishopMelt = "true"
+    f.bishopMelt = "true"
 
 def arc5_14():
     room_run("arc5_14")
@@ -1533,11 +1594,11 @@ def arc6_0():
 
 def arc6_1():
     room_run("arc6_1")
-    if g.failCounter == 5:
+    if flag.failCounter == 5:
         choices = ["Continue..."]
         paths = ["arc6_25"]
     else:
-        if g.firstAmbush == "false":
+        if flag.firstAmbush == "false":
             choices = ["Continue..."]
             paths = ["arc6_2"]
         else:
@@ -1553,7 +1614,7 @@ def arc6_2():
 
 def arc6_3():
     room_run("arc6_3")
-    g.firstAmbush = "true"
+    flag.firstAmbush = "true"
 
 def arc6_4():
     room_run("arc6_4")
@@ -1565,35 +1626,35 @@ def arc6_5():
     room_run("arc6_5")
     choices = ["Continue..."]
     paths = ["arc6_10"]
-    g.talkedTo = "liName"
+    flag.talkedTo = "liName"
     create_choices(choices, paths)
 
 def arc6_6():
     room_run("arc6_6")
     choices = ["Continue..."]
     paths = ["arc6_10"]
-    g.talkedTo = "aName"
+    flag.talkedTo = "aName"
     create_choices(choices, paths)
 
 def arc6_7():
     room_run("arc6_7")
     choices = ["Continue..."]
     paths = ["arc6_10"]
-    g.talkedTo = "bardName"
+    flag.talkedTo = "bardName"
     create_choices(choices, paths)
 
 def arc6_8():
     room_run("arc6_8")
     choices = ["Continue..."]
     paths = ["arc6_10"]
-    g.talkedTo = "chef"
+    flag.talkedTo = "chef"
     create_choices(choices, paths)
 
 def arc6_9():
     room_run("arc6_9")
     choices = ["Continue..."]
     paths = ["arc6_10"]
-    g.talkedTo = "mName"
+    flag.talkedTo = "mName"
     create_choices(choices, paths)
 
 def arc6_10():
@@ -1604,7 +1665,7 @@ def arc6_10():
 
 def arc6_11():
     room_run("arc6_11")
-    g.failCounter += 1
+    flag.failCounter += 1
 
 def arc6_12():
     room_run("arc6_12")
@@ -1613,14 +1674,14 @@ def arc6_12():
     create_choices(choices, paths)
 
 def arc6_13():
-    g.failCounter += 1
+    flag.failCounter += 1
     room_run("arc6_13")
     choices = ["Continue..."]
     paths = makeTears()
     create_choices(choices, paths)
 
 def arc6_14():
-    g.failCounter += 1
+    flag.failCounter += 1
     room_run("arc6_14")
     choices = ["Continue..."]
     paths = makeTears()
@@ -1633,12 +1694,12 @@ def arc6_15():
     create_choices(choices, paths)
 
 def arc6_16():
-    g.failCounter += 1
+    flag.failCounter += 1
     room_run("arc6_16")
     choices = ["Continue..."]
     paths = makeTears()
     create_choices(choices, paths)
-    g.watchedTorture = "true"
+    flag.watchedTorture = "true" # used later in arc 7
 
 def arc6_17():
     room_run("arc6_17")
@@ -1647,11 +1708,11 @@ def arc6_17():
     create_choices(choices, paths)
 
 def arc6_18():
-    g.failCounter += 1
+    flag.failCounter += 1
     room_run("arc6_18")
 
 def arc6_19():
-    g.failCounter += 1
+    flag.failCounter += 1
     room_run("arc6_19")
     choices = ["Continue..."]
     paths = makeTears()
@@ -1762,6 +1823,9 @@ for section in story_sections:
         file_path = "script/arc6/" + section + ".txt"
     elif i<204:
         file_path = "script/arc7/" + section + ".txt"
+    else:
+        print("error script out of bounds")
+        file_path = "script/arc7/arc7_0.txt"
     #203 + arc8 length including 0 then + 1
     with open(file_path, encoding="utf8") as file_reader:
         story_content[section] = file_reader.read()
