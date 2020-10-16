@@ -1,0 +1,11 @@
+[$liName] Oh no…
+[$aName] Crap…
+Everyone that has a weapon draws theirs and points it at DEATH unsteadily. DEATH walks forward confidently until finally stopping 10 feet away, and you hold your breath. 
+[DEATH] The Ancient Dragon awaits at the top of the spire. You will pay the ultimate price to continue.
+His voice is harsh and sounds like nails on chalkboard, and you grimace with each syllable he utters.
+[DEATH] One of you must die to pass. Choose wisely.
+[$liName] Don’t listen to him $pName!
+[$aName] Let’s defeat him together!
+[$mName] We got this!
+[$bardName] I’m fired up!
+[Chef] I Chef Now!

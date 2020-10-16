@@ -13,10 +13,11 @@ try:
     import geocoder
     from threading import Thread
 except Exception as error:
-    with open('~/Desktop/ERRORLOG', 'wb') as f:
-        f.write(error)
-        f.write(sys.exc_type)
-        f.write("\n\nError Importing. Make sure computer OS and VLC are updated and installed.")
+    with open('~/Desktop/ERRORLOG.txt', 'wb') as f:
+        f.write(str(error))
+        f.write('\n')
+        f.write(str(sys.exc_type))
+        f.write('\n\nError Importing. Make sure computer OS and VLC are updated and installed.')
     f.close()
     print("ERROR")
 #--------------------------------------------------------Globals--------------------------------------------------------

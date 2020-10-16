@@ -1,0 +1,9 @@
+You dodge to the left and manage to avoid the knives just in time. DEATH pauses for a moment, and you catch your breath.
+[DEATH] Your struggle is pointless. DEATH is inevitable.
+[$pName] Not while I have the will to fight!
+[DEATH] I see… you retry over and over, guessing how to defeat me until you get lucky.
+[$pName] I’ll figure out how to win eventually, I always do!
+[DEATH] Not this time. I allowed you to survive at Kingsbridge because the Script ordered me to. Here, you have no hope of escape. One must die. You must Choose. We can fight forever and you will never defeat me.
+[$pName] I’m still here, I’m still trying, aren’t I?!
+[DEATH] Pointless…
+DEATH charges forward towards you, and through his veil you can faintly see his eyes glowing red from the darkness within. He’s not going to hold back any longer.

@@ -1,0 +1,21 @@
+[THE ANCIENT DRAGON] Thank you. I will give you one last goodbye, even if it’s meaningless.
+In front of you materializes your friends $aName, $liName, $mName, $bardName, and Chef. They look confused at first, then when they recognize you they sprint forward and give you a big group hug.
+[$aName] Yay! You did it!
+[$liName] I’m so proud of you!
+[$bardName] Not bad dude.
+[$mName] Excellent job my boy!
+[Chef] I Chef Now!
+
+Everyone lets go of you, but unable to resist they come back in and hug you one last time individually. Each says a few parting words.
+[$aName] I’ve been scared for much of my life, but you taught me how to be brave. I’ve never met someone so determined and valiant before, even in the face of great adversity. You are my inspiration!
+[$bardName] You were so weak, but despite that you managed to overcome every obstacle in your way. You make a fellow weakling like myself get fired up and want to achieve great things too, thank you!
+[$mName] I know I could be a bit much sometimes but you always chuckled at my jokes and made me feel welcome. Thank you for making this orphan boy feel like he had a family for the first time in his life.
+[Chef] I Chef Now!
+Last of all is none other than $liName, who cries as she hugs you and holds you as tight as she can. You embrace eachother like that for a long time, until she finally breaks away.
+[$liName] I was afraid to be vulnerable and pushed you away time and time again, but you never gave up on me. You truly are remarkable, the most remarkable person I have ever met. I love you. I have loved you. I will love you forever and always.
+$liName kisses you briefly and steps back. Everyone waves at you, smiles on their faces and joy in their eyes.
+[Everyone] Goodbye! We’ll miss you!
+The sun shines brightly on the icy platform, obscuring your vision and making you squint. Then just as suddenly as they appeared, your friends all disappear into a flash of dust. It’s time to finish this.
+Turning to the Ancient Dragon, you unsheathe your sword and hold it at the ready. He lowers his massive head and closes his eyes, resting just in front of you. You bring the sword up and hold it above your head, prepared to strike.
+[THE ANCIENT DRAGON] At last… I am SAVED.
+Your sword flies down and stabs straight through the dragon’s scaly skull, impaling him. Empowered by the memory of your friends, you push with all your might until a terrific explosion engulfs you and the Frozen Spire, sending it crumbling apart and tumbling down. The sky shatters, the earth heaves in tremors, and enormous spouts of molten flame and lava spew out of the ground. The air implodes, gravity reverses, the very laws of physics twist themselves apart until finally the…

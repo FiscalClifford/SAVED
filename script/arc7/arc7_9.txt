@@ -1,0 +1,8 @@
+You dodge to the right and manage to avoid the knives, but as you regain your balance your foot slips on the icy floor and you smash backwards onto the ground. Before you can even attempt to stand up DEATH is upon you, and thrusts his sword into your chest again and again in rapid succession without mercy.
+[DEATH] I am become DEATH…
+You desperately hold your arms in front of you in an attempt to stop his sword but he plunges his sword straight through your arms as well, and you get sliced to ribbons. Again and again he punctures you and sends your innards flying in all directions.
+[$pName] AAAAAAAAGGGGHHHH
+The pain is unbearable, and finally you become too weak to resist and lay limply. At this point it looks as if you have been turned inside out and it is impossible to see where your body begins and your organs end.
+[DEATH] …Destroyer of worlds
+DEATH sinks his sword into you one last time straight through your skull. You are dead.
+THE END

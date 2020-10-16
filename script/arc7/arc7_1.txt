@@ -1,0 +1,57 @@
+DEATH
+Since your visit to Gafengen, the six of you have traveled leisurely towards the Frozen spire for some time now. Axel was a catalyst in convincing you that the Dragon isn’t nearly as important as the people around you, so you’ve have found as many excuses as you can to slow down progress and prolong your time spent together. Despite your best efforts, everyone has still made good time along the road however and are now further north than any of you have ever gone before. The road is hard and icy, the trees are sparse and brittle, and the wind bites at any skin you leave exposed. Everyone is covered in furs and cloaks to survive the harsh weather, but the clothing did not come cheap and funds are starting to run low. 
+You look over at $mName. If it weren’t for him donating a substantial amount of the money he had been saving, it is likely nobody would have been able to afford the cloaks. He sees you looking at him, grins, and waves back at you.
+[$mName] Hey there bucko, I was just thinking, do you think now that we are getting close to the Dragon there might be some guards or something? Like maybe a bunch of cultists?
+You are about to respond, but $liName jumps in.
+[$liName] I don’t think there would be any this far up north. The horsemen might be here but probably no cultists.
+[$bardName] Oh, the four horsemen? Some of my favorite songs are about them.
+$mName stumbles in the snow for a moment but quickly regains his balance, then stomps awkwardly forward to catch up next to $bardName.
+[$mName] Can you refresh me on the horsemen real quick $bardName? I’d like to know what kind of threat we are approaching here.
+[$bardName] Eh, sure. The Four Horsemen of the Apocalypse are DEATH, FAMINE, WAR, and CONQUEST. They are like, super evil  and powerful but at least their songs are a lot of fun to sing. 
+[$mName] Super evil? Super powerful? Oh good, that’s not scary at all and I am not at all worried...
+[$bardName] Nice $mName, maybe you can sarcasm them to death. Hey $aName, are we there yet!?
+Currently, the gang is traveling through a snowstorm on the verge of finding the Frozen Spire. The snow is piled up to your knees and you trudge forward slowly, forcing yourself to keep pushing forward. Behind you in single file is everyone else, who carefully step into the snow trough you leave behind you in order to save energy.
+[$aName] $bardName, do you see a giant icicle?
+[$bardName] No…
+[$aName] Then we aren’t there yet! Shush!
+$aName isn’t a fan of the cold weather and has been on edge lately, but she keeps her emotions in check for the most part as your troupe trudges along. Wanting to lighten the mood a little, you turn around to make a joke about the temperature.
+WHACK
+Before you can even say a word $liName flicks you right in the middle of the forehead.
+[$pName] Wha..? OW! What was that for? I didn’t even say anything…
+[$liName] Oh I don’t know… I guess I just did it for old time’s sake. It’s been a while since I last gave you a good wack on the forehead.
+[$pName] And here I thought we were finally getting along $liName, tsk tsk.
+[$liName] We were, until you said that bad joke.
+[$pName] What, I didn’t say any joke!?
+[$liName] Well, you hadn’t said it yet. But I knew, I just knew you were about to say something dumb. I’ve gotten a sixth sense for when a dumb joke is coming after having hung around with $mName for this long.
+[$mName] Hey!
+You rub at your forehead anticipating a sting, but the feeling quickly goes away. It merely felt painful because the cold made it sensitive, she was actually surprisingly gentle with her ‘wack’. You glance backward at her again and she’s giving you a playful smile. You’ll have to get her back later.
+ The snowstorm swirls around you and makes it hard to see any more than 50 feet ahead. As you walk you notice a single snowflake fluttering through the air, a beautiful piece of natural art, and it gently lands on your outstretched finger. It glimmers and glistens for you, and for some reason you feel encouraged. Even in tough situations like this, there is beauty in this world. Suddenly, the wind stops all at once and the snowstorm lets up. Everyone cheers, and as the snowy fog and clouds start to break apart a single ray of sunshine sneaks through the troposphere and highlights something in front of you. Somehow a ton of light is reflected at you and nearly blinds you, forcing you to squint your eyes. It is as if someone is flashing a massive flashlight right at your face.
+[$liName] Look everyone! The Frozen Spire!
+The Ice of the Spire reflects the light around it in all directions as if made of brilliant diamonds, and it twinkles marvelously in the distance. You made it. The Dragon lies somewhere just up ahead!
+[$mName] We’re so close! Do you think the Dragon lives on top of the spire, or inside it? Behind it maybe?
+[Chef] I chef now.
+[$pName] I agree with Chef, we probably have to climb to the top of that thing. It just feels like the right thing to do.
+[$bardName] Do you think the eskimo people will mind if we ask them to let us climb the spire then?
+[$aName] Depends on if they are friendly to strangers I guess. Hopefully the Ancient Dragon has given them lots of wishes so that they’re in a good mood.
+$aName waggles her fingers across her chest.
+[$liName] That’s a good point. Let’s go say hello to them and get out of all this snow!
+Your crew of explorers make their way through the snow one step at a time, laboriously fighting through the piled-up snow. Finally, the six of you make it to the spire and can fully appreciate its incredible appearance. Just like $bardName said, it is at least 100 stories tall and sticks straight out of the ground, straight up. It is thin for its height, and is about as wide around as the length of a basketball court. There is only one entrance to the spire, a huge gate carved out of the ice and left wide open. There are no footprints leading in or out of the gate, but then again the recent snowstorm could have covered some up.
+[$pName] Let’s check it out.
+You lead the way inside the gates, and peer about. It appears to be some kind of storage area, with a lot of counters, tables, and holding areas scattered around that are made completely of ice. There is a single pillar in the center of the floor for structural support, and not much else. At the far side is a staircase running along the edge of the circular room that leads to the next floor, and beside that is a rope which is likely part of a pulley system. The floor is ice as well but scuffed enough that you don’t slip very often. There is nobody here.
+[$bardName] Where the heck is everyone?
+[$aName] Jeez, I have no idea. Looks like they’ve all moved out. It’s completely vacationed.
+[$mName] Vacationed?
+[$liName] … do you mean vacated?
+[$aName] Oh! Yeah that’s what I meant! It’s completely vacated.
+[$pName] Well there is nobody here, let’s go up another floor.
+You clamber up the icy steps, which have grooves carved into the surface so that it’s grippy enough for your boots. Now that you are closer to the rope you can see it leads up to the next floor and was likely used to pull cargo up for whoever used to live here. You make it to the second floor, and look around. This story looks like a common eating area, and has what looks like a kitchen to one side and a bunch of ice tables and chairs on the other. There is no one else here either.
+[$pName] Hellooooooooo?
+Your call echoes off the ice and carries up the spire, but nobody calls out in response. The Frozen Spire appears to be completely deserted.
+You climb up the spire to the next few floors and it is the same situation all around. The third used to be a communal area, the fourth used to be an ice sculpting area, and the fifth is filled with tiny empty ice huts stacked on top of each other where the eskimos probably used to live. All are empty and abandoned.
+[$pName] Where is everyone…
+Before you give up you decide to climb one last flight of stairs, and arrive at the sixth floor. This floor has a tall ceiling, making it feel much more spacious than the other ones. It is completely empty, and has small cuts out of the side walls that act as windows where snow gently falls in. A figure stands at the opposite side of the room.
+[$pName] Psst, guys! There’s someone here!
+Everyone rushes up the stairs to join you and the six of you square off across the room from the figure. The hairs on the back of your neck stand up, and you feel nervous. Something isn’t right about this guy. He slowly marches forward towards you, taking each step slowly and deliberately.
+The stranger is covered head to toe in midnight black leather and cloth, giving them a rugged and stealthy look. Judging by the height and muscles on the stranger it appears to be a man of a little more than six feet in height. Across the stranger’s chest, waist, legs, arms, and back are countless knives, swords, and weaponry of all kinds. He wears a black hood and Black veil which makes it impossible to see any of his features.
+[$pName] No… shit…
+[???] You can run, but you can never escape DEATH.

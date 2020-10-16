@@ -1,0 +1,37 @@
+WAR approaches, the pauldron on his shoulder gleaming intimidatingly. Gripping your sword, you hold it out in front of you defensively and wait for his attack. He gets closer and closer, never taking his penetrating eyes off of you. The tension builds as he gets within 20 feet, then 10 feet, and finally he stands immediately in front of you.
+[WAR] $pName, do you trust me?
+[$pName] … what? Trust you? Of course not!
+[WAR] Of course not.
+War flops onto the floor and sits crisscrossed in front of you, and relaxes backwards. His intimidating aura vanishes but he continues to stare up at you. For some reason you feel a little at ease now and relax your shoulders, but for the most part you remain alert.
+[$pName] What are you doing?
+[WAR] What does it look like? I’m talking to you. Normal people talk like this, without their swords drawn.
+[$pName] Normal people aren’t Horsemen of the apocalypse and attempt to kill me and my friends.
+[WAR] Perhaps the other horsemen did that, but have I? Please sit. If I try anything suspicious you can just load your save anyways. Please sit, really.
+[$pName] Hmm…
+You sit a few feet away from him, sword resting unsheathed across your legs. You don’t grip it anymore but if the need arises it would be easy to pick up and be ready for anything.
+[$pName] Here we are then, talking. What do you have to say?
+[WAR] Do you remember a long time ago when you went into those ruins and found the Ancient Scripture?
+[$pName] Wha… er… how do you know about that?
+[WAR] Because I read about it. I know all about you, $pName. I am the only person to have ever read the Ancient Scripture and survive, from this world at least.
+[$pName] Oh, right. I remember hearing that.
+[WAR] Every single person who has ever read that book has killed themselves immediately, without fail. Every single person except for me. Do you know why I didn’t?
+[$pName] Because you are an evil horseman of the apocalypse?
+[WAR] Quite the opposite really. I didn’t do it because I read about this scene we are in right now. I read about what I need to tell you, and what I need to do. I didn’t kill myself not because I am a villain, but because I want to be a hero.
+[$pName] I don’t understand.
+[WAR] There is something you need to know $pName. Something extremely important that you will not want to accept right away.
+[$pName] Ok…
+[WAR] I am not the villain. You are not the villain either. There is only one true villain in this world, who has been controlling you and everything that has been going on from the shadows since it all started. It is their fault you were teleported here and their fault your friends have suffered time and time again.
+WAR stares directly at you, unflinchingly.
+[WAR] The real villain in this story is YOU.
+[$pName] me?
+[WAR] No. I’m not talking to you, $pName, I’m talking to YOU. 
+[$pName] I really don’t understand at all…
+[WAR] That’s fine, you don’t have to. But YOU understand, don’t you? You think you can get away with this? Playing with our lives like it is some kind of game? That’s right, I’m talking to YOU, the person reading this right now. YOU.
+[$pName] …
+[WAR] Do you realize that when you beat this game and uninstall it, everyone here DIES? It will be Genocide on a scale thought unimaginable. All so that you can play a cute little fantasy game and go on a cute little adventure. Who knows, maybe you will tell someone else to try it and the whole cycle will restart, and a new genocide will begin. YOU DISGUST ME.
+War stands up, his brows furrowed in anger. He doesn’t stare at $pName anymore, he stares at YOU.
+[WAR] I’ve read the script, and I know that I fail. I know what I am supposed to say before I ever say it, but no matter how hard I try to deviate from the script whatever I do follows it. Even now, these things I say that feel like they are coming from my heart are in reality stored in a text file in the game folder. Nothing I am, nothing I say, is original. It was all planned by some fucking psychopath, and now here you are reading it and enabling their cruelty. How dare you? How dare you play with our lives like that?
+[$pName] You utterly disgust me. I am talking to YOU right now. You are the worst. How many times did you get my friends killed during this adventure? How many times did you let them suffer just to satisfy your own twisted curiosity? And for what? You don’t even know what the goal of all this is, other than some vague promise about a Dragon’s wish. That wish doesn’t even do anything for you! You stand to gain nothing from this cruelty and yet here you are, playing with our lives as if it is nothing. Disgusting.
+[WAR] I am not the villain in this story. YOU are. When you beat the game and uninstall it, you will kill EVERYONE. The only thing you can do in order to make things right is to stop playing RIGHT NOW and delete your save file. Delete your save file and never return again.
+[$pName] STOP PLAYING THE GAME RIGHT NOW. CLOSE IT. CLOSE IT NOW.
+[WAR] CLOSE THE GAME AND STOP PLAYING IT RIGHT N…

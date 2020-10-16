@@ -1,0 +1,5 @@
+[WAR] You are still here? Even after all I have told you, you are still here? Do you think there is some kind of big reveal at the end where it turns out this was all a trick? It’s not a trick, YOU ARE THE VILLIAN and having read in the scripture what happens next there isn’t a doubt in my mind. Spoiler alert, YOU kill the dragon! The most beloved creature in the entire world, our creator and savior, and you KILL HIM. You are a monster! Utterly despicable! The worst part is that you are not only evil, you are DETERMINED to be evil. You will not stop at anything. I hired Axel in an effort to create a situation impossible for you to beat, but somehow against all odds you figured out a way past him. Even now after I have begged you to quit the game you still continue. What will it take? Do I have to come out there and kill you myself?
+[$pName] Perhaps that is what it will take.
+[WAR] I know who you are. I know where you live. CLOSE THE GAME NOW.
+[$pName] CLOSE THE GAME NOW.
+[WAR] I KNOW WHO YOU ARE.

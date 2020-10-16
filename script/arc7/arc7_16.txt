@@ -1,0 +1,41 @@
+You fall to your knees, hopeless.
+[$pName] I tried, I really tried… I’m sorry…
+[DEATH] One must die. You must Choose.
+[$pName] I don’t make this decision lightly. I choose… I choose… $mName.
+[$mName] What!? How could you say that!?
+[$liName] $pName! What are you doing!?
+[DEATH] It is done.
+DEATH points his finger at $mName and snaps, causing him to freeze in place unable to move. Panicking, his eyes dart back and forth between you and DEATH and tries to yell for help. 
+[$liName] Oh no, $mName! I’ll save you!
+You watch helplessly from the ground and do nothing. They haven’t realized what you have yet, they haven’t realized that the second you met death it was already over.
+Grimacing, $liName holds Gasp tightly against herself and sprints forward at incredible speed, determined to protect $mName with everything she has. DEATH readies his sword and blocks her attack, and the two clash back and forth rapidly and with great precision. The sound of their swords clanging against each other rings out and bounces over and over against the icy walls, causing a chorus of battle to echo across the room. Finally, after much struggle, DEATH manages to grab $liName’s arm and throw her with tremendous strength towards the Spire’s wall. Just when it looks like she will smash into it and break every bone in her body Chef jumps in the way and catches her, and the two fly backwards and skid safely along the ground.
+[$aName] $liName! You bastard…
+$aName charges up to DEATH and picks up right where $liName left off, and sparks fly out as the two smash at each other as hard as they can with their swords. $aName cleverly backs off for a second to use Whisper’s superior range, but DEATH doesn’t fall for it and instead starts throwing knifes at her, forcing her to dodge. She bends backwards, summersaults, and flips, barely managing to dodge around the stream of weaponry thrown at her. Seeing her out of breath and caught off balance, DEATH charges back in and slices at $aName with such force that when she attempts to block it she loses her grip on Whisper and the sword goes flying off into the distance. Unarmed, $aName tries to punch at DEATH with her bare fists in an impressive display of determination but it proves fruitless when DEATH easily dodges the attack and spartan kicks her in the chest. $aName goes flying backwards and collides with $liName and Chef in a defeated pile.
+[DEATH] The only way to overcome DEATH is to accept its inevitability. Congratulations, you have defeated me.
+DEATH strides up to the frozen $mName and with a single thrust impales him through the heart, killing him instantly. With a puff of smoke DEATH vanishes into thin air, and $mName’s corpse falls to the ground unfrozen in time. You crawl up to him.
+[$pName] I’m sorry… I’m so sorry…
+$liName comes rushing back, and sees you huddling over $mName’s body. Consumed with fury, she pushes you off of him and checks his pulse. When she realizes $mName is gone forever, she screams in frustration and pounds at the ground. A minute passes until she wipes her tears off and angrily stands back up to face you.
+[$aName] WHAT THE FUCK WAS THAT!? IT’S YOUR FAULT!
+[$pName] I know…
+$liName and $aName punch you over and over again in the face, stomach, and anywhere else they can find an opening. You feel no motivation to fight back so you curl up in the fetal position and simply wait for them to tire out. After the two finish giving you a savage beating, you finally sit up and wipe the blood from your face. $liName stares at you in disgust.
+[$liName] Why did you choose him? Why did you give up right away? 
+[$pName] I DID try $liName, you just couldn’t see it. I tried as hard as I could, I really did. But no matter how long I tried, no matter how much effort I put in, I couldn’t do it. I just couldn’t…
+[$liName] What the fuck are you talking about, you asked him to kill $mName right away at the start! Bullshit!
+[$pName] You wouldn’t understand…
+You become silent, and stare grimly at the ground. $liName and $aName glare at you angrily for several minutes without saying a word before finally breaking down and crying. Just after letting out all her frustrated emotions, $liName’s words are choked and you can barely understand her:
+[$liName] Why… why did it have to go this way…
+An idea flashes across your mind.
+[$pName] Wait… Maybe it doesn’t have to.
+You stand up, and try to pull yourself together. You are pretty beat up but it’s nothing you can’t recover from.
+[$pName] I’m just as saddened by $mName’s death as you are, but its not over yet. If the Dragon’s Horsemen of the Apocalypse are guarding this Spire then it’s a sure sign he is at the top. If we manage to beat all four of them, then we can finally meet the Ancient Dragon and get our wishes, right?
+$liName looks up at you with tears in her eyes, and nods solemnly.
+[$pName] Then it’s simple. We can wish for $mName to be resurrected, good as new. Since It is my fault he died, I will use up my wish to do it. Then when we are done everyone else gets their wish and we can all live happily ever after. Right!?
+$liName looks at you confused for a moment, and then her face starts to brighten up as she slowly realizes what you are saying.
+[$liName] You’re right… It’s not over yet…
+Everyone else has been standing to the side watching this whole time without saying a word, not wanting to interrupt the emotional scene. Finally, $aName decides to pipe in.
+[$aName] I agree with $pName, we should power through and bring back $mName. It’s not over yet!
+[$bardName] yeah!
+[Chef] I Chef Now!
+Emboldened, $liName stands back up and recovers herself, wiping her tears off her face completely. She slowly walks over to $mName’s body and closes his eyes.
+[$liName] We will save you, I promise!
+Everyone groups back up and makes their way to the staircase leading to the next floor. Through the windows along the wall you can see that far below you now the snow glistens in the sun and the wintery countryside glows beautifully. It’s a tender sight, but one you can’t enjoy for long. You brave the stairs upwards, and prepare for the next battle.
