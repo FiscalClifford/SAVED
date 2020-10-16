@@ -1,0 +1,30 @@
+[$bardName] Ok guys, so now what?
+The five of you are gathered together at the side of a road arching past the Royal Museum. Despite the chaos of the hurried crowds passing by, the small space created within your group is comfortingly calm.
+[$aName] Well I think since we all worked together to obtain the Ancient Scripture, we should all share in the reward. 100 Aureus for each of us sounds fair to me.
+[$mName] Yipee!
+$aName takes the bag of money the clerk handed her and carefully distributes a fifth of it’s contents to each person. The clinking of coins makes $bardName’s face light up excitedly, and $liName grins slyly as she imagines what she should buy with the cash.
+[$aName] And lastly, the reward for $pName…
+A single coin falls out of the bag and lands in your palms, and you look up at her in confusion.
+[$pName] Um…
+[$aName] Let’s see, taking into account the horse, equipment, clothing, food, and training we have provided you, this should just about cover it. 
+The lonely coin flashes at you sheepishly, and you groan. 
+[$liName] I think everyone deserves a break. Let’s take a couple hours for ourselves, maybe spend a little money on touristy stuff in the capital, and then meet back here.
+[$aName] and $liName, don’t forget about the plan…
+You interrupt, holding your single coin up to her
+[$pName] What am I supposed to buy with only a single Aureus!?
+[$aName] Great question. Anyone else have any questions? Alright good, see you guys in a couple hours!
+[$pName] Hey!
+In an instant, everyone scatters into the city streets like startled squirrels and you found yourself completely alone.
+[$pName] Ah… Drat.
+You take a couple listless steps in a random direction before you hear a familiar voice behind you.
+[???] $pName…
+You turn, and see $liName sheepishly looking at you. It looked like she had taken off like the others but she must have doubled back.
+[$liName] I’ve been wanting to tell you something…
+Her cheeks are flushed red and she is having trouble making eye contact with you. You have never seen her act like this before.
+[$liName] $pName I… You should know that I… I…
+She gets flustered, looks into your eyes for a moment, then turns away again and crosses her arms.
+[$liName] Ah… $pName you’re such an idiot. Try not to spend all your money at once.
+[$pName] …
+And with that, $liName marches off and disappears into the crowd.
+Now you are truly alone, save for the throng of citizens busily making their way down the numerous avenues. You don’t really know where you are or what is around you at all so you know you can’t go too far or else you’ll get lost. If you lose your way around here you could end up wandering for hours with no way for the others to find you. Lazily, you begin plodding along the streets going in a circle around the Museum, trying to explore as much as possible while still staying close to what you know is familiar.
+Despite the nice weather and pleasant environment, you quickly become bored. With nobody to talk to and no money to shop with there isn’t much for you to do. Craving stimulation, you continue to wander along the streets until you finally notice an opened manhole cover that leads into the sewers. Normally these would be closed off to the public, but someone left this one open in a hurry. A familiar aura of adventure radiates from the opening.

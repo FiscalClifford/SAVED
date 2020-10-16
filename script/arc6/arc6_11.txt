@@ -1,0 +1,35 @@
+You decide to figure this problem out on your own. Worst case scenario you will have to reload a save or two, but it will be a lot easier to handle this without needing to explain everything to everyone.
+[$pName] Enjoy your soup guys. I’m gonna take a quick walk so don’t mind me.
+[$aName] You want me to come with you? It’s pretty spooky out there.
+[$pName] No it’s fine, really. I’ll be right back.
+[$aName] Huh, suit yourself.
+You make your way out the bar and head towards the forest on the outskirts of the town. The pine needles and half frozen dirt crunch satisfyingly under your feet, and the fog begins to shroud your surroundings. You have never felt this alone before in your life.
+You continue along the pine forest floor, picking your way over rocks and fallen branches.
+[$pName] This is gonna hurt. I know I’m not going to make it out of this alive, at least not for the first try. Am I really that numb to death already?
+You talk to yourself in an attempt to soothe your nerves, but it doesn’t help much. Your surroundings are quiet now, far too quiet.
+[$pName] I could load back before they kill me maybe. Maybe I’ll just stick around long enough to gain some new info, then load back really quick before I get hurt. Agh I really don’t want to die again…
+Ahead of you is a massive fallen pine tree, with a trunk as wide as you are tall. You approach it expecting to climb it, but before you can a shadowed figure jumps out of the fog and on top of it, looking down at you.
+[???] Well well well. If it isn’t $pName, all by his lonesome.
+You draw your sword, and hold it in front of you at the ready.
+[???] No need to be aggressive, you already know what’s coming don’t you? Why not just lay the sword down and give up nicely, save us both some trouble?
+[$pName] Fuck you. Why are you attacking me and my friends?
+[???] Nope not your friends, just you. We are only getting paid to kill you, $pName. But you already knew that, didn’t you?
+The shadowed figure jumps down from his perch and crosses his arms. He has Fiery red hair, and a black eye patch covering his left eye. He is taller than you by half a foot and bulging with muscles. Despite the cold he only wears pants which leaves his muscular chest exposed, and you notice it is covered in scars. Slung diagonally across his back are two swords in parallel, one is plain steel and the other is sheathed in an incredible onyx scabbard covered in ornate golden decorations.
+[???] Nice to meet you again, $pName. My name is Axel, the greatest bandit chieftain to have ever lived. I am here to kill you yet again. Now without further ado, get him!
+A whistle in the wind announces the arrival of an arrow, which flies from somewhere in the forest to your left straight towards you. You attempt to dodge but it is too late, and it lodges itself into your left leg with a loud Thunk.
+[$pName] AAAGHHH!
+The arrow sends a searing hot pain throughout your leg, and you can feel the wound begin to bleed. It is in too deep to pull out, but right now that is the least of your concerns. Currently, at least ten other bandits have emerged from the forest and charge towards you, swords drawn. All of them wear red bandanas on their heads and all have a thirst for blood in their eyes. You bring your sword up at the ready and prepare to defend yourself.
+The first bandit runs in with his sword pointed straight towards you, attempting to skewer you with his charge. The second he gets within range you bring your blade down and parry his thrust, but before you are able to counter attack he jumps back and is replace by two new bandits. You bring your weapon back up to ward them off when a second arrow whistles through the air and punctures your right shoulder, hitting right on the nerve and sending white hot searing pain throughout your torso and arm.
+[$pName] Aaaahhhh shiiiit…
+The pain is too overwhelming and you involuntarily drop your sword, leaving you defenseless. One of the closest bandits sees the opening and swings as hard as he can at you from above his head. Instinctually, you raise your left hand in an attempt to grab the sword but it already has too much momentum and slices straight down your forearm, splitting your entire arm all the way down halfway past your elbow. The two halves of your arm dangle pitifully away from eachother like a blooming flower and spout blood across the forest floor. You scream.
+[$pName] AAAAAAAHHHHHHHH!!!
+You collapse, the pain is so intense and so overwhelming that you can’t think, can’t speak, can’t do anything. All you can do is convulse on the ground useless, screaming. The bandits watch you in silence.
+[$pName] AAAAAAAHHHHHHHH!!!
+It takes only a few seconds for your vocal cords to give out, so you give up on screaming and try to overcome the pain. You grit your teeth and shut your eyes tight, hoping for relief that never comes. You clench your jaw in utter agony, clenching it as hard as you can hoping the pain will go away. The white hot pain that is consuming your body is so unbelievably bad that you soon feel your molars crunching as you clench your jaw harder than the structure of your teeth can handle, and the broken shards of your teeth intermingle with the taste of blood in your mouth. Finally, after what feels like years of pain, you hear a voice. It is Axel.
+[Axel] You can try to beat me for the next million years, by yourself or not, but it doesn’t matter. Look at you, laying there so pitifully. Do you wish for death?
+Your vocal cords are ruined and your mouth is filled with teeth and blood, so you spit out a mouthful of bile and whisper out a hoarse response.
+[$pName] Kill me…
+You have lost a lot of blood, and your consciousness is starting to give out. It is remarkable you are even still awake at this point.
+[Axel] Sorry $pName, but I can’t do that. I have strict orders from the client to draw out your death no matter what. The client knows about your power, you see, and told me all about it. He wants you to give up, to hide from the pain and never return to this world. I think it’s a load of crap, to be honest, because if you really could see the future you wouldn’t have been beaten this easily. I mean come on, you sucked! You couldn’t even touch one of us, and you can see the future!? Man, that really stinks. Sorry about this kid. Maybe if…
+You no longer can hear him as all your senses finally dull and give out. The blood loss is too great for you to handle and you finally die on the forest floor, alone.
+THE END

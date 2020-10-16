@@ -1,0 +1,15 @@
+*A Golden voice of deep Baritone gently reaches out to you at the edge of your consciousness*
+[???] Intrepid traveler, do you yet know what you have become?
+[$pName] Er…
+[???] What is morality? Is it something we learned from an ancient book? Is it something others force upon us since birth? Does right and wrong exist?
+[$pName] Woah, um…
+[???] Do you yet know what you have become?
+A light appears far above you, casting a bright light down on a new set of surroundings. Without explanation you find yourself standing in the middle of a large field of short grass. The grass is green, but the sky is an odd combination of purple and pink, as if two buckets of paint were spilt onto a single canvas and mixed together. You look around yourself and find nothing else at all, the ground is perfectly level, without a single variance in height or imperfection. The grass continues on infinitely in all directions, and you feel a little disoriented not being able to tell one way from the other. Then, a huge whoosh of wind blows past you and a new object rushes into the scene: First a set of train tracks, which at lightning speed appears from thin air and lays itself onto the ground as if being built by a million unseen hands. Next, a divergence in the tracks is laid down so that one set is perfectly straight and the new set curves away from the original and takes a second path that runs parallel to the first. A lever materializes next to you, with a wire that runs towards where the two sets of tracks split. Finally a train is constructed out of thin air bolt by bolt at an incredibly fast speed. After watching with your jaw dropped for only a short moment, the train is finished constructing and is gently laid down on the track perhaps 100 feet before where the divergence in the track is.
+*A Golden voice of deep Baritone gently reaches out to you at the edge of your consciousness*
+[???] A train is hurtling down the tracks at incredible speed, too fast for the train to be able to brake in time. Tied to the track ahead are five people of completely randomized age, race, gender, and position…
+Five people appear on the track ahead of the train just past where the tracks diverge, and the train begins to move forward gaining momentum.
+[???] Just before the five tied down people is a divergence in the tracks, which only activates if you pull that lever. On this new divergent track is only a single person of completely randomized age, race, gender, and position…
+A single person appears at the parallel track, and just like the others is tied down and helpless to escape.
+[???] If you do nothing, the train will run over and kill the five people tied to the track ahead. If you pull the lever, it will take the alternate track and kill the single person tied to the track.
+A bead of sweat forms on your temple, and slowly slides down.
+[???] Some would say that it is morally correct to sacrifice one to save the many, but others would argue that in a dilemma that is by default morally wrong, participating at all makes you partially responsible for their death. I don’t care what they think, I care what YOU think. So, $pName, which will you choose?

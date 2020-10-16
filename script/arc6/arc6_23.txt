@@ -1,0 +1,12 @@
+Your eyes open. Somehow, against all odds, you are still not dead. In your soul you can feel you are very close however, and only have perhaps a few more moments of lucidity before everything fades away for the last time. You turn your head slowly to the side, towards where you hear a faint shuffling sound. You can’t believe your eyes. It is Chef, dragging his dying body slowly towards you at a snails pace.
+[$pName] Chef? I thought… you were… dead…
+You cough violently, and blood covers your chin. A few feet away Chef is approaching, and you watch in horror as he struggles towards you on his hands and knees, blood spouting out from him like a torrent. He is a big man with a lot of blood, but it looks like an almost impossible amount of blood is gushing out from him. It looks like all the blood in the world is pouring out, and it just keeps going and going. The sight is so gruesome it makes you shiver.
+You hear another noise. To your left, a scuffle of footsteps alerts you and you turn to look. It is one of the bandits, sneaking towards you with a knife drawn. At this point you are too exhausted to be afraid, and sigh. The bandit is coming to finish the job.
+You close your eyes. It will soon be over. The footsteps get closer and closer, with the timidity of a coward. Finally, the bandit is right over you, and you can sense he is raising the dagger to finish you off. Then, unbelievably, you feel a weight placed on you and your eyes shoot open to see what happened.
+On top of you, protecting you, is Chef. In his final moments, with his last bit of energy, he lays on top of you and puts himself between you and the dagger wielding bandit. Frustrated, the bandit stabs him. Chef doesn’t make a sound.
+[bandit] Wha???
+The bandit tries to move Chef, but he resists. Frustrated, the bandit stabs chef again, but Chef refuses to move. The bandit attempts to stab at your face around Chef, but at the last second Chef throws his arm over your head and takes yet another blow for you. He grunts in pain.
+[$pName] Chef?
+[Chef] I… Chef… Now…
+The bandit screams in frustration, and thrusts his dagger into Chef’s neck. It severs his spinal cord and his body goes limp, falling off you and laying on the ground uselessly. Your vision begins to go black. The bandit raises his dagger to finally stab at you, but it is too late; you are already dead. With his final moments chef saved you, a dying man, from a killing blow. His gesture was completely pointless, entirely fruitless. Despite this, you couldn’t be more grateful. Chef died a hero.
+THE END

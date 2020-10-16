@@ -1,0 +1,61 @@
+[$pName] I will try anything, at this point. Let’s say hello to Maud.
+You hate to admit it, but it’s the truth. You need to figure out a way to get out of this situation.
+[$aName] Really? If you say so…
+You wait outside the bar while $aName explains the situation to everyone, then she meets up with you again outside. The two of you head towards the opposite half of town across the main road. As you walk, loitering members of the Forest Fangs eye you suspiciously and you feel uneasy. $aName opens and closes her fist as she walks, visibly nervous. Finally, you reach the mercenary fortress and speak to the guard posted outside.
+[Guard] Halt, who goes there?
+[$pName] $pName and $aName, just two travelling adventurers seeking audience with Maud of the Forest Fangs.
+[Guard] And what business do you seek with her?
+[$aName] We hope to employ her services.
+The guard raises his eyebrows as $aName, and speaks in a low voice.
+[Guard] What are you doing here, miss? Are you trying to piss Maud off?
+[$aName] What? What do you mean?
+[Guard] She hates other women, don’t you know that? You really aught to get out of here before she…
+Just then, the fortress doors blow open and reveal an impressively dressed woman in her late thirties. She has long silky black hair and jet black eyes, and wears a small tiara on her head decorated with little steel swords dancing along the sides. She is covered head to toe in black clothing, and her back is adorned with a long cape of incredibly vibrant green with golden fringes. Her hands are both gloved in black leather, and her boots don’t have a speck of mud on them. She immediately strikes you as someone of immense power and could easily be mistaken for the queen of $kingdomName. This can only be one person; the leader of the Forest Fangs, Maud.
+She glances over you, unimpressed, before turning to $aName. Her face immediately contorts into one of disgust, and you can practically see venom dripping from her eyes.
+[Maud] I see the town’s newest visitor and his harlot have finally decided to pay their respects to me. Follow.
+She turns on her heels and heads back inside, her emerald cape gleaming as it whips about and chases after her. You glance at $aName, gulp, and head inside.
+10 minutes pass, and you find yourself at a small throne room of sorts where Maud sits perched above you on top of a massive throne made of silver. She looks down on both of you with contempt, without saying a word all the while sipping on a glass of wine. You too, have a glass of wine, but you don’t drink from it out of discomfort. $aName was never offered a glass. Both of you stand in front of the throne room without having been offered a chair and are forced to look up at Maud when speaking to her.
+[Maud] Well? Get on with it then.
+The extreme inhospitality has thrown you off balance, and you wonder in the back of your head if this was a good idea after all.
+[$pName] Well… ah… um… We have come here, you see, so that we can… uh…
+You trip over your words, feeling the intensity of Maud’s gaze on you as you struggle to speak out.
+[$pName] There are Bandits you see, bandits that are just outside your town. And we were…. Uh… we were hoping that uh, that you could help us…
+[$aName] What he is trying to say, is that there are…
+[Maud] SILENCE!
+Maud yells ferociously at $aName with a booming voice, instantly silencing her. You can’t believe the expression of contempt and hatred Maud has adopted, you would think $aName had just killed her family.
+[Maud] How dare you speak to me, you bitch? If you talk one more time in front of me I will have you both thrown out and not listen to another word, do you understand?
+$aName lets a flash of annoyance cross her face for a brief second before regaining composure, and nodding in agreement. You can tell she wants to put Maud in her place but doesn’t want to ruin things for you. You take a deep breath.
+[$pName] There is a gang of bandits that want to kill me, Maud of the Forest Fangs. There are less than 50 of them but likely more than ten. We have decided the best course of action would be to ask for, and purchase, your aid.
+[Maud] I see… How many are there, exactly?
+[$pName] I do not know.
+[Maud] How many archers?
+[$pName] I do not know.
+[Maud] What is their position?
+[$pName] Somewhere in the forest… I do not know exactly where…
+[Maud] And what do you offer me for my services?
+[$pName] We have about a thousand Aureus altogether that we could use to…
+[Maud] HA! One THOUSAND!? Do you think I am some cheap whore you can use for a night and toss to the side the next day? Do you realize who you are speaking with!?
+[$pName] I apologize, I didn’t realize it wouldn’t…
+[Maud] SHUT UP. You really think you can come in here to waste my time like this? You know nothing of the enemy, you know nothing of their motivations, you offer nothing for my services, you bring this wench into here as an insult… Have you no respect?
+[$pName] I truly am sorry, I didn’t know…
+[Maud] You are the worst negotiator I have ever met in all my years as a Mercenary. First off, Bringing backup to a one on one negotiation is a major break in protocol. Why didn’t you come alone? Secondly, you have nothing to offer me. Why on earth would I risk my life and the lives of my men for someone I don’t know and that has nothing to pay me with? Lastly, you don’t know anything about these bandits at all! I need exact numbers and positions! How dare you!?
+[$pName] Well I could try to share some more details about them, just…
+[Maud] I said SHUT UP.
+Maud takes a deep breath, and a deep pull from her wine. She looks completely exasperated. She stares at you like a misbehaving child for some time. Then, slowly, a sly grin appears on her face. She glances between you and $aName, and raises a single eyebrow. Then…
+[Maud] Maybe there is something you could do to convince me to help you after all…
+[$pName] What is it? Please, anything!
+[Maud] Well, first let me tell you a little story.
+She puts the wine glass down on the armrest of her throne and Looks down at her right hand.
+[Maud] A long time ago I used to be married to a roguish man who took me for granted. One day I learned he was cheating on me, of course, with some disgusting whore who looks an awful lot like your nasty friend there.
+Maud points at $aName, who narrows her eyes but says nothing. You silently thank her for keeping her composure.
+[Maud] I got mad, we got in a fight. Most people just slap each other during domestic disputes, but we were the leaders of a mercenary army so of course our fights were a little more… intense than that. I got him pretty good, but he permanently damaged my perfect body and ran off with my sword. Let me show you something extremely few people in this world know about…
+Maud pulls off her right leather glove to reveal her hand, a grotesquely disfigured and poorly healed stump missing all five of her fingers.
+[Maud] He tried to take my arm off but missed, and got my fingers instead. Hurt like hell at the time. Anyways the lesson learned is that you can’t trust men, but even more so you can’t trust women because there will always be some sloppy slut that is willing to jump in and ruin your relationship. Your friend here looks remarkably similar to the woman he cheated on me with, and if there is one regret I have in life it is that I never got to take out my revenge out on her. So here is my offer.
+She looks at you now, with an intensity that deeply unsettles you. Her expression can only be described as being one of pure wickedness.
+[Maud] I want you to do to your friend what my ex husband did to me. I want you to cut off her fingers. If you do that, then I will do everything in my power to save you and your friends.
+[$aName] WHAT!? That is the most…
+[Maud] Strellooooo!!!
+Maud points at $aName while shouting and $aName suddenly falls to the floor fast asleep. A faint sparkle of magic twinkles about her sleeping form before dissipating into the room, and Maud chuckles to herself. You rush over to check on her, but she is appears completely fine other than maybe a small bump on the head. She seems like she is having a nice dream, and grins slightly.
+[Maud] I told her to keep quiet, I really did. Well, $pName, she is going to be completely and utterly asleep for the next five minutes and won’t wake up no matter what happens to her. That is the power of my control word. It’s time to choose; will you spare her fingers and accept doom, or be a man and do what needs to be done?
+You stare up at her in disbelief. 
+[$pName] I can’t believe this…

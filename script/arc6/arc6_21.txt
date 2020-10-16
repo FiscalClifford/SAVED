@@ -1,0 +1,14 @@
+Your eyes open. Somehow, against all odds, you are still not dead. In your soul you can feel you are very close however, and only have perhaps a few more moments of lucidity before everything fades away for the last time. You turn your head slowly to the side, towards where you hear a faint shuffling sound. You can’t believe your eyes. It is $aName, dragging her dying body slowly towards you at a snails pace.
+She makes her way over to you inch by inch until she is finally close enough to touch you if she reached out far enough, and collapses. You hear a pained whisper escape her lips, so faint it is hardly audible.
+[$aName] Looks like… the adventure… is over, huh?
+You stare back at her sympathetically. A pool of blood forms around her.
+[$pName] It’s over.
+[$aName] But we had… a good run… didn’t we?
+Despite almost certainly being in excruciating pain, $aName smiles a little to herself and you notice a glimmer in her eyes.
+[$aName] I’ll… never… forget you… thank…. You…
+You say nothing. Tears are streaming down your face. Tears are streaming down hers. Both of you are dying.
+[$aName] Maybe next time… you will keep… your promise…
+$aName gives a final shudder, and falls over dead. You cough, and paw feebly at your wounds. Everything goes dark. 
+[$pName] Next time… Will be different…
+You gasp, and your lifeforce exits your body. You are dead.
+THE END.

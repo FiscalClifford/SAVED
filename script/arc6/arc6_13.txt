@@ -1,0 +1,94 @@
+[$pName] I think a frontal assault is best. Sometimes keeping things simple can end with the best results, you know?
+[$liName] The last thing they will be expecting is a full blown confrontation without the element of surprise at their side. Let’s do it then.
+$liName leads the way back into the bar and claps her hands together to get everyone’s attention. She explains on your behalf that yet again there is a foe to be defeated, and that she is counting on everyone to do their part to help out. 
+[$liName] As a final note, keep your wits about you as there may be arrows coming in from unexpected directions. Any questions?
+$bardName meekly raises her hand.
+[$liName] Yes, $bardName?
+[$bardName] Can I sit this one out? This isn’t really a job for a young singer like myself.
+[$liName] I suppose…
+[$mName] Wait, can I sit this one out too? To be honest I’m more a fan of the adventuring side of things than the violent side, so I don’t really want to…
+[$liName] …Ok now hold on…
+[$aName] Are you sure a frontal assault is the right choice here? It sounds dangerous! Maybe I’ll stay back and guard these two…
+[$liName] Not you too, $aName! C’mon we need you to help for when we…
+[Chef] I Chef Now!
+[$pName] Thanks Chef, I’m glad at least you are brave enough to join us…
+[$bardName] Why not just wait here for them to attack us, why do we have to go to them!?
+[$mName] Why do they want to kill $pName anyways? What’s their problem?
+[$pName] It’s hard to explain, I think…
+[$liName] EVERYONE! Please! Calm down a little bit for a second!
+Everyone glances around nervously and quiets down out of respect for $liName. She takes a deep breath, and continues.
+[$liName] We are an adventuring team, are we not? An adventuring TEAM. We need to fight these hitmen as a team. If you are scared you can hang back a little but we need every single person as backup just in case things get dicey. 
+[$pName] Thank you $liName, I couldn’t agree more. These guys are serious, we need everything at our disposal to defeat them.
+[$aName] Ah…
+[$mName] Hmm…
+[$bardName] Eek!
+[$pName] I’ll tell you everything I know about them, and share the plan $liName and I came up with. It’s gonna go just as smoothly as our fights with the cult.
+$bardName and $mName don’t look like they are entirely convinced, but because they care about you they reluctantly agree to help anyways. You whisper out loud to yourself:
+[$pName] Plus If things get bad, I can always load my save before anyone suffers…
+Everyone gathers their things and prepares for the fight. You tell them everything you know about the enemy force of assassins while sharpening your sword, and with each stroke of the whetstone you feel yourself getting angrier and angrier at the situation. Half an hour passes, and it is time - The six of you venture into the foreboding fog of the woods.
+[$aName] You said they are waiting out here, right?
+Everyone is marching through the woods in a flying V formation, weapons drawn. $aName and $liName idly swipe at branches around them as they walk past, which gently fall down and bounce across the pine needles. You scan ahead of you, but see nothing familiar nor any sign of the bandits. Did you take the right path? You glance around you worriedly, when
+TING!
+Acting on pure instinct, $liName deflects an incoming arrow away that was shot at her from somewhere to the right. The arrow bounces off Gasp and twirls behind a tree, ineffective.
+[$liName] There they are! Charge!
+$liName crouches low and sprints as fast as she can sideways, moving to a position from where she can loop behind the archer and flank them. Meanwhile, everyone else turns to face the direction of attack and charges together. Out of the foggy gloom, at least ten or so bandits jump out from behind a myriad of trees and charge forward to meet you.
+The first to come into contact with the enemy is $aName, who engages two bandits simultaneously and begins her deadly dance with Whisper, whipping the lengthy blade around her rapidly while keeping the enemy out of range for attack. You don’t have long to watch however as you are the second to enter the fight, and you square off against an intimidating looking bandit with a curved sword in each hand. You two test each other out with some safe lunges and swipes without committing, and slowly begin to circle each other. To the side you see Chef engaging three at once, cleaving at them with such awesome strength that his missed swings send his cleaver straight through one of the trees and sends it falling down sideways. Beyond him you see a couple bandits chasing after $mName and $bardName, who yell comically as they scamper away as fast as they can. 
+The dual wielding bandit notices you are distracted and takes a wild swipe at you with his left hand that you block easily. His right arm quickly follows the left however, so you try to dodge backwards. The curved blade catches you on the thigh as you retreat, but only barely. The cut is shallow, and your leg bleeds a little through your pants. Grimacing, you hold your blade ready for an attack of your own and swing upwards at him, which he blocks. He counterattacks with another horizontal swipe, but this time you are ready and you parry it away. His other arm brings a second blade careening towards you but since your sword is still centered you manage to block that as well, and lunge forwards. With both swords knocked away and caught off balance, the bandit is unprepared and stumbles backwards, exposed. You bring your sword around in a mighty arc and lope one of his arms off, sending his curved blade spinning away with the hand still gripping it tightly. Screaming, the bandit unexpectedly retains his composure and attempts a counter attack with his still attached arm. His attack smashes into your side, but in his haste he forgot to angle the blade correctly and it mostly hits you with the broad side of the blade. It still slices you pretty bad however, and badly bruises you at the impact site. You stagger and bring your sword around to block a second attack, but the bandit has collapsed and can fight no more. You regain your composure, and look around.
+$liName has engaged at the flank of the enemy formation and has already taken care of the archers. $aName has defeated the three bandits she started fighting, but looks like she is getting tired quickly as she fights off another pair. Chef is… Chef is dead? 20 feet away, you see Chef’s last moments as he fights off something like 6 bandits at once. He is completely surrounded, and many dissected bodies lay around him. In his last moments he grabs one of the bandits with a single hand and crushes their windpipe effortlessly, but is quickly attacked from the rear and stabbed several times. Enraged, he turns and cleaves the attacker in two, but three more bandits assault his exposed back yet again and lodge several swords into his shoulder and back. Chef roars in pain before finally collapsing to the ground, and doesn’t move again. $mName and $bardName are nowhere in sight.
+[$pName] Chef! NO!
+You sprint towards Chef’s body, and attack one of the triumphant bandits. He is too busy celebrating to notice your charge, and you shove your sword straight through his back and into his heart killing him instantly. Pushing his dead body forward and away from you, you hold your sword at the ready while the remaining bandits move in to surround you much like they did Chef. You try backing up to stop them, but every time you turn or try to backtrack one of them swings at you and you have to slow down to block the attack. In only a few seconds you find yourself in the exact same situation Chef was only moments ago.
+[$pName] This isn’t looking good…
+Just when you think its over, $liName comes crashing in from the side and swings Gasp at two of them, decapitating both instantly. The bandit in front of you turns to yell angrily at $liName, so you take advantage of the distraction and stab him through the stomach. The bandit drops his sword and stares at you in complete surprise, then grips your blade as if he could somehow undo the irreparable damage you have just dealt him. With a grunt, you push him backwards and your sword slides out of his belly, making room for his entrails to spill out of his stomach. The bandit stumbles backwards several feet until tripping over the first dual wielding bandit you fought, who is still laying on the ground and weakly attempting to reattach his arm back to his body. 
+Now there is only one bandit left, and he throws his weapon down in terror and raises his arms.
+[Bandit] I surrender! Please! I surrender don’t hurt me!
+[$liName] This is for Chef.
+Quick as a lightning strike, $liName blasts through the bandit’s skull with an intense burst of violence from her sword and kills him instantly.
+[$liName] Where is $aName?
+[$pName] I don’t know, she was fighting some bandits back where I was before and… DUCK!
+$liName crouches low and barely dodges in time to avoid a sword swing aimed directly at the back of her head. A bandit had snuck up behind her using the trees as cover, but luckily missed his best chance at a free shot at her.
+The bandit has Fiery red hair, and a black eye patch covering his left eye. He is taller than you by half a foot and bulging with muscles. Despite the cold he only wears pants which leaves his muscular chest exposed, and you notice it is covered in scars. Slung diagonally across his back is an incredible sheathed sword of onyx covered in ornate golden decorations. In his hands and now pointed at you is a simple steel blade.
+[???] Nice to meet you again, $pName. My name is Axel, the greatest bandit chieftain to have ever lived. I am here to kill you yet again. Now without further ado…
+Axel swings at $liName a second time, and you find yourself in the middle of an intense bout of swordsmanship the likes of which you had never seen before. You are completely outclassed by both $liName and Axel, so while you try to help out as much as possible for the most part you are forced to dodge backwards and watch. The two battle ferociously, and for the first time it looks like $liName has met her match. After the two exchange a flurry of blows, both take a step back to catch their breath.
+[Axel] Not bad… *huff* not bad at all! It’s been a long time since I met a foe worthy of the Black Blade…
+Axel casts his steel sword to the side, and with a flourish draws his second sword from his back. The blade is so black, so incredibly dark, it almost appears to be sucking the light out from the air around it. The gold decorations along the sides gleam brilliantly and you can barely make out a small carving of a dragon on the pommel.
+$liName gasps.
+[$liName] Dra… Dragonium!?
+[Axel] a whopping 40% of the sword, nearly 24 marbles in all. It has the highest concentration of Dragonium in the entire world.
+[$liName] Imp… Impossible!
+$liName visibly falters, and takes a step back.
+[Axel] You’ve been fighting me with your fancy blade all this time without blinking an eye, but the second I use my own special sword you get scared huh? Not very sportsmanlike of you.
+Axel wields the blade firmly, and a black energy seems to emanate from within the blade. Some of it expands away from the sword like smoke, and some gets pulled into Axel’s body as if he is absorbing it.
+[Axel] Ah, Dragonium in this concentration is truly intoxicating. What do you say we continue our little duel?
+[$liName] $pName, RUN!
+$liName turns to fight Axel and buy you time to escape, but the fight is over before you even have time to think. Axel’s body disappears in a cloud of black smoke, only to reappear behind $liName in a blink of an eye. Reacting faster than you thought possible, $liName brings Gasp around and behind her and turns to block the strike she instinctually knows is coming. Despite her best efforts, it is all in vain. The Black Blade vibrates rapidly and violently creating a disturbing humming sound, and slices clean through Gasp as if it was made of paper. Defenseless, $liName takes the full force of the attack and is sent flying backwards, a massive gash arcing across her chest. She travels through the air rapidly until finally slamming into a tree and crumbling to the ground, coughing up blood. You can’t even look to see if she is alive yet before Axel turns to you and charges.
+[$aName] $pName!
+In the nick of time $aName jumps in front of you and pushes you out of the way, and the Black blade slices downwards across thin air. His swing has so much momentum that it continues down and into the earth, and you realize that the sword has cut through the ground just as easily as it cut through $liName’s sword. It looks like it passes through almost any material without any effort whatsoever. 
+Axel lets out a snarl of frustration, and turns to $aName. She brings Whisper up and at the ready for a strike, and slices down towards Axel with furious speed. Right before impact however, he erupts into another cloud of smoke and reappears behind her.
+[Axel] It’s over!
+The Hum of the Blake Blade raises in volume to a frenzy as he slices it across $aName’s back, ripping her apart and sending her broken body flying forward. She catapults through the air for a few seconds before finally smashing into the branches of a pine tree and returning to the icy mud below, motionless.
+You stare at Axel feeling a mixture of anger and helplessness. He is completely out of your league. With a sad sigh, Axel sheathes the Black Blade on his back and strolls over to you. You point your sword at him like a child holding a stick towards a bear.
+[Axel] Well, here we are. I’ve killed all of your friends. Maybe this is the first time I’ve killed all of them, maybe it’s the hundredth, I have no way of knowing. Here’s the thing though: I have strict orders from the client to draw out your death no matter what. The client knows about your power, you see, and told me all about it. He wants you to give up, to hide from the pain and never return to this world. I think it’s a load of crap, to be honest, because if you really could see the future you wouldn’t have been beaten this easily. But since that’s what he wants…
+Axel lunges towards you, and before you can react he has a grip on your sword arm. With his free hand he brings it back and wallops you in the stomach so hard you are forced to your knees gasping for air. Circling around you while still holding onto your sword arm, he punches forwards at your elbow and breaks your arm. It makes a loud crunching sound, like footsteps on gravel.
+[$pName] Uuuuuughhhh….
+Your broken arm drops your sword, and you fall over. Axel casually picks it up and inspects the blade.
+[Axel] I told you once, and I’ll tell you again; I am going to torture you. I don’t like torture, but the client very specifically requested I do this. If you really do have the power to go back in time like he said you could, I suggest you do it right away cause this is about to get nasty.
+Axel smashes your face with the pommel of your sword and everything goes black.
+By the time you wake up, you realize you are tied to a log, laying down on top of it. You can’t move your hands or legs at all, and your sword arm burns savagely where Axel broke it. A cold chill runs across your body and you realize you are naked.
+[Axel] Look who is back! Time to begin.
+Axel is holding a small, wickedly sharp dagger in his hand and is standing directly over you. He has a look of remorse in his eyes.
+[Axel] I really am sorry about this.
+Axel brings his dagger down to your chest, and with a quick swipe cuts off your left nipple. You scream.
+[Axel] I know, I know, it hurts. Sorry sorry sorry…
+Axel cuts off the right nipple as well, then moves to your right side. Your eyes water in pain and you scream into the empty forest for help but there is no one there to hear you. Next, Axel grabs one of your hands, which you desperately try to free from the bindings to no avail.
+[Axel] This one’s a doozy…
+He stabs the dagger underneath your fingernail, sending searing pain into your hand that is so acute you can’t believe it is real. He digs and digs with it, sending wave after wave of excruciating pain across your body. Finally, after what certainly must have been an entire week of digging, he turns the dagger and twists it to remove the fingernail entirely. The red hot sensation of the nail being cut out is unbearable, but you admittedly feel a sense of relief that since the nail is gone and it will finally be over.
+[Axel] It never feels good to have bits of your body taken off. This little guy was my ex’s fault, you know.
+Axel taps his black eyepatch.
+[Axel] She didn’t take the breakup very well, but I think I got the better end of the deal in the end.
+Axel looks off in the distance lost in thought for a moment before finally coming back to reality and gripping your hand again.
+[Axel] Anyways, looks like It’s just you and me and a whole lot of time to kill. I’ve got all the other nails on this hand, and then all the other nails on the other. And just when you think it’s over, we’ve got a whole row of toenails to work on too. Buckle up.
+What follows is a blurry haze of unbelievable pain that rips at your body over and over again. You are completely helpless to stop it, and every time the pain becomes so overwhelming that you lose consciousness you wake up only a few minutes later to find that Axel has waited for you to come to before continuing once again. One after the other he painstakingly removes every single fingernail and toenail on your body, and by the end of it you have completely lost your mind. As he rips off the last toenail you scream and laugh manically, shuddering violently against your bindings. The receptor in your brain that recognizes pain has at this point been completely shot, and you are numb to all feeling in your body.
+[Axel] Well my friend, that’s all I can stomach to be honest. Until next time.
+Axel flips the dagger in his hand to point downwards, and he plunges it into your chest. You hear the thud of it slicing into your organs but feel nothing. 
+[Axel] Goodbye.
+Axel gets up and casually strolls into the forest until he is engulfed in fog. tied up and dying, you watch him solemnly as he disappears. You close your eyes.

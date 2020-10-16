@@ -1,0 +1,93 @@
+[$pName] Terrible things will happen if these bandits catch us… 
+You shiver.
+[$pName] The safest option is simply to sneak away and escape. We have less than an hour to prepare. Let’s tell the others.
+The two of you re enter the bar and get everyone’s attention. They quiet down immediately, sensing that whatever it is you are about to tell them must be very important.
+[$aName] Attention you guys! So here is the situation. There is a band of bandits hunting down $pName right now and they are at this very moment hiding out there in the forest, waiting for us.
+Surprised looks appear around the table. $bardName fidgets nervously.
+[$aName] We can’t stay here or they will kill us in our sleep, or hurt townsfolk, or for a bunch of other different reasons. We have one hour to sneak out as fast as possible and lose them. The plan $pName and I came up with is to sneak out of town in disguises, then once we get far enough away we simply ride as hard and fast as possible so that they can’t catch up. What do you guys think?
+[$liName] Why don’t we just attack them before they attack us?
+[$pName] Thank you for the suggestion $liName, but right now we are trying something different. Anything else?
+[Chef] I chef now.
+[$pName] … Thank you Chef. Is that all?
+No one says anything else so you take that as a sign of agreement.
+[$pName] Ok everyone, here is the strategy for disguises! $mName, go into the general store we went into earlier and grab some bandages, we can use those to cover our faces.
+[$mName] What do you mean, we haven’t gone into a general store…?
+[$pName] What? Yes we…. Oh right, um, ok I guess I misspoke there. But if you go along this road a little bit there is a store with no sign on it 2 buildings down on the left. That is the general store.
+[$mName] And grab some bandages there, alright.
+[$pName] $bardName, I need you to get some black cloaks from that same store, I remember seeing them in the clothing section. They are cheap but should alter our appearance pretty well.
+[$bardName] Okie dokie.
+[$pName] $liName, I want you to wait 20 minutes then try and start a forest fire at the south side of town, where we came in. I’m hoping if we create a distraction big enough the bandits won’t notice us skulking by.
+[$liName] It’s gonna be hard to do considering how damp it is out here, but I can try…
+[$aName] $pName and I will buy some food for tomorrow and take care of the horses. Meet back here in half an hour!
+Everyone mutters in agreement and goes their separate ways while Chef contentedly stays in the bar to eat $aName’s untouched soup. You and $aName head for a small bakery you noticed nearby to buy some bread.
+[$aName] So $pName, you really don’t know why they are after you huh? You don’t think maybe they have something to do with the cult?
+[$pName] There is a lot I don’t understand about this situation still. All I know for sure is that I want to make sure everyone gets out of this alive.
+[$aName] Fair enough. I hope this works…
+20 minutes pass and everything is going according to plan. Everyone is stocked up on food, faces covered in bandages, and appearance disguised by the cloaks. The horses are ready, and well rested. South of the town, a small fire was reported and a few townspeople busily hustle past to help put it out. The smoke from the fire billows over the forest tree line behind you as you mount $hName and prepare to ride.
+[$pName] We couldn’t ask for the set up to be any better than this, let’s ride!
+The gang hollers in agreement and everyone urges their horses to sprint, sending the six of you careening out of the town and North along the road as quickly as possible. The wind whips at your face and eyes as you ride at a breakneck pace, and you pray that this rush of excitement marks your valiant escape from this hellhole.
+[$pName] $aName!
+You yell sideways at $aName, who is riding beside you.
+[$aName] What!?
+[$pName] Don’t you think taking the main road North is a little too obvious!?
+[$aName] Don’t worry, I thought of that! $mName asked around and found a little side trail we can take that is well hidden!
+[$mName] That’s right, follow me!
+$mName takes the lead of the formation and steers the group diagonally off the road. Without slowing down the six of you ride in a single column formation along the narrow trail, which zig zags through the pine trees perilously. Pine boughs threaten to knock you off your horse but $mName calls in warning every time a low hanging branch approaches and you duck underneath them deftly. Mud flies, horses snort, and the fog cools you down as you maintain control of $hName’s wild sprint. Then suddenly:
+[$mName] WOAH!!!
+A mud covered rope was laid across the path completely invisible to the naked eye, and now it is suddenly pulled taught about 2 feet up in the air. On either side of the rope are bandits which had been waiting in ambush behind pine trees, and they lean back with all their might to keep the rope tight. Unable to react in time, $mName’s horse attempts to jump over but is instead caught up in the rope and trips over it terribly, tumbling down and sending $mName flying into the mud. With no room between them and moving far too fast, each one of you proceed to smash into his fallen horse and trip up as well, and within seconds all six of you have been flung off your horses and strewn about the forest floor.
+You attempt to catch your fall, but in the corner of your eye you notice a hoof whipping sideways straight for your head and everything goes black.
+You wake up to find yourself tied up to a tree and facing your friends who are all similarly tied up to trees across from you. Your head thumps with a ferocious migrane and you are having trouble thinking clearly. Through your blurred vision, you can barely see your friends struggling against the ropes that hold them and Axel strolling towards you.
+[$pName] Uuuughhh…. Ahhhh….
+Drool drips from your open mouth as you take ragged breaths, fighting to stay awake. Across from you, your friends are all in similarly bad shape. All of them look pretty beat up from the crash, and $bardname is crying bitterly as she leans limply against her tree. Chef appears to be dead already, and is lying a few feet to your right unmoving. He has an arrow sticking out of the back of his neck and is covered in blood. He might have been the only one able to put up a fight after falling off his horse, and paid for it.
+[???] Well that didn’t work out so well for you did it? I didn’t expect you to be so cowardly.
+A shadowed figure strides forward and crosses his arms. He has Fiery red hair, and a black eye patch covering his left eye. He is taller than you by half a foot and is bulging with muscles. Despite the cold he only wears pants which leaves his muscular chest exposed, and you notice it is covered in scars. Slung diagonally across his back are two swords in parallel, one is plain steel and the other is sheathed in an incredible onyx scabbard covered in ornate golden decorations.
+[???] Nice to meet you again, $pName. My name is Axel, the greatest bandit chieftain to have ever lived. I am here to kill you yet again. 
+You strain against the ropes binding you to the tree as hard as you can, but to no avail. Axel chuckles at your struggling and slowly shakes his head disapprovingly.
+[Axel] Sorry $pName, but I am going to have to torture you and your friends now. I have strict orders from the client to draw out your death no matter what. The client knows about your power, you see, and told me all about it. He wants you to give up, to hide from the pain and never return to this world. I think it’s a load of crap, to be honest, because if you really could see the future you wouldn’t have been beaten this easily. I mean come on, you really thought you could just run away with your tail tucked between your legs? You think we didn’t think of that?
+You look down at your feet, frustrated. It’s over.
+[Axel] Like I said, we know all about your ability. That means we prepared EVERYTHING. No matter what you do, we will be waiting for you, always. If you try to stay in town, we have a plan for that. If you try to run away, we have an army of scouts and sentries waiting to catch you because we have a plan for that. No matter what you try to do, you will never defeat me. 
+Axel scratches his head as he looks between you and your friends, as if he is trying to decide on something.
+[Axel] Technically I’m only supposed to torture you, but the client offered a lot of extra bonuses if I tortured your friends first before killing you. Something about the trauma of seeing them in pain will make you be afraid of trying again? I really don’t buy it, but hey if the client is willing to pay for it then I am willing to do it. Not that I like torturing or anything, it grosses me out to be honest. But you got to do what you got to do you know? I have a family to feed. Now who should I start with…
+Axel pulls out a dagger and tosses it up in the air and catches it again, thinking.
+[Axel] Let’s see… Eenie meany meiny moe, catch a Dragon by it’s toe, if it roars then let him go, eenie meany meiny… Moe!
+Axel points the dagger at $aName, who whimpers in fear as she realizes what is going to come next.
+[Axel] let me be very clear here $pName. If you have the power to go back in time, then you don’t have to watch this. This is going to be terrible for your friends, you see. If your power is real, which I doubt, but if it is, then you better get going on that. ANYWAYS…
+Axel approaches $aName and slices her shirt open with the knife. $aName screams in fear.
+[Axel] I’m sorry miss, I really am. Orders are orders.
+With two deft flicks of the knife, he slices off both of $aName’s nipples, leaving bloody gouges where they used to be. $aName cries and screams and wails in terror and pain, but no matter how hard she tries she cannot escape. Next Axel moves to her hand, and stabs the knife underneath her fingernails. The pain must be unbearable, and $aName struggles with every bit of strength left in her body fruitlessly. Axel twists the knife around and around, making sure to hit every sensitive nerve in the finger before finally spinning it and slicing the nail completely off. $aName has completely lost her composure now and bangs her head against the tree she is tied to again and again, likely trying to knock herself out so that she doesn’t have to experience the pain for any longer.
+[Axel] Hey that’s one down miss. Only 19 more nails to go.
+It takes almost an entire hour for Axel to take off every single one of $aName’s nails, and she screams in sheer agony the entire time. At about nail 4 she blew her vocal cords, and the sound of her wheezy groaning filled the forest. At nail 9 she lost consciousness, but Axel had one of his bandits splash water on her face and wake her up again before continuing. About when he took off her third toenail is when she began begging him to kill her, which he ignored. Crying desperately, she promised him everything and anything he wanted if he would only end her life then and there. Finally, after taking the last toenail off, he accepted her request and stabbed her in the chest. He had a bandit cut her down and toss her body to the side before grabbing another dagger and approaching $mName.
+[$mName] Please, please, anything but that, anything at all, I will do anything… 
+[Axel] Sorry mister, but you know what is coming next. This is all your fault, $pName, I hope you know that.
+Axel then proceeds to do exactly what he did with $aName to $mName, torturing him just as slowly and deliberately as before. $mName’s voice went out sooner than $aName’s at about nail 3, but the entire time before then he used his vocal cords nonstop. He tried pleading for mercy at first until the nipples were cut off, then he started hurling insults. Everything and anything he could say that had even a tiny chance of hurting Axel’s feelings, $mName threw at him. Axel paid him no mind, almost as if he couldn’t hear him at all.
+At nail 8 $mName lost the ability to think creatively and choked out in a hoarse voice his hatred for Axel again and again and again.
+[$mName] I hate you. I hate you. I hate you. I hate you.
+And every time Axel responded.
+[Axel] It’s $pName’s fault. He did this to you.
+By his fourth toenail $mName must have started to believe him because from that moment until the very last toenail, $mName never broke eye contact with you. All he could moan out, again and again, were the same two words.
+[$mName] Why $pName? Why $pName? Why $pName?
+When the last toenail was finally done, he was stabbed in the chest exactly the same as $aName and tossed to the side.
+[Axel] Whew, this is tiring. Next.
+$liName was unconscious when Axel approached her, but he slapped her around until she groggily woke up again. Incredibly, she didn’t make a single sound as Axel cut her nipples off, and didn’t even scream as he tore off the first two fingernails. She began to crack during the third however, and quickly descended into delirious bouts of screaming and begging. Axel was clearly impressed by her stoicism, but that didn’t stop him from continuing the terrible deed. One by one he twisted and tore at her nails until each one was plucked off like a lover plucking petals off a flower and whispering “She loves me, she loves me not, she loves me…”
+Once $liName’s chest was adequately filled with cold hard steel, she was tossed unceremoniously to the side. Skipping over Chef, Axel slowly approaches $bardName. She had been watching in just as much horror as you and hysterically screaming the entire time. Now as Axel gets closer, she breaks down into tears and pleads desperately between sobs.
+[$bardName] PLEASE JUST KILL ME YOU DON’T HAVE TO TORTURE ME, ANYTHING BUT THAT PLEASE DON’T DO IT! I’M JUST A LITTLE GIRL YOU DON’T HAVE TO DO THIS JUST LET ME GO JUST KILL ME ANYTHING BUT THAT PLEASE…
+Axel hesitates in front of her, and takes a deep breath. His hands start shaking. Unbelievably, he even reaches up with his other hand to wipe a tear from his eye.
+[Axel] I’m… so sorry… I really am… Orders are orders...
+His voice is choked up as if this is one of the most difficult things he has ever done. $bardName turns and looks desperately at you, crying.
+[$bardName] PLEASE! Save me $pName… do something, I don’t know, anything… Please…
+Axel then proceeds to torture $bardName in the exact same way as the others, plunges a knife into her chest the exact same way as the others, and tosses her carelessly to the side the exact same way as the others. Her cries of pain echo in your ears and haunt your soul. Axel has been torturing your friends for the past four hours and he looks almost as exhausted as you do.
+[Axel] Well well well, looks like you are all that is left, $pName. Since you are still here and looking at me, that means you haven’t gone back in time yet. Now that means one of two things: either the client was wrong about you, or you are truly the most cold, heartless bastard the world has ever known. For that reason alone your torture and death is going to the only one I can perform without any regret.
+Axel brings his dagger down to your chest, and with a quick swipe cuts off your left nipple. You scream.
+[Axel] I know, I know, it hurts. I’m sure by now you know the next step…
+Axel cuts off the right nipple as well, then moves to your right side. Your eyes water in pain and you scream into the empty forest for help but there is no one there to hear you. Next, Axel grabs one of your hands, which you desperately try to free from the bindings to no avail.
+[Axel] This one’s a doozy…
+He stabs the dagger underneath your fingernail, sending searing pain into your hand that is so acute you can’t believe it is real. He digs and digs with it, sending wave after wave of excruciating pain across your body. Finally, after what certainly must have been an entire week of digging, he turns the dagger and twists it to remove the fingernail entirely. The red hot sensation of the nail being cut out is unbearable, but you admittedly feel a sense of relief that since the nail is gone it will finally be over.
+[Axel] It never feels good to have bits of your body taken off. This little guy was my ex’s fault, you know.
+Axel taps his black eyepatch.
+[Axel] She was a real bitch, I tell ya. I guess I only married her because of her status and power and all that. Never a good idea to do that, take it from me.
+Axel looks off in the distance lost in thought for a moment before finally coming back to reality and gripping your hand again.
+What follows is a blurry haze of unbelievable pain that rips at your body over and over again. You are completely helpless to stop it, and every time the pain becomes so overwhelming that you lose consciousness you wake up only a few minutes later to find that Axel has waited for you to come to before continuing once again. One after the other he painstakingly removes every single fingernail and toenail on your body, and by the end of it you have completely lost your mind. As he rips off the last toenail you scream and laugh manically, shuddering violently against your bindings. The receptor in your brain that recognizes pain has at this point been completely shot, and you are numb to all feeling in your body.
+[Axel] Well my friend, that’s all I can stomach to be honest. Until next time.
+Axel flips the dagger in his hand to point downwards, and he plunges it into your chest. You hear the thud of it slicing into your organs but feel nothing. 
+[Axel] Pack it up boys, we’re done here.
+The bandits collect their things and disappear into the fog, leaving you bleeding and dying alone. Not far away, you can see the bodies of your friends piled on top of each other cruelly. You sob quietly to yourself utterly defeated until finally blacking out.

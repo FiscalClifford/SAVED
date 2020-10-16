@@ -1,0 +1,25 @@
+You decide to ask $liName for help. Leaning over, you whisper in her ear.
+[$pName] Hey I need to talk to you in private. It’s important.
+$liName blinks several times in surprise and immediately blushes.
+[$liName] In… In… In… Private? Wh.. What do you…?
+[$pName] Stop getting all flustered, it’s not like that!
+You speak louder, addressing everyone at the table.
+[$pName] Hey everyone, real quick just wanted to let you know $liName and I are going on a quick walk while we discuss certain strategies. Please just hang tight for a bit until we come back.
+[$aName] Talking strategy huh? Is that what they call it now?
+$aName chuckles to herself but the rest of the group doesn’t seem to get her joke. Nobody else says anything so you head out of the bar with $liName and begin strolling around the town.
+[$liName] So what’s going on? 
+[$pName] I didn’t want to tell everybody at the same time, because it might cause a panic. I wanted to get a plan of action established before bringing up this conundrum.
+[$liName] Ok…
+She pushes her $liHairColor hair back behind her ear, concentrating on what you are about to say.
+[$pName] There is a group of bandits just outside of town, waiting in the forest. They want to kill me. We only have an hour or so before they will attack.
+Her eyes widen in surprise, but she quickly regains composure and narrows them in thought.
+[$liName] So we need to figure out how to defeat them huh? Do they already know we are here?
+[$pName] Probably.
+[$liName] Are there fewer than 50 of them?
+[$pName] I don’t know for sure but I think so.
+[$liName] Well it’s simple then, isn’t it? We just need to take them out before they take you out.
+[$pName] I was thinking along the same lines, we should bring the fight to them. But I need your help thinking of a good battle plan, and more importantly getting the team ready for the attack.
+[$liName] Well we have two good options. The first is a frontal attack, where we kinda do the same strategy as we used back at the Cathedral. You, Chef, and $aName head up the center while I go for a good flank. Do they have any archers?
+You rub at your chest, where not long ago an arrowhead used to protrude from of it.
+[$pName] Yes. A good one, too.
+[$liName] A better flank may be more beneficial then. Another option is we use you as bait. Since they are only after you, you could walk up the center and get their attention while we all come in around the side. Then we spring the trap on them. It puts you at more risk since they obviously are focused on killing you, but it also means we could pull off a better surprise attack. Which do you think is best?

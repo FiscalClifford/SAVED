@@ -1,0 +1,38 @@
+Everyone slowly ventures forward, eager to infiltrate the building and uncover its secrets. Before you can move however, $liName motions for you to stay put by the damaged door and waits for everyone to pass by. Hesitatingly, she talks to you in a hushed voice.
+[$liName] I know this is the worst time ever for this but I’ve been thinking about it all day and I just have to get it out. Listen…
+Even in the poorly lit hallway you can see the beet red color of $liName’s cheeks as she blushes. With one hand she pushes her hair behind her ear, and continues without making eye contact.
+[$liName] So basically… I just wanted to tell you… how I feel….
+She fidgets nervously.
+[$liName] I mean its obvious really… but I thought I should tell you before $aName did…
+She tries to push her hair behind her hair again but its already back there, and nothing changes. Realizing this she kinda stares at her hand for a moment before shyly looking back at you.
+[$liName] Ahhhh…. Well….
+[$bardName] $liName! $pName! Hurry up!
+Down the hallway you see your friends annoyedly marching back towards you, clearly impatient to begin the mission.
+[$aName] What are you two talking about back here?
+$liName glances at them with a frustrated expression as they approach, then back at you before finally flicking you solidly on the forehead. 
+SMACK
+[$pName] OW!
+[$liName] I was just telling $pName what a dummy he is, naïve as ever heh… C’mon guys lets get a move on.
+$aName’s eyebrows are raised so high they look like they might fall off her forehead, but she doesn’t say anything as you and $liName rejoin the group. Tentatively, you take the lead and move down the hallway in search of the ritual. Deep down you want to think about what $liName was trying to tell you back there but you need to focus on saving those captured civilians right now.
+The ornately decorated hallway takes a sharp turn left, where it opens up into a much longer stretch with numerous doors on either side. It is much better lit as well, with candleholders and their respective candles casting a decent amount of light all the way down. This hallway looks like it is a part of some kind of dormitory, where cultists rest after a long day of hard work and murdering. Most of these doors likely open into rooms, and a restless cultist could open one and raise the alarm at any time. At the far end of the hallway is a metal door that likely leads to some kind of storage room, and halfway down the hallway is a pair of sturdy oak doors.
+You quietly tiptoe along the hallway, your movement completely silent thanks to the unusual red carpet muffling each footstep. After finally reaching the oak doors you crack one of them open just a smidge and try to peek through. It looks like there is a small courtyard in between this exit and the next building that is across from you, and is no larger than the length of a truck. Pushing the door further open, you can see the building across the open space more clearly.
+The building across the courtyard is none other than the Church of the Dragon’s Official Cathedral, and stands 12 stories tall above the surrounding cityscape. It’s massive stone towers and flying buttresses keep it upright in an astonishing challenge to the laws of physics, and it’s huge stained glass windows gleam in the fresh moonlight. 
+[$liName] I still can’t believe they are using the church’s Cathedral for their ritual, I thought them and the church were at odds?
+[Chef] I Chef Now?
+[$pName] Maybe the Cultists have taken over the mainstream church. Maybe the two were working together all along… I have no idea.
+[$aName] It sure is spooky looking now that it’s dark out. I don’t want to go in there…
+[$liName] We are in too deep to back out now, $aName. I say we cross this courtyard and barge in before they hurt anybody.
+[$mName] We could consider a stealthy option like we did back with the baron, right? Maybe if we looped around…
+[$pName] The longer we mess around the more people are potentially being killed for this damn ritual. 
+[Chef] I Chef Now!
+[$pName] Yeah, I agree.
+[$bardName] Wait, what did he say?
+[$pName] I Chef Now.
+[$bardName] That’s not what I meant!
+$aName looks genuinely concerned now, and clenches her fist open and closed fitfully.
+[$aName] What if they curse us or something? I feel like killing cultists in a holy place is bad karma or something…
+[$liName] You can’t get bad karma for doing something that…
+$liName suddenly stops, and everyone spins around at the same time. Directly behind you is a cultist, who sleepily rubs their eyes while standing in the middle of the hallway. If he sees you and raises the alarm, it’s all over. Frozen, you watch as he yawns and makes his way past you only a few feet away. In disbelief, you glance at $mName who shrugs back at you. Luckily for everyone, the groggy Cultist must have been barely awake as he made his way to the bathroom and somehow never noticed the small crowd preparing to storm his home.
+[$pName] We are running out of luck fast, let’s get the hell in there while we still have the element of surprise.
+[$liName] Agreed!
+With a swift movement you draw your sword, and make your way to the Cathedral across the courtyard. Behind you $liName and $aName do the same, and Chef brandishes his massive cleaver menacingly. $bardName and $mName hang back, but look ready for a fight if necessary. The six of you marching in formation draped in moonlight makes for an impressive sight. You’ve come a long way since your first day of poverty and struggle in Kingsbridge.

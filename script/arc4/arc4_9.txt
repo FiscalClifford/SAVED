@@ -1,0 +1,11 @@
+This hallway is much smaller than the other ones you have traversed thus far. In fact, it is so short it is almost not even a hallway, but rather a small space the size of a living room. At the far end is a huge door made of pure gold with a sculpture of an enormous dragon roaring out from its surface. The design is very intimidating, but you are sure if you can pass this test the door will open and hopefully reveal the path to the Ancient Scripture.
+In the middle of the room is a plain wooden chair, and just in front of that chair is yet another plaque. Walking up to it, you find that someone has already brushed the dust off. It reads:
+KNOW WHAT YOU BECAME
+There is nothing else in the room than the chair. With no other option, you adjust your posture so that you can sit in it.
+[$mName] Wait!
+You hesitate, and stand upright again to look at $mName.
+[$mName] You’ve done an amazing job so far $pName, you really don’t have to lead the way on every puzzle down here. I would feel terrible if you ended up getting hurt…
+[$pName] Well someone’s got to do it, might as well be me right? Besides, I feel like this next trial in particular is going to be important…
+With that, you turn and sit in the chair. The moment you rest your weight on it, you find that gravity no longer holds you down and you begin to float upwards.
+[$pName] Wha!?
+You look down to see if you are floating away from the floor, but nothing is there. In fact, nothing is everywhere: you can’t even see your own body, and absolutely everything has taken on the color of an impenetrable black. The final trial has begun.

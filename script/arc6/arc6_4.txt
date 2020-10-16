@@ -1,0 +1,13 @@
+The darkness clouding your mind slowly lifts, and the rushing sound of static overwhelms your senses before suddenly stopping all at once. Your eyes shoot open, and you stumble over yourself while coughing violently.
+[$liName] $pName, are you ok? What happened!?
+[$pName] Sto… *cough* STOP!
+You can barely catch your breath but you still manage to halt $liName in the nick of time. Only a couple steps in front of her is the pothole from earlier, that she surely would have twisted her ankle in if not for your intervention.
+[$pName] Mind your… step. You could *cough* you could hurt yourself.
+$liName looks at you with a confused expression, then mildly walks around a pothole while giving it a wide berth.
+[$liName] I appreciate your concern $pName but I could see it just fine, thanks. What’s your deal, you look like you’ve seen a ghost.
+You start shivering uncontrollably, and grab a blanket off of $hName which you use to warm yourself.
+[$pName] Well you aren’t far from the truth, in a way. Hey listen, I don’t think these woods are safe we need to hurry up and get into town.
+[$aName] I’m getting the creeps right now too to be honest, I totally agree. Let’s get out of here.
+[$bardName] You two are a couple of scaredy cats! Whatever, lets roll.
+[Chef] I chef now.
+The six of you pick up the pace towards Gefangen and make quick progress. Everyone is relatively spaced out, and the environment is comfortably quiet. You take a deep breath and spend the next ten or so minutes decompressing and recovering from your recent death, if that is even emotionally possible. Whatever danger threatened you and your friends before isn’t around now at least so you feel safe enough to strike up a conversation with someone while you walk along the road. This is a valuable time to get to know one of your closest allies a little better, the only question is who would you like to speak to?

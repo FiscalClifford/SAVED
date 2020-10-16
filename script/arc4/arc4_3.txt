@@ -1,0 +1,76 @@
+When she finishes her song there is a short lull of silence as the mesmerized crowd finally manages to come to their senses. Immediately after, they break into uproarious applause and you can’t help but join in. The girl concludes her performance with a bow and walks over to the bar area to talk to someone, and everyone goes back to whatever they were doing before she began singing.
+[$mName] You know I could get a crowd riled up like that in no time as well, if you’d let me!
+[$aName] Stay focused $mName! Now’s not the time for any of your… er…
+[$liName] Tricks?
+[$pName] mischief?
+[$aName] No…
+[$liName] Shenanigans? 
+[$aName] That’s it! Wow I’m impressed you got that one…
+[$liName] Who even says ‘Shenanigans’ anymore?
+[$aName] It just felt right! Anyways now’s not the time for your shenanigans $mName, we gotta find a guide to get us to those ruins. Anyone here look like the adventurer type to you?
+Looking around you, nobody seems to stand out at all. Almost everyone around you looks like either simple dairy farmer or plain townsfolk.
+[$pName] I’ll keep an eye out for someone wearing an Indiana Jones hat, but in the meantime maybe we should split up and ask around.
+[$liName] What is an ‘Indiana Jones hat’?
+[$pName] He’s a… nevermind. Let’s just start looking.
+[$liName] Strange as ever, $pName…
+The four of you split up and begin asking around. Despite Durango supposedly being close to these ruins, it seems either nobody has heard of them before or nobody is willing to tell you about them. This goes on for some time, until eventually you feel like you have interrogated every person nearby. Wearily, you rejoin the others at the sit down bar.
+[$pName] Any luck?
+[$liName] None at all. It seems like nobody has heard of these ruins before.
+[$mName] Or no one is willing to admit they have…
+[???] What’s this about the ruins?
+Behind you, someone speaks with a euphonious voice reminiscent of porch chimes daintily ringing. Turning, you find that the speaker is none other than the girl who had been singing at the stage earlier.
+[Girl] You mean the old Dragon Temple?
+[$aName] So you know where it is!?
+[Girl] Of course I do. But I’m not supposed to say that...
+[$pName] Why not?
+[Girl] Hmm… They say the Cult has eyes and ears everywhere. You don’t look the type though… Why are you looking for the temple?
+You glance at the others warily; can she be trusted? 
+[$pName] We have heard that there is significant Dragon Cult activity around those ruins, and we think they are up to something. We are adventurers hoping to find the Ancient Dragon, and we suspect that the cult may give us some kind of clue as to his whereabouts. It will probably be very dangerous, but we humbly ask that you guide us to these ruins so that we may continue in our quest.
+[Girl] How exciting! A real adventure… I could write a song about this you know! 
+She starts humming to herself while deep in thought, likely already imagining the chord structure of her next release.
+[$liName] Do you think you could help us?
+[Girl] Hmm… How about you buy me lunch and it’s a deal.
+[$aName] Hmph. Alright, seems fair enough.
+[Girl] my name is $bardName by the way, nice to meet you.
+[$liName] I’m $liName, this is $aName, and these two useless guys are $pName and $mName.
+[$pName, $mName] Useless!?
+[$bardName] He he, well nice to meet all of you! And I will take oat flapjacks, thank you!
+The five of you eat lunch together without saying anything further, remaining careful not to reveal too much while cult spies could be lurking around. Eager to get somewhere more private, $aName suggests everyone meet outside of town after finishing.
+Electing to leave her terracotta cone and cowbell behind but bringing along her guitar, $bardName joins the four of you at a cluster of trees on the edge of Durango. She leans against one of the trees casually and absentmindedly strums at her guitar while you briefly explain everything that had brought you here up until this point.
+[$bardName] uh huh. And you still don’t know why the Cult is at the temple?
+[$pName] Well… Of course not. That’s why we are here.
+[$bardName] Well how about this. I will tell you what they are up to AND I’ll lead you to the temple if you pay me 100 Aureus.
+[$aName] 100!? What kinda…
+[$liName] Shrewd little girl aren’t you?
+[$mName] Wait, that’s a great idea! How about you pay me 100 Aureus as well to thank me for all the help I’ve provided as well.
+[$pName] You should be paying US for all the terrible jokes you’ve been telling…
+[$mName] Hey listen man, it’s called dough for a reason. Everyone kneads it!
+Exasperated, $liName marches up to $mName and with a loud thwap flicks him in the forehead with such force he goes flying backwards.
+[$mName] Oof! That was a good one…
+$liName turns back to $bardName now, who looks thoroughly intimidated by her show of force.
+[$bardName] Hey hey hey now! Honestly, 50 would be fine. Let’s do 50 then! A nice discount for my nice new friends…
+[$aName] Deal. Tell us everything you know while we head for the temple ruins.
+With that, the five of you set off north and $bardName happily began her monologue while pocketing the cash.
+[$bardName] The Temple ruins are just a little North of Durango, maybe 30 minutes away. The cult recently moved in here to uncover some sort of ancient artifact; they call it “The Ancient Scripture”. It is some kind of holy document written by the Dragon himself. Apparently, they think it gives the reader absolute understanding of the world and even quasi-omniscience. Infinite knowledge, if you will. They want to uncover the artifact and bring it back for the Arch-Bishop in the capital to read so that he may reveal where the Dragon is hiding.
+[$pName] Hmm, do you think such an artifact exists?
+[$bardName] No idea, they still haven’t gotten to it yet. Apparently it resides deep in the temple ruins and is guarded by a multitude of diabolical traps. It’s like, super dangerous. So far the Cult has simply thrown bodies at each trap until it gets clogged up and stops working, so by now they have probably gotten pretty close. But it won’t matter in the end anyways.
+[$mName] And why’s that?
+[$bardName] Everyone in Durango knows about the legend of the Scripture, and its curse. It is said that all who read it are soon filled with existential dread and kill themselves almost immediately, without fail. In fact, the only person to have ever read the Scripture and survived is one of the four evil horseman of the apocalypse, WAR. 
+[$liName] Then there’s nothing to worry about, the arch-bishop will never be able to read it.
+[$pName] Perhaps. If they are fanatical enough, they might have found some way around the curse. Otherwise, why would they try so hard to obtain it?
+[$aName] What if we got it and used it to find the dragon instead?
+[$bardName] While that would be good for thwarting the Cult’s plan, I doubt any of you could read it…
+[$aName] But $pName has his magical device that can help him find the dragon, maybe you could use that to dispel the curse?
+Your phone had run out of battery weeks ago, in fact, but you hadn’t found the courage to tell them that yet. Despite this…
+[$pName] My perspective on reality is a little… different from yours. I’m confident I could give it a glance and come out ok.
+[$bardName] In the end it is your decision, just be careful. Apparently, the knowledge of our reality is so dark and sinister that no mere mortal can handle it…
+The five of you continue in silence as you get closer and closer to the Dragon Temple ruins. The path $bardName leads you on zig zags through the trees and over boulders, and everyone remains on high alert in case a cult patrol happens to be near. Finally, after what feels like an eternity of walking, you come to a rest at the top of a rocky outcropping and manage to survey the Temple area.
+There is a large swath of trees cut down leaving an empty space about the size of a football field. In the center is a single small pyramid around the size of a truck, surrounded by torches. All around it in the clearing is a gathering of tents of various sizes pitched haphazardly without any planned formation. The area is bustling with activity; at least 100 individuals are moving about the campground performing various chores or going in and out of their tents. One of them approaches the pyramid, and adjusts a pulley system that looks like it is connected to some sort of crane. On further inspection you realize that the pyramid has an enormous door of pure iron that is held open by this crane-pulley system, and this must be how they enter in and out. Other than the unimpressive pyramid and the strange door, there are no other indications of any ruins or temple like structures.
+[$mName] A little underwhelming don’t you think?
+[$pName] I was expecting something… bigger.
+[$mName] Aye, I’ve heard that one before…
+[$liName] Would you two morons shut it?
+$liName moves to give you a thwack on the forehead but this time you are prepared, and dodge just in time. Not so lucky is $mName, who receives a solid hit and clutches at his forehead.
+[$liName] We need to figure out how to get into that temple without alerting the small army camped all around it. Any ideas?
+[$pName] hmm…
+Everyone goes quiet, and tries their best to think. What should you do?

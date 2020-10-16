@@ -1,0 +1,49 @@
+The darkness clouding your mind slowly lifts, and the rushing sound of static overwhelms your senses before suddenly stopping all at once. Your eyes shoot open, and you stumble over yourself while coughing violently.
+[$liName] $pName, are you ok? What happened!?
+You fall to your knees. You have no strength left in them, no will to continue forward. You feel as if you are but a shell of your former self, a sad defeated husk of a human. Seeing this, $liName freezes, and runs towards you. By changing direction she avoids the pothole completely on accident and rushes to your side.
+[$liName] $pName, what’s wrong?
+You stare at the ground and don’t respond. Here you are, for what feels like the hundredth time, no closer to figuring out how to defeat the bandits than before. You have felt excruciating death after excruciating death and witnessed everyone you care about share the same fate, and for what? You feel completely trapped; this is a dead end with no escape.
+[$liName] $pName, talk to me. What just happened to you?
+[$aName] Is he alright $liName?
+[$liName] Everyone get back, give us a little space. C’mon $pName, let’s sit down over here.
+$liName puts your arm around her shoulder and lifts you up. Next, she moves you over to the side of the road and gently sits you down on a tree stump jutting out of the mud. There isn’t room to join you on the stump so she sits on her heels in front of you and hugs her knees.
+[$liName] Are you ok $pName? You look… tired. You look exhausted, even. You look like you have witnessed something terrible, and aged like ten years. What is going on? Talk to me…
+You look up from the ground at her, and see her caring, beautiful face. She looks so genuinely concerned for you, it breaks your heart. She is a dead woman that doesn’t even know it yet. You burst into tears.
+[$liName] pName! It’s ok, there there…
+She gets up and hugs you, holding you softly in her arms. You sob uncontrollably, heaving as hard as you can with as much emotion as you can. All this built up stress, all this built up desperation finally comes gushing out and it overwhelms you. You stay like that with $liName for a long time, crying like a baby while she holds you sympathetically. It means nothing, you know, but it still feels good. You feel like a human being for the first time in a long time. Finally, you finish crying and begin to calm down. Every few seconds you whimper gently, which is a little pathetic, but you can’t help it. 
+[$liName] Hey there mister man, it’s ok. It’s going to be ok…
+$liName gently wipes your tears off your cheek and pats you on the head. It feels heavenly.
+[$pName] $liName…
+[$liName] I’m here for you…
+You open your eyes and turn to hug her, and the two of you embrace for a while without saying a word. It feels like for every second you hold her, her love and strength pours into you and reinvigorates you. You start to feel a little better.
+[$liName] Hey there, I need to know what’s wrong so that I can make it right. What’s wrong $pName? I’ve never seen you like this before…
+You sniffle and clear your throat. Forcing out the emotion clogging up your breath, you finally open up to her.
+[$pName] I’m being tested, $liName. I’m being tested, and I don’t know if I’m going to pass. I have seen some things. Some terrible things. Things I want to forget. I feel like every time I get closer to you guys, and love you guys more than ever, I am punished for it and pushed further and further away. It feels like I will never escape. It feels like I am trapped and doomed to replay this horror scene over and over. I don’t know what to do.
+$liName takes a deep breath, and looks you in the eyes.
+[$liName] I’m going to be honest $pName, I have no idea what you are saying or what you are going through right now. But there is one thing I do know. And it is that you are strong. It is that you are brave, and kind, and loving. Most of all, you never ever give up no matter how bad things look. You just keep on getting stronger and stronger each day I look at you and it fills me with inspiration. You’re like the Black Blade, always growing more powerful and…
+[$pName] What? Wait wait wait, stop, what?
+$liName is completely caught off guard by your interruption, and blinks in surprise.
+[$pName] What did you just say!? What did you just tell me that blade was!?
+[$liName] The Black Blade? What do you mean?
+[$pName] You know about the Black Blade? You know about Axel!?
+[$liName] Who is Axel? I don’t know what you are talking about…
+[$pName] Tell me everything you know about the Black Blade, $liName. It’s very important.
+[$liName] Woah, um, ok. If it makes you feel better…
+$liName regains her composure and stands up. She begins to pace back and forth in front of you trying to remember everything she can, and pushes her hair behind her ear in concentration. 
+[$liName] Well the legend of the Black Blade is fairly common, I guess. Yet again you surprise me by never having heard of it… Well I guess I’ll start at the beginning then. The Black Blade used to be a normal sword used by a knight of old, who would fight monsters that attacked his village. One day a great fiery beast attacked, and the knight gave his life in the effort of plunging the sword into the monster’s molten heart, scorching it black forever. The village memorialized the knight as a hero for decades after that, proudly displaying the Black Blade at their town hall, until one day a cruel swordsman wanting to achieve great deeds snuck in and stole the blade away.
+$liName is starting to really get into the story now, acting it out as she goes along.
+[$liName] He then spent the next 30 or so years defeating terrible beasts but also murdering fellow monster slayers. Each time he came across an epic warrior he would challenge and defeat them then melt their swords down looking for Dragonium. At a certain caliber of fighter it is fairly common for them to have at least a marble in their sword, and so the great warrior slowly accrued more and more Dragonium to add into his Black Blade. Before long, he had the highest concentration of Dragonium to have ever been put inside a sword in thousands of years. 
+$liName pauses to unsheathe Gasp from her back, and runs her finger across the blade. It gleams brilliantly.
+[$liName] They say that the purer in Dragonium a sword gets, the more powerful it becomes. It is rumored that the Black blade can slice through any material, absorb magical attacks, and even grant it’s wielder incredible strength and abilities. Some say the concentration of Dragonium in that blade is so great that the wielder is even granted magical abilities of their own. So they say.
+[$pName] But what about Axel? How did this random Bandit get his hands on such an incredible sword?
+[$liName] I don’t know who this Axel is, but if you think he has it he must be one lucky guy. The tale revolving around the blade ends with a short lesson on greed. The legendary warrior was eventually killed by his own daughter, who interestingly enough lives somewhere close by. Her name is Nod I think?
+Your eyes light up in surprise. Maud!?
+[$liName] Right, that’s the one. She used the sword to gain power and soon became the leader of a powerful mercenary gang. Later, she fell in love with some guy and got married, but he got jealous of her abilities and tried to steal the sword. Either that or she caught him cheating, depends on who is telling the story. Either way they ended up getting in a big fight. They both injured each other pretty bad and the guy ran away with the Black Blade, never to be seen again. Legend has it that to this day she simmers in hatred for him, and the woman accomplice who helped him conspire to steal it.
+[$pName] So you are saying that Maud would do anything, give anything, to get her revenge on that man and get her sword back?
+[$liName] Well she is a pretty nasty person from what I’ve heard, but I suppose that is correct.
+You jump up, and hug her tightly.
+[$pName] $liName! I love you I love you I love you! You are the best!
+$liName yelps in surprise, and her face turns a deep crimson red. You can feel the heat of her blushing cheeks as you hold her, and you twirl her around in a silly celebratory dance.
+[$pName] You did it! You figured it out! We don’t have any time to lose, let’s get a move on!
+You urge everyone to resume their path along the road, and they are heartened by your newfound fiery resolve. For the first time in a long time, you feel hope again.
+Ahead lies Gafengen.

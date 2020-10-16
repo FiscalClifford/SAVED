@@ -1,0 +1,6 @@
+You enter the town cautiously, careful to check down every alleyway and make sure there is nobody suspicious watching. Very few people are walking along the foggy road however, and nobody seems to pay any attention to your group. 
+[$pName] Let’s rest at the bar for a second.
+[$bardName] Tired already?
+[$liName] $pName did have that ferocious coughing fit earlier. Maybe it’s a good idea to take a quick breather.
+You lead everyone to the bar, which you remember was the first building you entered back when you were only with $mName. Each person pulls up a chair to a large table and sits down, chatting amiably about random topics. The bar owner comes by and takes an order for soup from $bardName and $aName.
+You finally have some time to think. The one thing you know for sure is that there is a threat out there, waiting for you. You could figure out what to do on your own, which has the advantage of efficiency and not putting the others in danger. You could also Ask $aName for help, who might have a level headed way of taking care of the problem. Finally there is $liName, who likely has a good aggressive battle plan for defeating the enemy. What will you choose?

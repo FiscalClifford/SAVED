@@ -1,0 +1,73 @@
+After 23 days straight of travelling towards the capital, you finally notice something incredible on the horizon. You can’t believe your eyes, and it isn’t until climbing up a large hill overlooking this unbelievable sight that you can finally grasp what it is you are looking at.
+Five stories tall and many, many football fields long and wide is the biggest warehouse you have ever laid eyes on. It is built of oxidized aluminum that gleams in the sunlight, and has huge garage doors that open every couple hundred of feet. Enormous crowds of people swarm in and out of the warehouse in the hundreds, perhaps even thousands, and cart after cart enters empty and leaves filled with bags of something you can’t quite make out. Surrounding this building are miles and miles of barricades and towers filled with guards. It looks as if it would take an entire army to break into this compound. Your jaw drops, and $aName walks up to join you.
+[$aName] Isn’t it amazing? The Great Haven is said to be so large that the capital could eat solely from it for hundreds of years and it still wouldn’t run out of potatoes.
+Your horse $hName trots up to you and whinnies excitedly, as if she can’t believe it either. You pet her reassuringly.
+[$pName] A giant metal building filled with potatoes…
+[$aName] The Dragon’s gift for us. One of the last remaining pieces of proof that he exists.
+The scale of the building is truly astonishing. It is the largest and widest building you have ever seen, including when you used to live in the modern world. There must be billions or even trillions of potatoes in there, with just as many burlap sacks to hold them. 
+[$pName] There are too many potatoes to eat in there, wouldn’t they all rot and go bad?
+[$aName] The Dragon’s magic keeps them from spoiling, as long as you don’t remove them from the Building. The king has special rationing measures in place to make sure it doesn’t get wasted as well. If you are rich enough you can even pay the king to rent spaces inside of it, since any food stored there doesn’t ever spoil either.
+[$pName] That’s crazy. It’s like a giant refrigerator…
+[$aName] Refiger… what?
+[$pName] ah.. nothing. Well, lets keep moving then.
+
+You rejoin the others and head past the warehouse towards the Capital. The line of people waiting to enter the Great Haven is astonishingly long and snakes all the way around and outside the compound and into the street towards the Capital, clogging it up and making it hard to progress. The road is conveniently wide but extremely busy, and the throngs of people pushing around each other to leave or enter the city slow your group down often.
+Nevertheless, everyone finally makes it into the capital and continues along the main road towards the castle. There are no walls, the city is far too big for that, but at least there are small patrols of guards that you see roaming the streets often. You are also impressed by the stonework and quality of every house you pass. Compared to the other buildings you have seen thus far even these simple homes far exceed everything else. Most are made completely of perfectly sculpted stone with ornately carved wooden doors of sturdy complexion guarding the entrance, and even well kept lawns and gardens decorate the front lawns. Roofs are made of high-quality terra cotta neatly stacked on one another, and in some windows you can spot finely woven curtains neatly watching the crowd as it passes by.
+[$pName] The people in the capital live lives of luxury compared to everyone else I have ever seen, these buildings are remarkable.
+[$liName] You haven’t been to the capital before have you, $pName? Such a shut in… Unlike most towns where the rich live towards the center, the wealthiest here live closest to the Great Haven while the poorest collect on the farthest side. These rich snobs get easy access to the kingdom’s most valuable storage facility, and that explains why all the houses you are seeing are so fancy compared to the rest.
+[$bardName] Hey I was wondering, do we have to make an appointment? Like a reservation or something?
+[$liName] What? 
+[$bardName] To see the king, I mean. Like do you have to book a showing with him.
+[$liName] I don’t know, I’ve never met the king before.
+[$bardName] Like, we can’t just show up you know. You can’t just show up all of a sudden and talk to the king. You need to ask all nicely and then they send a guy on a white horse with a big plume in his hat, and he hands you this big fancy invitation letter. And you use that to enter the castle.
+[$pName] Is that for real or just something from one of your songs?
+[$bardName] I don’t know! It’s not like I’ve ever talked to the king before either! But I feel like if we just show up and ask to see the king we are gonna get laughed at!
+[$liName] Do we even talk to the king about this? If we just want to give them the ancient Scripture, it seems like more of a royal museum matter than an official one. I think we should go there instead… Hey, where is the museum anyways?
+[$mName] I visited it once when I was little, I can lead the way if you like.
+[$liName] For once you are actually proving useful $mName, I’m so proud!
+Making a mock emotional face, $liName turns to $aName and pretends to wipe a tear off her cheek.
+[$liName] How quickly they grow up!
+$mName scrunches up his face trying to think of some kind of witty comeback, but after a couple seconds comes up with nothing and gives up. 
+[$mName] Grr… Maybe you’d like to find the museum without me then?
+[$aName] Woah woah woah now, $liName was only teasing! Let’s stop wasting time and get rid of this creepy book as soon as possible. C’mon $mName show us where to go.
+$mName crosses his arms in a big huff and takes the lead, continuing along the main road. You jog up to him and catch up easily.
+[$pName] Hey sorry about $liName, I’m sure she…
+[$mName] Shh! Don’t worry about it. If $liName thinks she went too far today then she will probably buy me a fancy meal tonight as an apology, don’t ruin my plan!
+$mName chuckles to himself mischievously and leaves you behind.
+Shaking your head, you walk along with the group following $mName along the main road for a long time before finally turning off onto some smaller winding roads. Now that you are closer to the center of the capital the buildings are of less quality, but still much nicer than most houses you have seen on your travels. Some are even covered in faded paints, which adds some welcome splashes of color to the urban sprawl. Small fences jut out into the street where homeowners attempt to steal a bit of backyard from the road, and clotheslines arc overhead and across the thin alleyways. Most of the buildings here are around three stories tall, and for some reason everyone has painted the shutters around their windows blue.
+Finally after a lot of walking, everyone finally makes it to the Royal Museum. It is a large square building with a single tower jutting out from the left side, where from inside guards lazily look across the streets for trouble. Attached to the right side of the main building is a smaller room with people streaming in and out of it. Since the larger area appears to be locked up, you head for the smaller section and go inside.
+Surprisingly, it is very crowded and exactly mimics the layout and appearance of a tourist-trap giftshop. The aisles are packed with people looking through the odd commodities and eccentric baubles, and children scream and sprint around chasing each other with wooden sword replicas of some kind of fancy looking sword.
+[$pName] What’s up with this place?
+[$mName] What do you mean? It’s the Royal Museum.
+[$pName] Well I was expecting something a little more… formal I guess.
+[$mName] The artifacts are kept under close supervision in the larger building attached to this one, this is merely where the commonfolk go to learn about what is hidden away inside and buy cute toy replicas. You don’t think they would actually let the random citizens just walk up to the incredibly powerful and valuable artifacts in the museum would you?
+[$pName] Oh, well I guess that makes sense. 
+[$mName] I’m not kidding, there are some truly crazy artifacts in there. For example, check this out. 
+$mName hands you a nearby pamphlet documenting the most famous artifacts held within the museum.
+[$mName] The Ancient Forge is one of my favorites. Read that one.
+You scan the pamphlet until seeing a paragraph describing an artifact called “The Ancient Forge”. It reads:
+Thousands of years ago, the Original hero saved the world many times thanks to his abilities and the Legendary Ancient Blade, rumored to be the greatest sword ever created and a gift from the Dragon himself. Stories tell of the Blade’s power being so incredible that it could even slice through the fabric of reality itself. As the years went by however it was slowly split apart more and more, as the Original Hero’s children and other adventurers sought to obtain the valuable Dragonium stored within it. But what if all the Dragonium in the world was reforged into a single blade once more, would the Legendary Ancient Blade return? Historians disagree on the matter, but a pivotal component to this debate is none other than the Ancient Forge, an artifact found about 700 years ago by royal archeologist Sam Rockman. When discovered, Sam described the Forge being stored along with numerous scrolls and instructions that detail a prophecy about when the Ancient Blade will be recreated. According to these scrolls, one day a hero will rise up with power beyond all others to fire up the forge for the first and final time. They will wield a cursed sword of unparalleled strength and plunge it into the forge, activating the artifact. Instantly, all the Dragonium in the world will be teleported into the forge and transform the Cursed Blade into a reborn object of purity, the Legendary Ancient Blade. Fact or Fiction, you decide. But one thing is for sure: History Rocks!
+There is a small drawing of a goofy looking archeologist giving a thumbs up to the side, with a speech bubble affirming that History Rocks. You scoff.
+[$mName] Crazy stuff right? Anyways come on, we need to get to the acquisitions department.
+$mName powers through the crowd towards the back of the room and you follow as best you can, with everyone else in close pursuit. Once you make it to the back wall you enter a small office tucked into the corner with a wooden sign reading ‘Acquisitions’ above it.
+[$mName] Good Day Madam, my friends and I have an artifact to donate today.
+[???] Do you now?
+Behind a wooden table is a middle aged woman sharply dressed in a black robe. She peers down her pointed nose at you with her chin up, which makes it seem like she is looking down at you despite her sitting at a much lower height. She must be the Acquisitions Clerk.
+[Clerk] Well, let’s see it then.
+The woman reaches behind her and grabs a sheet of paper, which she begins filling out with a quill and ink. After scratching some notes down she looks up to find $mName holding the Ancient Scripture, and raises her eyebrows.
+[Clerk] Is that the Ancient Scripture you got there? The incredible artifact that has been sought out for hundreds of years?
+[$mName] The one and only!
+[$bardName] And we can prove it too, all you gotta do is peep inside. Don’t recommend that though.
+[Clerk] Excellent, the King will be pleased to have such a prize added to his collection. The museum offers 100 Aureus for your donation.
+[$aName] 100 Aureus!? What kind of scam is this!?
+[$pName] I think you are misunderstanding what the word donation means…
+[Clerk] You disagree with the donation reward?
+[$liName] It is a priceless artifact! It surely must be worth at least one hundred thousand…
+[Clerk] It is a book you can’t read, can you think of anything more useless than that? The only thing that makes it valuable is its historical significance. 500 Aureus.
+[$aName] Deal!
+[$mName] That’s still not…
+[$aName] I said deal! We gotta take what we can get, plus that thing creeps me out…
+And with that, $mName handed over the Scripture and $aName cheerfully pocketed the 500 Aureus.
+[clerk] We appreciate your donation. Have a good day.
+[$pName] I still don’t think anyone here is understanding what the word ‘donation’ means…
+And so without further incident everyone left the museum and gathered together outside to figure out what to do next.

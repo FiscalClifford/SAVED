@@ -1,0 +1,37 @@
+You lead $hName over to $bardName and strike up a conversation.
+[$pName] Hey I know this is kinda out of nowhere but I just want to say I appreciate you, and I appreciate you being a part of this group. You mean a lot to me and I am truly thankful we found you back at Durango.
+[$bardName] Aww, that’s so sweet of you to say! Thanks $pName.
+[$pName] To be honest I don’t really know a whole lot about you $bardName, which is crazy considering how much time we have been spending together recently. I understand if it is something you don’t want to talk about but…
+[$bardName] Oh! No it’s ok! I guess I just don’t really like talking about myself so I never really bring it up. Um, what do you want to know?
+[$pName] Well Its not an interview or anything…
+[$bardName] Of course not! Er, how about how I came to Durango, where we met? Unlike you guys I haven’t been around as long so my story is a bit more condensed, but here goes. Um… So pretty much It all starts in this cute little village I used to live in with my parents. It was a decent ways south of Durango, a bit closer to the capital. It’s called Tillipy, if you’ve ever heard of it…
+[$pName] Tillipy? Mmm, nope.
+[$bardName] Man $liName wasn’t kidding when she said you lived under a rock. Anyways I used to live in Tillipy with my parents. My mom owned a guitar shop, in fact she made this one here…
+$bardName points to her guitar, which is strapped to her horse. Upon further inspection, you realize it is extremely well made and ornately decorated with beautiful little carvings of baby cows and pigs dancing along its sides.
+[$bardName] My mom loved music. She taught me how to sing and play and everything. She was a lovely person like that. My father… my father was a political figure. He was in charge of creating propaganda for $kingdomName. He usually worked all week at the capital then came home during weekends to spend time with us. He was a really nice guy too, just as nice and caring as my mom. Except for when he… well…
+She looks away, and pushes her braid behind her head. She looks like she is lost in thought for a moment, then continues.
+[$bardName] Well he had a drinking problem. My mom always got so mad about how he would drink, and he would go off on her about being too controlling, and all that stuff. He was real stressed. He would come home each week freaking out about how he was going to spin a military loss as a positive, or some war crime as a good thing. He was very good at his job but it really tore him up inside you see. The problem was he got all messed up about his job and then he would be stressed out and drink, and when he drank he would mess us up too. He lost control all the time and hurt mom over and over. It was the worst. I hate $kingdomName for what it did to my dad to be honest, it’s their fault. Their fault for their stupid war…
+$bardName stops and looks at you with a morose face.
+[$bardName] Look at me yapping away, over something so dumb. Whatever. If you’re getting annoyed just say something and I…
+[$pName] No, not at all! I’m glad you feel comfortable enough to tell me all this, I think it’s important. Please continue.
+[$bardName] Ah… ok… Well you remember how I told you I had killed a man, way back when at Durango?
+[$pName] Sure, I remember.
+[$bardName] One day, I came home from a friend’s house to find my dad drunk as a skunk and beating on mom real bad. Except it was worse than usual, he was going way too far. He was barely even conscious he was so drunk, and he kept blaming her for all the wars in the world which of course makes no sense. She was screaming, and bleeding, and it was awful to look at. It looked like he was going to kill her. I begged him to stop, but he just kept yelling and beating her. So I did what I thought was right; I took a frying pan and hit him in the head as hard as I could. Except it turns out it doesn’t just knock people out like in the stories, sometimes it breaks something and they die. And that’s what happened.
+[$pName] Oh my god, I’m so sorry.
+[$bardName] It’s not your fault. Anyways my mom freaked out and I didn’t want to get arrested for murder so I packed my stuff up and left in a hurry and never went back. I had been wandering around singing and collecting tips to survive for only about a week when I found you guys. 
+[$pName] Wow, I had no idea.
+[$bardName] Honestly, you guys really did save me in more ways than one. Maybe I’m so obsessed with songs and stories ‘cause its some form of escapism or something. I heard a guy talking about escapism once, its when you don’t like your life and pretend its different. So going on this grand adventure with you guys is pretty good for my healing process and all that. I feel pretty guilty to be honest. I’ve never told anyone about this before to be honest. I’m feeling a little scared to be honest…
+$bardName breaks into tears, and lunges forward to hug you tightly. You hold her close and don’t let go, trying to comfort her until she feels better. $mName, who was walking behind the two of you, raises his eyebrows but for once has the maturity to keep quiet and not interrupt.
+You hold her like that as she sobs into your chest for a while until she finally gets it all out, then takes a step back to wipe her tears.
+[$bardName] Ahhhh…. Sorry about that. Sorry, really….
+[$pName] You have nothing to be sorry about $bardName. I’m only sorry I can’t do more for you. I think you did what you thought was right at the time and nobody can blame you for that. I think everything is gonna be ok.
+[$bardName] Everything is gonna be ok? Do you really mean that? You promise?
+[$pName] I promise.
+[$bardName] Ha. Haha. 
+$bardName smiles at you gratefully and nods her head.
+[$bardName] hahaha. Well that’s a relief then. If you say so, I’ll believe you. Ah… Now I’m in the mood to play a song. That always helps too. Any requests?
+[$pName] You could sing anything and it would sound good.
+[$bardName] Ha. You got that right! Alright, I’ll get something going and we can ride the musical wave all the way into town. That’s it right up ahead, right?
+You look along the path and notice Gafengen is approaching quickly.
+[$pName] You got it. Maybe you’ll be able to score some good tips up here.
+$bardName plays a song beautifully all the way towards town, and you can tell by the emotion in her voice a huge weight was lifted off of her shoulders. You smile to yourself – Gafengen lies just up ahead.

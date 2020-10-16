@@ -1,0 +1,15 @@
+You have been traveling for about a month and a half now. Currently, you are walking along a dirt road leading directly north while leading your horse, $hName. Everyone is doing the same, since you all agreed the horses could use a break from all the recent riding. Like usual, $mName is messing around to stave off the boredom.
+[$mName] It’s crazy to think we are so close to finally meeting the Ancient Dragon!
+He waggles his fingers across his chest.
+[$mName] What are you guys going to wish for? I’ve changed my mind on my wish again. 
+[$bardName] Oh yeah? What dumb idea do you have for your wish now?
+[$mName] I’m going to wish that from now on you can only fart through your mouth $bardName, Muhaha!
+[$bardName] WHAT!? Ew, gross $mName! That’s the dumbest wish I’ve ever heard of…
+You look behind you to tell $liName a joke about $mName when you notice her stumble and fall forward, crying out in pain.
+[$pName] $liName!
+You rush over to help her up and see that she has twisted her ankle pretty bad leaving her unable to walk. There was pothole covered in a thin layer of half frozen leaves and ice making it hard to detect, and her foot went right through.
+[$liName] Ah… Ahhhh stupid! Dumb… just ignore me lets keep going…
+$aName rushes over to help and gasps.
+[$aName] $liName! Oh my god you twisted it so bad it almost looks broken! We aren’t going anywhere, the last thing you should be doing is riding or walking on that thing. Chef, $bardName, please help me set up camp. $mName, $pName, there is a town up ahead only a few miles away. Go over there and get some medicine and a splint.
+[$mName, $pName] Yes Ma’am!
+Without a moment’s hesitation the two of you mount your horses and quickly ride forward along the road.

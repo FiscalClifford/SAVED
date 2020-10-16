@@ -1,0 +1,39 @@
+The thunder of hooves as you push $hName to move faster is loud, but you attempt to shout over the noise anyways.
+[$pName] WHERE ARE WE HEADED?
+[$mName] IT’S A TOWN CALLED GEFANGEN. ITS AN OLD MERCENARY HANGOUT SPOT.
+[$pName] WILL THEY HELP US?
+[$mName] I HEARD THE MERCENARY LEADER IS RUTHLESS, BUT THE TOWNSPEOPLE THERE ARE FINE. WE SHOULD BE OK.
+You save your breath and ride in silence the rest of the way. Luckily, Gefangen is only a couple miles away from where $liName was injured and it hardly takes any time to arrive. You enter the town along the main road next to $mName, scanning for a store where you could buy a splint.
+The town is split into two halves, bisected perfectly by the main road. On the left side is a friendly looking area filled with bars, stores, inns, and basic houses. On the right side is an unwalled fortress and several rows of barracks, as well as training yards and supply depots. Next to the fortress is a bronze statue of a woman holding an impressive looking sword triumphantly in the air. It looks like there is supposed to be a second person posing with her as well except someone had smashed up that half of the statue and left the crumpled pieces on the ground next to the base of the piece.
+[$pName] Someone got real mad at that statue…
+[$mName] Hey $pName, looks like the general store is over here. Bet they’ll have a splint for us.
+The two of you turn left and head towards one of the stores and leave your horses outside. Unfortunately, it turns out to be a bar, so the two of you exit and try again at the neighboring store. None of the buildings have signs so it is hard to tell what is what. Finally after several tries you guess correctly and enter the general store. The building is plain but has a convenient selection of food items, Horse care gear, sparse clothing, and medical aid. You make your way to the medical section and start looking for a splint.
+[$mName] A couple years ago I tried shoplifting in a store just like this, there was this cool looking watch on a top shelf so I had my two vampire friends help me out by putting me on their shoulders.
+[$pName] $mName, this better not be another one of your cringey jokes…
+[$mName] The manager caught me in the end. I got charged with shoplifting on two counts.
+[$pName] UGH! It hurts you know. It hurts when you tell jokes that bad!
+You don’t want to encourage him but you can’t help but grin a little bit while perusing the shelves. $mName notices your amusement and chuckles to himself triumphantly.
+[$mName] You hate it, but you love it too! C’mon, admit it!
+[$pName] Ah look, the splints…
+You grab a splint off the shelf as well as a couple bandages and make your way to the counter. You purchase the items easily then head outside, where $hName happily greets you. While heading back the way you came, $mName strikes up conversation yet again.
+[$mName] Have you heard the rumors about this place? Apparently this is the headquarters to one of the largest mercenary gangs ever, the forest fangs or something like that. It used to be run by this power couple that were the greatest fighting team ever seen on a battlefield, but they had some sort of disagreement and broke up. Now the mercenary gang is a shadow of its former self and only the woman remains. Kinda sad huh? I hate when relationships don’t work out… Hey speaking of relationships, what’s up with you and $liName? I’ve noticed a lot of lusty glances between you two…
+[$pName] $mName Would you shut it! Its complicated and I’m not in the mood to analyze it… you better relax or I’m gonna hire these funky fangs to take you out…
+The two of you speed up again and ride at a gallop back towards where the others are camped, and luckily for you $hName navigates the muddy pathway easily. The wind is cold and you continually have to wipe your nose as you ride along. A dreary fog soon sets in as well which gives the surrounding pine trees an intriguing, mysterious vibe which you are none too eager to ride into. You are certain it hasn’t been longer than an hour since you left by the time you return to where you last saw the group, but for some reason no one is there.
+[$pName] Hello? Anyone there?
+You look all around you but there is no trace of the others.
+[$mName] Looks like they finally did it. They have been talking about ditching you for a long time but I’m surprised they finally did it…
+[$pName] Shut up $mName, if they ditched me that means they ditched you too.
+[$mName] Not so fast, they told me about a secret location where they are hiding so…
+[$pName] Stop messing around $mName, we need to get this splint to $liName as soon as possible. Try looking around for clues or something, I don’t know.
+You jog around the road looking for clues for a while but don’t see anything out of the ordinary.
+[$mName] Hey $pName, come quick! I found something!
+You hear $mName calling out from the foggy woods, and head towards the sound of his voice. You dodge pine trees and hop over boulders until finally catching up and see him pointing at a tree. There is an arrow lodged into the wood, and the bark oozes sap.
+[$mName] Someone loosed this arrow, and recently. Do you think they were attacked?
+[$pName] Perhaps someone was just practicing, or maybe…
+THUNK.
+You feel a sharp push from behind, but when you turn around you don’t see anyone there. Looking down, you notice an arrowhead protruding from your chest right where your heart should be. You glance up at $mName, who is frozen in fear and surprise and says nothing as he stares at you sympathetically.
+[$pName] Wha…?
+Rapidly, the world begins to darken and you lose the strength to stand, and collapse. The last thing you hear is the sound of $mName running away, and a faint voice in the distance;
+[???] Ah you idiot, I said not to kill him right away. The client specifically said to….
+The world fades to black and you can no longer see nor hear. With a final shudder, your blood stops pumping and your veins run cold. You are dead.
+THE END

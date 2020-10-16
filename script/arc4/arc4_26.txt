@@ -1,0 +1,40 @@
+At last you have reached it: the final stage in the Temple of the Dragon. You find yourself in an unbelievably huge room, the stones in the wall carved to look like the inside of a cathedral. The arched ceilings are so high up you have to crane your neck to look at them, and the sheer scale of it all takes your breath away. In front of you, three figures are huddled around a golden pedestal with some kind of book on it.
+[$liName] The Scripture! 
+The five of you rush forward to face off against the figures. Once you get closer you recognize the fluffy robes they wear, and realize with a sinking feeling that the cult got there before you.
+[???] well, well, well. A couple heretics looking to steal our artifact?
+The tallest of the three speaks out in a condescending voice. He is completely bald, and has sharp eyebrows and a beaked nose. He stands confidently behind the altar with the book closed in front of him, and his two accomplices square off against you.
+[Robed Man] My name is Bishop Wurian, one of the most devout in all the separatist church. I was told you might be coming, but didn’t expect you to arrive so soon… No matter. You can try to defeat us by force, but your sharp sticks are no match for the power of the Ancient Dragon! With this scripture, I shall know all the realities in which we combat each other, and pick out only the one in which we win!
+[Accomplice] Wurian, I’m really not sure you should…
+[Bishop Wurian] Silence! Behold the Dragon’s glory!
+With a grand gesture, the Bishop whips the book open and greedily begins to read. You feel like you should probably move to stop him, but you are compelled to wait out of curiosity. Will the rumors about the scripture be true?
+[$bardName] A truth so terrible, so beyond mortal comprehension, that all who read it take their own lives immediately…
+It sounds like $bardName is thinking the same, and everyone waits with bated breath.
+The Bishop continues to read. At first his expression is one of triumphant determination, but quickly it turns to curiosity. Next, it transforms into frustration.
+[Bishop Wurian] What…?
+He reads quicker now, as if the pages pose riddles he does not understand. Confusion, desperation, and grief flash across his features in rapid succession as if he cannot decide how he wants to feel. He clutches both sides of the book now, and turns each page with gusto.
+[Bishop Wurian] Imp… Imp… Impossible…
+His face turns pale, and he takes a step backwards. His eyes flick between you and your allies, but it is almost as if he is looking past you rather than at you.
+[Bishop Wurian] But of course that doesn’t mean…
+He rushes back to the book, and re-reads a few pages as fast as he can. His entire head whips side to side as he reads with every bit of concentration he has.
+[Accomplice] W… Wurian?
+Wurian’s eyes well up with tears, and he begins sobbing onto the book. He doesn’t stop reading, but his knees go week and he struggles to stand. Finally, he cannot take it anymore and collapses onto the ground desperately crying.
+[Accomplice] Boss!?
+You are frozen, you and your friends have absolutely no idea how to react. All you can do is watch as Wurian cries and cries on the ground, covering the dusty stones with tears and his robe with snot. Finally, the bishop stands unsteadily and looks at each person around him with a remorseful look.
+[Bishop Wurian] So be it.
+In a rapid motion he reaches for his waist and pulls out a massive dagger with a wicked edge. With the desperation of a starving man grasping for food he plunges the blade straight into his own heart, and sighs in relief before finally collapsing onto the ground.
+[Accomplice] BOSS!
+[$aName] Holy shit…
+[$mName] Tsk…
+The Bishop’s accomplices try to wake him up for a few minutes but it is no good, bishop Wurian is dead. Shoulders slumped and completely dejected, the two accomplices turn to face you.
+[Accomplice] Honestly… You can have the damn thing. This whole temple has been cursed from the start.
+With that the two sluggishly walk past you without saying another word, and exit the way you had come.
+[$bardName] So the rumors are true…
+You approach the altar, and step over Wurian’s dead body. With a concentrated effort you close your eyes and flip the book closed, disarming it. Relieved, you inspect the cover. It is nothing more than a simple leather bound book, and while the size is much larger than any other book there isn’t anything about it that really stands out. Engraved onto the leather is the word “Script” and below that is a picture of an Oak tree.
+[$aName] Now we can finally use it to figure out where the dragon is hiding! Although maybe that’s not a good idea…
+[$liName] Normally I’m all for $pName taking one for the team, but I don’t have a good feeling about this. I… I don’t want you to get all messed up $pName…
+[$bardName] Well what was the point if we don’t end up reading it? We went through all that trouble for nothing!?
+[$aName] Hey $pName what do you think? Should we read the book or no? I’m nervous about it…
+[$pName] Well on one hand if we don’t read it, $bardName has a point in that all this will have been for nothing. But I also don’t want any of you to read it in case something bad happens.
+[$bardName] If you end up reading it, make sure to at least let us know what it says before you off yourself okay?
+[$mName] I’d be lying if I said I wasn’t intensely curious as well… But $pName it really could be dangerous. Maybe it’s best to skip this one.
+[$pName] I’ve decided…
