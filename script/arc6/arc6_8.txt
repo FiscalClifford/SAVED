@@ -1,0 +1,27 @@
+You lead $hName over to Chef and strike up a conversation.
+[$pName] Hey I know this is kinda out of nowhere but I just want to say I appreciate you, and I appreciate you being a part of this group. You mean a lot to me and I am truly thankful we ran into eachother back at the capital. Plus it’s nice to have another man in the group, since $mName doesn’t count.
+[$mName] Hey! I heard that!
+[$pName] Just kidding!
+You chuckle to yourself and turn to Chef, who is laughing heartily.
+[Chef] HA HA HA. I Chef Now!
+[$pName] So anyways, I’m curious about your background story. You were working with your friend at that butcher shop right? That’s what you used to do?
+[Chef] I.
+[$pName] Were you pretty good at it?
+[Chef] I! I Chef Now!
+[$pName] That’s good. It must feel nice to be really good at your job like that. I used to have a job a long, long time ago that I didn’t really like at all, and it was the worst. It sounds like you felt like you belonged there, and you were happy. Such a shame the cult had to ruin that for you, I’m sorry.
+[Chef] chef. I chef now.
+[$pName] Have you had your speech impediment your whole life? I feel like you can understand me pretty well considering you can’t speak beyond saying ‘I chef now’.
+[Chef] I chef now.
+[$pName] Ah ha. I see. Well buddy that’s about all I got for ya, I’m just glad you’re around is all. Also when we one day meet the dragon I’ll make sure to help the Dragon understand whatever your wish is, in case he doesn’t speak Chef.
+[Chef] I Chef Now!
+[$pName] No problem man. Oh, and one last thing.
+[Chef] Chef?
+[$pName] I promise we will make it to the dragon. Whatever it takes, no matter how many times I have to keep retrying… We are gonna make it together. I promise. Ok?
+[Chef] I chef now.
+You lead $hName back to your previous spot in the travelling column and continue to walk along the road towards Gafengen. You still have bit of time left, so you idly chat with $hName.
+[$pName] Chef really doesn’t get enough credit. Sure it’s hard to speak with him, and sure he doesn’t have an in depth backstory, but I still think he’s a valuable member of this group. Despite having less connection to us than anyone else, he has never hesitated to put himself in harms way on our behalf. He is probably the purest and most giving member of this group; he can’t speak with words but he certainly speaks with actions.
+You give $hName a pet.
+[$pName] In a way, our relationship is pretty similar to my relationship with Chef, huh $hName?
+$hName gives you a whinny of agreement.
+[$pName] I’m like 90% sure you can understand English, which isn’t possible but it sure feels like it. Maybe smart animals like you are just really good at reading body language.
+And so, you and $hName merrily chatted away until you reached Gafengen.

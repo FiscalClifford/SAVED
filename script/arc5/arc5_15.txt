@@ -1,0 +1,13 @@
+Two days have passed since the fight in the Cathedral, and everyone has enjoyed their short stay in the capital. The entire group is well rested, healed, and prepared for another journey into the countryside. It didn’t take long for word to get around about how you rescued those people from the cult, and every now and then a passerby on the street thanks you for what you did. On one such occasion while walking with $liName, you casually joked afterward;
+[$pName] I’m not used to being a celebrity you know.
+[$liName] The only thing you are famous for is your naivety, $pName!
+$liName calls you names more than ever these days, but at least now she says it in a playful way. Every now and then you notice her sneaking a glance at you too.
+[$pName] By the way… Do you remember me telling me to “save the game” back in the cathedral?
+[$liName] Save the Game… What does that mean? I’ve never uttered that sentence before in my life.
+[$pName] Well, technically you haven’t in THIS life but… Ah, forget it. Man, sometimes it feels like the further I get the more unraveled everything becomes… Anyways, weren’t you supposed to tell me something important earlier? Something about how… you feel?
+[$liName] I feel like you’re a pain in my butt right now, that’s what I feel!
+With that, she skips merrily away in front of you.
+Yesterday, you took some time to check in on the Butchery and Grill Chef used to work at, but unfortunately it had already gone out of business without the owner to take care of it. Unemployed, Chef ended up sticking with your group and everyone was happy to have him. Considering how dangerous your journeys had been thus far, it was nice to finally get another proper fighter added in.
+Eventually there was nothing left to buy or prepare in the Capital so the six of you headed out north, towards the Frozen Spire. You don’t know what is in store for your motley crew of adventurers, but one thing is for sure; every step forward is another step towards finding the Dragon. Now, you are closer than ever before.
+
+END OF ARC 5, THE CULT

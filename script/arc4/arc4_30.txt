@@ -1,0 +1,46 @@
+The hole is perfectly vertical, and never gets any wider or thinner. You expected to hit the bottom within seconds, but instead you continue falling for what feels like ages. If you hit the ground now, your legs would instantly shatter into a million pieces.
+[$pName] Gah!
+Finally, you see a light below you. Before you even have time to process what that light may mean, the light rushes up to meet you and you emerge from the hole at tremendous speed.
+[$pName] Woah!
+You pop out of the hole upside down, despite having never changed orientation during the fall. You fly straight up and into the air, and you have just barely enough time to see that the sky is the ground and the ground is the night sky before gravity takes affect and brings you back down, which is up.
+[$pName] ???
+You smack into the ground completely disoriented, but don’t break anything. Rubbing your head, you sit up. Unbelievably, you have just emerged from a hole in the ground which had somehow appeared at the rocky outcropping where your infiltration of the Cultists campground originally began. Then:
+[$aName] AAAGGGHH!!!
+$aName shoots up and out of the hole, her feet aimed straight towards the stars. She continues about 4 feet up before slowing down, and makes a baffled expression towards you before gravity takes a hold of her and brings her back to the earth with a loud thump.
+[$aName] Owww…
+[$pName] Impossible…
+The ground trembles a little, and the hole collapses in on itself sealing it shut forever. Simultaneously, you can see that far off in the campground the pyramid begins to crumble and collapse as well. Behind you, $liName, $bardName, and $mName have all gotten to their feet and dusted themselves off.
+[$mName] Not gonna lie folks, nothing that has happened so far today has made any sense.
+[$pName] You can say that again…
+You slowly get to your feet and rub at your head, groaning at the idea of how sore it will be all day tomorrow. $bardName leaves to grab the horses, and $liName picks up the Ancient Scripture which you had dropped during the fall.
+[$liName] All that trouble for this stupid thing, and we can’t even read it. What a waste.
+Dusting herself off, $aName chimes in.
+[$aName] Maybe we could bring it into the royal museum for the artifact bounty? They would probably pay good money for something as important as this.
+[$liName] That’s not a bad idea… It’s about time we actually made some Aureus off of our travels rather than burning through it…
+[$mName] But what about the Dragon? Now we don’t have any leads… Are you sure you can’t tell us what is in there $pName?
+You shake your head.
+[$pName] I’m just happy I am still here and have the willpower to press on. All I can say about the dragon is that if we follow our instincts we will meet him soon enough.
+[$liName] Just when I thought you were improving, you show your old moronic self…
+[$pName] Hey! I heard that!
+[$bardName] C’mon everyone, lets get out of here!
+$bardName returns with the horses, and everyone begins mounting up. You approach $hName to do the same.
+[$pName] It’s been a long day $hName, I’m glad you’re here to help me get home.
+You move to give $hName a friendly pet, but freeze when you notice her eyes widen. Before you have time to investigate what is causing her distress, $hName butts her head into you, knocking you over.
+[$pName] Wha?
+The second you land on the ground you notice the glint of a dagger flying through the air, whizzing just past where you were standing only seconds ago. Turning to look for its source, you see the Cultist who had only just thrown it and two more running towards you.
+[$pName] Cultists! Run!
+Leaping upwards, you mount $hName and give her a kick to the side. $hName gives a snort of concentration and takes off at top speed, narrowly saving you from several more daggers thrown your way. Frantically all five of you make a hasty retreat, and manage to escape just before the squad of cultists converge on your position.
+[$pName] That was a close one… You saved me $hName, thank you!
+$hName gives you a self-satisfied whiny and contentedly trots along the path. The moonlight glows gently off her $horsecolor coat, and you allow yourself to finally relax as you continue through the trees and back towards Durango.
+
+It has now been an hour since your great escape, and everyone is gathered around a campfire a mile or two away from Durango. $liName had decided it would be best if everyone avoided the town in case the Cultists came looking for you there, and $aName had snuck in to surreptitiously buy some dinner for everyone. Now, all five of you relax around the fire and plan your next move.
+[$aName] I suppose the next step is getting the artifact bounty for this book. If what $pName says is true, then we just need to go with the flow and it won’t be long before we accomplish our goal!
+Swallowing her bite of food, $bardName Jumps into the conversation with gusto
+[$bardName] I absolutely have to come with you guys! That little temple adventure is going to end up as one of my greatest songs ever, and I need you guys to keep the grade A material coming. Pretty please?
+[$aName] I don’t see a problem with that. Does anyone?
+$liName says nothing, and you give $bardName a smile of approval. $mName doesn’t even notice the conversation, and is too busy practicing one of his card tricks to offer an opinion.
+[$aName] Well that settles it then, welcome to the team!
+
+And so, the five of you celebrated for the rest of the night and fell into a comfortable slumber. The next day everyone packed up to leave, and you began your journey towards the Grand Capital of $kingdomName.
+
+END OF ARC 4, THE RUINS

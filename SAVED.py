@@ -21,14 +21,14 @@ except Exception as error:
     print("ERROR")
 #--------------------------------------------------------Globals--------------------------------------------------------
 badInput = ["!","@","#","$","%","^","&","*","^_^",":)"," ","",".",",","-","_","$pName","$aName","$bName","$liName"]
-
+maudAnswers = ["0", 0, "zero", "none", "nothing", "no fingers", "there aren't any"]
 class g:
     inputResponse = "null"
     # global values
     
     currentRoom = "null"
     savedRoom = "null"
-    txtSpeed = 0.05
+    txtSpeed = 0.000001#0.05
     txtSize = 16
 
     food = "null"
@@ -61,6 +61,7 @@ class g:
     loadTimes = 0
     hName = "null"
     horseColor = "null"
+    failCounter = 0
 
     # !!!Flags!!!
     firstTimeArc2 = "true"
@@ -71,6 +72,11 @@ class g:
     metB = "false"
     firstMeeting = "true"
     seenForest = "false"
+    takenTrial = "false"
+    bishopMelt = "false"
+    firstAmbush = "false"
+    talkedTo = "null"
+    watchedTorture = "false"
 
 #=======
 
@@ -136,6 +142,16 @@ class VLC:
         self.fillPlaylist()
         self.play()
         self.listPlayer.get_media_player().audio_set_volume(60)
+    def playKulning(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/kulning.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
+
 music = VLC()
 
 
@@ -199,6 +215,9 @@ def postDeathPassage(toPrint):
 
 def deadChecker():
     # if you just died this is a special message for you :)
+    if g.currentRoom == "arc5_13":
+        checkLoadTimes()
+        eval('arc5_14()')
     if g.deathReturn == "arc2_17" or g.deathReturn == "arc2_42":
         g.deathReturn = "null"
         postDeathPassage('arc2_52')
@@ -224,6 +243,7 @@ def deadChecker():
         postDeathPassage('arc2_55')
     else:
         checkLoadTimes()
+        print(g.savedRoom)
         eval(g.savedRoom + "()")
 
 
@@ -235,7 +255,7 @@ def loadGame(window):
     listy = list.items()
     for left, right in listy:
         if left.startswith("__") == False:
-            left = data[left]
+            g.left = data[left]
     #delete buttons
     list = frame2.pack_slaves()
     for x in list:
@@ -253,7 +273,9 @@ def loadGame(window):
     music.startBackgroundMusic()
     if g.currentRoom == "arc1_0":
         g.currentRoom = "arc1_1"
-
+    if g.currentRoom == "arc5_13":
+        g.currentRoom = "arc5_14"
+        g.savedRoom = "arc5_14"
     deadChecker()
 
 def saveGame(window):
@@ -267,6 +289,7 @@ def saveGame(window):
     for left, right in listy:
         if left.startswith("__") == False:
             data[left] = right
+
     data['dateTime'] = dt_string
 
     if os.path.exists('./savefile'):
@@ -523,7 +546,7 @@ def create_choices(choiceList, pathList):
             button = Button(frame2, text=choiceList[i], command=lambda i=i: click_choice(pathList[i]), bg="#333333", fg="#EEEEEE")
             button.pack(fill='both', expand='yes')
 
-#Unique Room for starting the game
+#Unique Room for starting the game ################################################################################
 def queue_start_story(window):
     window.destroy()
     music.startBackgroundMusic()
@@ -531,11 +554,11 @@ def queue_start_story(window):
     win.deiconify()
 
     room_run("arc1_0")
-    getInput("Please Enter Character Name:")
-    g.pName = g.inputResponse
+    #getInput("Please Enter Character Name:")
+    g.pName = "tester" # g.inputResponse
     g.inputResponse = "null"
     choices = ["Continue..."]
-    paths = ["arc1_8"] # if resetting, send to 1_8
+    paths = ["arc6_0"] # if resetting, send to 1_8
     create_choices(choices, paths)
 
 def quit_me():
@@ -543,7 +566,23 @@ def quit_me():
     win.quit()
     win.destroy()
 
+def makeTears():
+    if g.talkedTo == "chef":
+        return ["arc6_23"]
+    elif g.talkedTo == "aName":
+        return ["arc6_21"]
+    elif g.talkedTo == "liName":
+        return ["arc6_20"]
+    elif g.talkedTo == "bardName":
+        return ["arc6_22"]
+    elif g.talkedTo == "mName":
+        return ["arc6_24"]
+    else:
+        print("error finding sad part")
+        return "arc6_20"
 
+
+#####################################################################################################################
 #build main GUI------------------------------------------------------------------
 win = tk.Tk()
 win.protocol("WM_DELETE_WINDOW", quit_me)
@@ -1175,6 +1214,504 @@ def arc3_8():
     choices = ["Continue..."]
     paths = ["arc4_0"]
     create_choices(choices, paths)
+
+def arc4_0():
+    room_run("arc4_0")
+    choices = ["Continue..."]
+    paths = ["arc4_1"]
+    create_choices(choices, paths)
+
+def arc4_1():
+    room_run("arc4_1")
+    choices = ["Continue..."]
+    paths = ["arc4_2"]
+    create_choices(choices, paths)
+
+def arc4_2():
+    music.playKulning()
+    room_run("arc4_2")
+    choices = ["Continue..."]
+    paths = ["arc4_3"]
+
+    create_choices(choices, paths)
+
+def arc4_3():
+    music.startBackgroundMusic()
+    room_run("arc4_3")
+    choices = ["Fight your way through the cultists", "Sneak Through the Camp", "use " + g.mName + " as a sacrifice and "
+    "run past the guards", "Abandon your friends and go in by yourself"]
+    paths = ["arc4_4", "arc4_4", "arc4_4", "arc4_4"]
+
+    create_choices(choices, paths)
+
+def arc4_4():
+    room_run("arc4_4")
+    choices = ["Continue..."]
+    paths = ["arc4_5"]
+    create_choices(choices, paths)
+
+def arc4_5():
+    room_run("arc4_5")
+    choices = ["Continue..."]
+    paths = ["arc4_6"]
+    create_choices(choices, paths)
+
+def arc4_6():
+    room_run("arc4_6")
+    getInput("Please enter the correct four letters")
+    string = g.inputResponse
+    if string.lower() == "uiop" or string.lower() == "u i o p":
+        choices = ["Continue..."]
+        paths = ["arc4_8"]
+    else:
+        choices = ["Continue..."]
+        paths = ["arc4_7"]
+    g.inputResponse = "null"
+
+    create_choices(choices, paths)
+
+def arc4_7():
+    room_run("arc4_7")
+
+def arc4_8():
+    room_run("arc4_8")
+    if g.takenTrial == "true":
+        choices = ["Continue..."]
+        paths = ["arc4_10"]
+    if g.takenTrial == "false":
+        choices = ["Continue..."]
+        paths = ["arc4_9"]
+    create_choices(choices, paths)
+
+def arc4_9():
+    room_run("arc4_9")
+    choices = ["Continue..."]
+    paths = ["arc4_11"]
+    create_choices(choices, paths)
+
+def arc4_10():
+    room_run("arc4_10")
+    choices = ["Continue..."]
+    paths = ["arc4_26"]
+    create_choices(choices, paths)
+
+def arc4_11():
+    room_run("arc4_11")
+    choices = ["Do Nothing", "Pull the Lever"]
+    paths = ["arc4_13", "arc4_12"]
+    create_choices(choices, paths)
+
+def arc4_12():
+    room_run("arc4_12")
+    choices = ["Do Nothing", "Push the man in front of the Train"]
+    paths = ["arc4_15", "arc4_14"]
+    create_choices(choices, paths)
+
+def arc4_13():
+    room_run("arc4_13")
+    choices = ["Do Nothing", "Pull the Lever"]
+    paths = ["arc4_17", "arc4_16"]
+    create_choices(choices, paths)
+
+def arc4_14():
+    room_run("arc4_14")
+    choices = ["Do Nothing", "Step in front of the Train"]
+    paths = ["arc4_19", "arc4_18"]
+    create_choices(choices, paths)
+
+def arc4_15():
+    room_run("arc4_15")
+    choices = ["Do Nothing", "Push the man in front of the Train"]
+    paths = ["arc4_21", "arc4_20"]
+    create_choices(choices, paths)
+
+def arc4_16():
+    room_run("arc4_16")
+    choices = ["Step in front of the Train", "Do Nothing"]
+    paths = ["arc4_22", "arc4_23"]
+    create_choices(choices, paths)
+
+def arc4_17():
+    room_run("arc4_17")
+    choices = ["Do Nothing", "Press the Red Button"]
+    paths = ["arc4_25", "arc4_24"]
+    create_choices(choices, paths)
+
+def arc4_18():
+    g.takenTrial = "true"
+    room_run("arc4_18")
+    choices = ["Continue..."]
+    paths = ["arc4_26"]
+    create_choices(choices, paths)
+
+def arc4_19():
+    g.takenTrial = "true"
+    room_run("arc4_19")
+    choices = ["Continue..."]
+    paths = ["arc4_26"]
+    create_choices(choices, paths)
+
+def arc4_20():
+    g.takenTrial = "true"
+    room_run("arc4_20")
+    choices = ["Continue..."]
+    paths = ["arc4_26"]
+    create_choices(choices, paths)
+
+def arc4_21():
+    g.takenTrial = "true"
+    room_run("arc4_21")
+    choices = ["Continue..."]
+    paths = ["arc4_26"]
+    create_choices(choices, paths)
+
+def arc4_22():
+    g.takenTrial = "true"
+    room_run("arc4_22")
+    choices = ["Continue..."]
+    paths = ["arc4_26"]
+    create_choices(choices, paths)
+
+def arc4_23():
+    g.takenTrial = "true"
+    room_run("arc4_23")
+    choices = ["Continue..."]
+    paths = ["arc4_26"]
+    create_choices(choices, paths)
+
+def arc4_24():
+    g.takenTrial = "true"
+    room_run("arc4_24")
+    choices = ["Continue..."]
+    paths = ["arc4_26"]
+    create_choices(choices, paths)
+
+def arc4_25():
+    g.takenTrial = "true"
+    room_run("arc4_25")
+    choices = ["Continue..."]
+    paths = ["arc4_26"]
+    create_choices(choices, paths)
+
+def arc4_26():
+    room_run("arc4_26")
+    choices = ["Do Not Read The Script", "Read The Script"]
+    paths = ["arc4_28", "arc4_27"]
+    create_choices(choices, paths)
+
+def arc4_27():
+    music.stop()
+    room_run("arc4_27")
+    choices = ["Continue..."]
+    paths = ["arc4_29"]
+    create_choices(choices, paths)
+    path = os.path.realpath('./script/arc4')
+    os.startfile(path)
+
+def arc4_28():
+    room_run("arc4_28")
+    choices = ["Continue..."]
+    paths = ["arc4_29"]
+    create_choices(choices, paths)
+
+def arc4_29():
+    music.startBackgroundMusic()
+    room_run("arc4_29")
+    choices = ["Continue..."]
+    paths = ["arc4_30"]
+    create_choices(choices, paths)
+
+def arc4_30():
+    room_run("arc4_30")
+    choices = ["Continue..."]
+    paths = ["arc5_0"]
+    create_choices(choices, paths)
+
+def arc5_0():
+    room_run("arc5_0")
+    choices = ["Continue..."]
+    paths = ["arc5_1"]
+    create_choices(choices, paths)
+
+def arc5_1():
+    room_run("arc5_1")
+    choices = ["Continue..."]
+    paths = ["arc5_2"]
+    create_choices(choices, paths)
+
+def arc5_2():
+    room_run("arc5_2")
+    choices = ["Continue..."]
+    paths = ["arc5_3"]
+    create_choices(choices, paths)
+
+def arc5_3():
+    room_run("arc5_3")
+    choices = ["Enter the mysterious Sewer Entrance", "Continue to wander the streets, bored"]
+    paths = ["arc5_5", "arc5_4"]
+    create_choices(choices, paths)
+
+def arc5_4():
+    room_run("arc5_4")
+    choices = ["Enter the mysterious Sewer Entrance", "Continue to wander the streets, bored"]
+    paths = ["arc5_5", "arc5_4"]
+    create_choices(choices, paths)
+
+def arc5_5():
+    room_run("arc5_5")
+    choices = ["Go forwards along the tunnel", "Turn and go the opposite direction along the tunnel"]
+    paths = ["arc5_6", "arc5_6"]
+    create_choices(choices, paths)
+
+def arc5_6():
+    room_run("arc5_6")
+    choices = ["Take Left Path", "Take Right Path"]
+    paths = ["arc5_7", "arc5_7"]
+    create_choices(choices, paths)
+
+def arc5_7():
+    room_run("arc5_7")
+    choices = ["Continue..."]
+    paths = ["arc5_8"]
+    create_choices(choices, paths)
+
+def arc5_8():
+    room_run("arc5_8")
+    choices = ["Continue..."]
+    paths = ["arc5_9"]
+    create_choices(choices, paths)
+
+def arc5_9():
+    room_run("arc5_9")
+    choices = ["Continue..."]
+    paths = ["arc5_10"]
+    create_choices(choices, paths)
+
+def arc5_10():
+    room_run("arc5_10")
+    choices = ["Scout using Balcony", "Charge!"]
+    paths = ["arc5_11", "arc5_12"]
+    create_choices(choices, paths)
+
+def arc5_11():
+    room_run("arc5_11")
+    choices = ["Continue..."]
+    paths = ["arc5_13"]
+    create_choices(choices, paths)
+
+def arc5_12():
+    room_run("arc5_12")
+    if g.bishopMelt == "false":
+        choices = ["Continue..."]
+        paths = ["arc5_13"]
+    else:
+        choices = ["Continue..."]
+        paths = ["arc5_14"]
+    create_choices(choices, paths)
+
+def arc5_13():
+    room_run("arc5_13")
+    g.bishopMelt = "true"
+
+def arc5_14():
+    room_run("arc5_14")
+    choices = ["Continue..."]
+    paths = ["arc5_15"]
+    create_choices(choices, paths)
+
+def arc5_15():
+    room_run("arc5_15")
+    choices = ["Continue..."]
+    paths = ["arc6_0"]
+    create_choices(choices, paths)
+
+def arc6_0():
+    room_run("arc6_0")
+    choices = ["Continue..."]
+    paths = ["arc6_1"]
+    create_choices(choices, paths)
+
+def arc6_1():
+    room_run("arc6_1")
+    if g.failCounter == 5:
+        choices = ["Continue..."]
+        paths = ["arc6_25"]
+    else:
+        if g.firstAmbush == "false":
+            choices = ["Continue..."]
+            paths = ["arc6_2"]
+        else:
+            choices = ["Continue..."]
+            paths = ["arc6_4"]
+    create_choices(choices, paths)
+
+def arc6_2():
+    room_run("arc6_2")
+    choices = ["Continue..."]
+    paths = ["arc6_3"]
+    create_choices(choices, paths)
+
+def arc6_3():
+    room_run("arc6_3")
+    g.firstAmbush = "true"
+
+def arc6_4():
+    room_run("arc6_4")
+    choices = ["Speak with Chef", "speak with "+g.aName, "speak with "+g.bardName, "speak with "+g.liName, "speak with "+g.mName]
+    paths = ["arc6_8", "arc6_6", "arc6_7", "arc6_5", "arc6_9"]
+    create_choices(choices, paths)
+
+def arc6_5():
+    room_run("arc6_5")
+    choices = ["Continue..."]
+    paths = ["arc6_10"]
+    g.talkedTo = "liName"
+    create_choices(choices, paths)
+
+def arc6_6():
+    room_run("arc6_6")
+    choices = ["Continue..."]
+    paths = ["arc6_10"]
+    g.talkedTo = "aName"
+    create_choices(choices, paths)
+
+def arc6_7():
+    room_run("arc6_7")
+    choices = ["Continue..."]
+    paths = ["arc6_10"]
+    g.talkedTo = "bardName"
+    create_choices(choices, paths)
+
+def arc6_8():
+    room_run("arc6_8")
+    choices = ["Continue..."]
+    paths = ["arc6_10"]
+    g.talkedTo = "chef"
+    create_choices(choices, paths)
+
+def arc6_9():
+    room_run("arc6_9")
+    choices = ["Continue..."]
+    paths = ["arc6_10"]
+    g.talkedTo = "mName"
+    create_choices(choices, paths)
+
+def arc6_10():
+    room_run("arc6_10")
+    choices = ["Ask "+g.aName+" for help", "Attempt to Fight on your own", "Ask "+g.liName+" for help"]
+    paths = ["arc6_15", "arc6_11", "arc6_12"]
+    create_choices(choices, paths)
+
+def arc6_11():
+    room_run("arc6_11")
+    g.failCounter += 1
+
+def arc6_12():
+    room_run("arc6_12")
+    choices = ["Frontal Attack", "Flank, using yourself as bait"]
+    paths = ["arc6_13", "arc6_14"]
+    create_choices(choices, paths)
+
+def arc6_13():
+    g.failCounter += 1
+    room_run("arc6_13")
+    choices = ["Continue..."]
+    paths = makeTears()
+    create_choices(choices, paths)
+
+def arc6_14():
+    g.failCounter += 1
+    room_run("arc6_14")
+    choices = ["Continue..."]
+    paths = makeTears()
+    create_choices(choices, paths)
+
+def arc6_15():
+    room_run("arc6_15")
+    choices = ["Sneak out of the Town and avoid Conflict", "Ask Maud for Help"]
+    paths = ["arc6_16", "arc6_17"]
+    create_choices(choices, paths)
+
+def arc6_16():
+    g.failCounter += 1
+    room_run("arc6_16")
+    choices = ["Continue..."]
+    paths = makeTears()
+    create_choices(choices, paths)
+    g.watchedTorture = "true"
+
+def arc6_17():
+    room_run("arc6_17")
+    choices = ["Cut off the fingers on "+g.aName+"'s right hand", "Refuse Maud's offer and leave"]
+    paths = ["arc6_18", "arc6_19"]
+    create_choices(choices, paths)
+
+def arc6_18():
+    g.failCounter += 1
+    room_run("arc6_18")
+
+def arc6_19():
+    g.failCounter += 1
+    room_run("arc6_19")
+    choices = ["Continue..."]
+    paths = makeTears()
+    create_choices(choices, paths)
+
+def arc6_20(): #liname
+    room_run("arc6_20")
+
+def arc6_21(): #aname
+    room_run("arc6_21")
+
+def arc6_22(): #bardname
+    room_run("arc6_22")
+
+def arc6_23(): #chef
+    room_run("arc6_23")
+
+def arc6_24(): #mname
+    room_run("arc6_24")
+
+def arc6_25():
+    room_run("arc6_25")
+    choices = ["Continue..."]
+    paths = ["arc6_26"]
+    create_choices(choices, paths)
+
+def arc6_26():
+    room_run("arc6_26")
+    choices = ["Continue..."]
+    paths = ["arc6_27"]
+    create_choices(choices, paths)
+
+def arc6_27():
+    room_run("arc6_27")
+    getInput("How many fingers is Maud holding up?")
+    string = g.inputResponse
+    global maudAnswers
+    if string.lower() in maudAnswers:
+        choices = ["Continue..."]
+        paths = ["arc6_29"]
+    else:
+        choices = ["Continue..."]
+        paths = ["arc6_28"]
+    create_choices(choices, paths)
+
+def arc6_28(): #mname
+    room_run("arc6_28")
+
+def arc6_29():
+    room_run("arc6_29")
+    choices = ["Continue..."]
+    paths = ["arc6_30"]
+    create_choices(choices, paths)
+
+def arc6_30():
+    room_run("arc6_30")
+    choices = ["Continue..."]
+    paths = ["arc7_0"]
+    create_choices(choices, paths)
+
 
 #-----------------------------------------------Program Start----------------------------------------------------------
 #arc 1

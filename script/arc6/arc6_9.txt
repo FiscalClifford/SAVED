@@ -1,0 +1,33 @@
+You lead $hName over to $mName and strike up a conversation.
+[$pName] Hey I know this is kinda out of nowhere but I just want to say I appreciate you, and I appreciate you being a part of this group. You mean a lot to me and I am truly thankful we ran into each other back at the barony.
+$mName looks back at you with an expression of surprise, and smiles faintly.
+[$mName] Well thanks man, I appreciate that. You mean a lot to me too. All of you do, really. I haven’t had a group of friends like this since… well I don’t know how long. Forever, probably.
+[$pName] You didn’t have very many friends growing up?
+[$mName] Well they just weren’t that useful you see. Friends are nice to have around but the only friends I could make were people like me, people that had to beg or perform for a living. With friends like that if you stick together you need to combine acts or else you will be biting into each other’s earnings. I am much more of a solo performer so in the end I couldn’t make many friends. I was friendly with a lot of people, but not many friends.
+[$pName] Sounds pretty lonely.
+[$mName] I got used to it I guess. My passion is magic so you gotta make sacrifices to follow your dreams.
+[$pName] Considering real magic already exists in this world, I’m surprised anyone finds it entertaining.
+[$mName] I remember briefly mentioning this back when we first met, but it’s actually quite the opposite. I have met many performers in my life, but never another “fake” magician like myself. People are always blown away when I make magic happen without uttering a single control word and are sometimes even desperate to learn my secrets. The concept of sleight of hand is completely foreign to most of these people, because real magic is already a proven concept. In the end, it is the balance of trying to figure out which tricks are real magic and which ones aren’t that keeps people entranced.
+[$pName] So where did you learn about this “fake” magic then, if it is so rare?
+[$mName] Not where, but who! My old mentor taught me everything I know. He had a peculiar name, what was it? TheLegend22.
+[$pName] TheLegend22!?
+[$mName] Right? Strangest name I’ve ever heard of. It’s almost like he just made it up on the spot and kept it for no reason. Kinda like your name, actually.
+[$pName] My name isn’t weird!
+[$mName] If you say so. He gave me this deck of cards you call “Uno” as well, and told me all these amazing stories of his travels. Apparently he used to travel through this strange land called “California” and do tricks…
+[$pName] Woah woah woah, did you just say California? I know that place!
+[$mName] What, really? You are the first person I’ve ever met who has heard of it before. That’s even more ironic considering you hardly ever know about any of the places around here. What’s it like?
+[$pName] Well it is very big, and has a lot of people that live there of all different backgrounds. They like to hang out on the beach and in big cities. There are lots of performers there like your mentor, and they do all kinds of crazy acts. I can’t believe someone from California has been here before… Does that mean people are teleported here often? Am I not the first? Am I the last?
+[$mName] Good heavens my boy, I have no idea what you are going on about now.
+[$pName] Agh… forget it.
+[$mName] Anyways as I was saying, he taught me everything I know. I grew up an orphan with nothing to my name, and he put magic in pockets. I’m truly blessed to have met him. Then one day, without warning, he vanished. Never heard from him again. Shame, really.
+[$pName] yeah… I would have liked to have met him.
+[$mName] You two probably would have gotten along really well. You two are kinda similar, in a way. 
+[$pName] Hmm… So… What will you wish for when we finally meet the dragon?
+[$mName] Ah good question, I’ve never gone into detail about it have I? First, a preface; The way this world works, control words are everything. Control words are the most closely guarded secret any magician can have, and the sharing of valuable control words only ever happens in the most secret of societies. Unlike you I was born with a tremendous amount of magical power, however since I’ve lived most of my life alone and as a begging orphan, I have never had the wealth nor status to ever learn a control word matching my abilities. As a result I have to make do with the simplest and most worthless party tricks.
+[$pName] So if you were born wealthy, or at least well connected, then you would have been taught valuable control words. But since you weren’t you will never have the chance.
+[$mName] Exactly! In this way, the upper classes of the world prop each other up, keep a death grip on society with their power, and gatekeep anyone else who might be more talented from challenging them. It’s completely unfair. For my wish, I would request to instantly know by memory every single control word that has ever existed. Then I would open up a public library, where this knowledge could be shared with everyone who has a passion for learning. With only a few disciples we would be strong enough to challenge any of the nobles who dared to stop us, and we could finally restore the balance of power. Better yet, I could use this newfound power and influence to create a network of orphanages across the kingdom that could help young men from avoiding the same sorry fate as myself.
+[$pName] Wow that’s pretty noble of you $mName. I think that’s a great wish to have.
+[$mName] Thank you, it has been my dream ever since I was a little boy. Will you support me in my quest?
+[$pName] Well of course! $mName, I promise I will do everything I can to help you achieve your wish.
+[$mName] Thank you… That means a lot, hearing that.
+The two of you chat some more about random topics, until $mName begins a chain of terrible dad jokes and you are forced to retreat. Chuckling, you head back over to your original spot in the traveling column and soothe $hName, who appears to be snorting at $mName’s antics. After a few minutes of hanging with your horse everyone makes excellent progress along the road, and before you know it you are in front of the town of Gafengen.

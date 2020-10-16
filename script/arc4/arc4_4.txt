@@ -1,0 +1,45 @@
+[$pName] I think we should…
+[$bardName] Ah ha! I’ve got it!
+Everyone stops thinking and looks at her in surprise.
+[$bardName] I know a couple Church Hymns, I could sing with my lovely voice and captivate the cultists as my audience. Then while they are distracted you guys can sneak past and get inside the Temple. Once you’re in there I’ll sprint to join you, and you can cut the rope holding that door open so that they can’t chase us!
+[$aName] Hey that’s a great idea! 
+[$pName] That’s a pretty good idea… but aren’t you doing a lot for us? Isn’t this whole thing a bit dangerous for someone so young?
+[$bardName] As for your first remark, I’ve been looking for a real-life adventure for a loooong time, and if this whole thing works out I’ll have the material for the best ballad made in years. Furthermore, If we can find the Dragon then that means I’ll get a wish too, right? 
+[$pName] Well yeah…
+[$bardName] So its worth it for me in the end then isn’t it? As for the danger part, let me ask you this: Have you ever killed a man, $pName?
+Startled, you stare back at her for a moment. She meets your gaze with an air of stoicism.
+[$pName] Well… no…
+[$bardName] It just so happens that I have. Since you are so comparatively inexperienced, does that mean this operation is a little too dangerous for YOU $pName? Should we leave you behind?
+[$liName] Woah $pName, ZING! Honestly she might be right, you are rather useless…
+[$pNames] Yikes, harsh! Don’t make me remind you of how if it wasn’t for my efforts back in Kingsbridge we would all have succumbed to DEATH, and I even helped devise the plan against the Baron too didn’t I?
+[$liName] I seem to recall in both situations all the fighting being done by $aName and I…
+[$aName] $liName, that’s enough! $pName is a valuable member of this group and is always ready to make tough decisions on our behalf. Plus, I bet there will be all kinds of booby traps in that temple and we will need him to help us navigate through them, right?
+[$pName] Ri… Right.
+[$aName] There it is then, looks like we are all joined by our goal of finding the Dragon and so we will all stick together along this path. $bardName, you don’t have to put yourself in danger but if you still want to help I would be… ah…
+[$liName] indebted?
+[$pName] Grateful?
+[$aName] Yes! I would be very grateful for your help!
+[$bardName] Of course! Let’s do it then.
+And with that, $bardName leaps down the rocks and loops to the right around the camp, so that she may begin singing on the right side.
+[$mName] If she sings on that side to distract them, we better approach from the left.
+[$liName] Let’s move.
+The four of you carefully make your way down the rocks and sneak along the treeline until you are opposite where $bardName will begin her performance. Next, you wait behind some trees until it seems like a commotion is stirring up inside the camp.
+[$mName] That must be our signal, let’s move!
+The four of you scamper through the tents, constantly checking over your shoulders to make sure you haven’t been discovered. Luckily, the entire area is devoid of life as every single cultist congregates to the right side of the compound to see what all the fuss is about. Finally, you manage to get within 20 feet of the pyramid and take cover inside of a tent. In the distance, you can hear the powerful resonation of 100 people singing along to some kind of church song. Either she is leading them in the music or she is being sacrificed and they are singing to celebrate, but you can’t tell either way. Hoping for the best, you nod to each of your comrades and prepare to make a break for the temple.
+[$pName] Go!
+The four of you sprint as hard as you can towards the temple, but with nothing at all to break the line of sight between you and the congregation it is only a matter of time until someone notices the intrusion. Lucky for you, everyone seems to be more concerned with the song and you make it to the huge iron door without a problem. Peering inside the doorway, you see an incredibly long staircase leading down into the ground below, slowly turning away until you can’t even see where the bottom is. Above you, the iron door is held open by a thick rope attached to a crane, and a complicated pulley system strains to hold it open.
+[$pName] Alright $aName, prepare to slice this rope. I’ll signal to $bardName that we made it.
+You clamber up the pyramid as quickly as you can, but it is surprisingly slick and you struggle to get any good footholds. Nevertheless, you manage to finally reach the summit and look over the compound to where everyone is gathered. 
+At the far end, a huge circle of cultists have joined hands and lean side to side in unison, creating a strange wavelike effect in the crowd. Each cultist is wearing a fluffy brown robe, with a single strip of burlap acting as a waistband. The collar of these robes are popped out so that the material wraps around and behind their head in an odd way, similar to something you would see Dracula wear except fuzzier. At the center of the concert is none other than $bardName, except somehow she managed to get a hold of one of those fuzzy robes and wears one herself. Thinking she must be one of them, the cultists joyously sing and dance to her song without a second thought as to who she is or why she would perform so suddenly. Even from so far away you can faintly hear her singing, and it lulls you into a state of relaxed melancholy almost immediately. Dazed, you watch for a few seconds before remembering what you are trying to accomplish and snap out of it. 
+[$pName] $bardName! Get over here!
+You wave your arms wildly, and hope that she can see your gesture. Without skipping a beat she moves forwards through the crowd while still singing, as if she was a pop performer. She moves slowly and deliberately so as not to rouse suspicion, and even takes the time to sing directly to a couple of the cultists individually which excites them even more. Then, upon reaching the edge of the crowd, she stops the act and makes a break for it.
+[Cultist] Hey, who’s that on the temple!?!?
+One of them finally sees you dancing around like a monkey and raises the alarm. Legs pumping and arms flailing, $bardName runs as fast as she can towards you with the crowd in hot pursuit.
+[$pName] This is gonna be a close one guys!
+You slip down the slope of the pyramid as quick as you can, and grab $mName as you head inside. From just within the doorway you can see $bardName getting closer and closer, but it looks like she isn’t going to be quick enough as one of the cultists is rapidly gaining on her. Just when you think she is caught, $liName flies out with lightning speed towards her and cuts the cultist down with a single Gasp. Now both her and $bardName sprint towards the entrance, and leap over the threshold just as the masses are about to close in.
+[$pName] Now $aName!
+$aName swipes at the rope connected to the crane and leaps down to join you. With a load groan the Iron door finally allows gravity to take over and slams shut with tremendous momentum.
+WHAM
+The door comes to a rest, blocking out all light as well as the angry crowd of cultists outside. You made it just in time.
+[$mName] Everyone ok?
+Everyone catches their breath and nods in affirmation. Looks like you made it in just barely, and there is only one direction left that you can go: Down, down into the ominous temple of the Ancient Dragon. 

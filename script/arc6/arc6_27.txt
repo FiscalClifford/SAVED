@@ -1,0 +1,47 @@
+You stride across the main road to the other side of town, towards the Fortress. As you walk, loitering members of the Forest Fangs eye you suspiciously but when you meet their gaze they look away. Finally, you reach the mercenary fortress and speak to the guard posted outside.
+[Guard] Halt, who goes there?
+[$pName] $pName, a travelling adventurer seeking audience with Maud of the Forest Fangs.
+[Guard] And what business do you seek with her?
+[$aName] I have an offer for her that she won’t be able to refuse.
+[???] Something I can’t refuse? Then by all means…
+The doors are thrown open, and out strides Maud looking as imposing as ever.
+[Maud] … Tell me what you have in mind.
+
+Once again you find yourself in the throne room, with Maud perched high above you on her fancy silver chair. You’re not in the mood to break your neck looking up at her, so instead you stand sideways to her with your arms crossed. She takes a sip of her wine, and the negotiations begin.
+[Maud] So here you are, $pName, all alone with promises of an offer I will find irresistible. Either you have a lot of money to offer me, or you want to blackmail me. Which is it?
+[$pName] Neither.
+[Maud] Then we are done here. Goodbye.
+[$pName] Not so fast!
+Maud raises an eyebrow at you, but doesn’t interrupt.
+[$pName] Have you ever heard of a man named… Axel?
+Maud’s expression freezes. She is caught completely off guard by the name, and quickly attempts to hide her extreme reaction from you. Squinting her eyes suspiciously, she responds.
+[Maud] How do you know that name?
+[$pName] Because we have a common enemy, Maud. We both wish for revenge on Axel, no matter what it takes.
+Maud scrutinizes you for the longest thirty seconds of your life without saying a word, but you don’t back down from her gaze. Finally, she lithely hops down from her throne and speaks to you at eye level.
+[Maud] Are you… the target?
+You stare back at her with a blank expression.
+[Maud] Yes you are, you must be. Axel is hunting you, isn’t he?
+[$pName] Yes.
+[Maud] Of course. As much as I hate Axel, he is undoubtedly one of the greatest and most cunning ambushers I have ever known. Not a single person he has been determined to hunt has ever lived to know it was Axel that wanted them dead. Yet here you stand.
+[$pName] Axel and I have a strained relationship, that is true. But I hear that your relationship with him is even more strained than mine.
+[Maud] Strained is putting it lightly, it wouldn’t be inaccurate to say I hate him more that anyone else in the world. But enough about me, you are truly the target are you not?
+[$pName] I don’t know what you mean…
+Maud chuckles to herself, and bunches up an armful of her green cape in front of her and hugs it. She slowly strokes it with one hand as if it is some kind of comforting gesture for her.
+[Maud] A strangely dressed bald man was here not too long ago trying to hire me and my mercenaries to take you out. He told strange tales of a man that could see into the future, and had all these barbaric requirements about how to kill you. The target is you, isn’t it?
+[$pName] Must be. What was his name?
+[Maud] Never said. Not that it matters, I would never tell anyone outside of the Forest Fangs that kind of information.
+She turns her back to you, and flings her cape out behind her with gusto. It flutters in the air impressively, and she speaks over her shoulder haughtily.
+[Maud] Let’s get to the point. What exactly do you want from me?
+Your voice fills with determination. This is it.
+[$pName] Maud, I humbly request that you help me and my friends defeat Axel in combat. With your abilities and resources, our victory is assured. In return for your help, I offer something that has eluded you in your quest for revenge all these years; the perfect bait.
+[Maud] bait?
+[$pName] That’s right. If I venture out into the woods, Axel is guaranteed to show up. I know exactly what direction to go as well. He has prepared for every possible attack, every possible trick, except for you. Never in a million years could he expect us to become allies, and he will be unable to escape if we combine forces. Not only will you get your revenge on him, you will also finally be able to reclaim what is rightfully yours; the Black Blade.
+Maud’s eyes light up, filled with desire. 
+[Maud] You speak as if you don’t know our victory is guaranteed. For someone that can travel through time, isn’t that a bit odd?
+[$pName] It is hard to explain. I can only ever go backwards, not forwards. I have not experienced a future where we beat him yet. At the same time, I have not experienced a future where you help us yet either. This is the last chance I have to overcome Axel.
+[Maud] Hmm…
+Maud pauses, deep in thought, before marching up to you and staring into your eyes.
+[Maud] And how do I know your ability isn’t a load of crap? How do I know that you aren’t secretly baiting me out of my fortress so that Axel can attack me?? I can’t trust you at all… Unless…
+She backs away from you, and hides her hands behind her back. She pulls at something behind her, then with her left hand throws her right leather glove forwards and towards you. It hits the ground, then slides to your feet.
+[Maud] If you can rewind time then this should be easy for you. Behind me and hidden from your view is my right hand. Can you tell me how many fingers I am holding up? If you guess wrong, I will instantly vaporize you with a lightning bolt and that will be the end of you, So I wouldn’t mess around if I were you.
+Enter How many fingers she is holding up.

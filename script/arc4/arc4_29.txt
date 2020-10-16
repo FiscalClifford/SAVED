@@ -1,0 +1,23 @@
+[$liName] Well? Where do we find the Dragon then?
+[$pName] All I can say is… We will find the Dragon eventually, I’m confident about that.
+[$bardName] Eh? Well that’s a bit cryptic…
+Before you can respond, the walls start to shake and a mighty tremor pulses through the stone walls. Before you know it huge arches of stone that decorated the ceiling only moments before come crashing down, and entire columns and archways crack and then collapse.
+[$aName] Woah… This place is falling apart!
+Further along and behind the altar a large tapestry of red falls off its hooks and flutters to the floor, revealing the entrance to a secret tunnel.
+[$liName] We gotta get out of here, let’s head for that tunnel!
+[$bardName] But what about…
+[$liName] No time! Let’s move!
+You grab the Scripture and awkwardly hold it in your arms as you run side by side with the others. Dashing into the secret tunnel, you follow a rough path that twists and turns time and time again, dust and small rocks spilling out from the ceiling and landing on and all around you. Finally, the tunnel comes to a final turn to reveal that you can go no further.
+[$bardName] AGH! Dead end!
+[$aName] What about this?
+$aName points to a small hole in the ground only about 3 feet wide at the end of the tunnel.
+[$mName] Looks like a deathtrap to me…
+Peering into it, all you see is inky blackness. The hole could lead anywhere, or to anything.
+[$liName] Better than being crushed to death up here!
+And with that $liName plunges down and into the hole, disappearing completely.
+[$pName] $liName!
+$bardName and $mName shrug their shoulders at eachother and follow $liName’s lead, hopping into the hole and disappearing from view.
+[$aName] Are we really doing this!? I’m scared…
+$aName looks at you paralyzed with fear, her $aEyeColor Eyes brimming with tears.
+[$pName] I’m not sure we have a choice. 
+With that, you leap into the hole and fall, fall, fall down for what feels like an eternity.

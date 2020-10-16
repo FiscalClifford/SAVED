@@ -1,0 +1,23 @@
+You lead $hName over to $liName and strike up a conversation.
+[$pName] Hey I know this is kinda out of nowhere but I just want to say I appreciate you, and I appreciate you being a part of this group. You mean a lot to me and I am truly thankful you allowed me to join you back at Kingsbridge.
+$liName makes a face like she was just slapped, then stares at you with a weird expression for a few seconds before smiling.
+[$liName] That really was out of nowhere, woah! But uh, heh, yeah I appreciate you too $pName. To be honest I don’t know why I let you come with us back then when we barely knew you, but now that I do I sure am glad I did.
+[$pName] We’ve come a long way since that day. I didn’t realize it at the time but its pretty crazy we survived a run in with DEATH, huh?
+[$liName] Maybe that’s why we ended up keeping you around, you are some sort of good luck charm or something. Nobody has ever escaped DEATH before, it’s a pretty big deal… It’s like you have the power of good fortune or something. We have gone on all these crazy adventures together and somehow we keep coming out ahead, with perfect endings and nobody getting hurt. It feels like we are living in a fairytale. I hope it never ends.
+[$pName] Me too $liName, me too. Hey I’ve never asked, how did you get that scar? The one over your eyebrow?
+[$liName] Oh, this?
+She rubs her finger over a scar above her right eyebrow that is about two inches long and runs straight down towards her eye.
+[$liName] I got this in a sparring accident with $aName a long time ago. I remember the day it happened, she was so worried and felt so guilty! She apologized for weeks afterwards. She really is the sweetest… I care a lot about that girl, you know.
+$liName adopts a solemn face and gets more serious.
+[$liName] $aName was there when no one else was, did you know that? My parents couldn’t afford to raise me since I was an accident and they had no money. They abandoned me. They left me on $aName’s doorstep like a forgotten letter. If it wasn’t for $aName and her family, I wouldn’t be here.
+She looks away, towards the pine trees and the fog. You can hear in her voice it is painful to share this.
+[$liName] I’m scared to lose her you know. I’m scared to lose her like I lost my parents. Her family had it’s own problems but at least they were there to take care of us… If something were to happen to $aName they would be furious. I would be furious. I would be lost. I don’t know what I would do without her…
+She takes a deep breath, and continues.
+[$liName] This whole adventure is because $aName needed to get away and live her own life, but I am honestly scared $pName. I am scared I might lose her one day. We may be excellent swordswomen, but even the worst archer or bandit gets in a lucky hit sometimes.
+Finally, she looks back at you. Her eyes are full of emotion, and she gives you a halfhearted smile.
+[$liName] But you are our good luck charm right? Promise you will protect us, $pName?
+You take her hand.
+[$pName] I promise.
+She smiles, and regains her composure. Her posture goes from vulnerable back to powerful in the span of a second, and before you can react she flicks you gently on the forehead.
+[$liName] Good. Now get to the front, we will reach the town soon.
+You smile to yourself and follow her orders promptly. Just ahead of you is the town of Gafengen.

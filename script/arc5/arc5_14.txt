@@ -1,0 +1,46 @@
+The darkness clouding your mind slowly lifts, and the rushing sound of static overwhelms your senses before suddenly stopping all at once. Your eyes shoot open, and you stumble over yourself while coughing violently. 
+[$pName] *cough* ugh… *cough*
+You get yourself together and try to ignore the feeling of dread in your stomach and the taste hiding at the back of your tongue. It looks like time has rewound just far enough that the fight with the cultists hasn’t started yet, and you breathe a sigh of relief. Doing your best to regain your composure, you resume your attack so that your friends aren’t left without your help.
+The 18 or so cultists reach into their fuzzy robes as you charge forward, and they draw a uniquely varied array of weaponry to point at you. Some have sickles, some have jagged daggers, but all have deadly intent to stop you. You feel as if you had just woken up from a dream, and in a daze run forward. You were supposed to be attacking cultists right?  Holding your sword above your head, you bring it down with all your might towards the closest one but he dodges backwards just in time to avoid it. At the same time, another cultist makes his move to attack your left flank while you are vulnerable and you only barely manage to bring your sword around and deflect his blow. Meanwhile, Chef bullishly charges forwards into the center of the fray while hurling his massive cleaver about him in a deadly assault. The cleaver has such tremendous momentum by the time it reaches each cultist that no matter how hard they try to dodge they cannot escape, and even if they attempt a parry their weapons are instantly shattered by the impact. 
+You square off against the cultist who tried to flank you and prepare to strike. The cultist is no older than 17 and has bloodlust in his eyes. His head is completely shaven and his fuzzy robe loosely covers his rib lined chest. With a bloodcurdling scream the cultist lunges towards you, and you manage to barely dodge to the side and avoid it. In retaliation you attempt a lunge of your own, but the cultist narrowly dodges as well and prepares for another swing. In his hand is a long and thin short sword with no guard, and you can see the whites of his knuckles gripping it tightly. His eyes narrow, and he lunges again. You attempt a parry, and this time get it exactly right. Your blade sends his flying away from you while simultaneously positioning itself for attack, and with an adept swipe you lodge your sword up and into his armpit towards the neck, where it gets lodged into him about halfway up. The cultist stares at you in surprise and drops his short sword, feebly grasping at yours with his other hand. You try to pull it free but it somehow got lodged into his ribcage, so you bring your foot up and spartan kick him backwards, dislodging it. The cultist flies backwards, broken, and drowns to death on his own blood as his lung collapses from the mortal wound.
+Meanwhile, $liName and $aName spring their trap and attack the cultists from the rear. In a hurricane of bladework and deadly assault the two cut down eight or so within the span of seconds, and it is only after two more are swiftly chopped down that the ArchBishop finally notices and raises the alarm to the ambush. $liName and $aName’s synergy is perfect, and they attack and defend for each other in excellent coordination.
+You march towards the ritual circle once again to help but by the time you arrive all the cultists are either dead or defeated. Only the Archbishop remains, cowering in the center of the ritual circle. He wears a white fuzzy robe with a golden chain draped across it, three human skulls dangling from it’s links. Splattered across the pale whiteness of the robe is the gore from his sacrifice, and his shoulder length black hair is soaked in it as well. He is surprisingly handsome and has amiable features, the exception being his sharp orange eyes which appear to glow in the torchlight of the ritual circle.
+[ArchBishop] Typical heretic behavior, resorting to violence so quickly. You’re just like the mainstream church, childish and brutish beyond compare. How dare you!
+[Chef] I CHEF NOW.
+Chef stomps up to the Archbishop and wallops him in the stomach, forcing the maniac to double over in pain. You have a feeling if Chef used his full strength there instead of holding back, his fist may have been able to go straight through the man.
+[$aName] $pName told us all about your scheme to sacrifice these innocent people and looks like we caught you in the act too. What do you have to say for yourself!?
+[$liName] There’s no point $aName, it’s gonna be some bullshit about…
+[ArchBishop] Don’t… *cough* don’t you understand they want it? They crave to be sacrificed!
+The Archbishop looks up from the ground with a crazed look in his eyes, locked onto $aName with an uncomfortable intensity.
+[ArchBishop] By giving their blood to me, they achieve what most cannot: salvation! By halting our prayer, you have ruined their chances of true freedom! How dare you!?
+[$liName] Shutup, I don’t want to hear your worthless lecturing. What the hell is the cult doing in the Capital Cathedral?
+[Archbishop] The Chosen Ones have little fingers in the affairs of all who live in this world, you know. The mainstream garbage is nothing but a puppet we keep around out of convenience. They, like you and I, all have our role to play. And my role ends tonight, as foretold…
+Unsteadily, the ArchBishop rises to his feet, and hugs himself tightly.
+[Archbishop] Behold my power! reee… ACK!
+The ArchBishop stops in the middle of his control word, unable to continue due to the blade protruding from his chest. Looking down, he realizes it was you who put it there, and you smile with satisfaction.
+[$pName] Allowing the villain time to monologue is a little cliché, don’t you think?
+You retract the sword from his chest and bring it around in a circle, loping the ArchBishops head off in a graceful spin. Even while rolling across the Cathedral floor, the ArchBishop retains his expression of petulant indignation. $bardName and $mName jog up to rejoin the group.
+[$liName] $pName! We were supposed to ask him where the Dragon is!
+[$pName] I already did. We need to head for the Frozen Spire, whatever that is.
+[$liName] Oh… Um… Ok, wow. When did you…?
+[$bardName] THE frozen Spire? The one all the way north, in the frozen wasteland?
+[$pName] I don’t know where it is or how to get there, but I’m confident we need to head towards “The Frozen Spire”.
+[$aName] That’s pretty far away… But if the Dragon is hiding there, that would explain why nobody has seen him for so long…
+[Chef] I Chef Now.
+[$mName] I’m really not a fan of the cold…
+[$pName] Well I’m not a huge fan of the hot, but I got more than enough of that just a second ago. I’m sure you’ll be able to handle the climate just fine.
+A loud clang rings out across the cathedral as $liName breaks the chains restraining the hostages, and she helps them escape out the back. As they escape in the night, each person makes sure to share their gratitude and profuse thanks for the aid you lent them. After returning, everyone gathers their things and prepares to leave.
+[$liName] I’m not sure where or how you managed to get the Frozen Spire out of the ArchBishop, but at least I know for sure we did good today by saving those innocent people. 
+[$bardName] Do you think killing the ArchBishop means the end of the Cult now?
+[$liName] Not likely, it’s a large organization. Defeating the leader in the capital city will severely weaken the cult’s influence however and likely restrain their growth for some time. This is a great victory for the people of $kingdomName.
+[$aName] That ArchBishop guy gave me the creeps too. Kidnapping and sacrificing people… Who does that? I shudder to think of what the purpose of that ritual was…
+[$pName] Believe me, you don’t want to know.
+[Chef] I Chef Now.
+[$mName] Well, we have a long journey ahead of us. The Frozen Spire is extremely far north, and we will have almost the entire kingdom to cross along the way. We better gear up and prepare for a long haul.
+[$pName] Good idea about preparing correctly… Oh and $liName, about what you were trying to say earlier…?
+$liName tenses up, and looks at you with surprise. Her cheeks immediately flush, and she looks away.
+[$liName] Ahh, forget it! I’ll tell you some other time.
+With that she rushes out of the Cathedral ahead of you, and $aName gives you a wink.
+[$aName] You really shouldn’t play with a woman’s heart like that you know…
+[$pName] What!?
+$mName chuckles, and everyone heads out of the cathedral and back to the relative safety of the city.

@@ -1,0 +1,22 @@
+The sunset cast an orange haze across the city buildings, washing over the urban landscape with a fuzzy warmth in contrast to the cold tension you felt. It had been some time since you and Chef left to collect your friends, and now that everyone was finally submerging into the cities undercroft you feared it may already be too late to save the soon to be sacrifices. It took a long time for everyone to finally meet back up after their individual adventures in the capital, and even longer to explain how you came to meet the strange and intimidating man accompanying you. You remember $bardName’s reaction well;
+[$bardName] You mean to tell me that in the amount of time it took me to shop for a new pair of shoes, you managed to uncover a major human trafficking ring, kill three cultists, and make a new friend to boot? Don’t you know how to relax for once!?
+Luckily, a hurried explanation of the day’s events was all it took to catch the gang up to speed, and they believed everything you had to say immediately. One of the perks of being an adventurer is that even the preposterous begins to feel normal, and it seemed like no one was that surprised about your strange day out. Despite Chef’s bloody costume and stature everyone immediately warmed up to him as well, and even attempted to communicate with him further. They say 80% of communication is simply body language, and thanks to this nobody had any problems understanding him.
+After getting caught up, everyone headed straight for the sewer entrance where they hoped to navigate its corridors and find the secret entrance to the Cathedral that the cultists would have used. The orange glow of the sunset was the last thing you saw before finally descending yet again into the gloom of the sewers, and to the present moment.
+[$pName] Alright, I made it down. Everyone have their torches?
+Everyone except $mName and Chef hold up their torches in affirmation.
+[$pName] Perfect. Sorry about the general store selling out of torches $mName, just try not to wander too far off and you should be fine. All good Chef?
+[Chef] I Chef Now.
+[$pName] Great! Alright everyone, this way!
+You lead the way down the sewer tunnels, retracing your previous steps from before. It doesn’t take long before you arrive at the larger room with the four pillars again, and carefully climb over the cultist corpses. All the civilians they had abducted before have woken up and left by now, except for two unlucky ones that were killed before you had arrived. One of these is Chef’s friend, who mournfully gazes in that direction for a moment before turning away.
+[$pName] We’ll give him a proper burial once we save the others Chef, don’t worry.
+Holding your torch out in front of you, you progress  down the tunnel the Cultists were attempting to drag their victims into before you had arrived. Like the other tunnels, it twists and turns confusingly and in some places has piles of rubble or pools of sewage you must navigate over and around. Unlike the others however this one eventually begins to slant upwards and before long leads to a stout wooden door.
+[$mName] I’ve been trying to keep track of where we are while stomping around down here, and while I’m not 100% certain I’m pretty sure we are right underneath the Capital Cathedral. This must be it!
+$aName tugs on the wooden door, but it doesn’t budge an inch. Locked.
+[$mName] Trapped in the sewers… I guess you could say this is a shitty situation…
+The sound of $liName flicking $mName on the forehead echoes eerily across the stone walls, but that doesn’t stop $bardName from giggling at him.
+[$aName] Well of course the door is locked, crap! Ugh, we are gonna have to backtrack all the way down these tunnels again and check those dead cultists for a key, then drag our feet all the way back up before we can finally…
+WHAM
+With a tremendous crash, Chef punches his arm straight through the wooden door and reaches around behind it, unlocking the latch and swinging the door open.
+[$aName] … oh… that works too!
+[Chef] Chef.
+The six of you continue forward through the door. On the opposite side is a plush hallway, completely contrasting in appearance from the dingy sewer tunnels you just left. The ground is covered by soft red carpet and the walls are wooden and decorated with ornate carvings. Between carvings are paintings, most depicting biblical scenes involving a dragon. Through the walls, you can faintly hear a chorus singing. You have entered the Church’s compound.

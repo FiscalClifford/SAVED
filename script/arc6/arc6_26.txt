@@ -1,0 +1,9 @@
+You arrive in town without incident, and gather at the bar to prepare for the upcoming battle. While arriving you explained to everyone about the bandit gang waiting for you, their cunning leader Axel, and his nefarious intentions. Despite the story seeming almost unbelievable the entire group readily accepts your explanation and supports you fully. You are filled with gratitude to be surrounded by such outstanding allies.
+[$mName] So key to victory then is convincing Maud to join our cause?
+[$pName] Yes, almost certainly. I don’t think anything else will work to defeat Axel, he and his Black Blade are simply too powerful.
+[$liName] What if we used you as a distraction, and we flanked from the side…
+[$pName] Thaaaaat’s not gonna work. Believe me. We need Maud and her mercenaries.
+[$liName] I just don’t trust an outsider to save us is all…
+[$pName] We have no choice but to trust her. I have one shot to convince her to join us, and failure means doom for us all. Wish me luck.
+[$liName, $bardName, $aName, Chef, $mName] GOOD LUCK!!!
+You wave to them as you exit the bar, and march towards Maud’s fortress. This is it.

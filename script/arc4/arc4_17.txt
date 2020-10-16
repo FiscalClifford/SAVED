@@ -1,0 +1,18 @@
+You decide to do nothing, and watch the train gain more and more speed with a feeling of dread. The train hurtles down the parallel tracks at tremendous speed, but just before it hits your friends…
+Poof!
+You blink, and the entire situation has reset itself. The train is right back where it had started, and doesn’t move.
+[???] Interesting. Even with your friend’s lives on the line, you refuse to participate in the dilemma and count that as a moral victory in of itself. I wonder if you do it out of spite, a sense of moral superiority, or perhaps you just don’t really care that much and are curious what would happen? Let’s find out, time for the final stage of the trial.
+You take a deep breath.
+[???] A train is hurtling down the tracks at incredible speed, too fast for the train to be able to brake in time. Tied to the track ahead are your close friends $aName, $liName, $mName, $bardName, and $merchantName.
+All five of them appear on the train tracks, and are tied down unable to move. They struggle mightily to free themselves, but can’t move an inch.
+[$aName] $pName! What the hell is going on!?
+[$liName] You better have a good reason for this you moron!
+[$mName] Well this is no joking matter…
+[$bardName] AHHH! Help us!
+[$merchantName] What the…?
+[$pName] You’re repeating yourselves?
+[???] Let’s put your ethics to the test.
+The light above you flashes down brightly, forcing you to cover your eyes with one hand and blink. The split second later that you open your eyes, you see that you have been teleported. Looking around you, you realize that you are now on the train tracks and tied down next to $merchantName. Unlike the others, your arm that you were using to block the light only a moment ago is free from the ropes and you can move it around. The knots are so tight that you cannot move, and cannot untie them with one hand. Held in your free hand is a bright red button, with a wire that leads down to the divergence in the tracks.
+[???] The only way to save your friends and yourself is to press that button. By doing so, it will activate the divergence in the tracks and send the train hurtling into a man you do not know with randomized features and background. By doing so, the train will certainly kill him. If you do nothing, then the train will run over both yourself and your friends. Your death is not as trivial as you think either: by sacrificing yourself to stop this train, not only will you die but I will also destroy your save file so that you may not load your progress back and you will be forced to completely restart.
+[$pName] What!?
+[???] But don’t forget, by pressing that button you are directly responsible for that man’s death. So, $pName, time for the final decision. Which will you choose?

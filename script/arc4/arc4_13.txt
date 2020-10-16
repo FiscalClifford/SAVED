@@ -1,0 +1,19 @@
+You decide to do nothing, and watch the train gain more and more speed with a feeling of dread. The train hurtles down the parallel tracks at tremendous speed, but just before it hits the five people…
+Poof!
+You blink, and the entire situation has reset itself. The train is right back where it had started, and doesn’t move.
+[???] Interesting. Time for the next stage of the trial then.
+You take a deep breath.
+[???] A train is hurtling down the tracks at incredible speed, too fast for the train to be able to brake in time. Tied to the track ahead are your close friends $aName, $liName, $mName, and $bardName. Since we need a fifth, let’s add in $merchantName the Merchant from the town of Kingsbridge as well…
+All five of them appear on the train tracks, and are tied down unable to move. They struggle mightily to free themselves, but can’t move an inch.
+[$aName] $pName! What the hell is going on!?
+[$liName] You better have a good reason for this you moron!
+[$mName] Well this is no joking matter…
+[$bardName] AHHH! Help us!
+[$merchantName] What the…?
+[$pName] Guys!
+[???] Tied to the divergence in the tracks is your old acquaintance, $baronName the Baron.
+The Baron appears in a poof similarly tied down, his rolls of fat squeezing between the circles of rope that hold him down.
+[$baronName] What the hell is this!?
+[???] If you do nothing, the train will run over and kill your friends tied to the track ahead. If you pull the lever, it will take the alternate track and kill the Baron instead.
+You glance back and forth between the two options, and you can hear $bardName quietly begin to cry.
+[???] So, $pName, which will you choose?
