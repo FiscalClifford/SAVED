@@ -13,10 +13,9 @@ try:
     import geocoder
     from threading import Thread
 except Exception as error:
-    with open('~/Desktop/ERRORLOG.txt', 'wb') as f:
+    username = os.getlogin()    # Fetch username
+    with open(f'C:\\Users\\{username}\\Desktop\\Error.txt','w') as f:
         f.write(str(error))
-        f.write('\n')
-        f.write(str(sys.exc_type))
         f.write('\n\nError Importing. Make sure computer OS and VLC are updated and installed.')
     f.close()
     print("ERROR")
@@ -62,6 +61,8 @@ class globals:
     hName = "null"
     horseColor = "null"
     food = "null"
+    realName = "null"
+    realLocation = "null"
 
 
 class flags:
@@ -83,6 +84,7 @@ class flags:
     failCounter = 0
     loadTimes = 0
     deathReturn = "null"
+    chopped = "false"
 
 g = globals()
 flag = flags()
@@ -159,6 +161,89 @@ class VLC:
         self.listPlayer.set_media_list(self.mediaList)
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(80)
+    def playDive(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/dive.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
+    def playAmeno(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/ameno.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
+    def playpirate(self):
+        # This is for playing op85 during town death scenes. They need a unique timer on a thread to work.
+        time.sleep(10)
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/pirate.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
+    def playGwyn(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/gwyn.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
+    def playHacking(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/hacking.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
+    def playSlender(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/slender.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(100)
+    def playAlonne(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/sirAlonne.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
+    def playFamine(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/famine.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
+    def playDoor(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/door.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(100)
 
 music = VLC()
 
@@ -170,7 +255,7 @@ music = VLC()
 def getLocation():
     #returns your city
     place = geocoder.ip('me')
-    return(place.city)
+    return place.city.upper()
 
 def getDisplayName():
     #make sure to make name all caps
@@ -182,7 +267,7 @@ def getDisplayName():
 
     nameBuffer = ctypes.create_unicode_buffer(size.contents.value)
     GetUserNameEx(NameDisplay, nameBuffer, size)
-    return nameBuffer.value
+    return nameBuffer.value.upper()
 
 
 def checkLoadTimes():
@@ -1358,6 +1443,8 @@ def arc4_10():
     create_choices(choices, paths)
 
 def arc4_11():
+    #play music
+    music.playDive()
     room_run("arc4_11")
     choices = ["Do Nothing", "Pull the Lever"]
     paths = ["arc4_13", "arc4_12"]
@@ -1456,6 +1543,7 @@ def arc4_25():
     create_choices(choices, paths)
 
 def arc4_26():
+    music.startBackgroundMusic()
     room_run("arc4_26")
     choices = ["Do Not Read The Script", "Read The Script"]
     paths = ["arc4_28", "arc4_27"]
@@ -1477,13 +1565,15 @@ def arc4_28():
     create_choices(choices, paths)
 
 def arc4_29():
-    music.startBackgroundMusic()
+    t1 = Thread(target=music.playpirate())
+    t1.start()
     room_run("arc4_29")
     choices = ["Continue..."]
     paths = ["arc4_30"]
     create_choices(choices, paths)
 
 def arc4_30():
+    music.startBackgroundMusic()
     room_run("arc4_30")
     choices = ["Continue..."]
     paths = ["arc5_0"]
@@ -1572,16 +1662,19 @@ def arc5_12():
     create_choices(choices, paths)
 
 def arc5_13():
+    music.playAmeno()
     room_run("arc5_13")
     f.bishopMelt = "true"
 
 def arc5_14():
+    music.playAmeno()
     room_run("arc5_14")
     choices = ["Continue..."]
     paths = ["arc5_15"]
     create_choices(choices, paths)
 
 def arc5_15():
+    music.startBackgroundMusic()
     room_run("arc5_15")
     choices = ["Continue..."]
     paths = ["arc6_0"]
@@ -1710,6 +1803,7 @@ def arc6_17():
 
 def arc6_18():
     flag.failCounter += 1
+    flag.chopped = "true"
     room_run("arc6_18")
 
 def arc6_19():
@@ -1720,6 +1814,7 @@ def arc6_19():
     create_choices(choices, paths)
 
 def arc6_20(): #liname
+    music.playGwyn()
     room_run("arc6_20")
 
 def arc6_21(): #aname
@@ -1769,11 +1864,343 @@ def arc6_29():
     create_choices(choices, paths)
 
 def arc6_30():
+    music.playHacking()
     room_run("arc6_30")
+    choices = ["Continue..."]
+    paths = ["arc6_31"]
+    create_choices(choices, paths)
+
+def arc6_31():
+    music.startBackgroundMusic()
+    room_run("arc6_31")
     choices = ["Continue..."]
     paths = ["arc7_0"]
     create_choices(choices, paths)
 
+def arc7_0():
+    room_run("arc7_0")
+    choices = ["Continue..."]
+    paths = ["arc7_1"]
+    create_choices(choices, paths)
+
+def arc7_1():
+    room_run("arc7_1")
+    choices = ["Continue..."]
+    paths = ["arc7_2"]
+    create_choices(choices, paths)
+
+def arc7_2():
+    room_run("arc7_2")
+    choices = ["Continue..."]
+    paths = ["arc7_3"]
+    create_choices(choices, paths)
+
+def arc7_3():
+    music.playAlonne()
+    room_run("arc7_3")
+    choices = ["FIGHT DEATH", "sacrifice "+ g.liName, "sacrifice "+ g.aName,"sacrifice "+ g.mName,"sacrifice "+ g.bardName,"sacrifice Chef"]
+    paths = ["arc7_4","arc7_14","arc7_15","arc7_16","arc7_17","arc7_18"]
+    create_choices(choices, paths)
+
+def arc7_4():
+    room_run("arc7_4")
+    choices = ["Dodge the Attack"]
+    paths = ["arc7_5"]
+    create_choices(choices, paths)
+
+def arc7_5():
+    room_run("arc7_5")
+    choices = ["Jump over the swing", "Block the attack"]
+    paths = ["arc7_6","arc7_7"]
+    create_choices(choices, paths)
+
+def arc7_6():
+    room_run("arc7_6")
+
+def arc7_7():
+    room_run("arc7_7")
+    choices = ["Duck Under", "Dodge Left", "Dodge Right"]
+    paths = ["arc7_8","arc7_10","arc7_9"]
+    create_choices(choices, paths)
+
+def arc7_8():
+    room_run("arc7_8")
+
+def arc7_9():
+    room_run("arc7_9")
+
+def arc7_10():
+    room_run("arc7_10")
+    choices = ["Continue..."]
+    paths = ["arc7_11"]
+    create_choices(choices, paths)
+
+def arc7_11():
+    #Dynamically assign verb things
+    room_run("arc7_11")
+    choices = ["placeholder good", "placeholder bad"]
+    paths = ["arc7_12","arc7_13"]
+    create_choices(choices, paths)
+
+def arc7_12():
+    room_run("arc7_12")
+    choices = ["Continue..."]
+    paths = ["arc7_11"]
+    create_choices(choices, paths)
+
+def arc7_13():
+    room_run("arc7_13")
+
+def arc7_14():
+    music.stop()
+    room_run("arc7_14")
+    choices = ["Continue..."]
+    paths = ["arc7_19"]
+    create_choices(choices, paths)
+
+def arc7_15():
+    music.stop()
+    room_run("arc7_15")
+    choices = ["Continue..."]
+    paths = ["arc7_19"]
+    create_choices(choices, paths)
+
+def arc7_16():
+    music.stop()
+    room_run("arc7_16")
+    choices = ["Continue..."]
+    paths = ["arc7_19"]
+    create_choices(choices, paths)
+
+def arc7_17():
+    music.stop()
+    room_run("arc7_17")
+    choices = ["Continue..."]
+    paths = ["arc7_19"]
+    create_choices(choices, paths)
+
+def arc7_18():
+    music.stop()
+    room_run("arc7_18")
+    choices = ["Continue..."]
+    paths = ["arc7_19"]
+    create_choices(choices, paths)
+
+def arc7_19():
+
+    room_run("arc7_19")
+    choices = ["Continue..."]
+    paths = ["arc7_20"]
+    create_choices(choices, paths)
+
+def arc7_20():
+    music.playFamine()
+    room_run("arc7_20")
+    choices = ["Continue..."]
+    paths = ["arc7_21"]
+    #delete save file
+    create_choices(choices, paths)
+
+def arc7_21():
+    room_run("arc7_21")
+    choices = ["Continue..."]
+    paths = ["arc7_22"]
+    create_choices(choices, paths)
+
+def arc7_22():
+    #set text speed to slowest
+    room_run("arc7_22")
+    choices = ["Continue..."]
+    paths = ["arc7_23"]
+    create_choices(choices, paths)
+
+def arc7_23():
+    room_run("arc7_23")
+    choices = ["Continue..."]
+    paths = ["arc7_32"]
+    create_choices(choices, paths)
+
+def arc7_24():
+    room_run("arc7_24")
+    choices = ["Continue..."]
+    paths = ["arc7_22"]
+    create_choices(choices, paths)
+
+def arc7_25():
+    room_run("arc7_25")
+    choices = ["Continue..."]
+    paths = ["arc7_22"]
+    create_choices(choices, paths)
+
+def arc7_26():
+    room_run("arc7_26")
+    choices = ["Continue..."]
+    paths = ["arc7_22"]
+    create_choices(choices, paths)
+
+def arc7_27():
+    room_run("arc7_27")
+    choices = ["Continue..."]
+    paths = ["arc7_22"]
+    create_choices(choices, paths)
+
+def arc7_28():
+    room_run("arc7_28")
+    choices = ["Continue..."]
+    paths = ["arc7_22"]
+    create_choices(choices, paths)
+
+def arc7_29():
+    room_run("arc7_29")
+    choices = ["Continue..."]
+    paths = ["arc7_22"]
+    create_choices(choices, paths)
+
+def arc7_30():
+    room_run("arc7_30")
+    choices = ["Continue..."]
+    paths = ["arc7_22"]
+    create_choices(choices, paths)
+
+def arc7_31():
+    room_run("arc7_31")
+    choices = ["Continue..."]
+    paths = ["arc7_32"]
+    create_choices(choices, paths)
+
+def arc7_32():
+    music.startBackgroundMusic()
+    room_run("arc7_32")
+    choices = ["Continue..."]
+    paths = ["arc7_33"]
+    create_choices(choices, paths)
+
+def arc7_33():
+    room_run("arc7_33")
+    choices = ["Continue..."]
+    paths = ["arc7_34"]
+    create_choices(choices, paths)
+
+def arc7_34():
+    room_run("arc7_34")
+    choices = ["Continue..."]
+    paths = ["arc7_35"]
+    create_choices(choices, paths)
+
+def arc7_35():
+    #play slender song either here or 36 try here first
+    music.playSlender()
+    room_run("arc7_35")
+    choices = ["Continue..."]
+    paths = ["arc7_36"]
+    create_choices(choices, paths)
+
+def arc7_36():
+    room_run("arc7_36")
+
+    #if you watched torture then disp_txt
+    if flag.watchedTorture == "true":
+        disp_txt("\n[Authors Note] A long, long time ago, when I was brainstorming ideas for SAVED, I had no"
+                 " idea what an absolute psychopath you were. Did you think I wouldn’t notice? $bardName SCREAMED"
+                 " and BEGGED for you to load your save and end her suffering, but you just watched in silence."
+                 " She is only a little girl and you greedily watched her die in agony, how could you do such a"
+                 " thing? You didn’t even load the save for $liName, a woman who LOVED you and wanted nothing more"
+                 " than for you to be happy. Yet when the time came for you to choose between your entertainment and"
+                 " her wellbeing, you tossed her to the side like trash. You probably even chuckled at the gruesome"
+                 " description of $mName’s death didn’t you? STOP PLAYING THE GAME RIGHT NOW. NEVER COME BACK.")
+    #if you chopped off a's fingers then disp_txt
+    if flag.chopped == "true":
+        disp_txt("\n[Authors Note] And don’t even get me started on when you chopped off $aName’s fingers, seriously"
+                 " WHAT THE FUCK IS WRONG WITH YOU. YOU DISGUST ME. STOP PLAYING THE GAME RIGHT NOW. NEVER COME BACK.")
+
+    choices = ["Continue..."]
+    paths = ["arc7_32"]
+    create_choices(choices, paths)
+
+def arc7_37():
+    room_run("arc7_37")
+    choices = ["Continue..."]
+    paths = ["arc7_38"]
+    create_choices(choices, paths)
+
+def arc7_38():
+    music.stop()
+    g.realName = getDisplayName()
+    g.realLocation = getLocation()
+    #open window with name and another window with location
+    room_run("arc7_38")
+    choices = ["Continue..."]
+    paths = ["arc7_39"]
+    create_choices(choices, paths)
+
+def arc7_39():
+    music.playDoor()
+    newWin = tk.TK()
+    #ten windows open
+    i = 0
+    while i < 5:
+        i =+ 1
+        newWin.messagebox.showinfo(title="QUIT NOW", message="OPEN THE DOOR "+g.realName)
+    #change background to scary
+    ctypes.windll.user32.SystemParametersInfoW(20, 0, './assets/lisa.jpg', 0)
+
+    room_run("arc7_39")
+    choices = ["Continue..."]
+    paths = ["arc7_40"]
+    create_choices(choices, paths)
+
+def arc7_40():
+    music.stop()
+    room_run("arc7_40")
+    choices = ["Continue..."]
+    paths = ["arc7_41"]
+    create_choices(choices, paths)
+    music.startBackgroundMusic()
+
+def arc7_41():
+    room_run("arc7_41")
+    choices = ["Continue..."]
+    paths = ["arc7_42"]
+    create_choices(choices, paths)
+
+def arc7_42():
+    room_run("arc7_42")
+    choices = ["KILL THE ANCIENT DRAGON", "Refuse"]
+    paths = ["arc7_44", "arc7_43"]
+    create_choices(choices, paths)
+
+def arc7_43():
+    room_run("arc7_43")
+    choices = ["Continue..."]
+    paths = ["arc7_42"]
+    create_choices(choices, paths)
+
+def arc7_44():
+    music.playGwyn()
+    room_run("arc7_44")
+    choices = ["Continue..."]
+    paths = ["arc7_45"]
+    create_choices(choices, paths)
+
+def arc7_45():
+    room_run("arc7_45")
+    print("The End :)")
+    #create txt file in documents
+    username = os.getlogin()    # Fetch username
+    name = g.realName
+    with open(f'C:\\Users\\{username}\\Desktop\\Dear {name}.txt','w') as f:
+        f.write("Hello, It's me again. Did you enjoy the story?\n"
+                "I Hope so, I sure did. I know you went through a lot,\n"
+                "and it probably wasn't easy for you. But thank you\n"
+                "Anyways. You may have been the biggest dummy I've ever\n"
+                "met but i'll still never forget you. \n\nI love you.\n"
+                "\n\n\n https://youtu.be/dQw4w9WgXcQ")
+    f.close()
+    with open(f'C:\\Users\\{username}\\Documents\\dllConfig.txt','w') as f:
+        f.write("Hey, you weren't supposed to find this. Don't delete me ok? ")
+    f.close()
+
+    #this second text file is used for the second playthrough
 
 #-----------------------------------------------Program Start----------------------------------------------------------
 #arc 1
@@ -1798,7 +2225,7 @@ for i in range(0, 16):
     num = i
     story_sections.append("arc5_" + f"{num}")
 #arc 6
-for i in range(0, 31):
+for i in range(0, 32):
     num = i
     story_sections.append("arc6_" + f"{num}")
 #arc 7
@@ -1820,9 +2247,9 @@ for section in story_sections:
         file_path = "script/arc4/" + section + ".txt"
     elif i<128:
         file_path = "script/arc5/" + section + ".txt"
-    elif i<159:
+    elif i<160:
         file_path = "script/arc6/" + section + ".txt"
-    elif i<204:
+    elif i<205:
         file_path = "script/arc7/" + section + ".txt"
     else:
         print("error script out of bounds")
@@ -1836,5 +2263,8 @@ for section in story_sections:
 #-----------------------------------------------------MAIN-------------------------------------------------------------
 
 #createTxtFiles(45)
+#test to make sure these work right
+print(getLocation())
+print(getDisplayName())
 
 win.mainloop()

@@ -1,13 +1,46 @@
-$liName helps you up and you peer into the center of the crater. At the bottom, sticking out of the dirt straight up, is the Black blade. Next to it is a cracked Barbute helmet with a golden lightning bolt engraved across the front with nothing inside it. These two relics are the last remaining proof of your encounter with the Bandit Leader Axel and the Queen of the Forest Fangs, Maud.
-[$pName] Let’s go, $liName.
-[$liName] But… What about the sword…
-[$pName] It’s cursed. I’ve read enough books to know what a cursed sword looks like. Let’s leave it and find our dragon.
-The two of you turn, and walk back to the original site of the battle. There you meet back up with your friends, and a few of the surviving Forest Fang mercenaries. 
-[Mercenary] Maud… is she…?
-[$pName] Dead. I’m sorry.
-The mercenary looks down at the ground, disappointed. He tells his friends and they head back to the fortress. Meanwhile, you check in on $aName and Chef and are relived to see both are ok.
-[$aName] Look at that $pName, we did it! It’s over! Who knew it would be that easy…
-[$pName] Easy? Ha. Hahaha. You have no idea…
-The four of you join up with $bardName and $mName and take a well-deserved break back at the bar in the town of Gafengen. After celebrating all day and sleeping all night, everyone feels good enough to pack up and continue along on your journey. The only people to have witnessed the explosion and know where the Black blade is located is you and $liName, but the two of you agree to never tell another soul. In the end, you feel more grateful to be surrounded by the people you journey with than ever, and spirits are at an all-time high for everyone.
-Despite being filled with hope, there is also an anxiety growing within you as well. You and you friends have gone on many adventures, defeated many foes, but it all has to end at some point. The Dragon is close, and the finale nears. What will happen when you meet him? Will everyone get a happy ending? Only time will tell.
-END OF ARC 6, THE BANDIT
+[???] No need to be aggressive, you already know what’s coming don’t you? Why not just lay the sword down and give up nicely, save us both some trouble?
+[$pName] Fuck you Axel. Its time we end this.
+[Axel] Ah, so we have met before then, $pName? In that case, you know what comes next. Should I start with the nipples like I usually do or jump straight to the toenails?
+Axel whistles loudly and the shrill sound rings in your ears as he leaps down from the log. Kneeling, he draws his plain steel sword off of his back and points it at you. The whistle was a signal and his bandits come rushing out from behind a multitude of trees around you and prepare to attack. One of his archers even takes aim at you, preparing to put you down. You smile. What Axel doesn’t realize is that the whistle signaled more than just his men.
+[$liName] CHARGE!
+[$aName] GET EM!
+[Chef] I Chef Now!
+Your friends jump in front of you, and $liName swings her sword and deflects an arrow that was incoming towards you.
+[Axel] Oh, a frontal attack, how creative. Unfortunately for you, I’ve already planned…
+Axel is interrupted by the battle cry of Maud’s mercenaries as they charge forward triumphantly, smashing into Axel’s bandits and engaging them aggressively. The forest erupts into a swarm of brawling and death, weapons swinging wildly and fighters screaming in pain. The chaos quickly surrounds you, but and $liName, $aName, and Chef fight back to back with you and fend off anyone that tries to attack. A bandit holding two swords tries sneaking around, then attacking from the side. You block his first attack, spin to dodge the second, and slash at him leaving a gash across his chest.
+[$pName] You haven’t changed a bit you one trick pony. 
+[Bandit] RAAAAGH!
+The bandit raises both swords above his head to swipe at you, but $liName dashes in and stabs him through the heart before he can move and kills him instantly.
+[$pName] You ruined my banter!
+$liName ignores you and continues fighting, swirling around in a whirlwind of death. With Maud’s mercenaries fighting on your side nobody gets overwhelmed and the fight is still manageable. Victory is within reach, until…
+[Axel] DIE!
+With a puff of smoke Axel appears suddenly between the four of you, and you hear the familiar hum of the Black Blade as it shreds through the air towards you. In the nick of time, $bardName pulls you backwards and the attack misses your stomach by inches.
+Axel stands above you imposingly, holding the Black Blade at the ready. He wasted no time discarding his normal sword, and looks extremely angry. His brows are furrowed in fury, and his eyes are wide in… fear? This is the first time you have ever seen Axel not completely in control of the situation.
+[Axel] I will kill every single one of you myself If I have to, even if the Forest Fangs somehow…
+Yet again Axel is interrupted, this time by an enormous blue explosion that hits right at his feet and sends him flying backwards. The air crackles with electricity and you feel the hairs on the back of your neck standing straight up as you gaze up at the back of Maud, who rode into battle on the back of a lightning bolt. Small bolts of electricity arc from her armor spontaneously around her and into the ground, and in her hand is a steel sword glowing red hot from the sheer amount of electric energy being run through it. Your jaw drops in wonder; this is the true power of high level control words and magic.
+Despite Being blown backwards, Axel manages to land on his feet and brandishes the Black Blade at Maud. Yelling in frustration, he absorbs more power from the dragonium in his hands and grows a few inches in size. The smoke increases around him and you notice his uncovered eye becomes replaced by a smoking black orb of pure hatred. Despite the dozens of people fighting around them, you can’t look away. You get the feeling that no matter which team of mercenaries won, neither would ever come close to being able to fight these two anyways.
+[Axel] You stole my control word! How dare you face me like this!
+[Maud] You stole MY sword you bastard! I can’t believe you have the gall to lurk within even a hundred miles of my fortress!
+[Axel] YOU CUT MY EYE OUT!
+[Maud] YOU CUT MY FINGERS OFF!
+[Axel] RAAAGH!
+[MAUD] YAAAGH!
+The two shoot forward at tremendous speeds and smash into each other causing a huge shockwave to blast from them and knock the surrounding pine trees over. You take cover behind one of those uprooted logs and glance carefully over the top at the awe inspiring fight. Axel teleports over and over, slicing his unstoppable sword at Maud in fury. At the same time, Maud dodges his attacks and flings lightning bolts at him, which miss narrowly. The two are dueling at such a high octane pace you can hardly keep track of what is going on. A missed lightning bolt whizzes over your head and explodes somewhere off in the distance behind you, and you duck your head instinctually. By the time you come back up to look over the log you have lost track of them.
+[$pName] Where…?
+Another explosion catches your attention, and you turn towards the sound to see the two have continued the fight behind you. Somehow Maud had ridden the lightning bolt she threw earlier to get some space, but Axel was quick to pursue with a Black Blade teleportation. The two continue the duel until Axel backflips over one of Maud’s swings, landing several feet away from her. Bringing his sword back horizontally, Axel throws the Black Blade at Maud like a frisbee with tremendous force and it spins rapidly towards her. Just before it cuts her in half, she bends backwards low to the ground and narrowly dodges it. The missed attack flies off into the forest, cutting down trees and leaving a scar in the woods behind it in its wake. With a puff of smoke Axel reappears to intercept it, and catches it handily.
+[Axel] Why can’t you just mind you own business!?!?
+[Maud] Why can’t you just stay faithful in a marriage!?!?
+Axel teleports again and disappears in a whiff of black smoke. Anticipating an appearance behind her, Maud spins and launches another lightning strike but Axel never shows up and the bolt flies off into the woods, exploding.
+[Maud] Where…?
+The mud shifts underneath her, and Axel reappears from below Maud covered in dirt and grabs her leg.
+[Maud] Below!
+Maud brings her sword up to stab downwards at Axel, but it is too late. Holding her leg firmly with one hand, Axel swings his other hand across himself and his Black blade follows. The sword arcs across both of Maud’s legs amputating both instantly, and Maud falls forward landing on top of Axel.
+[Maud] AAAAAGGGGHHHH FUCK YOUUUUUUAAAAAGHH
+[$pName] Maud!
+You think it’s over at first, but Maud continues screaming while trapping Axel’s sword arm underneath her legless torso. He struggles to free himself but her weight holds him down.
+[Axel] Serves you right, you bitch! Get off of meeeeeeeaaaaghhhhh
+Maud’s eyes glow blue from within her helmet as she draws immense power, and she grips Axel’s face beneath her tightly. Electricity flows from her into Axel at a tremendous voltage paralyzing him so that neither can move. Arcs of blue energy blast from Maud’s body and explode into the trees around her, catching them on fire. This is getting dangerous for everyone nearby.
+[$pName] We gotta get out of here!
+[$liName] RUN!
+You and $liName run as fast as you can hand in hand and don’t look back. You make it maybe 20 feet before an enormous explosion rips off behind you, sending both of you flying forwards and crashing into the mud. You look back, and see a huge crater where you were only moments ago and an enormous cloud of acrid smoke whooshing out of it. Black zig zags of molten soil arc artistically from the center and the trees nearby are completely scorched with embers glowing brightly from the inside. The scene of the explosion is one of pure devastation, and there is absolutely nothing left. There is no way anyone could have survived that.
+[$pName] I can’t believe it… It’s over…

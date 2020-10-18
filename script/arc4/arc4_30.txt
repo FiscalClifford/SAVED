@@ -1,15 +1,3 @@
-The hole is perfectly vertical, and never gets any wider or thinner. You expected to hit the bottom within seconds, but instead you continue falling for what feels like ages. If you hit the ground now, your legs would instantly shatter into a million pieces.
-[$pName] Gah!
-Finally, you see a light below you. Before you even have time to process what that light may mean, the light rushes up to meet you and you emerge from the hole at tremendous speed.
-[$pName] Woah!
-You pop out of the hole upside down, despite having never changed orientation during the fall. You fly straight up and into the air, and you have just barely enough time to see that the sky is the ground and the ground is the night sky before gravity takes affect and brings you back down, which is up.
-[$pName] ???
-You smack into the ground completely disoriented, but don’t break anything. Rubbing your head, you sit up. Unbelievably, you have just emerged from a hole in the ground which had somehow appeared at the rocky outcropping where your infiltration of the Cultists campground originally began. Then:
-[$aName] AAAGGGHH!!!
-$aName shoots up and out of the hole, her feet aimed straight towards the stars. She continues about 4 feet up before slowing down, and makes a baffled expression towards you before gravity takes a hold of her and brings her back to the earth with a loud thump.
-[$aName] Owww…
-[$pName] Impossible…
-The ground trembles a little, and the hole collapses in on itself sealing it shut forever. Simultaneously, you can see that far off in the campground the pyramid begins to crumble and collapse as well. Behind you, $liName, $bardName, and $mName have all gotten to their feet and dusted themselves off.
 [$mName] Not gonna lie folks, nothing that has happened so far today has made any sense.
 [$pName] You can say that again…
 You slowly get to your feet and rub at your head, groaning at the idea of how sore it will be all day tomorrow. $bardName leaves to grab the horses, and $liName picks up the Ancient Scripture which you had dropped during the fall.
