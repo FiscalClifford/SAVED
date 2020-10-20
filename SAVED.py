@@ -649,7 +649,7 @@ def settingsconfig():
     settings_window.title("Settings")
     settings_window.iconbitmap('./assets/treelarge_CKX_icon.ico')
     settings_window.geometry("230x230")
-    settings_window.resizable(False, False)
+    #settings_window.resizable(False, False)
     settings_window.config(bg="#333333")
 
     # putting in the defaults
