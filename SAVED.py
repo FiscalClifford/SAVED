@@ -2405,7 +2405,7 @@ for i in range(0, 32):
     num = i
     story_sections.append("arc6_" + f"{num}")
 #arc 7
-for i in range(0, 45):
+for i in range(0, 46):
     num = i
     story_sections.append("arc7_" + f"{num}")
 
