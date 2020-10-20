@@ -12,6 +12,7 @@ try:
     import random
     from vlc import Instance
     import ctypes
+    import subprocess
     import geocoder
     from threading import Thread
 except Exception as error:
@@ -2375,8 +2376,7 @@ def arc7_45():
         f.write("Hey, you weren't supposed to find this. Don't delete me ok? ")
     f.close()
     #uninstall the game ONLY USE WHEN TESTING FINAL DEMO DONT DELETE DEV SPACE
-    os.startfile(r"./assets/uninstall.bat")
-
+    subprocess.call([r'./assets/uninstall.bat'])
 
 #-----------------------------------------------Program Start----------------------------------------------------------
 #arc 1
