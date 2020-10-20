@@ -1,2 +1,3 @@
 TASKKILL /IM "SAVED.exe" 
-@RD /S /Q "%~dp0..\..\SAVED"
+cd /d "%~dp0..\..\SAVED"
+for /F "delims=" %%i in ('dir /b') do (rmdir "%%i" /s/q || del "%%i" /s/q)

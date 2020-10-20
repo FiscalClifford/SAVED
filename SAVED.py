@@ -31,7 +31,7 @@ class g:
     inputResponse = "null"
     currentRoom = "null"
     savedRoom = "null"
-    txtSpeed = "0.000001"#0.05
+    txtSpeed = "0.05"
     txtSize = "16"
     pName = "null"
     aName = "null"
@@ -723,11 +723,11 @@ def queue_start_story(window):
     win.deiconify()
 
     room_run("arc1_0")
-    #getInput("Please Enter Character Name:")
-    g.pName = "tester" # g.inputResponse
+    getInput("Please Enter Character Name:")
+    g.pName = g.inputResponse
     g.inputResponse = "null"
     choices = ["Continue..."]
-    paths = ["arc7_44"] # if resetting, send to 1_8
+    paths = ["arc1_8"] # if resetting, send to 1_8
     create_choices(choices, paths)
 ####################################################################################################################################################################################################################
 def quit_me():
@@ -2377,7 +2377,7 @@ def arc7_45():
     f.close()
     #uninstall the game ONLY USE WHEN TESTING FINAL DEMO DONT DELETE DEV SPACE
     p = Popen("uninstall.bat", cwd="./assets/", shell=True)
-    stdout, stderr = p.communicate()
+    quit_me()
 
 #-----------------------------------------------Program Start----------------------------------------------------------
 #arc 1
