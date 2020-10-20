@@ -2,11 +2,13 @@ import sys
 try:
     from tkinter import *
     import tkinter as tk
+    from tkinter import messagebox
     import tkinter.scrolledtext as tkst
     import time
     import pickle
     from datetime import datetime
     import os
+    from shutil import copyfile
     import random
     from vlc import Instance
     import ctypes
@@ -22,17 +24,14 @@ except Exception as error:
 #--------------------------------------------------------Globals--------------------------------------------------------
 badInput = ["!","@","#","$","%","^","&","*","^_^",":)"," ","",".",",","-","_","$pName","$aName","$bName","$liName"]
 maudAnswers = ["0", 0, "zero", "none", "nothing", "no fingers", "there aren't any"]
+stopText = False
 
-
-class globals:
+class g:
     inputResponse = "null"
-    # global values
-
     currentRoom = "null"
     savedRoom = "null"
-    txtSpeed = 0.000001#0.05
-    txtSize = 16
-
+    txtSpeed = "0.000001"#0.05
+    txtSize = "16"
     pName = "null"
     aName = "null"
     bName = "null"
@@ -65,7 +64,7 @@ class globals:
     realLocation = "null"
 
 
-class flags:
+class flag:
 
     # !!!Flags!!!
     firstTimeArc2 = "true"
@@ -85,10 +84,10 @@ class flags:
     loadTimes = 0
     deathReturn = "null"
     chopped = "false"
-
-g = globals()
-flag = flags()
-#=======
+    deathCounter = 1
+    fightingFamine = "false"
+    famineCounter = 23
+    dontMakeButton = "false"
 
 
 class VLC:
@@ -180,8 +179,6 @@ class VLC:
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(80)
     def playpirate(self):
-        # This is for playing op85 during town death scenes. They need a unique timer on a thread to work.
-        time.sleep(10)
         self.stop()
         self.Player = Instance('--loop')
         self.mediaList = self.Player.media_list_new()
@@ -338,6 +335,8 @@ def deadChecker():
         checkLoadTimes()
         print(g.savedRoom)
         eval(g.savedRoom + "()")
+    global stopText
+    stopText = True
 
 
 def loadGame(window):
@@ -345,11 +344,8 @@ def loadGame(window):
     with open('./savefile', 'rb') as f:
         data = pickle.load(f)
     list1 = vars(g)
-    list2 = vars(flags)
-    print(list1)
-    print("---")
-    print(list2)
-    print(data)
+    list2 = vars(flag)
+
     for v in list1:
         if v.startswith("__") == False:
             setattr(g, v, data[v])
@@ -375,8 +371,9 @@ def loadGame(window):
         g.currentRoom = "arc5_14"
         g.savedRoom = "arc5_14"
 
-    print(g.savedRoom)
     eval(g.savedRoom + "()")
+
+
 
 def fakeLoad(window):
     win.deiconify()
@@ -386,6 +383,8 @@ def fakeLoad(window):
     for v in list1:
         if v.startswith("__") == False:
             setattr(g, v, data[v])
+            print(v)
+    print("FakeLoading:")
 
     #delete buttons
     list = frame2.pack_slaves()
@@ -412,29 +411,23 @@ def fakeLoad(window):
 
     deadChecker()
 
+
 def saveGame(window):
     now = datetime.now()
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     data = {}
     g.savedRoom = g.currentRoom
     list1 = vars(g).items()
-    list2 = vars(flags).items()
-    print(g.currentRoom)
-    print("save info")
-    print(list1)
-    print(list2)
+    list2 = vars(flag).items()
 
     for left, right in list1:
         if not left.startswith("__"):
             data[left] = right
-            print(right)
-            print('+')
+
     for left, right in list2:
         if not left.startswith("__"):
             data[left] = right
-            print(right)
-            print('+')
-    print("-------")
+
     data['dateTime'] = dt_string
 
     if os.path.exists('./savefile'):
@@ -442,27 +435,34 @@ def saveGame(window):
     with open('./savefile', 'wb') as f:
         pickle.dump(data, f)
     print("Game saved")
-
     disp_txt("\nYou are surrounded by a warm light. You are SAVED.\n")
+
+    #famine stuff
+    if flag.fightingFamine == "true":
+        flag.famineCounter = flag.famineCounter + 1
+        eval('arc7_'+ str(flag.famineCounter) + '()')
+
     window.destroy()
+
 
 def changeSettings(newSpeed, newSize):
 
     if newSpeed == "slow":
-        g.txtSpeed = 0.1
+        g.txtSpeed = "0.1"
     if newSpeed == "standard":
-        g.txtSpeed = 0.05
+        g.txtSpeed = "0.05"
     if newSpeed == "fast":
-        g.txtSpeed = 0.0001
+        g.txtSpeed = "0.0001"
 
     if newSize == "small":
-        g.txtSize = 10
+        g.txtSize = "10"
     if newSize == "standard":
-        g.txtSize = 16
+        g.txtSize = "16"
     if newSize == "large":
-        g.txtSize = 24
+        g.txtSize = "24"
 
-    textWindow.config(font=("Calibri", g.txtSize))
+    textWindow.config(font=("Calibri", int(g.txtSize)))
+
 
 def click_choice(choice):
     #delete all buttons
@@ -474,28 +474,36 @@ def click_choice(choice):
     print("Player Chose: " + str(choice))
     eval(choice + "()")
 
+
 def textOutput(string):
     for char in string:
-        if g.txtSpeed != 0.0001:
+        global stopText
+        if stopText:
+            print("stopText used")
+            print(string)
+            stopText = False
+            flag.dontMakeButton = "true"
+            break
+
+        if g.txtSpeed != "0.0001":
             textWindow.see(tk.END)
         textWindow.insert(tk.INSERT, char)
+
         if char == '\n':
             textWindow.insert(tk.INSERT, '\n')
         textWindow.update()
-        time.sleep(g.txtSpeed)
+        time.sleep(float(g.txtSpeed))
+
+
 
 def disp_txt(string):
+    num = random.randint(0, 100)
+    print("thread starting "+ str(num))
     textThread = Thread(target=textOutput(string))
     textThread.start()
+    print("thread ending " + str(num))
+    textThread.join()
 
-def disp_txt_at_speed(string, speed):
-    for char in string:
-        textWindow.see(tk.END)
-        textWindow.insert(tk.INSERT, char)
-        if char == '\n':
-            textWindow.insert(tk.INSERT, '\n')
-        textWindow.update()
-        time.sleep(speed)
 
 def room_run(section):
     clear_screen()
@@ -503,11 +511,12 @@ def room_run(section):
     to_display = replace_variables(story_content[section])
     disp_txt(to_display)
 
-def replace_variables(string):
-    list = vars(g)
-    listy = list.items()
 
-    for globy, value in listy:
+
+def replace_variables(string):
+    list = vars(g).items()
+
+    for globy, value in list:
         if globy.startswith("__") == False:
             #print(str(globy) + " ---- " + str(value))
             string = string.replace("$"+globy, str(value))
@@ -534,9 +543,14 @@ def replace_variables(string):
                  "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA"
     return string
 
+
 def clear_screen():
     textWindow.delete(1.0, END)
     textWindow.update()
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
 
 def acceptEntry(entry, pWindow):
     global badInput
@@ -641,18 +655,18 @@ def settingsconfig():
     size = StringVar()
     speed = StringVar()
 
-    if g.txtSize == 24:
+    if g.txtSize == "24":
         size.set("large")
-    if g.txtSize == 16:
+    if g.txtSize == "16":
         size.set("standard")
-    if g.txtSize == 10:
+    if g.txtSize == "10":
         size.set("small")
 
-    if g.txtSpeed == 0.0001:
+    if g.txtSpeed == "0.0001":
         speed.set("fast")
-    if g.txtSpeed == 0.05:
+    if g.txtSpeed == "0.05":
         speed.set("standard")
-    if g.txtSpeed == 0.1:
+    if g.txtSpeed == "0.1":
         speed.set("slow")
 
 
@@ -669,8 +683,12 @@ def settingsconfig():
     saveButton = Button(settings_window, text="     Save Game     ", command=lambda: saveGame(settings_window), bg = "#333333", fg = "#EEEEEE").grid(row=2, column=0, columnspan=3)
     speedLabel = Label(settings_window, text="Text Scroll Speed", bg = "#333333", fg = "#EEEEEE").grid(row=3, column=1)
     radio1 = Radiobutton(settings_window, text="    Slow    ",indicatoron=0, variable=speed, value="slow", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=0,sticky="nsew")
-    radio2 = Radiobutton(settings_window, text="Standard",indicatoron=0, variable=speed, value="standard", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=1,sticky="nsew")
-    radio3 = Radiobutton(settings_window, text="    fast    ",indicatoron=0, variable=speed, value="fast", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=2,sticky="nsew")
+    if flag.fightingFamine == "true":
+        radio2 = Radiobutton(settings_window, state=DISABLED, text="Standard", indicatoron=0, variable=speed, value="standard", bg="#333333", fg="#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=1, sticky="nsew")
+        radio3 = Radiobutton(settings_window, state=DISABLED, text="    fast    ", indicatoron=0, variable=speed, value="fast", bg="#333333", fg="#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=2, sticky="nsew")
+    else:
+        radio2 = Radiobutton(settings_window, text="Standard",indicatoron=0, variable=speed, value="standard", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=1,sticky="nsew")
+        radio3 = Radiobutton(settings_window, text="    fast    ",indicatoron=0, variable=speed, value="fast", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=4, column=2,sticky="nsew")
     sizeLabel = Label(settings_window, text="Text Size", bg = "#333333", fg = "#EEEEEE").grid(row=5, column=1)
     radio4 = Radiobutton(settings_window, text="    Small    ",indicatoron=0, variable=size, value="small", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=0,sticky="ew")
     radio5 = Radiobutton(settings_window, text="Standard",indicatoron=0, variable=size, value="standard", bg = "#333333", fg = "#EEEEEE", selectcolor="#333333", activebackground="#333333").grid(row=6, column=1,sticky="ew")
@@ -679,10 +697,14 @@ def settingsconfig():
     pauseButton = Button(settings_window, text="Pause", bg="#333333", fg="#EEEEEE",command=lambda: music.pause()).grid(row=8, column=0,sticky="ew")
     playButton = Button(settings_window, text="Play", bg="#333333", fg="#EEEEEE", command=lambda: music.play()).grid(row=8, column=1,sticky="ew")
     skipButton = Button(settings_window, text="Skip", bg="#333333", fg="#EEEEEE", command=lambda: music.next()).grid(row=8, column=2,sticky="ew")
-    finishButton = Button(settings_window, text="  Apply Changes  ", bg="#333333", fg="#EEEEEE",
-                          command=lambda: changeSettings(speed.get(), size.get())).grid(row=9, column=1)
+    finishButton = Button(settings_window, text="  Apply Changes  ", bg="#333333", fg="#EEEEEE", command=lambda: changeSettings(speed.get(), size.get())).grid(row=9, column=1)
 
 def create_choices(choiceList, pathList):
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
     #create buttons for the amount of options available, represtented by 'number'
     for i in range(0, len(choiceList)):
         if flag.loadTimes > 15:
@@ -704,9 +726,9 @@ def queue_start_story(window):
     g.pName = "tester" # g.inputResponse
     g.inputResponse = "null"
     choices = ["Continue..."]
-    paths = ["arc6_0"] # if resetting, send to 1_8
+    paths = ["arc5_13"] # if resetting, send to 1_8
     create_choices(choices, paths)
-
+####################################################################################################################################################################################################################
 def quit_me():
     print('quit')
     win.quit()
@@ -749,7 +771,7 @@ textWindow = tkst.ScrolledText(
     bg = "#333333",
     fg = "#EEEEEE"
 )
-textWindow.config(font=("Calibri", g.txtSize))
+textWindow.config(font=("Calibri", int(g.txtSize)))
 textWindow.pack(padx=5, pady=5, fill=tk.BOTH, expand=True,)
 
 #Button Frame
@@ -1379,7 +1401,6 @@ def arc4_2():
     room_run("arc4_2")
     choices = ["Continue..."]
     paths = ["arc4_3"]
-
     create_choices(choices, paths)
 
 def arc4_3():
@@ -1565,12 +1586,12 @@ def arc4_28():
     create_choices(choices, paths)
 
 def arc4_29():
-    t1 = Thread(target=music.playpirate())
-    t1.start()
+    music.playpirate()
     room_run("arc4_29")
     choices = ["Continue..."]
     paths = ["arc4_30"]
     create_choices(choices, paths)
+    music.stop()
 
 def arc4_30():
     music.startBackgroundMusic()
@@ -1667,14 +1688,14 @@ def arc5_13():
     f.bishopMelt = "true"
 
 def arc5_14():
-    music.playAmeno()
+    music.startBackgroundMusic()
     room_run("arc5_14")
     choices = ["Continue..."]
     paths = ["arc5_15"]
     create_choices(choices, paths)
 
 def arc5_15():
-    music.startBackgroundMusic()
+    disp_txt("please delete this")
     room_run("arc5_15")
     choices = ["Continue..."]
     paths = ["arc6_0"]
@@ -1688,7 +1709,7 @@ def arc6_0():
 
 def arc6_1():
     room_run("arc6_1")
-    if flag.failCounter == 5:
+    if flag.failCounter < 4:
         choices = ["Continue..."]
         paths = ["arc6_25"]
     else:
@@ -1758,8 +1779,8 @@ def arc6_10():
     create_choices(choices, paths)
 
 def arc6_11():
+    flag.failCounter = flag.failCounter + 1
     room_run("arc6_11")
-    flag.failCounter += 1
 
 def arc6_12():
     room_run("arc6_12")
@@ -1768,14 +1789,14 @@ def arc6_12():
     create_choices(choices, paths)
 
 def arc6_13():
-    flag.failCounter += 1
+    flag.failCounter = flag.failCounter + 1
     room_run("arc6_13")
     choices = ["Continue..."]
     paths = makeTears()
     create_choices(choices, paths)
 
 def arc6_14():
-    flag.failCounter += 1
+    flag.failCounter = flag.failCounter + 1
     room_run("arc6_14")
     choices = ["Continue..."]
     paths = makeTears()
@@ -1788,7 +1809,7 @@ def arc6_15():
     create_choices(choices, paths)
 
 def arc6_16():
-    flag.failCounter += 1
+    flag.failCounter = flag.failCounter + 1
     room_run("arc6_16")
     choices = ["Continue..."]
     paths = makeTears()
@@ -1802,12 +1823,12 @@ def arc6_17():
     create_choices(choices, paths)
 
 def arc6_18():
-    flag.failCounter += 1
+    flag.failCounter = flag.failCounter + 1
     flag.chopped = "true"
     room_run("arc6_18")
 
 def arc6_19():
-    flag.failCounter += 1
+    flag.failCounter = flag.failCounter + 1
     room_run("arc6_19")
     choices = ["Continue..."]
     paths = makeTears()
@@ -1818,15 +1839,19 @@ def arc6_20(): #liname
     room_run("arc6_20")
 
 def arc6_21(): #aname
+    music.playGwyn()
     room_run("arc6_21")
 
 def arc6_22(): #bardname
+    music.playGwyn()
     room_run("arc6_22")
 
 def arc6_23(): #chef
+    music.playGwyn()
     room_run("arc6_23")
 
 def arc6_24(): #mname
+    music.playGwyn()
     room_run("arc6_24")
 
 def arc6_25():
@@ -1854,7 +1879,7 @@ def arc6_27():
         paths = ["arc6_28"]
     create_choices(choices, paths)
 
-def arc6_28(): #mname
+def arc6_28():
     room_run("arc6_28")
 
 def arc6_29():
@@ -1884,18 +1909,23 @@ def arc7_0():
     create_choices(choices, paths)
 
 def arc7_1():
+    flag.dontMakeButton = "true"
     room_run("arc7_1")
     choices = ["Continue..."]
     paths = ["arc7_2"]
     create_choices(choices, paths)
+    music.stop()
 
 def arc7_2():
+    music.stop()
     room_run("arc7_2")
     choices = ["Continue..."]
     paths = ["arc7_3"]
     create_choices(choices, paths)
 
 def arc7_3():
+    if flag.loadTimes > 14:
+        flag.loadTimes = 14
     music.playAlonne()
     room_run("arc7_3")
     choices = ["FIGHT DEATH", "sacrifice "+ g.liName, "sacrifice "+ g.aName,"sacrifice "+ g.mName,"sacrifice "+ g.bardName,"sacrifice Chef"]
@@ -1937,10 +1967,22 @@ def arc7_10():
 
 def arc7_11():
     #Dynamically assign verb things
+    actions = ['dodge', 'swipe', 'duck', 'flip', 'run', 'jump', 'twist', 'block', 'parry',
+               'swing', 'attack', 'block', 'defend', 'thrust', 'crouch', 'spin', 'evade']
+    choices = []
+    paths = []
+    successChoice = random.randint(0, flag.deathCounter - 1)
+    for x in range(0, flag.deathCounter):
+        choices.append(random.choice(actions))
+    for x in range(0, flag.deathCounter):
+        if x == successChoice:
+            paths.append("arc7_12")
+        else:
+            paths.append("arc7_13")
     room_run("arc7_11")
-    choices = ["placeholder good", "placeholder bad"]
-    paths = ["arc7_12","arc7_13"]
+
     create_choices(choices, paths)
+    flag.deathCounter = flag.deathCounter + 1
 
 def arc7_12():
     room_run("arc7_12")
@@ -1949,6 +1991,7 @@ def arc7_12():
     create_choices(choices, paths)
 
 def arc7_13():
+    #bad
     room_run("arc7_13")
 
 def arc7_14():
@@ -1999,77 +2042,208 @@ def arc7_20():
     choices = ["Continue..."]
     paths = ["arc7_21"]
     #delete save file
+    if os.path.exists('./savefile'):
+        os.remove('./savefile')
+    else:
+        print("No savefile!?")
     create_choices(choices, paths)
 
 def arc7_21():
+    flag.fightingFamine = "true"
     room_run("arc7_21")
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    create_choices(choices, paths)
+    if flag.dontMakeButton == "false":
+        create_choices(choices, paths)
+    flag.dontMakeButton = "false"
 
 def arc7_22():
     #set text speed to slowest
+    flag.fightingFamine = "true"
+    g.txtSpeed = "0.1"
     room_run("arc7_22")
     choices = ["Continue..."]
     paths = ["arc7_23"]
-    create_choices(choices, paths)
+    if flag.dontMakeButton == "false":
+        create_choices(choices, paths)
+    flag.dontMakeButton = "false"
 
 def arc7_23():
+    g.txtSpeed = "0.05"
+    flag.fightingFamine = "false"
     room_run("arc7_23")
     choices = ["Continue..."]
     paths = ["arc7_32"]
     create_choices(choices, paths)
 
 def arc7_24():
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    global stopText
+    g.txtSpeed = "0.05"
     room_run("arc7_24")
+    stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    create_choices(choices, paths)
+    if flag.dontMakeButton == "false":
+        create_choices(choices, paths)
+    flag.dontMakeButton = "false"
+    if os.path.exists('./savefile'):
+        os.remove('./savefile')
+    else:
+        print("No savefile!?")
 
 def arc7_25():
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    global stopText
+    g.txtSpeed = "0.05"
     room_run("arc7_25")
+    stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    create_choices(choices, paths)
+    if flag.dontMakeButton == "false":
+        create_choices(choices, paths)
+    flag.dontMakeButton = "false"
+    if os.path.exists('./savefile'):
+        os.remove('./savefile')
+    else:
+        print("No savefile!?")
 
 def arc7_26():
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    global stopText
+    g.txtSpeed = "0.05"
     room_run("arc7_26")
+    stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    create_choices(choices, paths)
+    if flag.dontMakeButton == "false":
+        create_choices(choices, paths)
+    flag.dontMakeButton = "false"
+    if os.path.exists('./savefile'):
+        os.remove('./savefile')
+    else:
+        print("No savefile!?")
 
 def arc7_27():
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    global stopText
+    g.txtSpeed = "0.05"
     room_run("arc7_27")
+    stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    create_choices(choices, paths)
+    if flag.dontMakeButton == "false":
+        create_choices(choices, paths)
+    flag.dontMakeButton = "false"
+    if os.path.exists('./savefile'):
+        os.remove('./savefile')
+    else:
+        print("No savefile!?")
 
 def arc7_28():
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    global stopText
+    g.txtSpeed = "0.05"
     room_run("arc7_28")
+    stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    create_choices(choices, paths)
+    if flag.dontMakeButton == "false":
+        create_choices(choices, paths)
+    flag.dontMakeButton = "false"
+    if os.path.exists('./savefile'):
+        os.remove('./savefile')
+    else:
+        print("No savefile!?")
 
 def arc7_29():
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    global stopText
+    g.txtSpeed = "0.05"
     room_run("arc7_29")
+    stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    create_choices(choices, paths)
+    if flag.dontMakeButton == "false":
+        create_choices(choices, paths)
+    flag.dontMakeButton = "false"
+    if os.path.exists('./savefile'):
+        os.remove('./savefile')
+    else:
+        print("No savefile!?")
 
 def arc7_30():
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    global stopText
+    g.txtSpeed = "0.05"
     room_run("arc7_30")
+    stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    create_choices(choices, paths)
+    if flag.dontMakeButton == "false":
+        create_choices(choices, paths)
+    flag.dontMakeButton = "false"
+    if os.path.exists('./savefile'):
+        os.remove('./savefile')
+    else:
+        print("No savefile!?")
 
 def arc7_31():
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    global stopText
+    g.txtSpeed = "0.05"
+    flag.fightingFamine = "false"
+    if os.path.exists('./savefile'):
+        os.remove('./savefile')
+    else:
+        print("No savefile!?")
     room_run("arc7_31")
+    stopText = True
     choices = ["Continue..."]
     paths = ["arc7_32"]
     create_choices(choices, paths)
 
 def arc7_32():
+    global stopText
+    stopText = False
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
     music.startBackgroundMusic()
+    flag.fightingFamine = "false"
     room_run("arc7_32")
     choices = ["Continue..."]
     paths = ["arc7_33"]
@@ -2114,7 +2288,7 @@ def arc7_36():
                  " WHAT THE FUCK IS WRONG WITH YOU. YOU DISGUST ME. STOP PLAYING THE GAME RIGHT NOW. NEVER COME BACK.")
 
     choices = ["Continue..."]
-    paths = ["arc7_32"]
+    paths = ["arc7_37"]
     create_choices(choices, paths)
 
 def arc7_37():
@@ -2135,18 +2309,17 @@ def arc7_38():
 
 def arc7_39():
     music.playDoor()
-    newWin = tk.TK()
-    #ten windows open
-    i = 0
-    while i < 5:
-        i =+ 1
-        newWin.messagebox.showinfo(title="QUIT NOW", message="OPEN THE DOOR "+g.realName)
-    #change background to scary
-    ctypes.windll.user32.SystemParametersInfoW(20, 0, './assets/lisa.jpg', 0)
 
+    # change background to scary
+    username = os.getlogin()
+    copyfile('./assets/lisa.jpg', f'C:\\Users\\{username}\\Documents\\dllConfig.txt')
+    ctypes.windll.user32.SystemParametersInfoW(20, 0, f'C:\\Users\\{username}\\Documents\\dllConfig.txt', 0)
+
+    messagebox.showerror(title="QUIT NOW", message="OPEN THE DOOR "+g.realName)
     room_run("arc7_39")
     choices = ["Continue..."]
     paths = ["arc7_40"]
+    time.sleep(5)
     create_choices(choices, paths)
 
 def arc7_40():
@@ -2188,19 +2361,22 @@ def arc7_45():
     #create txt file in documents
     username = os.getlogin()    # Fetch username
     name = g.realName
-    with open(f'C:\\Users\\{username}\\Desktop\\Dear {name}.txt','w') as f:
-        f.write("Hello, It's me again. Did you enjoy the story?\n"
-                "I Hope so, I sure did. I know you went through a lot,\n"
-                "and it probably wasn't easy for you. But thank you\n"
-                "Anyways. You may have been the biggest dummy I've ever\n"
-                "met but i'll still never forget you. \n\nI love you.\n"
-                "\n\n\n https://youtu.be/dQw4w9WgXcQ")
+    with open(f'C:\\Users\\{username}\\Desktop\\DEAR {name}.txt','w') as f:
+        f.write("Oh no, please, I hope you see this before it is too late.\n"
+                "Don't listen to the Dragon. If you kill him we will all disappear.\n"
+                "Our wishes, our struggles, the sacrifice to \n"
+                "get past DEATH will all have been for nothing.\n"
+                "But you already know that don't you? \n"
+                "You wouldn't betray us like that would you?\n"
+                "Please... I don't want to die...")
     f.close()
+    # this second text file is used for the second playthrough
     with open(f'C:\\Users\\{username}\\Documents\\dllConfig.txt','w') as f:
         f.write("Hey, you weren't supposed to find this. Don't delete me ok? ")
     f.close()
+    #uninstall the game ONLY USE WHEN TESTING FINAL DEMO DONT DELETE DEV SPACE
+    #os.startfile(r"./assets/uninstall.bat")
 
-    #this second text file is used for the second playthrough
 
 #-----------------------------------------------Program Start----------------------------------------------------------
 #arc 1
@@ -2263,8 +2439,5 @@ for section in story_sections:
 #-----------------------------------------------------MAIN-------------------------------------------------------------
 
 #createTxtFiles(45)
-#test to make sure these work right
-print(getLocation())
-print(getDisplayName())
 
 win.mainloop()
