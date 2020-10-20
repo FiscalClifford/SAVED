@@ -31,7 +31,7 @@ class g:
     inputResponse = "null"
     currentRoom = "null"
     savedRoom = "null"
-    txtSpeed = "0.0000001"
+    txtSpeed = "0.05"
     txtSize = "16"
     pName = "null"
     aName = "null"
@@ -63,24 +63,25 @@ class g:
     food = "null"
     realName = "null"
     realLocation = "null"
+    watchedTorture = "false"
+    firstTimeArc2 = "true"
+    knowsDeath = "false"
+    aRecognize = "false" #if you play a second time a and li will recognize you
+    seenForest = "false"
 
 
 class flag:
 
     # !!!Flags!!!
-    firstTimeArc2 = "true"
-    knowsDeath = "false"
     loosenedPlanks = "false"
     hasPotato = "false"
     muggerMissing = "false"
     metB = "false"
     firstMeeting = "true"
-    seenForest = "false"
     takenTrial = "false"
     bishopMelt = "false"
     firstAmbush = "false"
     talkedTo = "null"
-    watchedTorture = "false"
     failCounter = 0
     loadTimes = 0
     deathReturn = "null"
@@ -721,7 +722,14 @@ def queue_start_story(window):
     music.startBackgroundMusic()
     rollCharacters()
     win.deiconify()
-
+    username = os.getlogin()
+    #these flags are set for your second playthrough
+    if os.path.exists(f'C:\\Users\\{username}\\Documents\\dllConfig.txt'):
+        g.knowsDeath = "true"
+        g.firstTimeArc2 = "false"
+        g.aRecognize = "true"
+        g.seenForest = "true"
+        
     room_run("arc1_0")
     getInput("Please Enter Character Name:")
     g.pName = g.inputResponse
@@ -881,12 +889,12 @@ def arc2_0():
     create_choices(choices, paths)
 
 def arc2_1():
-    if flag.firstTimeArc2 == "true":
+    if g.firstTimeArc2 == "true":
         room_run("arc2_1")
     else:
         room_run("arc2_51")
 
-    flag.firstTimeArc2 = "false"
+    g.firstTimeArc2 = "false"
     choices = ["Head over the brook towards Kingsbridge","Head the opposite direction along the path"]
     paths = ["arc2_2", "arc2_32"]
 
@@ -1178,11 +1186,11 @@ def arc2_62(): #Placed here because it is a continuation of arc 29 for simplicit
 
     #next is choose which death or victory you get
     flag.firstMeeting = "false"
-    if flag.knowsDeath == "false" and flag.loosenedPlanks == "false":
+    if g.knowsDeath == "false" and flag.loosenedPlanks == "false":
         choices = ["Join " + str(g.aName) + " and " + str(g.liName), "Join " + str(g.bName)]
         paths = ["arc2_31", "arc2_30"]
         create_choices(choices, paths)
-    elif flag.knowsDeath == "true" and flag.loosenedPlanks == "false":
+    elif g.knowsDeath == "true" and flag.loosenedPlanks == "false":
         choices = ["Join " + str(g.aName) + " and " + str(g.liName), "Join " + str(g.bName)]
         paths = ["arc2_47", "arc2_48"]
         create_choices(choices, paths)
@@ -1198,14 +1206,14 @@ def arc2_30():
     room_run("arc2_30")
 
     flag.deathReturn = "arc2_30"
-    flag.knowsDeath = "true"
+    g.knowsDeath = "true"
 
 def arc2_31():
     t1 = Thread(target=music.playSadSong2)
     t1.start()
     room_run("arc2_31")
     flag.deathReturn = "arc2_31"
-    flag.knowsDeath = "true"
+    g.knowsDeath = "true"
 
 def arc2_32():
     room_run("arc2_32")
@@ -1216,7 +1224,7 @@ def arc2_32():
 
 def arc2_33():
     room_run("arc2_33")
-    if flag.seenForest == "false":
+    if g.seenForest == "false":
         choices = ["follow path left along the outskirts", "enter the forest"]
         paths = ["arc2_37", "arc2_35"]
         create_choices(choices, paths)
@@ -1227,7 +1235,7 @@ def arc2_33():
 
 def arc2_34():
     room_run("arc2_34")
-    if flag.seenForest == "false":
+    if g.seenForest == "false":
         choices = ["follow path left along the outskirts", "enter the forest"]
         paths = ["arc2_37", "arc2_35"]
         create_choices(choices, paths)
@@ -1239,16 +1247,16 @@ def arc2_34():
 def arc2_35():
     room_run("arc2_35")
     flag.deathReturn = "arc2_35"
-    flag.seenForest = "true"
+    g.seenForest = "true"
 
 def arc2_36():
     room_run("arc2_36")
     flag.deathReturn = "arc2_36"
-    flag.seenForest = "true"
+    g.seenForest = "true"
 
 def arc2_37():
     room_run("arc2_37")
-    if flag.seenForest == "true":
+    if g.seenForest == "true":
         choices = [" 'I'm afraid your husband is dead' ", " 'I promise to try to find him' ", " 'I'm afraid I can't help you, I'm just passing through' "]
         paths = ["arc2_38", "arc2_39", "arc2_41"]
         create_choices(choices, paths)
@@ -1268,7 +1276,7 @@ def arc2_38():
 def arc2_39():
     room_run("arc2_39")
 
-    if flag.seenForest == "false":
+    if g.seenForest == "false":
         choices = ["Enter the forest"]
         paths = ["arc2_35"]
         create_choices(choices, paths)
@@ -1294,7 +1302,7 @@ def arc2_43():
 
 def arc2_44():
     room_run("arc2_44")
-    flag.knowsDeath = "true"
+    g.knowsDeath = "true"
     flag.deathReturn = "arc2_44"
 
 def arc2_45():
@@ -1312,12 +1320,12 @@ def arc2_46():
 def arc2_47():
     room_run("arc2_47")
     flag.deathReturn = "arc2_47"
-    flag.knowsDeath = "true"
+    g.knowsDeath = "true"
 
 def arc2_48():
     room_run("arc2_48")
     flag.deathReturn = "arc2_48"
-    flag.knowsDeath = "true"
+    g.knowsDeath = "true"
 
 def arc2_49():
     room_run("arc2_49")
@@ -1820,7 +1828,7 @@ def arc6_16():
     choices = ["Continue..."]
     paths = makeTears()
     create_choices(choices, paths)
-    flag.watchedTorture = "true" # used later in arc 7
+    g.watchedTorture = "true" # used later in arc 7
 
 def arc6_17():
     room_run("arc6_17")
@@ -2281,7 +2289,7 @@ def arc7_36():
     room_run("arc7_36")
 
     #if you watched torture then disp_txt
-    if flag.watchedTorture == "true":
+    if g.watchedTorture == "true":
         disp_txt("\n[Authors Note] A long, long time ago, when I was brainstorming ideas for SAVED, I had no"
                  " idea what an absolute psychopath you were. Did you think I wouldn’t notice? $bardName SCREAMED"
                  " and BEGGED for you to load your save and end her suffering, but you just watched in silence."
