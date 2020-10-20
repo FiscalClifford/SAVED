@@ -56,7 +56,7 @@ She rotates the marble so that it catches the light, it really is quite dazzling
 [$aName] Do you know where Dragonium comes from, $pName?
 [$pName] Not at all.
 [$aName] You guys must have been pretty sheltered in $pLocation to not even know about Dragonium… Anyways, Dragonium is a metal that has been melted down from the Original Hero’s blade from centuries ago. As you SURELY remember, the hero was created by the Ancient Dragon…
-$aName and liName waggle their fingers across their chests
+$aName and $liName waggle their fingers across their chests
 [$aName] … to smite evil from the world. Back in those days The Ancient Dragon always fulfilled the wish of any soul brave enough to pass his test, no matter how dastardly the wish would be. So the Hero’s job was to hunt down and defeat these people if they used their wish for bad things. Considering people would often wish for ridiculous things like ultimate power or immortality, that’s a pretty tall order! So the dragon forged a blade of pure Dragonium so that he could level the playing field, and gave it to the Original Hero. So then the hero spent decades going around and kicking ass, there’s like a whole book on it somewhere that tells you all the…
 [$liName] A Hero’s ballad.
 [$aName] … what?
