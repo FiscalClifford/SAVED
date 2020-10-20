@@ -31,7 +31,7 @@ class g:
     inputResponse = "null"
     currentRoom = "null"
     savedRoom = "null"
-    txtSpeed = "0.05"
+    txtSpeed = "0.0000001"
     txtSize = "16"
     pName = "null"
     aName = "null"
@@ -1107,21 +1107,22 @@ def arc2_29():
     if flag.muggerMissing == "true":
         flag.muggerMissing = "false"
         arc2_46()
-    room_run("arc2_29")
-
-    if flag.metB == "true":
-        flag.metB = "false"
-        disp_txt("\nHer white cloak gleams in the feeble sunlight that slips into the alleyway and you recognize "
-                 "her as the woman from the adventurer’s gear shop. \n"
-                 "[swordswoman] Ah, you. Hello again.\n")
     else:
-        disp_txt("Her white cloak gleams in the feeble sunlight that slips into the alleyway, and you shrink a"
-                 " little at her intimidating form."
-                 "\n[swordswoman] Sorry about that mess…\n")
+        room_run("arc2_29")
 
-    choices = ["Continue..."]
-    paths = ["arc2_58"]
-    create_choices(choices, paths)
+        if flag.metB == "true":
+            flag.metB = "false"
+            disp_txt("\nHer white cloak gleams in the feeble sunlight that slips into the alleyway and you recognize "
+                     "her as the woman from the adventurer’s gear shop. \n"
+                     "[swordswoman] Ah, you. Hello again.\n")
+        else:
+            disp_txt("Her white cloak gleams in the feeble sunlight that slips into the alleyway, and you shrink a"
+                     " little at her intimidating form."
+                     "\n[swordswoman] Sorry about that mess…\n")
+
+        choices = ["Continue..."]
+        paths = ["arc2_58"]
+        create_choices(choices, paths)
 
 def arc2_58(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_58")
@@ -1304,7 +1305,6 @@ def arc2_45():
 
 def arc2_46():
     room_run("arc2_46")
-
     choices = ["Stay in Town", "Leave Kingsbridge"]
     paths = ["arc2_17", "arc2_18"]
     create_choices(choices, paths)
