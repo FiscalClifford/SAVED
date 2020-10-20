@@ -874,8 +874,8 @@ def arc1_7():
     create_choices(choices, paths)
 
 def arc2_0():
+    disp_txt("             ")
     room_run("arc2_0")
-
     choices = ["Continue..."]
     paths = ["arc2_1"]
     create_choices(choices, paths)
@@ -1329,6 +1329,7 @@ def arc2_50():
     room_run("arc2_49")
 
 def arc3_0():
+    disp_txt("             ")
     room_run("arc3_0")
     choices = ["Continue..."]
     paths = ["arc3_1"]
@@ -1386,6 +1387,7 @@ def arc3_8():
     create_choices(choices, paths)
 
 def arc4_0():
+    disp_txt("             ")
     room_run("arc4_0")
     choices = ["Continue..."]
     paths = ["arc4_1"]
@@ -1420,6 +1422,7 @@ def arc4_4():
     create_choices(choices, paths)
 
 def arc4_5():
+    disp_txt("             ")
     room_run("arc4_5")
     choices = ["Continue..."]
     paths = ["arc4_6"]
@@ -1602,6 +1605,7 @@ def arc4_30():
     create_choices(choices, paths)
 
 def arc5_0():
+    disp_txt("             ")
     room_run("arc5_0")
     choices = ["Continue..."]
     paths = ["arc5_1"]
@@ -1696,7 +1700,7 @@ def arc5_14():
     create_choices(choices, paths)
 
 def arc5_15():
-    disp_txt("please delete this")
+    disp_txt("             ")
     room_run("arc5_15")
     choices = ["Continue..."]
     paths = ["arc6_0"]
@@ -1709,6 +1713,7 @@ def arc6_0():
     create_choices(choices, paths)
 
 def arc6_1():
+    disp_txt("             ")
     room_run("arc6_1")
     if flag.failCounter < 4:
         choices = ["Continue..."]
@@ -1904,6 +1909,7 @@ def arc6_31():
     create_choices(choices, paths)
 
 def arc7_0():
+    disp_txt("             ")
     room_run("arc7_0")
     choices = ["Continue..."]
     paths = ["arc7_1"]
@@ -1919,6 +1925,7 @@ def arc7_1():
 
 def arc7_2():
     music.stop()
+    disp_txt("             ")
     room_run("arc7_2")
     choices = ["Continue..."]
     paths = ["arc7_3"]
@@ -2031,7 +2038,7 @@ def arc7_18():
     create_choices(choices, paths)
 
 def arc7_19():
-
+    disp_txt("             ")
     room_run("arc7_19")
     choices = ["Continue..."]
     paths = ["arc7_20"]
