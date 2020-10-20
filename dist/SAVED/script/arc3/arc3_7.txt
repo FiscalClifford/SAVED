@@ -1,0 +1,10 @@
+[$pName] We got what we came for. In the end, the Royal courts will decide his fate.
+[$baronName] Th… Thank you…
+With that the four of you exit back out the way you came, down the stairs, and then through a storage room entrance in the back of the fortress. Without any incident you made it outside the walls, and regroup just outside of town.
+[$aName] Looks like we are all clear. Our next stop is going to be Durango, huh?
+[$liName] I believe so. He seemed so scared it didn’t strike me as a lie. Do you think you can handle exploring some ancient ruins, $pName?
+[$pName] Only one way find out! You’re coming along with us, right $mName?
+[$mName] So I get to stick with you guys! Of course I’m coming along!
+Victorious, the four of you set off west for the town of Durango. 
+After travelling for a few days, you heard the news about what happened in the Barony after you had moved on. Apparently, the Baron was more terrified than ever of additional intruders attacking him so he forcefully conscripted every single man, woman, and child in the entire Barony to act as his temporary soldiers. He even hired some mercenaries to bolster the defenses as well. Only a few days after you had left, the Royal Investigators arrived to question him about his cult connections and found a formidable force awaiting them. Instead of backing down, the Royal forces brought in reinforcements and assaulted the fortress. The mercenaries were in the back, and forced the townsfolk which were only armed with wooden spears to fight in the front. If any of them tried to run away or escape, the mercenaries cut them down without remorse. In the end, the townsfolk couldn’t hold up against the Royal forces and they were all brutally slaughtered in the battle. The mercenaries saw what was happening and tried to escape too, but most were cut down. In the end the Baron was arrested, and brought back to the capital for questioning. With almost every person that lived in the Barony now dead, it quickly deteriorated into a ghost town and was never inhabited again.
+END OF ARC 3, THE BARON

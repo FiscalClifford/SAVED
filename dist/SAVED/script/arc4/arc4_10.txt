@@ -1,0 +1,6 @@
+This hallway is much smaller than the other ones you have traversed thus far. In fact, it is so short it is almost not even a hallway, but rather a small space the size of a living room. At the far end is a huge door made of pure gold with a sculpture of an enormous dragon roaring out from it’s surface, and it is… already opened.
+[$bardName] Looks like somebody already cleared this trap out for us. Unless it’s a trick?
+$bardName bravely strides out into the middle of the room, past the chair and touches the door.
+[$bardName] Well I’m not dead yet, so looks like the coast is clear. Bit odd, isn’t it?
+[$pName] It has already passed judgement…
+The five of you make your way through the door without incident and continue forwards. Yet again, you find yourself peering down a long and dangerous looking staircase, and you begin to travel deeper and deeper into the temple. Finally, you make it to the end of the stairway and turn the corner.

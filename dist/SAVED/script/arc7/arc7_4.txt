@@ -1,0 +1,9 @@
+[$pName] I’m never giving up! We will defeat you like we did back at Kingsbridge!
+[DEATH] So be it.
+Death raises his hand in front of him, pointing it menacingly at you.
+[$liName] Charge!
+All six of you sprint forwards in an attempt to attack him all at once, and DEATH doesn’t move an inch. He simply waits, hand outstretched. Careening forward you bring your sword up and above your head to slice down at him, but right before you begin your attack DEATH makes his move.
+SNAP
+Death Snaps his fingers, and that is all it takes to stop everyone in their tracks. All six of you freeze, as if captured in that moment in time completely unable to move. You glance around you and notice that your friends are in the exact same predicament, looking around in panic. Death turns around, and with his back to you sighs tiredly. With his right hand he reaches behind him and unsheathes a sword, and with his left he snaps a second time. You are released from the spell and collapse to the floor, gasping. To your left and right your friends remain there, suspended in time and unable to move. It is just you and DEATH now.
+[DEATH] You cannot overcome DEATH. You can only accept it.
+You pick yourself up off the ground and hold your sword out at the ready. The duel has begun. DEATH turns towards you again and grips his sword with both hands, then charges forward in a lightning fast sprint.

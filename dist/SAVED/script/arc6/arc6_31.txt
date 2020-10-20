@@ -1,0 +1,14 @@
+$liName helps you up and you peer into the center of the crater. At the bottom, sticking out of the dirt straight up, is the Black blade. Next to it is a cracked Barbute helmet with a golden lightning bolt engraved across the front with nothing inside it. These two relics are the last remaining proof of your encounter with the Bandit Leader Axel and the Queen of the Forest Fangs, Maud.
+[$pName] Let’s go, $liName.
+[$liName] But… What about the sword…
+[$pName] It’s cursed. I’ve read enough books to know what a cursed sword looks like. Let’s leave it and find our dragon.
+The two of you turn, and walk back to the original site of the battle. There you meet back up with your friends, and a few of the surviving Forest Fang mercenaries. 
+[Mercenary] Maud… is she…?
+[$pName] Dead. I’m sorry.
+The mercenary looks down at the ground, disappointed. He tells his friends and they head back to the fortress. Meanwhile, you check in on $aName and Chef and are relived to see both are ok.
+[$aName] Look at that $pName, we did it! It’s over! Who knew it would be that easy…
+[$pName] Easy? Ha. Hahaha. You have no idea…
+The four of you join up with $bardName and $mName and take a well-deserved break back at the bar in the town of Gafengen. After celebrating all day and sleeping all night, everyone feels good enough to pack up and continue along on your journey. The only people to have witnessed the explosion and know where the Black blade is located is you and $liName, but the two of you agree to never tell another soul. In the end, you feel more grateful to be surrounded by the people you journey with than ever, and spirits are at an all-time high for everyone.
+Despite being filled with hope, there is also an anxiety growing within you as well. You and you friends have gone on many adventures, defeated many foes, but it all has to end at some point. The Dragon is close, and the finale nears. What will happen when you meet him? Will everyone get a happy ending? Only time will tell.
+END OF ARC 6, THE BANDIT
+

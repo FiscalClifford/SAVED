@@ -1,0 +1,31 @@
+You decide to ask $aName for help. Leaning over, you whisper in her ear.
+[$pName] Hey I need to talk to you in private. It’s important.
+$aName gives you a confused look for a second before nodding. You two have spent enough time together now that she trusts whatever you have to say will be important.
+[$aName] alright, outside then.
+You speak louder, addressing everyone at the table.
+[$pName] Hey everyone, real quick just wanted to let you know $aName and I are going on a quick walk while we discuss certain strategies. Please just hang tight for a bit until we come back.
+[$liName] Is there something we should know?
+[$pName] No… not yet. I’ll tell everyone in a second, I just wanted to bounce some ideas off of $aName first.
+There are some raised eyebrows, but nobody says anything else and they go back to their conversations. In the meantime you head out the door and walk slowly along the road, accompanied by $aName.
+[$aName] So what’s so important you had to be all secretive about it? 
+[$pName] I didn’t want to tell everybody at the same time, because it might cause a panic. I wanted to get a plan of action established before bringing up this conundrum.
+[$aName] Ok…
+$aName pushes her $aHairColor hair back behind her head and ties it into a bun, concentrating on what you are about to say.
+[$pName] There is a group of bandits just outside of town, waiting in the forest. They want to kill me. We only have an hour or so before they will attack.
+Her eyes widen in surprise, but she quickly regains composure and narrows them in thought.
+[$aName] So we need to figure out how to defeat them huh? Do they already know we are here?
+[$pName] Probably.
+[$aName] How many are there?
+[$pName] I don’t know for sure, but less than 50.
+[$aName] Well if they were sent here to kill you, that means they must be prepared for anything by now. We need to think outside of the box.
+[$pName] Exactly! That’s why I’m asking you for help!
+[$aName] Hmmm… Well the most obvious answer is to simply avoid fighting them altogether. Maybe we could sneak out somehow without them noticing and fight them another day when the odds are more in our favor. Another option is to fight here in town, but if anything that puts us at a disadvantage…
+[$pName] Why is that?
+[$aName] Well for one there are innocent civilians around here they could threaten. Another thing is if the bandits always attack us within the next hour then that means they likely have planned out every last detail of their attack. Hiding in this town is probably exactly what they want, otherwise they would have attacked us any of the dozens of days we weren’t anywhere near civilization.
+[$pName] so that only leaves running away then?
+[$aName] Yes. Well, and one other thing…
+[$pName] What? Anything, please!
+[$aName] Well I’m not exactly excited to suggest it, but the town of Gafengen is famous for being a mercenary gang hangout spot. One of them, Maud of the Forest Fangs, is the town leader of sorts and might be able to help us. I’ve heard she is particularly ruthless however and doesn’t like strangers much. It’s probably a bad idea to pro… ah… pro…?
+[$pName] Provoke?
+[$aName] Yep! Yep, yep, provoke her. Bad idea. She might end up being worse than the bandits in the forest. At the same time, having some extra helping hands could really turn the tides in the upcoming fight.
+[$pName] Hmm…

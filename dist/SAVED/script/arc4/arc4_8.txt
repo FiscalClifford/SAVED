@@ -1,0 +1,16 @@
+[$pName] Here goes nothing…
+Boldy, you leap from tile to tile following the first six known safe letters: QWERTY. Hopping from tile to tile, you feel the reassuring solidity of each piece of stone. Finally, it comes time to put your theory to test. You hesitate for a moment, and decide to commit. With a leap you jump onto the first letter: U.
+[$pName] … ?
+Nothing happens. You land on the tile and nothing happens at all, which is surely a sign you are doing the right thing.
+[$pName] Everyone ok back there? Nothing happened?
+[$bardName] We’re fine!
+Reassured, you continue to the next tile. With a grimace, you step onto the I tile and yet again nothing happens.
+[$pName] I think I figured it out!
+[$mName] Woo! Great job!
+Confident now, you step onto the O tile and then the P, finally taking a last step onto the safe ground at the far end of the hallway. You made it!
+[$pName] I figured it out guys! You need to step only on the top row of a keyboard, only touch the tiles that are part of the sequence Q W E R T Y U I O P!
+[$aName] What the heck is a keyboard!?
+[$pName] Never mind that, get over here!
+One by one, your companions follow your instructions and manage to cross safely. With a huge sigh of relief, you allow your shoulders to relax and $mName even gives you a big high five.
+[$liName] Wow, you actually used your brain for once. Nice one $pName.
+Triumphant, the five of you continue along the hallway until you reach another set of stairs. Just like before, they lead a long ways down which gives you time to tone the adrenaline from the last test down and prepare for the next trial. Finally, the five of you make it to the bottom and round another corner. 

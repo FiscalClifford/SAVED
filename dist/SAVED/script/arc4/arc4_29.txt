@@ -1,0 +1,34 @@
+[$liName] Well? Where do we find the Dragon then?
+[$pName] All I can say is… We will find the Dragon eventually, I’m confident about that.
+[$bardName] Eh? Well that’s a bit cryptic…
+Before you can respond, the walls start to shake and a mighty tremor pulses through the stone walls. Before you know it huge arches of stone that decorated the ceiling only moments before come crashing down, and entire columns and archways crack and then collapse.
+[$aName] Woah… This place is falling apart!
+Further along and behind the altar a large tapestry of red falls off its hooks and flutters to the floor, revealing the entrance to a secret tunnel.
+[$liName] We gotta get out of here, let’s head for that tunnel!
+[$bardName] But what about…
+[$liName] No time! Let’s move!
+You grab the Scripture and awkwardly hold it in your arms as you run side by side with the others. Dashing into the secret tunnel, you follow a rough path that twists and turns time and time again, dust and small rocks spilling out from the ceiling and landing on and all around you. Finally, the tunnel comes to a final turn to reveal that you can go no further.
+[$bardName] AGH! Dead end!
+[$aName] What about this?
+$aName points to a small hole in the ground only about 3 feet wide at the end of the tunnel.
+[$mName] Looks like a deathtrap to me…
+Peering into it, all you see is inky blackness. The hole could lead anywhere, or to anything.
+[$liName] Better than being crushed to death up here!
+And with that $liName plunges down and into the hole, disappearing completely.
+[$pName] $liName!
+$bardName and $mName shrug their shoulders at eachother and follow $liName’s lead, hopping into the hole and disappearing from view.
+[$aName] Are we really doing this!? I’m scared…
+$aName looks at you paralyzed with fear, her $aEyeColor Eyes brimming with tears.
+[$pName] I’m not sure we have a choice. 
+With that, you leap into the hole and fall, fall, fall down for what feels like an eternity. The hole is perfectly vertical, and never gets any wider or thinner. You expected to hit the bottom within seconds, but instead you continue falling for what feels like ages. If you hit the ground now, your legs would instantly shatter into a million pieces.
+[$pName] Gah!
+Finally, you see a light below you. Before you even have time to process what that light may mean, the light rushes up to meet you and you emerge from the hole at tremendous speed.
+[$pName] Woah!
+You pop out of the hole upside down, despite having never changed orientation during the fall. You fly straight up and into the air, and you have just barely enough time to see that the sky is the ground and the ground is the night sky before gravity takes affect and brings you back down, which is up.
+[$pName] ???
+You smack into the ground completely disoriented, but don’t break anything. Rubbing your head, you sit up. Unbelievably, you have just emerged from a hole in the ground which had somehow appeared at the rocky outcropping where your infiltration of the Cultists campground originally began. Then:
+[$aName] AAAGGGHH!!!
+$aName shoots up and out of the hole, her feet aimed straight towards the stars. She continues about 4 feet up before slowing down, and makes a baffled expression towards you before gravity takes a hold of her and brings her back to the earth with a loud thump.
+[$aName] Owww…
+[$pName] Impossible…
+The ground trembles a little, and the hole collapses in on itself sealing it shut forever. Simultaneously, you can see that far off in the campground the pyramid begins to crumble and collapse as well. Behind you, $liName, $bardName, and $mName have all gotten to their feet and dusted themselves off.

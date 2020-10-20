@@ -1,0 +1,78 @@
+[$pName] You nasty hag, of course I won’t do that to $aName!
+You kneel down and scoop up $aName in your arms, who sleeps soundly. She softly snuggles closer to you and you hold her tight.
+[Maud] Finally, turns out you have balls after all. You have until the count of thirty before I kill you both then. One, two, three…
+You retreat as fast as you can backwards through the fortress, and emerge out the front gate. The guard who was posted their earlier gives you a sympathetic nod but says nothing. You rush across the main street holding $aName tightly in your arms and finally make it back to the bar. To the surprise of everyone, you dump her onto the table they were using and take a heavy seat on one of the chairs, exhausted.
+[$lIName] $aName! What the hell happened $pName!?
+You force out an explanation through tired breaths.
+[$pName] We tried to negotiate with Maud, but she won’t help us. It’s ok, $aName is only asleep and will be fine.
+$liName paces worriedly across the wooden floor for several minutes until $aName finally wakes up. With a relieved gasp, $liName hugs her tightly.
+[$liName] Oh thank god, I was so worried!
+[$aName] $liName? Oh… hello… was I asleep? $pName? Wait what happened?
+$aName looks around her in a panic, before jumping as if something scared her. With a terrified expression she brings her right hand up to her face, but breathes a sigh of relief when she sees all the fingers are still attached.
+[$aName] Oh thank god. I mean, I didn’t really think you were gonna do it but still…
+[$pName] Hey listen everybody, I’ve got some bad news. Maud was our main plan and it didn’t work out, and now I have no idea how to take care of this bandit problem. Does anyone have any ideas?
+[Chef] I Chef Now!
+[$pName] Thank you for your input Chef, anyone else?
+[$bardName] We could hunker down right here you know. Like, not hiding, but like, we just don’t go anywhere. We don’t run away, we don’t attack them, we just stay right here. We could have shifts were one person keeps watch while the others sleep, and be real careful about it.
+[$pName] Well... I guess it’s something I haven’t tried yet…
+[$liName] I think we would be better off bringing the fight to them, personally. But staying on the defense means we might be able to mitigate any advantage they would have in numbers…
+[$mName] We have been on the road for a long time, I see nothing wrong with relaxing for a couple days.
+[$pName] Alright then, we will stay here and rent a room. We will fortify it and make sure someone is always keeping watch during the nights. All agreed?
+The room is filled with the encouragement of your friends, and the new plan of action is settled.
+And so, the six of you began your long stay in the town of Gafengen. It was lovely at first; everyone was in high spirits and diligently kept watch during the night. The bar served excellent food, and all six members greatly appreciated the break from all the traveling that had been going on lately. But soon the days began to drag on, and the days turned to weeks, and the weeks turned to fortnights. 
+It has been a month and a half since everyone agreed to stay.
+[$bardName] Can someone tell me WHY the HECK we are still HERE!?!?
+The six of you are gathered in the bar yet again, and everyone is at edge. There weren’t funds available to rent more than one room at once and as a result all six of you are going insane being forced to share the same tiny box every single night. 
+[$bardName] If I have to listen to Chef snore like a DYING ANIMAL for ONE more night I’m going to go CRAZY!
+[$pName] Calm down! I’m sure if…
+[$aName] I couldn’t agree more! I’m sorry $pName, we all played nice and behaved on your behalf but this is getting ridiculous. Normally when you say there is some sort of threat you are always proven right but this time there isn’t any evidence at all of this bandit gang! We have been here for like two months and there hasn’t been even a hint of danger!
+[Chef] I Chef Now!
+[$mName] Yes but $aName, you gotta understand $pName’s best contribution to this group is that his intuition is almost always right. I have never seen him…
+[$liName] Guys please calm down…
+[$aName] Never seen him what? Guess wrong? I mean, you’re awesome $pName but everyone has to slip up eventually and I would think by now…
+[$bardName] GET ME OUT OF HERE! 
+[$pName] Guys please, one at a time so that we can…
+[$bardName] THAT’S IT!
+$bardName stands up from the table, sending her chair flying backwards. In a huff she disappears upstairs into the room you are renting.
+[$mName] For someone so young it must be hard for her to never get any personal space. To be fair I think we have all been on edge lately…
+[Chef] Chef. NOW.
+Chef stands up, sending his chair flying backwards even further than $aName did. He looks at everyone at the table for a second, takes a deep breath and solemnly continues.
+[Chef] Chef. Chef. I chef, Now. I chef.
+It’s a moving speech. Just then, $bardName returns from upstairs with all of her belongings in a rucksack.
+[$bardName] I love you guys and loved every moment spent with everyone but this is just too much for me, I’m sorry.
+[Chef] I chef now.
+[$bardName] Oh, you are coming with me Chef? Good, I could use the protection. Let’s get going.
+[$aName] Wait.
+The room goes silent.
+[$bardName] Listen $aName… I just can’t do this anymore, I’m sorry. Nothing you say will…
+[$aName] No, that’s not it. I’m… I’m coming with you.
+[$liName] $aName!
+[$pName] $aName wait, you can’t…
+[$aName] $bardName is right! We can only live here for so long before people start going crazy! If this bandit threat really is out there then I’d rather go out, fight them and lose than stay in this shitty town the rest of my life and “win”.
+[$pName] Please $aName, you don’t understand…
+[$liName] $aName, don’t make me choose between you and $pName!
+[$aName] You don’t have to, $liName. I want you to stay, I think it would be best for you. Goodbye.
+$aName, $bardName, and Chef all leave together leaving you speechless, $liName in tears on the ground, and $mName sitting dumbly with his jaw dropped. Suddenly with only the three of you left, the room feels extremely empty.
+[$mName] Should we… should we catch up and stop them?
+[$pName] No… no they have a point. I’ve put you guys through too much. Now the group is split up and our trust in each other is broken. This attempt is over.
+[$mName] What do you mean ‘this attempt is over’!? What the hell does that mean!?
+[$pName] It’s OVER $mName!
+You shout at him now, all the frustration that has built up over the last several weeks exploding out of you.
+[$pName] it’s OVER and it is MY FAULT! I was too much of a coward to face those STUPID bandits head on, and I was too much of a failure to convince that STUPID woman to help us. I might as well just load back now…
+[$mName] What the hell are you talking about!?
+[$pName] Why don’t you just join them, $mName. Just join them, I don’t deserve a friend like you. I don’t deserve any of you. I have this stupid fantasy of going on this big fun adventure, but what you guys don’t know is that we die ALL THE TIME. I died back at Kingsbridge, we barely got away with our stunts at the Temple of the Ancient Scripture, and we got melted at the cathedral. FUCKING MELTED $mName. That shit HURTS. And guess what? We died just outside of Gafengen too! It was just you and me…
+$mName has a nervous expression on his face, as if he is watching you slowly go insane. You ignore it because it feels too good to finally get this off your chest.
+[$mName] $pName…
+[$pName] … just you and me DICKING around outside of town, and we couldn’t find the others. You know why? Cause those FUCKING bandits probably killed them. An arrow came out of nowhere and IMPALED ME IN THE FUCKING CHEST $mName. Have you ever DIED before!? I have! So many times! THAT SHIT HURTS. And all I want is a FUCKING way out of this but I can’t figure it out! But you guys don’t have to deal with that shit cause once you die, its over for you! But its not over for me, oh no no I have to go through it OVER AND OVER AGAIN LIKE IT’S SOME KIND OF FUCKING VIDEO GAME. Well I’m DONE with this. I’m DONE with…
+You are rudely interrupted by the sound of the door smashing open, and a stream of bandits come crashing in. In mere seconds they spread out across the room, blocking all the exits. You aren’t even fully dressed yet, and $liName isn’t wearing her sword either. The only person between the three of you that is currently armed is $mName, and he only has the butterknife from when he ate breakfast.
+[???] Well well well, having a little domestic dispute are we? I could hear your little mental breakdown from outside…
+In walks a new bandit, who is clearly the leader of them all. He has Fiery red hair, and a black eye patch covering his left eye. He is taller than you by half a foot and bulging with muscles. Despite the cold he only wears pants which leaves his muscular chest exposed, and you notice it is covered in scars and a considerable amount of blood that isn’t his. Slung diagonally across his back are two swords in parallel, one is plain steel and the other is sheathed in an incredible onyx scabbard covered in ornate golden decorations.
+[???] Nice to meet you again, $pName. My name is Axel, the greatest bandit chieftain to have ever lived. I am here to kill you yet again, just like I killed your friends outside. Now without further ado…
+The bandits all charge at once, and it is over before you even realized it began. $mName is impaled through the chest immediately, and falls over coughing blood all over the table and ground. $liName manages to disarm and even injure one of the bandits before she is similarly overwhelmed and brutally stabbed multiple times in the stomach, sending her collapsing onto the floor. You are tackled backwards by a tough looking bandit wearing three bandanas on his head, and you smash into a table behind you breaking it and getting the wind knocked out of you. Gasping for air, you struggle to escape but the bandit with the bandannas catches and punches you over and over again until you are nothing but a bloody pulp. The bandits carry you outside, where they have already stacked up the bodies of $aName, Chef, and $bardName before adding $liName and $mName to the pile. One of them holds you up next to the corpse pile while his buddy ties your hands and feet together, all the while Axel approaches you with his knife drawn.
+[Axel] The client told me you had the power to see through time, and that little speech you did back there really convinced me. I’m surprised though, if you could see through time, how come you were so easily attacked? I’m going to have to ask my client some questions when we next meet, that bald headed bastard… let’s see here, what comes next? Ah that’s right, some torturing. I think first I’ll start with the nipples, then I’ll…
+[???] HOW DARE YOU!!!
+Somewhere behind you, a somewhat familiar sounding voice shrieks through the air in absolute indignation. In front of you, Axel’s eyes narrow, and he tenses up. Muttering under his breath, you can barely hear him say:
+[Axel] Shit, the bitch noticed me. Looks like I’ll have to cut this short.
+Axel plunges his dagger into your chest and orders his men to scatter, then runs as fast as he can out of town. Behind him from far away, bolts of lightning arc across the sky towards him and smash into the trees behind the town in a series of incredible explosions, starting a multitude of fires at the points of impact. The shockwave of one of them nearly knocks you over, and the sound is so deafening you can hear hardly anything but a loud ringing in your ears. The electricity in the air is awe inspiring, but you can’t appreciate it much as you stagger to your knees and feel Axel’s blade tickling your heart. You don’t feel thing at first, and it almost seems as if time is moving in slow motion. You notice none other than Maud sprinting past you, chasing after Axel, and chuckle deliriously as she shouts after him.
+[Maud] HOW DARE YOU SHOW YOUR FUCKING FACE AROUND HERE AGAIN! COME BACK AT ONCE!
+You stop laughing once the pain hits, and it hits hard. Gasping, you fall to the ground and writhe in agony, it feels like someone has stuck a red hot rod of molten steel into your sternum and it is melting away all your organs. You would scream, but you are out of breath from the ragged gasping and can’t make any noise. Or maybe it is because one of your lungs are punctured? You cough up blood, and surmise that is the most likely case. Your vision starts to go dark, and the next second you lose all your senses and pass out. It’s over.

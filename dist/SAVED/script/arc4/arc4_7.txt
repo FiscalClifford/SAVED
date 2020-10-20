@@ -1,0 +1,15 @@
+[$pName] Here goes nothing…
+Boldy, you leap from tile to tile following the first six known safe letters: QWERTY. Hopping from tile to tile, you feel the reassuring solidity of each piece of stone. Finally, it comes time to put your theory to test. You hesitate for a moment, and decide to commit. With a leap you jump towards your guess…
+SNAP
+The tile beneath your feet cracks instantly, and you lose your balance and fall to the ground.
+[$aName] $pName!
+Suddenly, a huge gust of wind blows aggressively from underneath the tile you just broke, and a noxious green gas erupts from the newly exposed vent and rapidly fills the air. Your heart sinks; it was an incorrect guess.
+[$mName] $pName! *cough* get out of there!
+You try to hold your breath and get up as quickly as you can. Sprinting back the way you came, everyone runs back to the booby trapped hallway. It is so dark you can hardly see, but even with such little lighting it is clear that the noxious green fumes have rapidly filled the test hallway and even now have completely filled the boobytrap hallway. It’s moving far too quickly to outrun.
+[$liName] *cough* *cough* Cmon!
+The five of you sprint across the boobytrap hallway as quickly as you can, lungs burning from holding your breaths. Finally, you get a handful of steps up the staircase before you have no choice but to inhale a great gulp of air.
+[$pName] Hurk…
+There’s no helping it, the entire room and staircase and everything around you has been toxified by the green fumes. With a single breath your lungs erupt into fire, and your eyes water in pain. Behind you, $mName begins to scream in agony as his lungs are melted inside his chest and $bardName cries incoherently. Your eyes feel like they are on fire now as they react to the fumes, and your vision blurs. The last thing you see before going completely blind is $aName screaming and clawing at her eyes, which are literally melting out of their sockets.
+[$pName] uuugghhhh….
+You have no oxygen left in your body and even without the ability to see, little flashing lights dart across your mind as you writhe on the ground in pain. Every orifice on your body is burning, and your lungs have completely stopped working. Before long, you can no longer hear the tormented screams of your friends around you as they finally give up on life and one by one gasp their last breath. Just like that, your journey is over.
+THE END

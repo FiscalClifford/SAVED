@@ -1,0 +1,32 @@
+Reaching the top of the steps reveals a new hallway, this one with many doors leading to miscellaneous rooms on either side. Some are open, some are closed, but none of them look like they lead to the Baron. That is, until you reach the end of the hall and see a final door. This one is larger, grander, and more lavishly decorated than all the other doors. With a nod, the four of you move to open it. 
+The moment the door is shoved open the whistle of a crossbow bolt hisses out and a projectile whizzes past you, barely missing $mName’s head by only a few inches. With a loud thunk it hits the wall behind you and the four of you rush into the room.
+Inside, the Baron stands looking dejected with an unloaded crossbow. He is a tall, fat, sweaty man of about his 40’s with long blonde hair and a walrus mustache. He is dressed in a red garment covered in golden buttons and black laces, and a quiver of crossbow bolts lays at his side. He is standing in the center of the room, which appears to be a bedroom. All around are golden luxuries and fancy silk cloths, the room almost looks too gaudy even for a king. Behind him is an enormous bed covered in fancy red lace and golden decorations, and hiding in the corner beside the bed is a woman and a young boy cowering in fear.
+The Baron grunts in frustration and moves to grab another crossbow bolt and reload. Before he can even pick the bolt up, $liName rushes forwards and grabs for the crossbow with her left hand. With her right elbow, she plows into the Baron’s arm forcing him to lose his grip, and with a mighty shove she pushes him backwards and onto his butt at the foot of the bed. Casually, $liName grabs another bolt and shoves it into the crossbow, and while everyone walks up to join her she winds the mechanism so that it is armed. She points the crossbow at him; the Baron is completely at your mercy now.
+[$liName] We’ve gone through a lot of trouble to speak with you, $baronName. It’s time to start talking.
+$liName points the crossbow at $baronName, and he cowers in fear. In the corner, the woman and little boy start sobbing.
+[$baronName] So… You’ve… you’ve gotten past the guards then…
+[$liName] It’s just you and us here.
+[$baronName] I see… and… you must be the Royal Investigators…
+[$liName] Not at all, but they will probably be getting here soon enough. We aren’t here to arrest you Baron. We are here to get some answers.
+[$baronName] R- Really? Not the Investigators!? Then why the hell have you gone through all this trouble to speak with me!?
+[$liName] We want to know about the Dragon Cult. We’ve heard you are connected to them.
+The Baron’s face drains all it’s color, and he gasps in fright.
+[$baronName] The Dragon Cult!? Oh nononono… noonono… Anything but that… anything really…
+[$liName] I’m Serious! Start talking, or you’re a dead man!
+[$baronName] I’m a dead man either way! Don’t you get it? If I say nothing then you kill me, but If I tell you what you want then the cult will learn of my betrayal and hunt me down anyways.
+[$pName] When the Royal Investigators arrest you, perhaps they could somehow protect you?
+[$baronName] Hah! Like that would stop the cult. They have deeper connections than anyone would dare to know…
+[???] Don’t hurt daddy!
+The little boy crying in the corner speaks out in a sudden show of bravery, and the woman next him quickly covers his mouth with her hand and shushes him.
+[$liName] Is that your son?
+The Baron looks at her meekly, and nods his head yes.
+[$liName] I can’t guarantee your safety from the cult, but if you don’t tell us everything you know about them right now then I will kill you immediately. If you work with us, then you will at least be able to enjoy a little more time with your family. You don’t want your child to see you killed in front of him, would you?
+The threat is harsh, but effective. The Baron looks back and forth between the crossbow and his family several times in a fit, but eventually gives a sigh of defeat.
+[$baronName] I didn’t mean for all of this to happen you know. It all started last year, the old baron was a nasty man with a love for nepotism. Sure he was a nice guy to the townsfolk, but he gave every position of power to people in his family or whoever offered the best bribes. It wasn’t fair! Not at all! So I made a deal with the cult; give me the manpower necessary to overthrow him and gain control of the Barony, and I’ll send a tribute every month. So that’s what happened: they sent a small army, we took control of the fortress, and the old Baron was taken care of. The problem is that after it was all said and done, they doubled the necessary tribute I had to give them! It was a huge amount of money, more than the barony could sustain! So I had to improvise, and be a little bit harsh to the townsfolk and farmers. Every month we would barely manage to get enough money to appease the cult, and every month they would demand more of my soldiers to help them with some dumb project. In the end, I had no choice but to rule with an iron fist to stay afloat. It’s the cults fault everything is falling apart, not mine!
+[$aName] Project? Tell us more about this project they needed your soldiers for.
+[$baronName] They didn’t tell me much, but it seemed like it was a big deal… They seemed really excited about it, like they discovered something that would help them find the Dragon. All I know is that the soldiers were sent to some sort of ruins to the west of here, by a town called Durango.
+[$aName] Ruins by a town called Durango… Do you have any other information about the cult we should know?
+[$baronName] They really don’t tell me anything! I just pay them in Aureus and manpower, that’s it!
+$liName turns to you briefly, and whispers.
+[$liName] Well we got what we came for. What should we do with this nasty piece of work? Do we kill him right here right now, or leave him for the Royal Investigators to take care of? He really doesn’t deserve our mercy after how he has treated the townsfolk, but I also don’t want to kill him in front of his family…
+[$baronName] Please, the cult made me do everything! You promised you wouldn’t kill me if I told you about Durango! Please…

@@ -1,0 +1,68 @@
+[$pName] I think a flanking maneuver is best. The element of surprise is likely going to be our greatest ally here.
+[$liName] I agree, especially since they will be outnumbering us. We need every advantage we can get.
+$liName leads the way back into the bar and claps her hands together to get everyone’s attention. She explains on your behalf that yet again there is a foe to be defeated, and that she is counting on everyone to do their part to help out. 
+[$liName] As a final note, keep your wits about you as there may be arrows coming in from unexpected directions. Any questions?
+$bardName meekly raises her hand.
+[$liName] Yes, $bardName?
+[$bardName] Can I sit this one out? This isn’t really a job for a young singer like myself.
+[$liName] I suppose…
+[$mName] Wait, can I sit this one out too? To be honest I’m more a fan of the adventuring side of things than the violent side, so I don’t really want to…
+[$liName] …Ok now hold on…
+[$aName] Hey stop worrying you two, I think a flanking maneuver here is a great way to handle it. Don’t you want to see us emerge victorious so that you can sing about it $bardName?
+[Chef] I Chef Now!
+[$pName] Thanks Chef, I’m glad you agree with us as well.
+[$bardName] Why not just wait here for them to attack us, why do we have to go to them!?
+[$mName] Why do they want to kill $pName anyways? What’s their problem?
+[$pName] It’s hard to explain, I think…
+[$liName] EVERYONE! Please! Calm down a little bit for a second!
+Everyone glances around nervously and quiets down out of respect for $liName. She takes a deep breath then continues.
+[$liName] We are an adventuring team, are we not? An adventuring TEAM. We need to fight these hitmen as a team. If you are scared you can hang back a little but we need every single person as backup just in case things get dicey. 
+[$pName] Thank you $liName, I couldn’t agree more. These guys are serious, we need everything at our disposal to defeat them.
+[$aName] Absolutely! I’m a little nervous about it but I have full confidence in you guys!
+[$mName] Hmm…
+[$bardName] Eek!
+[$pName] I’ll tell you everything I know about them and share the plan $liName and I came up with. It’s gonna go just as smoothly as our fights with the cult.
+$bardName, and $mName don’t look like they are entirely convinced, but because they care about you they reluctantly agree to help anyways. You whisper out loud to yourself:
+[$pName] Plus If things get bad, I can always load my save before anyone suffers…
+Everyone gathers their things and prepares for the fight. You tell them everything you know about the enemy force of assassins while sharpening your sword, and with each stroke of the whetstone you feel yourself getting angrier and angrier at the situation. Half an hour passes, and it is time - The six of you venture into the foreboding fog of the woods.
+You are by yourself, carefully venturing forward through the foggy gloom of the pine forest. Somewhere far to your left is everyone else, careful to keep enough space between you so that they aren’t detected. The plan is basic, but should be effective; You will get the enemies’ attention, while your friends all flank behind them for a sneak attack. Then, when the timing is right, they will jump out and kill as many bandits as quickly as possible so that you have the greatest advantage you can. Once all the minions are taken care of you will all work together to take out the leader. 
+You pick your way through the forest carefully, ensuring that you don’t make too much noise and give yourself away early. Despite your best efforts, it doesn’t take long before a swarm of figures suddenly appear from out of the forest and surround you. About 12 visible bandits in all encircle you, and all point their weapons out at you menacingly.
+[???] Well well well. If it isn’t $pName, all by his lonesome.
+A shadowed figure emerges from the fog, and slowly approaches you. You draw your sword and hold it out towards him at the ready.
+[???] No need to be aggressive, you already know what’s coming don’t you? Why not just lay the sword down and give up nicely, save us both some trouble?
+[$pName] Fuck you. Why are you attacking me and my friends?
+[???] Nope not your friends, just you. We are only getting paid to kill you, $pName. But you already knew that, didn’t you?
+The shadowed figure strides forward and crosses his arms. He has Fiery red hair, and a black eye patch covering his left eye. He is taller than you by half a foot and is bulging with muscles. Despite the cold he only wears pants which leaves his muscular chest exposed, and you notice it is covered in scars. Slung diagonally across his back are two swords in parallel, one is plain steel and the other is sheathed in an incredible onyx scabbard covered in ornate golden decorations.
+[???] Nice to meet you again, $pName. My name is Axel, the greatest bandit chieftain to have ever lived. I am here to kill you yet again. Now without further ado…
+[$pName] Not so fast, Axel!
+Axel freezes in place, and looks at you in surprise.
+[$pName] You may only be paid to kill me, but when you mess with me you mess with my friends too. The bond that holds us together is something you could never understand!
+[Axel] What!? NO!
+With perfect timing, $mName, $bardName, $liName, Chef, and $aName come charging out from the forest behind the bandits with their weapons drawn. All the Bandits are completely caught off guard, and shrink in fear as your fearsome gang closes the gap.
+[Axel] How did they get behind us!?!? NOOO!!!
+You grin triumphantly. Axel shouldn’t have underestimated how…. You freeze.
+You friends are charging valiantly across the forest floor when suddenly the ground gives out from under each of them and a huge cloud of dust and pine needles explodes from underneath their feet. With an expression of shock each of them is caught by the trap and fall into the now revealed pit, which was cleverly disguised as ordinary forest floor. Down, down, down they fall towards a neatly laid row of spikes which line every inch of the bottom of the death trap. With a disgusting squelch, all five of your closest allies are impaled simultaneously, screaming.
+[Axel] Oh boy. That’s terrible. Oh dear.
+Your jaw drops and you feel like time itself has frozen. One moment you had victory in your grasp, the next it was completely pulled out from under you like a bad joke. From where you stand, you can hear the moans and screams of pain of all five of them as they slowly bleed to death in the spike trap. Their wails of agony echo hauntingly across the forest.
+[Axel] My dear friend, I’ve told you this already haven’t I? The client said you had the power of loading, the power to go back in time. Of course I have traps waiting for your friends! Of course I have taken every precaution of making it impossible to ambush us! There is literally a maze of traps and tricks in this forest, hundreds of them, so many it would take you a million tries to ever discover them all. I’m a little insulted at how little you think of me…
+You can’t move. You are completely shocked, you barely even register what Axel is saying.
+[Axel] Well, let’s get this over with shall we? 
+Axel strides over to you, and you simply watch as he gets closer and closer. Finally, once he has gotten within only a couple feet of you, you remember your mission and pitifully swing your sword at him. He dodges underneath the swing easily, and in the same motion he reaches behind his back and draws his steel sword. As if it is the most casual thing in the world he brings the blade over his head and towards your overextended sword arm, and slices the hand off at the wrist. Your sword goes flying out across the forest floor, spurting blood across the pine needles with each bounce. In slow motion you watch hopelessly as Axel spins around and thrusts forward, impaling you in the thigh and knocking you backward. You hit the ground hard, and wheeze for breath while crying out in pain.
+[Axel] Tie this one up and treat his wounds, I was careful not to hit any arteries. Simpson and Gregory, make sure the rest are all dead inside our little mousetrap. If any of them are still squirming, put them out of their misery.
+One of the bandits busily jerks you around trying to stop your bleeding, and your vision fades to black. By the time you wake up, you realize you are tied to a tree stump, sitting in front of it. You can’t move your hands, your feet are tied together, and your injuries scream in pain. A cold chill runs across your body and you realize you are naked.
+[Axel] Look who is back, and just in time too. Let’s begin.
+Axel is holding a small, wickedly sharp dagger in his hand and is standing directly over you. He has a look of disgust in his eyes.
+[Axel] I really am sorry about this. And about your friends too. You really didn’t have to bring them you know, we are only after you. Well, that’s not entirely true because I would capture them in order to bait you out, I suppose. Does it hurt at all knowing you are the reason they died?
+Axel brings his dagger down to your chest, and with a quick swipe cuts off your left nipple. You scream.
+[Axel] If being the reason your friends died doesn’t hurt, I’m sure that does. How many times have I done this to you by now, I wonder? Is this your first time? 100th?
+Axel cuts off the right nipple as well, then moves to your right side. Your eyes water in pain and you scream into the empty forest for help but there is no one there to hear you. Next, Axel grabs one of your hands, which you desperately try to free from the bindings to no avail.
+[Axel] This next part is going to hurt, it’s going to hurt a lot. I’m really sorry about this…
+He stabs the dagger underneath your fingernail, sending searing pain into your hand that is so acute you can’t believe it is real. He digs and digs with it, sending wave after wave of excruciating pain across your body. Finally, after what certainly must have been an entire week of digging, he turns the dagger and twists it to remove the fingernail entirely. The red hot sensation of the nail being cut out is unbearable, but you admittedly feel a sense of relief that since the nail is gone it will finally be over.
+[Axel] I had that done to me when I was captured about a decade ago by another mercenary gang that got the jump on us. Luckily my old ex jumped in and saved me after only one nail was removed, because I wouldn’t have been able to handle another one after that.
+Axel looks off in the distance lost in thought for a moment before finally coming back to reality and gripping your hand again.
+[Axel] Unfortunately for you, there isn’t anyone left that can save you. It’s just you and me. And I’ve got all the other nails on this hand, and then all the other nails on the other. And just when you think it’s over, we’ve got a whole row of toenails to work on too. Buckle up.
+What follows is a blurry haze of unbelievable pain that rips at your body over and over again. You are completely helpless to stop it, and every time the pain becomes so overwhelming that you lose consciousness you wake up only a few minutes later to find that Axel has waited for you to come to before continuing once again. One after the other he painstakingly removes every single fingernail and toenail on your body, and by the end of it you have completely lost your mind. As he rips off the last toenail you scream and laugh manically, shuddering violently against your bindings. The receptor in your brain that recognizes pain has at this point been completely shot, and you are numb to all feeling in your body.
+[Axel] I really do hate torturing. I should probably keep going and gouge your eyes out and all that but I really am not in the mood anymore. Oh well, until next time.
+Axel flips the dagger in his hand to point downwards, and he plunges it into your chest. You hear the thud of it slicing into your organs but feel nothing. 
+[Axel] Goodbye.
+Axel gets up and casually strolls into the forest until he is engulfed in fog. tied up and dying, you watch him solemnly as he disappears. You close your eyes.

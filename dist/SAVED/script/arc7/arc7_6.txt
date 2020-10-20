@@ -1,0 +1,10 @@
+You muster up all your strength and jump over him using everything you’ve got. Despite your best effort you are only human and can’t jump that high, so when DEATH slides underneath you he whips his sword above him and catches you on the right leg, chopping the entire thing off. It paints the ice red as it slides away, leaving a scarlet brush mark behind it in a gruesome form of calligraphy. The force of the blade slicing through your leg sends you spinning and you smash into the ground hard, clutching at your leg.
+[$pName] AAAAGGGGHHHH
+Your now missing leg screams in unbearable pain, and the arteries that used to connect to it violently spurt blood across the once immaculate floor. You didn’t notice it at first because of your leg, but you also bit off your tongue when you hit the ground and the blood wells up in your mouth, forcing you to spit every few seconds between screams. Despite being severed, it wriggles on the ground in a pool of your blood.
+[$pName] UUUUUGGGGHHHH
+DEATH approaches and kicks your sword away from you leaving you defenseless. He kneels down, and whispers in your ear.
+[DEATH] I am become DEATH…
+He stands up and plunges his sword into your heart causing the world to quickly fade to black. As your senses begin to diminish you almost want to thank him for stopping the pain.
+[DEATH] …Destroyer of worlds
+Everything goes blank, and you finally pass away.
+THE END

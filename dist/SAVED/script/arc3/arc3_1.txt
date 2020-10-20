@@ -1,0 +1,21 @@
+The week after your confrontation with DEATH, $liName and $aName were on constant high alert. Every shadow seemed an enemy, and every traveler a potential threat. In the end however, DEATH never reappeared and the three of you finally felt able to relax. With the immediate threat of DEATH having never materialized, the question of what to do next quickly came up. While all of you knew that you wanted to find the Dragon nobody could figure out how to go about actually doing so. $aName’s strategy was essentially to wander the kingdom until a lead opened up, and since nobody had any better ideas that is exactly what the group did. Having started at the eastern edge of $kingdomName the three of you headed north-west in the hopes of finding some new leads.
+After another 5 days of travelling, you finally managed to get the hang of basic horse-riding and could keep up with your two new accomplices just fine. During that time $aName made $liName teach you some swordsmanship basics, and while you could now hold a sword without looking awkward you knew deep down that you were still useless in combat. Your one advantage that you hadn’t been able to explain to anyone properly was your ability to SAVE and LOAD, but how could you? It’s not a concept many could understand, let alone believe. For now, all you could do was adapt to this new world and its rules as best you could.
+After a total of two weeks of travelling your trio arrived at a small town called Crowlidge. It wasn’t very big, and unlike Kingsbridge had no stone buildings whatsoever; it was a poor and completely unremarkable place. You thought you would simply pass through, but $liName had other plans.
+[$liName] hey $aName isn’t this Crowlidge, home of the famous Crowlidge Porridge?
+The three of you are riding on your horses and casually making your way through the town. As the three of you pass by the peasants stop and stare at the colorful procession.
+[$aName] ya know… yeah you’re right, Crowlidge! Yeah they do make that porridge here. The really fancy apricot porridge right?
+[$liName] That’s the one! Hey we should stop by a porridge place and get some.
+$aName excitedly agrees and she leads the group towards a small wooden shop to the side of the path where everyone dismounts. The building is quite small and only has two rooms: the first is the area they take the orders from and the second is a backroom where they presumably cook up the porridge. This back room has a massive chimney rising from the top of it where smoke escapes, and you can hear a cauldron bubbling in the background.
+[Man] Heya there travellers! Care fer some of the best porridge around?
+[$aName] As long as there aren’t any potatoes in it, I’d love some! Three please.
+The man disappears into the back and returns with three bowls balanced on his arm. After $aName exchanges some aureus with him, she takes the bowls and returns to where $liName and you are waiting.
+[$aName] Grub’s up!
+The three of you dig in. It tastes pleasant, and the apricots add a wonderful tang to the flavor. While eating, your horse neighs and leans into you a little.
+[$liName] Looks like your horse wants some. Don’t be greedy $pName, share a little.
+You look at the porridge in the bowl and hesitate. Either you can give the whole bowl to your horse or just a spoonful but either way you are going to get horse slobber all over the place.
+[$liName] Don’t be stingy!
+$liName and $aName snicker at you while you try to figure out what to do. Finally, you take a spoonful and plop it into your other hand after setting the bowl down. Offering your handful of porridge to the horse, she scoops it up eagerly and does a little trot-dance.
+[$aName] She’s awfully expressive! Have you named it yet $pName?
+You grin and give the horse a friendly pet to her $horseColor coat. What should your horse’s name be?
+
+Enter horse name

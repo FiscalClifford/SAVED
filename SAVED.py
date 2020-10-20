@@ -726,7 +726,7 @@ def queue_start_story(window):
     g.pName = "tester" # g.inputResponse
     g.inputResponse = "null"
     choices = ["Continue..."]
-    paths = ["arc5_13"] # if resetting, send to 1_8
+    paths = ["arc7_44"] # if resetting, send to 1_8
     create_choices(choices, paths)
 ####################################################################################################################################################################################################################
 def quit_me():
@@ -2375,7 +2375,7 @@ def arc7_45():
         f.write("Hey, you weren't supposed to find this. Don't delete me ok? ")
     f.close()
     #uninstall the game ONLY USE WHEN TESTING FINAL DEMO DONT DELETE DEV SPACE
-    #os.startfile(r"./assets/uninstall.bat")
+    os.startfile(r"./assets/uninstall.bat")
 
 
 #-----------------------------------------------Program Start----------------------------------------------------------
@@ -2425,7 +2425,7 @@ for section in story_sections:
         file_path = "script/arc5/" + section + ".txt"
     elif i<160:
         file_path = "script/arc6/" + section + ".txt"
-    elif i<205:
+    elif i<206:
         file_path = "script/arc7/" + section + ".txt"
     else:
         print("error script out of bounds")

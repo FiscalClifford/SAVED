@@ -1,0 +1,122 @@
+[$pName] I’m thinking she should be named $hName. What do you guys think?
+[$liName] Pretty lame to be honest.
+[$aName] $liName! I thought the name was fine…
+[$liName] mm, fine for a dog maybe…
+Your horse doesn’t really respond when you call her by $hName yet but she seems to be enjoying your attention anyways. She nuzzles your arm affectionately for a moment as a means of thanking you for the porridge, then goes back to gossiping with the other two horses.
+[$aName] $hName sure likes you $pName!
+$aName looks over at $liName with a sly grin on her face as she continues.
+[$aName] I didn’t realize there would be so much compet…
+With a flash $liName shushes $aName with a finger and glares at her with eyes that say ‘shut it’.
+[$pName] So much what?
+Without taking her finger off of $aName’s lips, $liName whips her other hand around and flicks you hard in the forehead.
+[$pName] OW!
+$aName giggles to herself, and the three of you finish your porridge in comfortable silence. You are about to ask $liName what $aName was talking about when you are interrupted by a peasant approaching. He wears a ragged, uncomfortable looking burlap tunic with the same small font covering the sides as usual, is covered in dirt and wears no pants. The tunic is long enough to cover ‘the goods’ but it looks very peculiar all the same. His eyes are brown, but shine with intensity as he introduces himself.
+[Man] You must be the royal investigators sent to look into Baron $baronName. The mayor told me to meet you and give his thanks, as well as point you in the right direction. Simply head right up ahead, and continue along the path until you reach a large rock that looks like a thumbs up.
+He gives you a thumbs up.
+[Man] Once you hit that rock take a left at the fork in the road and you’ll be in $baronName’s territory within a couple hours.
+$liName and $aName give eachother a look, then turn back to the man.
+[$aName] yes of course, thank you. And just to make sure we are on the same page… and that you are not a spy… er… tell me once more what the mission is.
+[Man] Well its really not that secret, the Baron has been preparing for a while so he knows you are coming.
+[$aName] Er… Yes, so since it is not a secret tell me yet again why we are going there. You know, just to make sure.
+[Man] I don’t get it, you don’t know? Wait, are you not the investigators?
+He looks at the three of you in confusion, and then frustration. You stare back awkwardly.
+[Man] Well why didn’t you just say so? Messing around in other people’s business…
+The man stomps off with a huff and disappears behind the porridge shop. $aName turns back to you with an excited look.
+[$aName] Sounds like something interesting is going down! We should go check it out!
+[$pName] I mean, It’s not like we have anything better to do…
+[$aName] And what great luck, that man coming up to us like that. I tell you what, we get a lot of weird looks for dressing so well but the advantages it brings are always worth it. That man thought we were important, $pName thought we were important… There’s an old saying you know, it goes “fake it until you make it”, and these dresses are great help in that.
+[$liName] Are you saying we haven’t “made it” yet?
+[$aName] I think we are make-ING it and we are make-ING it more and more the longer we go. It’s ok to be a work in progress $liName. As long as you have… uh…
+[$liName] Confidence?
+[$aName] No…
+[$liName] Faith?
+[$aName] Yeah that’s it! As long as you have faith in yourself. You gotta belieeeeeeve in yo self, right $pName?
+[$pName] Right…
+The three of you head off and walk along the path straight out of town, leading the horses behind as you walk so that they can get a little rest. $aName’s horse is a little restless but $hName behaves herself quite well. Once your trio has walked for a little bit you notice there is a fork in the road, and right where the fork splits is a large clump of rocks. There is a single large boulder at the bottom, with a couple long rocks balanced to one side of it giving it the vague appearance of a thumbs up. As you approach it, you notice a traveler walking from the path to the left towards you dressed in a very peculiar fashion.
+He wears brown burlap pants, tied to his waist by a yellow belt. His shirt is dyed green, and he wears an overcoat of black with yellow cuffs. On top of his head is yet another flash of yellow, this time in the form of a top hat. The man himself is mid 30’s with a plain face and features that could easily blend into a crowd. Overall his striking appearance and odd combination of colors make him hard to ignore. He approaches.
+[Man] Well well! If it isn’t the only people on this road dressed even stranger than I! Howdya do!
+The man walks right up to you with brazen confidence and extends an outstretched hand, and before you know it you find yourself taking part in a solid handshake.
+[Man] Now there’s five good fingers for ya! What’s your name pal?
+[$pName] Woah, uh… $pName.
+[Man] Nice to meet you $pName, I’m $mName! And what’s that you got in your ear?
+Confused, you step back and reach for your ear. You finger at it a little but find nothing.
+[$mName] A little forward of me I know, but we simply cannot allow this! Let me get it for you…
+$mName reaches behind your ear, and brings his hand back with a flourish. Inside his hand is a small rubber ball, which he shows to $aName with a grin.
+[$mName] Your friend had this little guy in his ear the whole time and you never said anything! And look, you have one too!
+$aName half startled and half laughing reaches for her ear, but of course finds nothing. In a quick motion $mName reaches behind her ear and yet again appears a new rubber ball in his hand.
+[$mName] Proper hygiene is important you know, otherwise these little bastards pile up quick! Anyways, nice to meet ya whats your name?
+[$aName] $aName!
+$mName sticks his arm out and shakes $aName’s hand with vigor.
+[$mName] Now there’s five buckaroos for ya, great shake! And lastly, to the lovely lady in lavender, what is your name?
+$liName crosses her arms.
+[$liName] $liName. Are you some kind of magician?
+The man takes his yellow hat off and gives a deep, over the top bow to the three of you. 
+[$mName] The very best in all of $kingdomName!
+[$liName] I’ve heard the very best magician in all of $kingdomName can throw fireballs the size of buildings towards their foes. Can you do that?
+$mName looks up with a frown, and resets his posture.
+[$mName] I see what you mean, no I’m not that kind of magician. I’m more like a fun type magician, one that brings joy to those around him! 
+His mood picks right back up and he starts tossing the balls up in the air. One by one, he winks at each of you and makes a clacking sound with his mouth. Each time he winks a new ball is added to the others and before you know it he is juggling five balls in the air. Not bad!
+[$liName] Well it’s nice to meet you $mName, you are certainly… friendly. Although mixing in real magic with sleight of hand kind of makes both feel cheaper doesn’t it?
+[$mName] on the contrary, it is when you don’t know which part is real and which is trickery that the act is at its best! Can you figure out which is which?
+$mName is having a pretty good time riddling at $liName and juggling, but $aName finally puts a stop to it.
+[$aName] so Mister $mName, you just came from $baronName’s territory, didn’t you? We are just now heading there ourselves.
+$mName stops juggling and puts the balls in his pocket before replying in a relaxed manner.
+[$mName] Well yes, but I wouldn’t go there If I were you. I was performing there for about a week before the Baron started his forced conscriptions. Luckily I had a couple good shows and could get out of there in time but most folk weren’t so lucky.
+[$pName] Forced conscriptions?
+[$mName] Yes the Baron is expecting a royal investigation to arrive soon and they will almost certainly find that the rumors about him are true. After that a squad will be sent to eliminate him, so he’s forcing all the townsfolk to fight for him as a private army.
+[$liName] and just what are these rumors?
+[$mName] Not a local eh? Well the talk around town is that he has been making a lot of money lately and funneling it towards the Dragon Cult. 
+[$pName] Dragon Cult? What’s that?
+$liName walks over to you in a huff and flicks you in the forehead, leaving a stinging mark.
+[$pName] OW!
+[$liName] You really did live under a rock before we met you! I’ll tell you later.
+$liName turns to $mName and brings her hands together, tilting her head and offering a warm smile.
+[$liName] Thank you very much for the information $mName, it has helped us a lot! I wish you luck on your travels.
+Before $liName can gather you and $aName together to leave, $mName shouts out in confusion.
+[$mName] Wait, you aren’t going straight over there are you!? Are you crazy!?
+[$aName] Well of course we are! If the Baron knows something about a Dragon Cult, then he could be just the lead we need to finally find the Ancient Dragon!
+[$mName] You… want to find the Ancient Dragon!?
+$mName waggles his fingers across his chest, and starts following your trio as you walk along the path. For some reason he tags along right behind you and refuses to give up.
+[$mName] Are you really trying to find him?
+Starting to get annoyed at the uninvited stranger, $liName turns to face him.
+[$liName] Yes of course we are! Whats it to ya?
+[$mName] Well… me too!
+Everyone’s expressions turn to surprise, except $mName who looks back with a sheepish grin.
+[$mName] If I met him, and were granted my wish, I would be able to help so many people that have gone through what I have… Not to mention I could create the greatest act the world has ever seen! Please, let me come along with you!
+[$liName] We already have a freeloader thank you, no room for anyone else.
+[$pName] Hey are you talking about me!?
+[$mName] But I’m not a freeloader! I’ve saved up plenty of money during my travels so you wouldn’t have to pay for my meals or anything. More importantly, I’m well liked in the Baron’s territory so I can convince the townsfolk to let you through without incident. Without me there, they will probably attack you on sight!
+$liName pushes her $liHairColor hair behind her ear and furrows her brows in thought.
+[$liName] I suppose having someone that could get us through the militia without bloodshed would be convenient… What do you think $aName?
+[$aName] I think we let him join us until we get the information we need out of the Baron. Once we are done we can decide if he should join us or not.
+[$pName] Yeah I agree, he seems nice enough especially if he… OW!
+$liName gives you another solid flick to the forehead, right where the last one landed. 
+[$liName] I didn’t ask you, $pName!
+[$pName] Well maybe you should! Also stop flicking me!
+You grapple with her momentarily trying to flick her forehead back, but she must have been trained in some kind of martial arts because she easily transfers your weight around and flings you to your back.
+[$liName] Heh heh, $pName you gotta try harder than that to best the queen of $kingdomName, $liName!
+[$pName] You’re a queen alright, cause you’re a royal pain in my…
+[$aName] OK $mName welcome aboard! Lets all head into the Baron’s territory and see if we can figure out what is going on a bit better.
+The four of you join up and walk along the path. The countryside is quite beautiful; small fields of soft grass split up large patches of happy trees, which sway in the gentle summer breeze. Clumps of wild flowers bloom merrily as the sun plays off their petals, and chirping birds sing as they dance through the foliage and air. Overhead, large swaths of clouds laze their way across the sky and you can see their shadows sprinting across the fields. The scene is quite serene, until it is interrupted by $mName.
+[$mName] Hey did you know I’m a bit of a comedian as well as a magician? How about this, back in this town I toured through a while ago they were building a large house, and I knew there would be some good material there for me to use.
+[$pName] …
+[$mName] Wait wait wait, that’s not the joke, this next part is! Would you like to hear a construction joke?
+[$pName] …
+[$mName] That’s ok, I’m still working on it anyways. Ba dum shh!
+[$liName] So $pName, did you still want to learn what the Dragon Cult is?
+[$pName] Anything but this!
+[$mName] What do you call a deer with no eyes?
+[$pName] Here we go again.
+[$liName] The…
+With a confident shout, $mName interrupts $liName while waving his hat in the air
+[$mName]  No idear!
+$liName stops and spins around, flicking $mName hard in the forehead
+[$mName] OW!
+Without saying another word to $mName, she turns back to you and continues.
+[$liName] As I was saying, the Dragon Cult was started maybe 50 years ago when an entire generation grew up having never seen The Dragon. The church was losing a lot of support and people were doubting their legitimacy now that they didn’t have visual proof of his existence. Eventually an extremist branch of the church separated themselves because they felt the mainstream church wasn’t doing enough to bring the Dragon back, and now here we are. The cult is surprisingly large and powerful, and are rumored to be doing some pretty nasty stuff in an effort to bring the Dragon back. They all rationalize it away as a “the ends justify the means” situation of course, and they must have some politicians in their pocket because they keep sticking around no matter how many people complain.
+[$pName] And you think they might know where we can find the Dragon?
+[$liName] They take finding the Dragon more seriously than anyone else, and have far more resources at their disposal than small groups like ours. If anyone has a good lead for finding it, its them.
+[$mName] Hey do you guys want to play a game? It’s real simple, when a bird flies overhead you get points based on color. One point for black, two points for brown, three points for…
+[$liName, $pName, $aName] NO!
+[$mName] Yikes, tough crowd!
+And so, the four of you continued towards the Barony of $baronName.

@@ -1,0 +1,22 @@
+[$pName] Zero. You don’t have any fingers on that hand at all.
+Maud chuckles to herself, and brings her right arm forwards to reveal the disfigured injury that Axel gave her during their battle.
+[Maud] Not many people know about this injury, and some passing traveler like yourself surely wouldn’t. How many times have we talked to each other by now, I wonder… Or maybe you just got a lucky guess? Either way, it doesn’t matter. It is time for us to enact our lovely revenge against my least favorite of all my ex husbands. Meet me on the Main road in the center of town in exactly twenty minutes.
+With a dramatic spin, she marches off in the opposite direction and disappears into one of the adjacent rooms. You head back the way you came, and let yourself out. Emerging from the fortress, you take a deep breath, and the entrance guard turns towards you.
+[Guard] Did it go well?
+[$pName] So far. But it’s only just beginning.
+You make your way forwards across the main road, and back to the bar to update your friends on the situation. They greet you with a cheer after hearing of your success.
+[$bardName] Yay, you did it!
+[$pName] Hold on guys, we haven’t won yet. We may have Maud’s support but Axel is far from defeated. Everyone needs to gear up and prepare themselves for battle, I’ve worked too hard to get this far to lose any of you so be ready and be careful. Let’s go!
+[$aName] You got it!
+[$liName] Let’s show these bandits what we are made of!
+[$bardName] I’ll sing an invigorating pump up song!
+[$mName] Good work!
+[Chef] I Chef Now!
+Everyone straps on their gear and protective clothing. $liName and $aName sharpen their swords and Chef polishes his massive cleaver, he even takes a second to check his reflection on the side of the blade. You adjust your sword belt and, in the background, $bardName is belting out a song that gets everyone eager for battle. 
+Ten minutes later the six of you meet up with Maud on the main road, who has brought along with her 20 intimidating looking mercenaries. Each one is battle hardened and covered in savage looking scars, trophies from their previous battles. Maud is the most impressive looking of all covered head to toe in black armor with golden edges. Her green cape is draped behind her and her head is covered is an impressive Barbute helmet with a golden lightning bolt engraved across the front. The slit where her eyes peer through is too dark to see into so you can’t tell if she is looking at you or not.
+[Maud] Are you ready?
+[$pName] Let’s go. Follow my lead. Try to stay at least 50 feet behind until they show themselves, then spring the trap and attack.
+You journey into the damp, fog covered woods cautiously, scanning the tree line for any sign of danger. The tension inside you grows and gets worse as the forest falls into silence. The animals, who sense a great conflict approaching, go silent and retreat as fast as they can. 
+The mist and fog swirl around you as your march forward, one hand resting on the pommel of your sword. Ahead of you is a massive fallen pine tree, with a trunk as wide as you are tall. You approach it but before you can get close a shadowed figure jumps out of the fog and on top of it, looking down at you.
+[???] Well well well. If it isn’t $pName, all by his lonesome.
+You draw your sword, and hold it in front of you at the ready.

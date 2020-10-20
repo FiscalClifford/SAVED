@@ -1,0 +1,46 @@
+You turn and head along the branching path and carefully continue forward. The way ahead twists and turns and before long you start to get the uneasy feeling that you are getting lost in the underground maze.
+Just as you are starting to get worried, you hear the sound of hushed voices ahead. They sound angry about something, and you decide to put the torch down carefully and continue ahead without the light giving away your position. Finally, you round a corner and see an open space ahead of you. It is much larger than the tunnels except for the low ceiling, and has a pillar in each corner helping to hold up the weight of whatever building must be above. Four men in fuzzy robes hurriedly scamper about the room, dragging either dead or unconscious people from one side to the other. They angrily whisper at one another every couple of seconds, likely accusing the other of not working hard enough or for being too careful with the bodies. They seem very on edge. At one point one of the people they are dragging groggily begins to wake up, until one of the robed men takes out a syringe from his pocket and injects something into him. The person instantly is knocked out and doesn’t stir again.
+These are clearly cultists up to something fiendish, but you don’t yet know what. Before you even have time to think however a new person arrives, crashing in from the opposite side of the room through a door and surprising the cultists greatly.
+He is a huge man, likely around seven feet tall and weighing at least 250 pounds. His broad shoulders and wide body indicate he is almost entirely made of defined muscle, most of which is hidden by a white collared shirt with two rows of black buttons running down the front. His features are hard to see in the dark, but it appears he has a sharply defined jawline and thick aggressive eyebrows. On top of his head is a chefs hat, which flops lazily across the side of his head. Gripped in both of his hands in front of him is an unbelievably massive meat cleaver, almost as long and thick as he is.
+[Man] I CHEF NOW
+[Cultist] Whaaat!?
+The Man in the chef hat bounds forward with his powerful legs and quickly closes the gap between himself and the cultists. Before any of the robe clad villains can even react the Chef brings his cleaver back behind his head and then forwards with all his might, slicing diagonally across one of the cultists. The force of the blow is so tremendous that the cultist is completely cleaved in two before even having time to react, and each half of his body separates onto the floor in a bloody spray.
+[Man] I CHEF NOW
+One of the cultists draws a syringe from his robes and holds it with one hand while brandishing a club with the other. Panicking, the last one abandons his friend and starts sprinting away from the gruesome scene, towards you.
+[Man] I CHEF NOW
+The sinews of the chef’s muscles flex impressively as he propels himself forwards like an unstoppable bullish force and smashes into the second cultist, sending him flying. The fuzzy robes do little to break his fall as he smacks into one of the pillars and weakly crumples to the floor.
+[Man] I… CHEF NOW
+Yet again the Giant brings the cleaver up and over his head, scraping it across the low ceiling. With a swift practiced movement he brings it across himself and cleaves the helpless cultist in two. The enormous cleaver makes  a loud clang as it bounces off the stone floor, as if the cultist’s body did nothing to slow it’s deadly progress.
+Meanwhile, the last cultist has dashed across the room and in his blind panic didn’t even notice you standing there. All it takes is for you to stick your foot out to trip him, and he propels at near comedic speed into the wall and hits his head terribly hard. The sound his skull makes making contact with the stones is not unlike a coconut being split open.
+Stooping down, you grab him and flip him over and shake him violently in order to keep him conscious.
+[$pName] What the hell are you crooks doing down here to these innocent civilians? What is going on here?
+[Cultist] Ugh…
+You give him a couple slaps for good measure and the cultist finally seems to come to. You repeat yourself.
+[$pName] What the hell are you three doing down here?
+[Cultist] Orders… sacrifices for the ArchBishop… Secret…
+[$pName] Sacrifices? You were going to kill these people?
+[Cultist] The ritual… just orders… Please don’t kill me…
+[$pName] When is this ritual supposed to take place?
+[Cultist] Please don’t kill… ritual… tonight at the cathedral… 
+You throw him back down and the cultist meekly closes his eyes. You feel a presence behind you. Slowly turning, you finally notice the brutish man in the chefs hat standing only a foot away, menacingly looking down at you. His hulkish figure is only surpassed in fear factor by the deadly gleaming of the cleaver he grips tightly, still dripping with blood.
+[Man] Chef… NOW
+You flinch as he reaches out to grab you, but instead of ripping you in two he instead gently pulls you to the side and out of his way. Without another word the man cleaves the third and final cultist in half.
+[Cultist] AAAGGGGHHHHHhhhh… aaaa…..
+It doesn’t take long for all the blood to run out of the cultists body, leaving him unable to scream any longer. Meanwhile, the huge Man turns and head back towards the larger room where the unconscious civilians lay and begins patting them down, as if he is looking for someone. After pawing over a few of the cultists victims, he finally finds an older gentleman and freezes as if he recognizes him. The huge Man stares for a few moments, then sits down heavily and begins to cry. He buries his head inside of his massive forearms and shakes with grief, whoever he found must have been familiar. Approaching, you notice an older gentleman hadn’t been sedated like most of the others but instead had already been killed; the cultists must not have been able to inject him like the others so they resorted to murder. Inside of the man’s vest is a business card and a bloody chef’s hat of his own. The card reads “Bill’s Butchery and Grill”.
+[$pName] Hey mister… Are you Ok?
+The huge Man looks up at you with tears in his eyes, surprisingly vulnerable looking considering his recent acts of intimidating violence. After catching his breath, he finally whispers back to you.
+[Man] I Chef Now…
+[$pName] You… chef now? What? Are you ok?
+[Man] I Chef Now…
+The fact that the man hadn’t butchered you like the other cultists means he is smart enough to at least know the difference between friend and foe, so it is likely he simply has some sort of speech impediment. Still, the idea of not being able to properly communicate with such a significantly stronger fighter in such a small space makes you uncomfortable. Uneasily, you give him a couple pats on the back reassuringly and glance over the room once more. There are perhaps 7 civilians laying around, and a couple of them are beginning to stir. Due to all the blood covering the room you would think it is the scene of a massacre, but all the blood mostly belongs to the recently deceased cultists. One civilian groggily stumbles out from the tunnel the cultists were dragging them towards, and leans against a pillar while holding his head.
+[$pName] Sir, do you know what these cultists were doing here? What is going on?
+[civilian] Ugh… I’m not sure… I was cooking at home one second and now I’m here the next. Some sort of kidnapping maybe… I want to go home…
+The man doesn’t even look at you as he wanders down the tunnel you just came from in a daze, stepping over the bloody corpses of the cultists without pause. Putting the pieces of the puzzle together, it seems like the cultists were using this sewer system as some kind of incognito route to transport kidnapped victims to a ritual location to be sacrificed. The cultist mentioned that location might be the cathedral, where the ArchBishop would kill them as soon as tonight, and there is a chance there could be more victims captured there already with no chance of escape. You will have to move fast to save them.
+[$pName] Hey, mister chef hat guy… can I call you Chef?
+The Huge man nods.
+[$pName] Ok Chef, hear me out. I’m very sorry about your friend dying, but the fact is that there are many more just like him that are currently imprisoned at the Cathedral by the ArchBishop and will likely share his fate by the end of tonight. These cultist guys are no joke and I could really use your help saving those who need it. We don’t have much time… will you join me to avenge your friend and save these innocent people?
+Chef closes his eyes and breathes deeply for a while, calming himself down. Finally, he reaches into his dead friend’s vest and pulls out the bloody chef’s hat, putting it into his pocket. Rising up, Chef looks as determined and powerful as ever, and gives you a nod.
+[Chef] I chef now.
+[$pName] Ok, I’ll take that as a yes! Let’s go meet up with my friends, we will need their help as well. Once we are all on the same page we can infiltrate the cathedral through the path these cultists would have used.
+[Chef] I Chef Now!
+With that, the two of you backtracked the way you came and returned to the surface.

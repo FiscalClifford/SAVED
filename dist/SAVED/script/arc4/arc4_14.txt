@@ -1,0 +1,10 @@
+You take a step forward and push the man with all the strength you have in you. With a gasp of surprise he loses his balance and collapses into the middle of the tracks. The train hurtles forwards at tremendous speed, but just before it hits the fat man…
+Poof!
+You blink, and the entire situation has reset itself. The train is right back where it had started, and doesn’t move.
+[???] Interesting. Pushing the man is no different from pulling the lever of course, but many people shy away from the more direct version of this dilemma. Not you. Time for the final stage of the trial then.
+You take a deep breath.
+[???] A train is hurtling down the tracks at incredible speed, too fast for the train to be able to brake in time. Tied to the track ahead are five people of completely randomized age, race, gender, and position…
+Five people appear on the track ahead of the train just past where the tracks diverge, and the train begins to move forward gaining momentum.
+[???] There is no divergence, and there is no fat man. Instead, there is only you. The only way to save these five people tied to the tracks is for you to step in front of the train, which will kill you but is also guaranteed to save the five people. Your death is not as trivial as you think either: by sacrificing yourself to stop this train, not only will you die but I will also destroy your save file so that you may not load your progress back and you will be forced to completely restart.
+[$pName] What!?
+[???] So, $pName, time for the final decision. Which will you choose?

@@ -1,0 +1,27 @@
+You lead $hName over to $aName and strike up a conversation.
+[$pName] Hey I know this is kinda out of nowhere but I just want to say I appreciate you, and I appreciate you being a part of this group. You mean a lot to me and I am truly thankful you allowed me to join you back at Kingsbridge.
+$aName makes a scoffing sound and giggles at you, clearly amused.
+[$aName] When did you get all lovey dovey $pName? You should know I’m totally out of your league.
+[$pName] Woah! That’s not what I meant, I was just trying to say…
+[$aName] Joking! Ha ha, well thanks $pName feels nice to be appreciated like that. You don’t have to get all serious about it though you know. I guess I let you join back then ‘cause I sensed you had as much of a love for adventure as I did. And you know what they say, Adventure loves company! Or is it misery? Wise words aren’t exactly my… uh… ah…
+[$pName] Specialty?
+[$aName] mmmm, almost…
+[$pName] Forte?
+[$aName] Yes! Not quite my forte. I’m more of a having fun and kicking butt kinda person than a drinking wine and philosophically speaking kind of person.
+[$pName] Ha, you can say that again.
+[$aName] Rude! Don’t be a rude dude. Rude dudes ruin moods.
+[$pName] You aughta be a rapper. Hey so you and $liName grew up together right? What was that like?
+$aName smiles to herself as the memories come flooding in.
+[$aName] I could talk for hours about how thankful I am to have $liName in my life. Growing up, my family was pretty strict, and I was trained to become a swordswoman almost everyday for my entire childhood. If it wasn’t swords it was horses, and if it wasn’t horses it was training athletics, all that kind of stuff. If you didn’t train, you didn’t eat, that was the rule. We lived right on the southwestern border between $kingdomName and $neighbor so there was often a lot of violence around us. Sometimes mercenaries that had routed from a battle would roam the countryside looking for people to terrorize and we would have to defend ourselves. It was a harsh and unforgiving place. So in the end my parents were very hard on me, and strict, and maybe even hit me sometimes, but it was all well intentioned. They knew they had to harden me so that I would be prepared for the real world…
+$aName stares off towards the grey sky for a few seconds, before returning to the present.
+[$aName] Oh right, but what I meant to say was that $liName was there. She was there for me throughout it all and she was my rock. That made it much easier, having a friend to grind out that brutal training with. If it weren’t for her I wouldn’t be the person I am today.
+$aName turns and looks back at $liName, giving her a friendly wave.
+[$aName] I accidently cut her eyebrow once while sparring, I felt so bad! You can still see the scar, but luckily it healed well and looks pretty badass. The only other time I have ever felt worse than that was when she and I came back to my family’s house to find it had been torched by raiders. Nothing left. Never even got to say goodbye to my parents. But that’s just how it goes sometimes, I guess. Ever since then we have stuck together like Potatoes and Butter. Now that I think about it we have been extraordinarily lucky ever since we met you, actually. Normally when we meet new friends they end up dying pretty quickly, but somehow you have managed to stick around. Everyone else too. This is the largest adventuring group I have ever been a part of!
+She looks at you with a glimmer in her $aEyeColor eyes.
+[$aName] Maybe that means you are special or something, eh? You’re like our ace in the pocket.
+[$pName] Hole you mean. Or sleeve I guess. Like an ace up your sleeve.
+[$aName] Ah, right. Yeah you’re like an ace up the sleeve, our secret weapon. So don’t let us down ok? Promise you will look out for us?
+[$pName] I promise.
+[$aName] Haha, great! Hey look, that town is getting pretty close. You better show $bardName where to go before she leads us straight past it.
+[$pName] Ah, good idea.
+You smile to yourself and follow her suggestion promptly. Gafengen lies just up ahead.

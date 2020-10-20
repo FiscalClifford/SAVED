@@ -1,0 +1,20 @@
+You take a step forward and push the man with all the strength you have in you. With a gasp of surprise he loses his balance and collapses into the middle of the tracks. The train hurtles forwards at tremendous speed, but just before it hits the fat man…
+Poof!
+Everything disappears from around you, and once again you find yourself swimming in black nothingness.
+[???] Interesting Indeed! You truly have no idea who you are or what you believe in do you? First you are willing to sacrifice the single for the many, but then when it is time to take more direct responsibility for the exact same situation you back down. But then, when told there are more people at the other end, you regain your confidence and push the man anyways! I wonder, how many people would have to be at the other end before you decided it was worth it? Instead of thousands, would it only take a hundred? Perhaps less? At what point do you decide that their lives are worth more than the fat mans? 
+[$pName] What? Wait… What was the point of this trial!?
+[???] Then you don’t already know? Or perhaps you already do, but don’t want to say…
+A peculiar feeling rises in your stomach, as if you are falling. Looking the direction your instincts tell you is “below” in this featureless world, you see that far away is the wooden chair you sat in when this all started.
+[???] Congratulations, you passed the trial. From now on you will be disallowed from taking it again, at least in this world. This is because curiosity for different results would tarnish the honesty of your first attempt, and that would render it worthless. No matter what you answered you would have passed but I hope that along the way you learned something about yourself.
+With that you fly towards the wooden chair at rapid speed, until finally being placed into it. The moment your legs touch the seat, you jump with a start and find yourself back in the room where it all started.
+[$pName] Woah! Wha… Ugh… How long was I out?
+[$bardName] What do you mean? You only sat in that chair a second ago…
+[$pName] Hmm…
+You stand up and brush the dust off your backside. A second later, a great rumbling shakes the room as the golden door swings open to reveal the path ahead.
+[$aName] Woah, did you do something to pass the trial $pName?
+[$liName] Didn’t look like he did anything except slump in his seat for a moment.
+[$mName] Maybe the test is that you have to be comfortable enough with who you are as a person that you can fall asleep in any chair.
+[$bardName] $mName, that’s the dumbest theory I’ve ever heard. $pName what happened?
+[$pName] It’s hard to describe, honestly. But I know one thing: in the next room we are going to find the Ancient Scripture.
+[$liName] Lets get moving then.
+The five of you make your way through the door without incident and continue forwards. Yet again, you find yourself peering down a long and dangerous looking staircase, and you begin to travel deeper and deeper into the temple. Finally, you make it to the end of the stairway and turn the corner
