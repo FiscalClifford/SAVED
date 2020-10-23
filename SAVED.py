@@ -365,6 +365,7 @@ def loadGame(window):
     disp_txt("\nLoading Game...\n")
     window.destroy()
 
+
     music.startBackgroundMusic()
     if g.currentRoom == "arc1_0":
         g.currentRoom = "arc1_1"
@@ -399,9 +400,6 @@ def fakeLoad(window):
     window.destroy()
     flag.loadTimes = flag.loadTimes + 1
 
-    #If you physically altered the world, we need to Undo that here
-    flag.loosenedPlanks = "false"
-    flag.metB = "false"
 
     music.startBackgroundMusic()
     if g.currentRoom == "arc1_0":
@@ -729,7 +727,7 @@ def queue_start_story(window):
         g.firstTimeArc2 = "false"
         g.aRecognize = "true"
         g.seenForest = "true"
-        
+
     room_run("arc1_0")
     getInput("Please Enter Character Name:")
     g.pName = g.inputResponse
@@ -889,6 +887,9 @@ def arc2_0():
     create_choices(choices, paths)
 
 def arc2_1():
+    # If you physically altered the world, we need to Undo that here
+    flag.loosenedPlanks = "false"
+    flag.metB = "false"
     if g.firstTimeArc2 == "true":
         room_run("arc2_1")
     else:
@@ -1112,11 +1113,14 @@ def arc2_28():
     create_choices(choices, paths)
 
 def arc2_29():
-    if flag.muggerMissing == "true":
+    if flag.muggerMissing == "true" and g.aRecognize == "false":
         flag.muggerMissing = "false"
         arc2_46()
     else:
-        room_run("arc2_29")
+        if g.aRecognize == "true":
+            room_run("arc8_0")
+        else:
+            room_run("arc2_29")
 
         if flag.metB == "true":
             flag.metB = "false"
