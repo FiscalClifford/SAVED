@@ -27,9 +27,10 @@ badInput = ["!","@","#","$","%","^","&","*","^_^",":)"," ","",".",",","-","_","$
 maudAnswers = ["0", 0, "zero", "none", "nothing", "no fingers", "there aren't any"]
 stopText = False
 
+
 class g:
+    #these globals are "remembered" after saves
     inputResponse = "null"
-    currentRoom = "null"
     savedRoom = "null"
     txtSpeed = "0.05"
     txtSize = "16"
@@ -69,27 +70,29 @@ class g:
     aRecognize = "false" #if you play a second time a and li will recognize you
     seenForest = "false"
 
-
+    bishopMelt = "false"
+    firstMeeting = "true"
+    firstAmbush = "false"
+    chopped = "false"
+    failCounter = 0
+    loadTimes = 0
+    deathCounter = 1
+    famineCounter = 23
+    takenTrial = "false"
+    
+    
 class flag:
-
-    # !!!Flags!!!
+    # !!!Flags get reset between each save
     loosenedPlanks = "false"
     hasPotato = "false"
     muggerMissing = "false"
     metB = "false"
-    firstMeeting = "true"
-    takenTrial = "false"
-    bishopMelt = "false"
-    firstAmbush = "false"
     talkedTo = "null"
-    failCounter = 0
-    loadTimes = 0
     deathReturn = "null"
-    chopped = "false"
-    deathCounter = 1
     fightingFamine = "false"
-    famineCounter = 23
     dontMakeButton = "false"
+    currentRoom = "null"
+    skipThisOne = "false"
 
 
 class VLC:
@@ -272,25 +275,25 @@ def getDisplayName():
 def checkLoadTimes():
 
     #if changing how many loads it takes to go crazy, don't forget to change the text on create_choices as well
-    if 3 < flag.loadTimes < 8:
+    if 3 < g.loadTimes < 8:
         clear_screen()
         string = "Your brain stings, your very soul aches in pain. It feels as if a small part of yourself was lost.\n\n"
         disp_txt(string)
         time.sleep(2)
 
-    if 7 < flag.loadTimes < 14:
+    if 7 < g.loadTimes < 14:
         clear_screen()
         string = "Your spirit screams in agony. Your soul wails in despair. You have dealt irreparable damage to yourself, but the consequences" \
                  " are yet to seen.\n\n"
         disp_txt(string)
         time.sleep(2)
-    if 13 < flag.loadTimes < 18:
+    if 13 < g.loadTimes < 18:
         clear_screen()
         string = "You feel your very sanity slipping, your soul withers away. Something core to who you are has been lost to the void forever. You start to chuckle.\n[" \
                  + g.pName + "] haha... HAHAHAHA...\n\n"
         disp_txt(string)
         time.sleep(2)
-    if 17 < flag.loadTimes < 20:
+    if 17 < g.loadTimes < 20:
         clear_screen()
         string = "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA.\n[" \
                  "HAHAHA] HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n\n HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n\n"
@@ -307,10 +310,11 @@ def postDeathPassage(toPrint):
 
 def deadChecker():
     # if you just died this is a special message for you :)
-    if g.currentRoom == "arc5_13":
+    if flag.skipThisOne == "true":
+        flag.skipThisOne = "false"
         checkLoadTimes()
         eval('arc5_14()')
-    if flag.deathReturn == "arc2_17" or flag.deathReturn == "arc2_42":
+    elif flag.deathReturn == "arc2_17" or flag.deathReturn == "arc2_42":
         flag.deathReturn = "null"
         postDeathPassage('arc2_52')
 
@@ -367,11 +371,11 @@ def loadGame(window):
 
 
     music.startBackgroundMusic()
-    if g.currentRoom == "arc1_0":
-        g.currentRoom = "arc1_1"
+    if flag.currentRoom == "arc1_0":
+        flag.currentRoom = "arc1_1"
         g.savedRoom = "arc1_1"
-    if g.currentRoom == "arc5_13":
-        g.currentRoom = "arc5_14"
+    if flag.currentRoom == "arc5_13":
+        flag.currentRoom = "arc5_14"
         g.savedRoom = "arc5_14"
 
     eval(g.savedRoom + "()")
@@ -380,12 +384,15 @@ def loadGame(window):
 
 def fakeLoad(window):
     win.deiconify()
+    if flag.currentRoom == "arc5_13":
+        flag.skipThisOne = "true"
+
     with open('./savefile', 'rb') as f:
         data = pickle.load(f)
-    list1 = vars(g)
+    list1 = vars(flag)
     for v in list1:
         if v.startswith("__") == False:
-            setattr(g, v, data[v])
+            setattr(flag, v, data[v])
             print(v)
     print("FakeLoading:")
 
@@ -394,21 +401,19 @@ def fakeLoad(window):
     for x in list:
         if str(x) != str(list[0]):
             x.destroy()
-
+        
     print("Game Loaded")
     disp_txt("\nLoading Game...\n")
     window.destroy()
-    flag.loadTimes = flag.loadTimes + 1
-
-
+    g.loadTimes = g.loadTimes + 1
+    
     music.startBackgroundMusic()
-    if g.currentRoom == "arc1_0":
-        g.currentRoom = "arc1_1"
+    if g.savedRoom == "arc1_0":
         g.savedRoom = "arc1_1"
-    if g.currentRoom == "arc5_13":
-        g.currentRoom = "arc5_14"
+    if g.savedRoom == "arc5_13":
         g.savedRoom = "arc5_14"
-
+        
+    flag.currentRoom = g.savedRoom
     deadChecker()
 
 
@@ -416,7 +421,7 @@ def saveGame(window):
     now = datetime.now()
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     data = {}
-    g.savedRoom = g.currentRoom
+    g.savedRoom = flag.currentRoom
     list1 = vars(g).items()
     list2 = vars(flag).items()
 
@@ -439,8 +444,8 @@ def saveGame(window):
 
     #famine stuff
     if flag.fightingFamine == "true":
-        flag.famineCounter = flag.famineCounter + 1
-        eval('arc7_'+ str(flag.famineCounter) + '()')
+        g.famineCounter = g.famineCounter + 1
+        eval('arc7_'+ str(g.famineCounter) + '()')
 
     window.destroy()
 
@@ -507,7 +512,7 @@ def disp_txt(string):
 
 def room_run(section):
     clear_screen()
-    g.currentRoom = section
+    flag.currentRoom = section
     to_display = replace_variables(story_content[section])
     disp_txt(to_display)
 
@@ -522,17 +527,17 @@ def replace_variables(string):
             string = string.replace("$"+globy, str(value))
     print("################")
 
-    if 15 < flag.loadTimes < 19:
+    if 15 < g.loadTimes < 19:
         string = string.replace('a', 'ha')
 
-    if 18 < flag.loadTimes < 21:
+    if 18 < g.loadTimes < 21:
         string = string.replace(g.pName, 'HAHAHA')
         string = string.replace(g.aName, 'HAHAHA')
         string = string.replace(g.bName, 'HAHAHA')
         string = string.replace(g.liName, 'HAHAHA')
         string = string.replace('a', 'ha')
 
-    if flag.loadTimes > 20:
+    if g.loadTimes > 20:
         string = "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
                  "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
                  "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
@@ -707,7 +712,7 @@ def create_choices(choiceList, pathList):
             x.destroy()
     #create buttons for the amount of options available, represtented by 'number'
     for i in range(0, len(choiceList)):
-        if flag.loadTimes > 15:
+        if g.loadTimes > 15:
             button = Button(frame2, text="HAHAHAHA", command=lambda i=i: click_choice(pathList[i]), bg="#333333", fg="#EEEEEE")
             button.pack(fill='both', expand='yes')
         else:
@@ -1138,7 +1143,7 @@ def arc2_29():
 
 def arc2_58(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_58")
-    if flag.firstMeeting == "true":
+    if g.firstMeeting == "true":
         disp_txt("\nYou feel a hint of sweat gathering on your temple and try not to look guilty. What you need "
                  "is a way to get out of this awkward conversation while simultaneously not ostracizing "
                  "yourself from the group. This may be your only chance to convince them to help you, and "
@@ -1151,7 +1156,7 @@ def arc2_58(): #Placed here because it is a continuation of arc 29 for simplicit
 
 def arc2_59(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_59")
-    if flag.firstMeeting == "true":
+    if g.firstMeeting == "true":
         disp_txt("\nYou feel frozen, it is as if she has seen right through you. You shift uncomfortably again, "
                  "trying to think of a way to get her off your back. But how? The " + str(g.food) + " worked for a little"
                  " bit so maybe something similar could get her to back off. You feel in your pocket your "
@@ -1174,7 +1179,7 @@ def arc2_60(): #Placed here because it is a continuation of arc 29 for simplicit
 
 def arc2_61(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_61")
-    if flag.firstMeeting == "true":
+    if g.firstMeeting == "true":
         disp_txt("\nYou aren’t really sure why but you know you have to join these people on their quest. "
                  "You also know that everything " + str(g.liName) + " just said is true, you truly offer little value. "
                  "The trick then will have to be convincing them to allow you to join, and then prove your "
@@ -1189,7 +1194,7 @@ def arc2_62(): #Placed here because it is a continuation of arc 29 for simplicit
     room_run("arc2_62")
 
     #next is choose which death or victory you get
-    flag.firstMeeting = "false"
+    g.firstMeeting = "false"
     if g.knowsDeath == "false" and flag.loosenedPlanks == "false":
         choices = ["Join " + str(g.aName) + " and " + str(g.liName), "Join " + str(g.bName)]
         paths = ["arc2_31", "arc2_30"]
@@ -1459,7 +1464,7 @@ def arc4_7():
 
 def arc4_8():
     room_run("arc4_8")
-    if flag.takenTrial == "true":
+    if g.takenTrial == "true":
         choices = ["Continue..."]
         paths = ["arc4_10"]
     else:
@@ -1524,56 +1529,56 @@ def arc4_17():
     create_choices(choices, paths)
 
 def arc4_18():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_18")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_19():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_19")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_20():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_20")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_21():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_21")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_22():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_22")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_23():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_23")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_24():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_24")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_25():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_25")
     choices = ["Continue..."]
     paths = ["arc4_26"]
@@ -1691,7 +1696,7 @@ def arc5_11():
 
 def arc5_12():
     room_run("arc5_12")
-    if flag.bishopMelt == "false":
+    if g.bishopMelt == "false":
         choices = ["Continue..."]
         paths = ["arc5_13"]
     else:
@@ -1727,11 +1732,11 @@ def arc6_0():
 def arc6_1():
     disp_txt("             ")
     room_run("arc6_1")
-    if flag.failCounter < 4:
+    if g.failCounter < 4:
         choices = ["Continue..."]
         paths = ["arc6_25"]
     else:
-        if flag.firstAmbush == "false":
+        if g.firstAmbush == "false":
             choices = ["Continue..."]
             paths = ["arc6_2"]
         else:
@@ -1747,7 +1752,7 @@ def arc6_2():
 
 def arc6_3():
     room_run("arc6_3")
-    flag.firstAmbush = "true"
+    g.firstAmbush = "true"
 
 def arc6_4():
     room_run("arc6_4")
@@ -1797,7 +1802,7 @@ def arc6_10():
     create_choices(choices, paths)
 
 def arc6_11():
-    flag.failCounter = flag.failCounter + 1
+    g.failCounter = g.failCounter + 1
     room_run("arc6_11")
 
 def arc6_12():
@@ -1807,14 +1812,14 @@ def arc6_12():
     create_choices(choices, paths)
 
 def arc6_13():
-    flag.failCounter = flag.failCounter + 1
+    g.failCounter = g.failCounter + 1
     room_run("arc6_13")
     choices = ["Continue..."]
     paths = makeTears()
     create_choices(choices, paths)
 
 def arc6_14():
-    flag.failCounter = flag.failCounter + 1
+    g.failCounter = g.failCounter + 1
     room_run("arc6_14")
     choices = ["Continue..."]
     paths = makeTears()
@@ -1827,7 +1832,7 @@ def arc6_15():
     create_choices(choices, paths)
 
 def arc6_16():
-    flag.failCounter = flag.failCounter + 1
+    g.failCounter = g.failCounter + 1
     room_run("arc6_16")
     choices = ["Continue..."]
     paths = makeTears()
@@ -1841,12 +1846,12 @@ def arc6_17():
     create_choices(choices, paths)
 
 def arc6_18():
-    flag.failCounter = flag.failCounter + 1
-    flag.chopped = "true"
+    g.failCounter = g.failCounter + 1
+    g.chopped = "true"
     room_run("arc6_18")
 
 def arc6_19():
-    flag.failCounter = flag.failCounter + 1
+    g.failCounter = g.failCounter + 1
     room_run("arc6_19")
     choices = ["Continue..."]
     paths = makeTears()
@@ -1944,8 +1949,8 @@ def arc7_2():
     create_choices(choices, paths)
 
 def arc7_3():
-    if flag.loadTimes > 14:
-        flag.loadTimes = 14
+    if g.loadTimes > 14:
+        g.loadTimes = 14
     music.playAlonne()
     room_run("arc7_3")
     choices = ["FIGHT DEATH", "sacrifice "+ g.liName, "sacrifice "+ g.aName,"sacrifice "+ g.mName,"sacrifice "+ g.bardName,"sacrifice Chef"]
@@ -1991,10 +1996,10 @@ def arc7_11():
                'swing', 'attack', 'block', 'defend', 'thrust', 'crouch', 'spin', 'evade']
     choices = []
     paths = []
-    successChoice = random.randint(0, flag.deathCounter - 1)
-    for x in range(0, flag.deathCounter):
+    successChoice = random.randint(0, g.deathCounter - 1)
+    for x in range(0, g.deathCounter):
         choices.append(random.choice(actions))
-    for x in range(0, flag.deathCounter):
+    for x in range(0, g.deathCounter):
         if x == successChoice:
             paths.append("arc7_12")
         else:
@@ -2002,7 +2007,7 @@ def arc7_11():
     room_run("arc7_11")
 
     create_choices(choices, paths)
-    flag.deathCounter = flag.deathCounter + 1
+    g.deathCounter = g.deathCounter + 1
 
 def arc7_12():
     room_run("arc7_12")
@@ -2303,7 +2308,7 @@ def arc7_36():
                  " her wellbeing, you tossed her to the side like trash. You probably even chuckled at the gruesome"
                  " description of $mName’s death didn’t you? STOP PLAYING THE GAME RIGHT NOW. NEVER COME BACK.")
     #if you chopped off a's fingers then disp_txt
-    if flag.chopped == "true":
+    if g.chopped == "true":
         disp_txt("\n[Authors Note] And don’t even get me started on when you chopped off $aName’s fingers, seriously"
                  " WHAT THE FUCK IS WRONG WITH YOU. YOU DISGUST ME. STOP PLAYING THE GAME RIGHT NOW. NEVER COME BACK.")
 
