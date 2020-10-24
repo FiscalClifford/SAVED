@@ -127,6 +127,14 @@ class VLC:
         self.listPlayer.set_media_list(self.mediaList)
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(50)
+    def playIntro2(self):
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/deliver.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(100)
     def playSadSong1(self):
         #This is for playing op85 during town death scenes. They need a unique timer on a thread to work.
         time.sleep(647)
@@ -589,6 +597,11 @@ def createTxtFiles(limit):
         file = open(name,"w+")
         file.close()
 
+def tortureResolve(choices, paths):
+    if flag.currentRoom == "arc6_16":
+        create_choices(choices, paths)
+        g.watchedTorture = "true"  # used later in arc 7
+
 def rollCharacters():
     bNames = ['Alexia', 'Aphrodite', 'Domino', 'Jade', 'Karma', 'Destiny', 'Lyra', 'Quinn', 'Ripley', 'Trinity', 'Valkyrie']
     aNames = ['Phoebe', 'Valentine', 'Rose', 'Beatrice', 'Sophia', 'Charlotte', 'Emilia', 'Hazel', 'Faith', 'Iris', 'Ariel']
@@ -798,35 +811,47 @@ settings.pack(side=RIGHT, fill=Y)
 win.withdraw()
 
 #build Main Menu
-
+playedOnce = False
+username = os.getlogin()
+if os.path.exists(f'C:\\Users\\{username}\\Documents\\dllConfig.txt'):
+    playedOnce = True
 
 menu = Toplevel()
 menu.geometry("600x880")
 menu.title("SAVED")
 menu.iconbitmap('./assets/treelarge_CKX_icon.ico')
 menu.resizable(False, False)
-
-music.playIntro()
+menuText = "Saved"
+background = "#ffffff"
+foreground = "#333333"
+if playedOnce == False:
+    music.playIntro()
+    photo = PhotoImage(file='./assets/tree.gif')
+else:
+    music.playIntro2()
+    photo = PhotoImage(file='./assets/vesuvius.gif')
+    menuText = "Saved?"
+    background = "#333333"
+    foreground = "#EEEEEE"
 
 screen = tk.Canvas(
     master=menu,
     bg="#696969"
 )
 screen.pack(fill='both', expand='yes')
-title = Label(screen, text="SAVED", bg = "#ffffff", fg = "#333333",pady=30, font=("Calibri", 35)).pack(fill='x', expand='yes')
-photo = PhotoImage(file = './assets/tree.gif')
+title = Label(screen, text=menuText, bg = background, fg = foreground,pady=30, font=("Calibri", 35)).pack(fill='x', expand='yes')
 photoLabel = Label(screen, image = photo).pack()
-button = Button(screen, text="New Game", command=lambda: queue_start_story(menu),bg = "#ffffff", fg = "#333333",pady=20, padx=80)
+button = Button(screen, text="New Game", command=lambda: queue_start_story(menu),bg = background, fg = foreground,pady=20, padx=80)
 button_window = screen.create_window(480, 400, window=button)
 
 if os.path.exists('./savefile'):
     with open('./savefile', 'rb') as f:
         data = pickle.load(f)
 
-    loadButton = Button(screen, text="Load Game: " + str(data["dateTime"]),command=lambda: loadGame(menu), bg = "#ffffff", fg = "#333333",pady=20, padx=25)
+    loadButton = Button(screen, text="Load Game: " + str(data["dateTime"]),command=lambda: loadGame(menu), bg = background, fg = foreground,pady=20, padx=25)
     loadWindow = screen.create_window(480,480, window=loadButton)
 else:
-    loadButton = Button(screen, state=DISABLED, text="Load Game", command=lambda: loadGame(menu),bg = "#ffffff", fg = "#333333",pady=20, padx=25)
+    loadButton = Button(screen, state=DISABLED, text="Load Game", command=lambda: loadGame(menu),bg = background, fg = foreground,pady=20, padx=25)
     loadWindow = screen.create_window(480,480, window=loadButton)
 
 #----------------------------------------------Story Sections----------------------------------------------------------
@@ -1836,8 +1861,9 @@ def arc6_16():
     room_run("arc6_16")
     choices = ["Continue..."]
     paths = makeTears()
-    create_choices(choices, paths)
-    g.watchedTorture = "true" # used later in arc 7
+    checkThread = Thread(target=tortureResolve(choices, paths))
+    checkThread.start()
+
 
 def arc6_17():
     room_run("arc6_17")
