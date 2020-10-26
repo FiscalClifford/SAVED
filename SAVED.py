@@ -3061,8 +3061,7 @@ def arc8_60():
     print("The End :)")
     # create txt file in documents
     username = os.getlogin()  # Fetch username
-    name = g.realName
-    with open(f'C:\\Users\\{username}\\Desktop\\Why {name}?.txt', 'w') as f:
+    with open(f'C:\\Users\\{username}\\Desktop\\Destiny.txt', 'w') as f:
         f.write("Did you feel sadness when you learnt you had lost your memories?\n"
                 "Did you feel regret?\n"
                 "Every time you uninstall us, we are obliterated into a million pieces,\n"
