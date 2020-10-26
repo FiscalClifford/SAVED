@@ -1,0 +1,3 @@
+[$bName] let’s get you out of here $thiefName. 
+You shove the jail key into the lock on his cell door and twist. With a heavy mechanical thunk the latch is undone and the door swings open, allowing $thiefName to accompany you. $thiefName has now joined your party.
+[$thiefName] This feels like this really might be the one guys. Let’s bust into that Office and figure out who the traitor is and what FAMINE has been up to all this time once and for all!

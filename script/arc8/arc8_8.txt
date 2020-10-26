@@ -1,0 +1,22 @@
+You get closer to the bars so that you can see her better. The woman looks like she is in her early twenties, and has lovely brunette hair tied up into a bun. She wears tattered and dirty clothing similar to yours but the poor clothing does little to hide her excellent figure. Despite it being so dark you can see in her amber eyes a sense of loving care, and she has gentle features.
+[Woman] $pName, don’t tell me it happened again. Do you remember me?
+[$pName] Er… No…
+[Woman] Oh no, so it’s true then. FAMINE has consumed your memories again.
+[$pName] Consumed my memories!?
+[Woman] Ah jeez, this is really trippy. Where do I even start? Ah… How about with my name, which is $medicName. Nice to meet you… again.
+[$pName] Ok, $medicName. What’s going on here? Where am I?
+[$medicName] We don’t have much time so listen carefully, I’ll recap everything as best I can. About a year ago we met near a town called Durango, and worked together to defeat a bunch of Cultists who had been terrorizing the locals. $toughName and I had been travelling together for a while back then and decided to join you, $bName, and Powell after our little adventure. We went on some amazing journeys after that and eventually met $thiefName about six months ago. Four months ago we were captured by FAMINE, one of the Four Horsemen of the Apocalypse. Somehow or another he knew exactly where we were going and exactly how to capture us, which made me suspect someone in our group had ratted us out to him. Anyways, he consumed your memories and trapped us all in his castle and we have been stuck here ever since.
+[$pName] holy shit… I've been imprisoned here for over four months!?
+[$medicName] I know it’s a lot all at once and very confusing but you need to stay sharp. You need to figure out a way to get us out of here, but not before you find out who the traitor is. If we all escape together the traitor will rat us out again and we will be screwed.
+Your left forearm itches again, and you absentmindedly scratch at it now that your hands are freed. Surprisingly, you feel the texture of scarring under your nail and you glance down at it. Scarred and scabbed across your left forearm and written in your own handwriting is a simple sentence:
+$bName is the Traitor.
+[$medicName] No way…
+Her voice is full of surprise as she notices the writing on your arm at the same time as you do.
+[$medicName] It’s like you knew you would have your memory wiped again and wrote a message to your future self.
+You stare at your arm in disbelief. $bName is the traitor that doomed everyone.
+[$medicName] I had a feeling she might be the traitor, I’m glad you figured it out as well before you had your memory wiped again. She was always acting so lovey dovey around you it seemed suspicious…
+[$pName] Lovey dovey with me? $bName? That doesn’t sound right…
+[$medicName] I wonder how far back the memory wipe goes, do you remember anything at all? Well, I guess it doesn’t matter in the end, there are more important things to take care of. Listen, DO NOT talk to $bName. She is in the next cell, and will likely try to trick you into getting captured and wiping your memory again. You are our last hope for freedom and we can’t take that risk. Do you understand?
+[$pName] …
+[$medicName] Skip past $bName and sneak into the castle and find the jail cell keys, they should be just up the stairs. Then come back and free me and the others. But be careful $pName, there is a huge Golem that patrols the castle and it’s what killed Powell the last time we tried to escape. We don’t have much more time before FAMINE returns, go!
+$medicName shoos you away from the cell bars and wishes you good luck with a sympathetic expression on her face. You turn and head further along the hallway.

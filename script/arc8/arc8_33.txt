@@ -1,0 +1,7 @@
+[$pName] $toughName, I have something to show you.
+[$toughName] Fook you.
+Ignoring him, you pull the bloody scalpel out and show it to him. $toughName reaches out between the bars and grabs it carefully, then inspects it.
+[$toughName] ‘An wha’ is this supposed tah be?
+[$pName] Evidence. I know you don’t trust me, but I also know that you would change your mind if shown the proper proof that I am innocent. That is what the scalpel is for.
+[$toughName] Eef it ain’t ye, then who th’ fook killed Powell!?
+[$pName] The Traitor has plagued our crew for a long time now, and without properly identifying them we will never be able to escape. I have gathered as much evidence as I can, and am ready to declare who the traitor is. The Traitor is none other than…

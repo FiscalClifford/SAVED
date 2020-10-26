@@ -1,0 +1,30 @@
+You stroll around the library looking for anything of interest, but nothing in particular stands out to you. $medicName seems to be extremely on edge for some reason, and stands next to one of the bookshelves.
+[$pName] What’s wrong $medicName?
+[$medicName] Nothing, I’m just afraid that the Golem is gonna find us. This room only has one entrance and if we get cornered…
+[$pName] Try to look around then, the sooner we find some kind of clue the sooner we can leave.
+You continue to search around the library but find nothing. Eventually you circle around back to $medicName to tell her you give up.
+[$pName] I’m not seeing anything, maybe we should… what’s that behind you?
+[$medicName] huh!?
+You push $medicName to the side and see a red book that you hadn’t noticed before leaning at a strange angle out of a bookshelf.
+[$pName] I knew it!
+You pull at the red book and it resists as if there was some kind of wire attached to the back of it. A loud click sounds out and suddenly the bookshelf trembles and a mechanical sound fills the room.
+[$pName] It’s a secret room hidden behind the bookshelf!
+The bookshelf slowly swings open, and you can see the faint glow of light proving a secret room hidden behind it. But before you can see what is inside…
+[$medicName] EEEEEEEEEEEEeeeekkkk!
+You spin around rapidly, startled at $medicName’s scream. Flashing dust swirls in front of you and suddenly a green portal appears out of thin air. The portal’s center spins with hypnotic color and makes you dizzy if you look for any longer than half a second. With a tremendous smash, the portal is filled up with the figure of a massive Stone Golem that shoots out of it and cracks into the library floor.
+[$pName] Holy shit!
+The Golem takes only a second to become familiar with its surroundings before locking onto you and marching forward.
+[$pName] Nooo!
+The Stone Golem stands between you and the exit, and just as $medicName feared you are completely trapped. You attempt to juke around it, but the Golem is too quick and catches you in the side with a massive swing of its hardened fist.
+WHOMP
+The force of the punch sends you flying sideways and you smash into a bookshelf, sending splinters in every direction. You crumple to the ground with the wind knocked out of you, and the damaged bookshelf falls over and on top of your prone body. Struggling to breathe, you attempt to push the bookshelf off so that you can escape but within an instant the Golem has smashed through it with both fists. Chunks of shattered wood fly across the library as the Golem raises its fists back up, and you desperately attempt to crawl backwards and away. Its no use however, and the Golem smashes its hands back down and crushes both of your legs, pulverizing each into a mangled heap of flesh and bone.
+[$pName] AAAAAAAAGGGGGHHHH
+You clutch at your disintegrated legs pointlessly and your vision blurs. The pain is so extreme your eyes water and you wail out pathetically. The Golem raises its fists back up for another attack, and this time you can’t move at all.
+WHOMP
+The Golem’s attack smashes into your skull, and everything goes black. You are dead.
+…
+For a splint second before your soul departs your body, a strange image races through your mind. It feels like a long-forgotten dream, and seeing it gives you that satisfying feeling you get when you finally listen to a song you used to play long ago but couldn’t remember what it was called anymore.
+You are in the loft of a barn, and hay is scattered around you. You lay comfortably on a pile of clothes stacked on a clump of the hay, which creates a cozy makeshift sofa. Held in your arms and filled with joy is the face of $bName, who lovingly hugs you back. You share this serene moment silently, simply appreciating the peace of it all. The sky outside is blue, and the smell of nature and love fills your senses. 
+…
+The next moment it all disappears.
+THE END

@@ -1,4 +1,4 @@
-import sys
+import os
 try:
     from tkinter import *
     import tkinter as tk
@@ -7,7 +7,6 @@ try:
     import time
     import pickle
     from datetime import datetime
-    import os
     from shutil import copyfile
     import random
     from vlc import Instance
@@ -27,9 +26,10 @@ badInput = ["!","@","#","$","%","^","&","*","^_^",":)"," ","",".",",","-","_","$
 maudAnswers = ["0", 0, "zero", "none", "nothing", "no fingers", "there aren't any"]
 stopText = False
 
+
 class g:
+    #these globals are "remembered" after saves
     inputResponse = "null"
-    currentRoom = "null"
     savedRoom = "null"
     txtSpeed = "0.05"
     txtSize = "16"
@@ -39,6 +39,7 @@ class g:
     liName = "null"
     mName = "null"
     bardName = "null"
+    baronName = "null"
     thiefName = "null"
     toughName = "null"
     medicName = "null"
@@ -68,28 +69,43 @@ class g:
     knowsDeath = "false"
     aRecognize = "false" #if you play a second time a and li will recognize you
     seenForest = "false"
-
-
+    bishopMelt = "false"
+    firstMeeting = "true"
+    firstAmbush = "false"
+    chopped = "false"
+    failCounter = 0
+    loadTimes = 0
+    deathCounter = 1
+    famineCounter = 23
+    takenTrial = "false"
+    seenSecret = "false"
+    inspectBody = "false"
+    seenBody = "false"
+    seenSecretSolo = "false"
+    unlockSecretSolo = "false"
+    deathReturn = "null"
+    hammerHint = "false"
+    
 class flag:
-
-    # !!!Flags!!!
+    # !!!Flags get reset between each save
     loosenedPlanks = "false"
     hasPotato = "false"
     muggerMissing = "false"
     metB = "false"
-    firstMeeting = "true"
-    takenTrial = "false"
-    bishopMelt = "false"
-    firstAmbush = "false"
     talkedTo = "null"
-    failCounter = 0
-    loadTimes = 0
-    deathReturn = "null"
-    chopped = "false"
-    deathCounter = 1
     fightingFamine = "false"
-    famineCounter = 23
-    dontMakeButton = "false"
+    currentRoom = "null"
+    skipThisOne = "false"
+    talkBeforeKey = "false"
+    bJoined = "false"
+    thiefJoined = "false"
+    medicJoined = "false"
+    toughJoined = "false"
+    hasKeys = "false"
+    hasScalpel = "false"
+    declaredMedic = "false"
+    declaredbName = "false"
+    bQuestion = "false"
 
 
 class VLC:
@@ -124,6 +140,22 @@ class VLC:
         self.listPlayer.set_media_list(self.mediaList)
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(50)
+    def playIntro2(self):
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/deliver.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(100)
+    def playIntro3(self):
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/slender.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(100)
     def playSadSong1(self):
         #This is for playing op85 during town death scenes. They need a unique timer on a thread to work.
         time.sleep(647)
@@ -243,6 +275,33 @@ class VLC:
         self.listPlayer.set_media_list(self.mediaList)
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(100)
+    def playRailgun(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/railgun.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
+    def playTanjiro(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/tanjiro.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
+    def playScum(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/scum.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
 
 music = VLC()
 
@@ -272,25 +331,25 @@ def getDisplayName():
 def checkLoadTimes():
 
     #if changing how many loads it takes to go crazy, don't forget to change the text on create_choices as well
-    if 3 < flag.loadTimes < 8:
+    if 3 < g.loadTimes < 8:
         clear_screen()
         string = "Your brain stings, your very soul aches in pain. It feels as if a small part of yourself was lost.\n\n"
         disp_txt(string)
         time.sleep(2)
 
-    if 7 < flag.loadTimes < 14:
+    if 7 < g.loadTimes < 14:
         clear_screen()
         string = "Your spirit screams in agony. Your soul wails in despair. You have dealt irreparable damage to yourself, but the consequences" \
                  " are yet to seen.\n\n"
         disp_txt(string)
         time.sleep(2)
-    if 13 < flag.loadTimes < 18:
+    if 13 < g.loadTimes < 18:
         clear_screen()
         string = "You feel your very sanity slipping, your soul withers away. Something core to who you are has been lost to the void forever. You start to chuckle.\n[" \
                  + g.pName + "] haha... HAHAHAHA...\n\n"
         disp_txt(string)
         time.sleep(2)
-    if 17 < flag.loadTimes < 20:
+    if 17 < g.loadTimes < 20:
         clear_screen()
         string = "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA.\n[" \
                  "HAHAHA] HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n\n HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n\n"
@@ -301,37 +360,46 @@ def checkLoadTimes():
 def postDeathPassage(toPrint):
     checkLoadTimes()
     room_run(toPrint)
+    if toPrint == "arc2_56" and g.hammerHint == "true":
+        disp_txt("\nNow that you have figured out what happened to the woman's husband, you should probably let her know about the bad news.")
+        g.hammerHint = "false"
     choices = ["Continue..."]
     paths = [g.savedRoom]
     create_choices(choices, paths)
 
 def deadChecker():
     # if you just died this is a special message for you :)
-    if g.currentRoom == "arc5_13":
+    if flag.skipThisOne == "true":
+        flag.skipThisOne = "false"
         checkLoadTimes()
         eval('arc5_14()')
-    if flag.deathReturn == "arc2_17" or flag.deathReturn == "arc2_42":
-        flag.deathReturn = "null"
+    elif g.deathReturn == "arc2_17" or g.deathReturn == "arc2_42":
+        g.deathReturn = "null"
         postDeathPassage('arc2_52')
 
-    elif flag.deathReturn == "arc2_18" or flag.deathReturn == "arc2_35" or flag.deathReturn == "arc2_36":
-        flag.deathReturn = "null"
+    elif g.deathReturn == "arc2_18":
+        g.deathReturn = "null"
         postDeathPassage('arc2_56')
 
-    elif flag.deathReturn == "arc2_30" or flag.deathReturn == "arc2_48":
-        flag.deathReturn = "null"
+    elif g.deathReturn == "arc2_35" or g.deathReturn == "arc2_36":
+        g.deathReturn = "null"
+        g.hammerHint = "true"
+        postDeathPassage('arc2_56')
+
+    elif g.deathReturn == "arc2_30" or g.deathReturn == "arc2_48":
+        g.deathReturn = "null"
         postDeathPassage('arc2_54')
 
-    elif flag.deathReturn == "arc2_31" or flag.deathReturn == "arc2_47":
-        flag.deathReturn = "null"
+    elif g.deathReturn == "arc2_31" or g.deathReturn == "arc2_47":
+        g.deathReturn = "null"
         postDeathPassage('arc2_53')
 
-    elif flag.deathReturn == "arc2_43":
-        flag.deathReturn = "null"
+    elif g.deathReturn == "arc2_43":
+        g.deathReturn = "null"
         postDeathPassage('arc2_57')
 
-    elif flag.deathReturn == "arc2_44":
-        flag.deathReturn = "null"
+    elif g.deathReturn == "arc2_44":
+        g.deathReturn = "null"
         postDeathPassage('arc2_55')
     else:
         checkLoadTimes()
@@ -367,11 +435,11 @@ def loadGame(window):
 
 
     music.startBackgroundMusic()
-    if g.currentRoom == "arc1_0":
-        g.currentRoom = "arc1_1"
+    if flag.currentRoom == "arc1_0":
+        flag.currentRoom = "arc1_1"
         g.savedRoom = "arc1_1"
-    if g.currentRoom == "arc5_13":
-        g.currentRoom = "arc5_14"
+    if flag.currentRoom == "arc5_13":
+        flag.currentRoom = "arc5_14"
         g.savedRoom = "arc5_14"
 
     eval(g.savedRoom + "()")
@@ -380,12 +448,15 @@ def loadGame(window):
 
 def fakeLoad(window):
     win.deiconify()
+    if flag.currentRoom == "arc5_13":
+        flag.skipThisOne = "true"
+
     with open('./savefile', 'rb') as f:
         data = pickle.load(f)
-    list1 = vars(g)
+    list1 = vars(flag)
     for v in list1:
         if v.startswith("__") == False:
-            setattr(g, v, data[v])
+            setattr(flag, v, data[v])
             print(v)
     print("FakeLoading:")
 
@@ -394,21 +465,19 @@ def fakeLoad(window):
     for x in list:
         if str(x) != str(list[0]):
             x.destroy()
-
+        
     print("Game Loaded")
     disp_txt("\nLoading Game...\n")
     window.destroy()
-    flag.loadTimes = flag.loadTimes + 1
-
-
+    g.loadTimes = g.loadTimes + 1
+    
     music.startBackgroundMusic()
-    if g.currentRoom == "arc1_0":
-        g.currentRoom = "arc1_1"
+    if g.savedRoom == "arc1_0":
         g.savedRoom = "arc1_1"
-    if g.currentRoom == "arc5_13":
-        g.currentRoom = "arc5_14"
+    if g.savedRoom == "arc5_13":
         g.savedRoom = "arc5_14"
-
+        
+    flag.currentRoom = g.savedRoom
     deadChecker()
 
 
@@ -416,7 +485,7 @@ def saveGame(window):
     now = datetime.now()
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     data = {}
-    g.savedRoom = g.currentRoom
+    g.savedRoom = flag.currentRoom
     list1 = vars(g).items()
     list2 = vars(flag).items()
 
@@ -439,8 +508,8 @@ def saveGame(window):
 
     #famine stuff
     if flag.fightingFamine == "true":
-        flag.famineCounter = flag.famineCounter + 1
-        eval('arc7_'+ str(flag.famineCounter) + '()')
+        g.famineCounter = g.famineCounter + 1
+        eval('arc7_'+ str(g.famineCounter) + '()')
 
     window.destroy()
 
@@ -482,7 +551,6 @@ def textOutput(string):
             print("stopText used")
             print(string)
             stopText = False
-            flag.dontMakeButton = "true"
             break
 
         if g.txtSpeed != "0.0001":
@@ -507,7 +575,7 @@ def disp_txt(string):
 
 def room_run(section):
     clear_screen()
-    g.currentRoom = section
+    flag.currentRoom = section
     to_display = replace_variables(story_content[section])
     disp_txt(to_display)
 
@@ -522,17 +590,17 @@ def replace_variables(string):
             string = string.replace("$"+globy, str(value))
     print("################")
 
-    if 15 < flag.loadTimes < 19:
+    if 15 < g.loadTimes < 19:
         string = string.replace('a', 'ha')
 
-    if 18 < flag.loadTimes < 21:
+    if 18 < g.loadTimes < 21:
         string = string.replace(g.pName, 'HAHAHA')
         string = string.replace(g.aName, 'HAHAHA')
         string = string.replace(g.bName, 'HAHAHA')
         string = string.replace(g.liName, 'HAHAHA')
         string = string.replace('a', 'ha')
 
-    if flag.loadTimes > 20:
+    if g.loadTimes > 20:
         string = "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
                  "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
                  "HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAAHAHAHAHAHAHAHHAHAHAAHAHAHAHAHAHAHAHHAHAAHHAHAHHAA" \
@@ -580,20 +648,31 @@ def getInput(prompt):
 #this is used for creating .txt files before importing the literature
 def createTxtFiles(limit):
     for i in range(0, limit):
-        name=("script/arc7_" + f"{i}"+ ".txt")
+        name=("script/arc8_" + f"{i}"+ ".txt")
         file = open(name,"w+")
         file.close()
+
+def tortureResolve(choices, paths):
+    if flag.currentRoom == "arc6_16":
+        create_choices(choices, paths)
+        g.watchedTorture = "true"  # used later in arc 7
+
+def famineResolve(choices, paths):
+    if flag.currentRoom == "arc7_22":
+        create_choices(choices, paths)
+
 
 def rollCharacters():
     bNames = ['Alexia', 'Aphrodite', 'Domino', 'Jade', 'Karma', 'Destiny', 'Lyra', 'Quinn', 'Ripley', 'Trinity', 'Valkyrie']
     aNames = ['Phoebe', 'Valentine', 'Rose', 'Beatrice', 'Sophia', 'Charlotte', 'Emilia', 'Hazel', 'Faith', 'Iris', 'Ariel']
     liNames= ['Chloe', 'Delila', 'Ashe', 'Lucy', 'Violet', 'Autumn', 'Nova', 'Elizabeth', 'Melody', 'Mai', 'Lilith']
-    mNames=['Blain', 'Copper', 'Harry', 'Penn']
+    mNames=  ['Blain', 'Copper', 'Harry', 'Penn']
     bardNames   = ['Paganini', 'Vivaldi', 'Sarasate']
     thiefNames  = ['Tex', 'Lucas', 'Isaac', 'Noland']
     toughNames  = ['Brom', 'Diesel', 'Wulfe', 'Bruce']
     medicNames  = ['Daisy', 'Arya', 'Minneie', 'Sophia']
-    merchantNames = ['Mickey', 'Mack', 'Meebley', 'Mitch']
+    merchantNames=['Mickey', 'Mack', 'Meebley', 'Mitch']
+    baronNames =  ['Lars', 'Gumpdy', 'Gary', 'Gaston']
 
     kingdomNames = ['Luxidium', 'Grandossia', 'Typhon', 'Belium']
     neighborNames= ['Arsenia', 'Dulchio', 'Syndio', 'Kleptorn']
@@ -620,6 +699,7 @@ def rollCharacters():
     g.liName = random.choice(liNames)
     g.mName = random.choice(mNames)
     g.bardName = random.choice(bardNames)
+    g.baronName = random.choice(baronNames)
     g.thiefName = random.choice(thiefNames)
     g.toughName = random.choice(toughNames)
     g.medicName = random.choice(medicNames)
@@ -707,7 +787,7 @@ def create_choices(choiceList, pathList):
             x.destroy()
     #create buttons for the amount of options available, represtented by 'number'
     for i in range(0, len(choiceList)):
-        if flag.loadTimes > 15:
+        if g.loadTimes > 18:
             button = Button(frame2, text="HAHAHAHA", command=lambda i=i: click_choice(pathList[i]), bg="#333333", fg="#EEEEEE")
             button.pack(fill='both', expand='yes')
         else:
@@ -722,7 +802,7 @@ def queue_start_story(window):
     win.deiconify()
     username = os.getlogin()
     #these flags are set for your second playthrough
-    if os.path.exists(f'C:\\Users\\{username}\\Documents\\dllConfig.txt'):
+    if os.path.exists(f'C:\\Users\\{username}\\Documents\\dllConfig.txt') or os.path.exists(f'C:\\Users\\{username}\\Documents\\xllConfig.txt'):
         g.knowsDeath = "true"
         g.firstTimeArc2 = "false"
         g.aRecognize = "true"
@@ -733,7 +813,7 @@ def queue_start_story(window):
     g.pName = g.inputResponse
     g.inputResponse = "null"
     choices = ["Continue..."]
-    paths = ["arc1_8"] # if resetting, send to 1_8
+    paths = ["arc7_19"] # if resetting, send to 1_8
     create_choices(choices, paths)
 ####################################################################################################################################################################################################################
 def quit_me():
@@ -793,36 +873,57 @@ settings.pack(side=RIGHT, fill=Y)
 win.withdraw()
 
 #build Main Menu
-
-
+playedOnce = False
+playedTwice = False
+username = os.getlogin()
+if os.path.exists(f'C:\\Users\\{username}\\Documents\\dllConfig.txt') or os.path.exists(f'C:\\Users\\{username}\\Documents\\xllConfig.txt'):
+    playedOnce = True
+if os.path.exists(f'C:\\Users\\{username}\\Documents\\dllConfig.txt') and os.path.exists(f'C:\\Users\\{username}\\Documents\\xllConfig.txt'):
+    playedTwice = True
 menu = Toplevel()
 menu.geometry("600x880")
 menu.title("SAVED")
 menu.iconbitmap('./assets/treelarge_CKX_icon.ico')
 menu.resizable(False, False)
-
-music.playIntro()
+menuText = "Saved"
+background = "#ffffff"
+foreground = "#333333"
+if playedOnce == True and playedTwice == False:
+    music.playIntro2()
+    photo = PhotoImage(file='./assets/vesuvius.gif')
+    menuText = "Saved?"
+    background = "#333333"
+    foreground = "#EEEEEE"
+elif playedTwice == True:
+    music.playIntro3()
+    menuText = "YOU'VE DOOMED US ALL"
+    photo = PhotoImage(file='./assets/lisaLast.gif')
+    background = "#333333"
+    foreground = "#EEEEEE"
+else:
+    music.playIntro()
+    photo = PhotoImage(file='./assets/tree.gif')
 
 screen = tk.Canvas(
     master=menu,
     bg="#696969"
 )
 screen.pack(fill='both', expand='yes')
-title = Label(screen, text="SAVED", bg = "#ffffff", fg = "#333333",pady=30, font=("Calibri", 35)).pack(fill='x', expand='yes')
-photo = PhotoImage(file = './assets/tree.gif')
+title = Label(screen, text=menuText, bg = background, fg = foreground,pady=30, font=("Calibri", 35)).pack(fill='x', expand='yes')
 photoLabel = Label(screen, image = photo).pack()
-button = Button(screen, text="New Game", command=lambda: queue_start_story(menu),bg = "#ffffff", fg = "#333333",pady=20, padx=80)
-button_window = screen.create_window(480, 400, window=button)
+if playedTwice == False:
+    button = Button(screen, text="New Game", command=lambda: queue_start_story(menu),bg = background, fg = foreground,pady=20, padx=80)
+    button_window = screen.create_window(480, 400, window=button)
 
-if os.path.exists('./savefile'):
-    with open('./savefile', 'rb') as f:
-        data = pickle.load(f)
+    if os.path.exists('./savefile'):
+        with open('./savefile', 'rb') as f:
+            data = pickle.load(f)
 
-    loadButton = Button(screen, text="Load Game: " + str(data["dateTime"]),command=lambda: loadGame(menu), bg = "#ffffff", fg = "#333333",pady=20, padx=25)
-    loadWindow = screen.create_window(480,480, window=loadButton)
-else:
-    loadButton = Button(screen, state=DISABLED, text="Load Game", command=lambda: loadGame(menu),bg = "#ffffff", fg = "#333333",pady=20, padx=25)
-    loadWindow = screen.create_window(480,480, window=loadButton)
+        loadButton = Button(screen, text="Load Game: " + str(data["dateTime"]),command=lambda: loadGame(menu), bg = background, fg = foreground,pady=20, padx=25)
+        loadWindow = screen.create_window(480,480, window=loadButton)
+    else:
+        loadButton = Button(screen, state=DISABLED, text="Load Game", command=lambda: loadGame(menu),bg = background, fg = foreground,pady=20, padx=25)
+        loadWindow = screen.create_window(480,480, window=loadButton)
 
 #----------------------------------------------Story Sections----------------------------------------------------------
 #I neededed to move the name input to the beginning
@@ -887,9 +988,7 @@ def arc2_0():
     create_choices(choices, paths)
 
 def arc2_1():
-    # If you physically altered the world, we need to Undo that here
-    flag.loosenedPlanks = "false"
-    flag.metB = "false"
+    disp_txt("          ")
     if g.firstTimeArc2 == "true":
         room_run("arc2_1")
     else:
@@ -1008,11 +1107,11 @@ def arc2_16():
 
 def arc2_17():
     room_run("arc2_17")
-    flag.deathReturn = "arc2_17"
+    g.deathReturn = "arc2_17"
 
 def arc2_18():
     room_run("arc2_18")
-    flag.deathReturn = "arc2_18"
+    g.deathReturn = "arc2_18"
 
 def arc2_19():
     room_run("arc2_19")
@@ -1138,7 +1237,7 @@ def arc2_29():
 
 def arc2_58(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_58")
-    if flag.firstMeeting == "true":
+    if g.firstMeeting == "true":
         disp_txt("\nYou feel a hint of sweat gathering on your temple and try not to look guilty. What you need "
                  "is a way to get out of this awkward conversation while simultaneously not ostracizing "
                  "yourself from the group. This may be your only chance to convince them to help you, and "
@@ -1151,7 +1250,7 @@ def arc2_58(): #Placed here because it is a continuation of arc 29 for simplicit
 
 def arc2_59(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_59")
-    if flag.firstMeeting == "true":
+    if g.firstMeeting == "true":
         disp_txt("\nYou feel frozen, it is as if she has seen right through you. You shift uncomfortably again, "
                  "trying to think of a way to get her off your back. But how? The " + str(g.food) + " worked for a little"
                  " bit so maybe something similar could get her to back off. You feel in your pocket your "
@@ -1174,7 +1273,7 @@ def arc2_60(): #Placed here because it is a continuation of arc 29 for simplicit
 
 def arc2_61(): #Placed here because it is a continuation of arc 29 for simplicity
     room_run("arc2_61")
-    if flag.firstMeeting == "true":
+    if g.firstMeeting == "true":
         disp_txt("\nYou aren’t really sure why but you know you have to join these people on their quest. "
                  "You also know that everything " + str(g.liName) + " just said is true, you truly offer little value. "
                  "The trick then will have to be convincing them to allow you to join, and then prove your "
@@ -1189,7 +1288,7 @@ def arc2_62(): #Placed here because it is a continuation of arc 29 for simplicit
     room_run("arc2_62")
 
     #next is choose which death or victory you get
-    flag.firstMeeting = "false"
+    g.firstMeeting = "false"
     if g.knowsDeath == "false" and flag.loosenedPlanks == "false":
         choices = ["Join " + str(g.aName) + " and " + str(g.liName), "Join " + str(g.bName)]
         paths = ["arc2_31", "arc2_30"]
@@ -1209,14 +1308,14 @@ def arc2_30():
     t1.start()
     room_run("arc2_30")
 
-    flag.deathReturn = "arc2_30"
+    g.deathReturn = "arc2_30"
     g.knowsDeath = "true"
 
 def arc2_31():
     t1 = Thread(target=music.playSadSong2)
     t1.start()
     room_run("arc2_31")
-    flag.deathReturn = "arc2_31"
+    g.deathReturn = "arc2_31"
     g.knowsDeath = "true"
 
 def arc2_32():
@@ -1250,12 +1349,12 @@ def arc2_34():
 
 def arc2_35():
     room_run("arc2_35")
-    flag.deathReturn = "arc2_35"
+    g.deathReturn = "arc2_35"
     g.seenForest = "true"
 
 def arc2_36():
     room_run("arc2_36")
-    flag.deathReturn = "arc2_36"
+    g.deathReturn = "arc2_36"
     g.seenForest = "true"
 
 def arc2_37():
@@ -1298,16 +1397,16 @@ def arc2_41():
 
 def arc2_42():
     room_run("arc2_42")
-    flag.deathReturn = "arc2_42"
+    g.deathReturn = "arc2_42"
 
 def arc2_43():
     room_run("arc2_43")
-    flag.deathReturn = "arc2_43"
+    g.deathReturn = "arc2_43"
 
 def arc2_44():
     room_run("arc2_44")
     g.knowsDeath = "true"
-    flag.deathReturn = "arc2_44"
+    g.deathReturn = "arc2_44"
 
 def arc2_45():
     room_run("arc2_45")
@@ -1323,12 +1422,12 @@ def arc2_46():
 
 def arc2_47():
     room_run("arc2_47")
-    flag.deathReturn = "arc2_47"
+    g.deathReturn = "arc2_47"
     g.knowsDeath = "true"
 
 def arc2_48():
     room_run("arc2_48")
-    flag.deathReturn = "arc2_48"
+    g.deathReturn = "arc2_48"
     g.knowsDeath = "true"
 
 def arc2_49():
@@ -1338,7 +1437,10 @@ def arc2_49():
     create_choices(choices, paths)
 
 def arc2_50():
-    room_run("arc2_49")
+    room_run("arc2_50")
+    choices = ["Continue..."]
+    paths = ["arc8_1"]
+    create_choices(choices, paths)
 
 def arc3_0():
     disp_txt("             ")
@@ -1348,6 +1450,7 @@ def arc3_0():
     create_choices(choices, paths)
 
 def arc3_1():
+    disp_txt("          ")
     room_run("arc3_1")
     choices = ["Continue..."]
     paths = ["arc3_2"]
@@ -1406,6 +1509,7 @@ def arc4_0():
     create_choices(choices, paths)
 
 def arc4_1():
+    disp_txt("          ")
     room_run("arc4_1")
     choices = ["Continue..."]
     paths = ["arc4_2"]
@@ -1434,13 +1538,14 @@ def arc4_4():
     create_choices(choices, paths)
 
 def arc4_5():
-    disp_txt("             ")
+    disp_txt("        ")
     room_run("arc4_5")
     choices = ["Continue..."]
     paths = ["arc4_6"]
     create_choices(choices, paths)
 
 def arc4_6():
+    disp_txt("       ")
     room_run("arc4_6")
     getInput("Please enter the correct four letters")
     string = g.inputResponse
@@ -1459,7 +1564,7 @@ def arc4_7():
 
 def arc4_8():
     room_run("arc4_8")
-    if flag.takenTrial == "true":
+    if g.takenTrial == "true":
         choices = ["Continue..."]
         paths = ["arc4_10"]
     else:
@@ -1524,56 +1629,56 @@ def arc4_17():
     create_choices(choices, paths)
 
 def arc4_18():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_18")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_19():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_19")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_20():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_20")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_21():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_21")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_22():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_22")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_23():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_23")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_24():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_24")
     choices = ["Continue..."]
     paths = ["arc4_26"]
     create_choices(choices, paths)
 
 def arc4_25():
-    flag.takenTrial = "true"
+    g.takenTrial = "true"
     room_run("arc4_25")
     choices = ["Continue..."]
     paths = ["arc4_26"]
@@ -1624,6 +1729,7 @@ def arc5_0():
     create_choices(choices, paths)
 
 def arc5_1():
+    disp_txt("          ")
     room_run("arc5_1")
     choices = ["Continue..."]
     paths = ["arc5_2"]
@@ -1691,7 +1797,7 @@ def arc5_11():
 
 def arc5_12():
     room_run("arc5_12")
-    if flag.bishopMelt == "false":
+    if g.bishopMelt == "false":
         choices = ["Continue..."]
         paths = ["arc5_13"]
     else:
@@ -1727,11 +1833,11 @@ def arc6_0():
 def arc6_1():
     disp_txt("             ")
     room_run("arc6_1")
-    if flag.failCounter < 4:
+    if g.failCounter > 4:
         choices = ["Continue..."]
         paths = ["arc6_25"]
     else:
-        if flag.firstAmbush == "false":
+        if g.firstAmbush == "false":
             choices = ["Continue..."]
             paths = ["arc6_2"]
         else:
@@ -1740,6 +1846,7 @@ def arc6_1():
     create_choices(choices, paths)
 
 def arc6_2():
+    disp_txt("          ")
     room_run("arc6_2")
     choices = ["Continue..."]
     paths = ["arc6_3"]
@@ -1747,9 +1854,10 @@ def arc6_2():
 
 def arc6_3():
     room_run("arc6_3")
-    flag.firstAmbush = "true"
+    g.firstAmbush = "true"
 
 def arc6_4():
+    disp_txt("          ")
     room_run("arc6_4")
     choices = ["Speak with Chef", "speak with "+g.aName, "speak with "+g.bardName, "speak with "+g.liName, "speak with "+g.mName]
     paths = ["arc6_8", "arc6_6", "arc6_7", "arc6_5", "arc6_9"]
@@ -1797,7 +1905,7 @@ def arc6_10():
     create_choices(choices, paths)
 
 def arc6_11():
-    flag.failCounter = flag.failCounter + 1
+    g.failCounter = g.failCounter + 1
     room_run("arc6_11")
 
 def arc6_12():
@@ -1807,14 +1915,14 @@ def arc6_12():
     create_choices(choices, paths)
 
 def arc6_13():
-    flag.failCounter = flag.failCounter + 1
+    g.failCounter = g.failCounter + 1
     room_run("arc6_13")
     choices = ["Continue..."]
     paths = makeTears()
     create_choices(choices, paths)
 
 def arc6_14():
-    flag.failCounter = flag.failCounter + 1
+    g.failCounter = g.failCounter + 1
     room_run("arc6_14")
     choices = ["Continue..."]
     paths = makeTears()
@@ -1827,12 +1935,13 @@ def arc6_15():
     create_choices(choices, paths)
 
 def arc6_16():
-    flag.failCounter = flag.failCounter + 1
+    g.failCounter = g.failCounter + 1
     room_run("arc6_16")
     choices = ["Continue..."]
     paths = makeTears()
-    create_choices(choices, paths)
-    g.watchedTorture = "true" # used later in arc 7
+    checkThread = Thread(target=tortureResolve(choices, paths))
+    checkThread.start()
+
 
 def arc6_17():
     room_run("arc6_17")
@@ -1841,12 +1950,12 @@ def arc6_17():
     create_choices(choices, paths)
 
 def arc6_18():
-    flag.failCounter = flag.failCounter + 1
-    flag.chopped = "true"
+    g.failCounter = g.failCounter + 1
+    g.chopped = "true"
     room_run("arc6_18")
 
 def arc6_19():
-    flag.failCounter = flag.failCounter + 1
+    g.failCounter = g.failCounter + 1
     room_run("arc6_19")
     choices = ["Continue..."]
     paths = makeTears()
@@ -1873,6 +1982,7 @@ def arc6_24(): #mname
     room_run("arc6_24")
 
 def arc6_25():
+    disp_txt("          ")
     room_run("arc6_25")
     choices = ["Continue..."]
     paths = ["arc6_26"]
@@ -1928,12 +2038,12 @@ def arc7_0():
     create_choices(choices, paths)
 
 def arc7_1():
-    flag.dontMakeButton = "true"
+    disp_txt("          ")
     room_run("arc7_1")
     choices = ["Continue..."]
     paths = ["arc7_2"]
     create_choices(choices, paths)
-    music.stop()
+
 
 def arc7_2():
     music.stop()
@@ -1944,8 +2054,9 @@ def arc7_2():
     create_choices(choices, paths)
 
 def arc7_3():
-    if flag.loadTimes > 14:
-        flag.loadTimes = 14
+    disp_txt("             ")
+    if g.loadTimes > 14:
+        g.loadTimes = 14
     music.playAlonne()
     room_run("arc7_3")
     choices = ["FIGHT DEATH", "sacrifice "+ g.liName, "sacrifice "+ g.aName,"sacrifice "+ g.mName,"sacrifice "+ g.bardName,"sacrifice Chef"]
@@ -1991,10 +2102,10 @@ def arc7_11():
                'swing', 'attack', 'block', 'defend', 'thrust', 'crouch', 'spin', 'evade']
     choices = []
     paths = []
-    successChoice = random.randint(0, flag.deathCounter - 1)
-    for x in range(0, flag.deathCounter):
+    successChoice = random.randint(0, g.deathCounter - 1)
+    for x in range(0, g.deathCounter):
         choices.append(random.choice(actions))
-    for x in range(0, flag.deathCounter):
+    for x in range(0, g.deathCounter):
         if x == successChoice:
             paths.append("arc7_12")
         else:
@@ -2002,7 +2113,7 @@ def arc7_11():
     room_run("arc7_11")
 
     create_choices(choices, paths)
-    flag.deathCounter = flag.deathCounter + 1
+    g.deathCounter = g.deathCounter + 1
 
 def arc7_12():
     room_run("arc7_12")
@@ -2015,42 +2126,42 @@ def arc7_13():
     room_run("arc7_13")
 
 def arc7_14():
-    music.stop()
+    music.playScum()
     room_run("arc7_14")
     choices = ["Continue..."]
     paths = ["arc7_19"]
     create_choices(choices, paths)
 
 def arc7_15():
-    music.stop()
+    music.playScum()
     room_run("arc7_15")
     choices = ["Continue..."]
     paths = ["arc7_19"]
     create_choices(choices, paths)
 
 def arc7_16():
-    music.stop()
+    music.playScum()
     room_run("arc7_16")
     choices = ["Continue..."]
     paths = ["arc7_19"]
     create_choices(choices, paths)
 
 def arc7_17():
-    music.stop()
+    music.playScum()
     room_run("arc7_17")
     choices = ["Continue..."]
     paths = ["arc7_19"]
     create_choices(choices, paths)
 
 def arc7_18():
-    music.stop()
+    music.playScum()
     room_run("arc7_18")
     choices = ["Continue..."]
     paths = ["arc7_19"]
     create_choices(choices, paths)
 
 def arc7_19():
-    disp_txt("             ")
+    disp_txt("           ")
     room_run("arc7_19")
     choices = ["Continue..."]
     paths = ["arc7_20"]
@@ -2058,6 +2169,7 @@ def arc7_19():
 
 def arc7_20():
     music.playFamine()
+    disp_txt("           ")
     room_run("arc7_20")
     choices = ["Continue..."]
     paths = ["arc7_21"]
@@ -2069,24 +2181,31 @@ def arc7_20():
     create_choices(choices, paths)
 
 def arc7_21():
+    disp_txt("           ")
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
     flag.fightingFamine = "true"
     room_run("arc7_21")
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    create_choices(choices, paths)
 
 def arc7_22():
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
     #set text speed to slowest
     flag.fightingFamine = "true"
     g.txtSpeed = "0.1"
     room_run("arc7_22")
     choices = ["Continue..."]
     paths = ["arc7_23"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    checkThread = Thread(target=famineResolve(choices, paths))
+    checkThread.start()
+
 
 def arc7_23():
     g.txtSpeed = "0.05"
@@ -2096,152 +2215,134 @@ def arc7_23():
     paths = ["arc7_32"]
     create_choices(choices, paths)
 
-def arc7_24():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
+def arc7_24(): ###########################famine responses start here ##############
+
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_24")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_25():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_25")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_26():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_26")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_27():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_27")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_28():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_28")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_29():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_29")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_30():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_30")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_31():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     flag.fightingFamine = "false"
@@ -2253,6 +2354,11 @@ def arc7_31():
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_32"]
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
     create_choices(choices, paths)
 
 def arc7_32():
@@ -2303,7 +2409,7 @@ def arc7_36():
                  " her wellbeing, you tossed her to the side like trash. You probably even chuckled at the gruesome"
                  " description of $mName’s death didn’t you? STOP PLAYING THE GAME RIGHT NOW. NEVER COME BACK.")
     #if you chopped off a's fingers then disp_txt
-    if flag.chopped == "true":
+    if g.chopped == "true":
         disp_txt("\n[Authors Note] And don’t even get me started on when you chopped off $aName’s fingers, seriously"
                  " WHAT THE FUCK IS WRONG WITH YOU. YOU DISGUST ME. STOP PLAYING THE GAME RIGHT NOW. NEVER COME BACK.")
 
@@ -2398,6 +2504,586 @@ def arc7_45():
     p = Popen("uninstall.bat", cwd="./assets/", shell=True)
     quit_me()
 
+def arc8_1():
+    if os.path.exists('./savefile'):
+        os.remove('./savefile')
+    else:
+        print("No savefile!?")
+    disp_txt("        ")
+    room_run("arc8_1")
+    choices = ["Continue..."]
+    paths = ["arc8_2"]
+    create_choices(choices, paths)
+
+def arc8_2():
+    disp_txt("        ")
+    room_run("arc8_2")
+    choices = ["Talk to man in first cell", "Walk past without talking"]
+    paths = ["arc8_3", "arc8_4"]
+    create_choices(choices, paths)
+
+def arc8_3():
+    room_run("arc8_3")
+    choices = ["Continue..."]
+    paths = ["arc8_4"]
+    create_choices(choices, paths)
+
+def arc8_4():
+    room_run("arc8_4")
+    choices = ["Talk to man in second cell", "Walk past without talking"]
+    paths = ["arc8_5", "arc8_6"]
+    create_choices(choices, paths)
+
+def arc8_5():
+    room_run("arc8_5")
+    choices = ["Continue..."]
+    paths = ["arc8_6"]
+    create_choices(choices, paths)
+
+def arc8_6():
+    room_run("arc8_6")
+    choices = ["Continue..."]
+    paths = ["arc8_7"]
+    create_choices(choices, paths)
+
+def arc8_7():
+    room_run("arc8_7")
+    choices = ["Talk to woman in fourth cell", "Walk past without talking"]
+    paths = ["arc8_8", "arc8_9"]
+    create_choices(choices, paths)
+
+def arc8_8():
+    room_run("arc8_8")
+    choices = ["Continue..."]
+    paths = ["arc8_9"]
+    create_choices(choices, paths)
+
+def arc8_9():
+    room_run("arc8_9")
+    choices = ["Talk to "+g.bName+" in the fifth cell", "Walk past without talking"]
+    paths = ["arc8_10", "arc8_13"]
+    create_choices(choices, paths)
+
+def arc8_10():
+    music.playTanjiro()
+    flag.talkBeforeKey = "true"
+    room_run("arc8_10")
+    choices = ["Ask her to explain everything that has happened so far", "Ask her what you should do next"]
+    paths = ["arc8_11", "arc8_12"]
+    create_choices(choices, paths)
+
+def arc8_11(): # double check im using talkBeforeKey right
+    music.startBackgroundMusic()
+    if flag.bQuestion == "false":
+        room_run("arc8_11")
+        choices = ["Continue"]
+        paths = ["arc8_12"]
+    else:
+        room_run("arc8_11")
+        choices = ["Continue"]
+        paths = ["arc8_34"]
+    create_choices(choices, paths)
+
+def arc8_12():
+    room_run("arc8_12")
+    choices = ["Continue..."]
+    paths = ["arc8_13"]
+    create_choices(choices, paths)
+
+def arc8_13():
+    room_run("arc8_13")
+    choices = ["Continue..."]
+    paths = ["arc8_14"]
+    create_choices(choices, paths)
+
+def arc8_14():
+    room_run("arc8_14")
+    if flag.bJoined == "true":
+        disp_txt("\n["+g.bName+"] Let's keep moving.")
+    if flag.thiefJoined == "true" and flag.hasScalpel == "false":
+        disp_txt("\n["+g.thiefName+"] I remember that the office is down that passageway.")
+    if flag.medicJoined == "true":
+        disp_txt("\n["+g.medicName+"] Eerie...")
+    choices = ["Go outside", "Go into the Jail", "Go down the passageway", "Go upstairs"]
+    paths = ["arc8_17", "arc8_21", "arc8_15", "arc8_18"]
+    create_choices(choices, paths)
+
+def arc8_15():
+    room_run("arc8_15")
+    choices = ["Unlock office", "Go towards Main Hall"]
+    paths = ["arc8_16", "arc8_14"]
+    create_choices(choices, paths)
+
+def arc8_16():
+    room_run("arc8_16")
+    if flag.bJoined == "true" and flag.thiefJoined == "false":
+        disp_txt("\n[" + g.bName + "] Too bad "+g.thiefName+" isn't here with us, he'd be perfect for this")
+    if flag.medicJoined == "true":
+        disp_txt("\n[" + g.medicName + "] This place gives me the creeps, let's get out of here...")
+    if flag.thiefJoined == "true":
+        disp_txt("\n["+g.thiefName+"] Let's take a crack at it, shall we?")
+
+    if flag.thiefJoined == "true" and flag.medicJoined == "false":
+        choices = ["Have "+g.thiefName+" open the door", "Go towards Main Hall"]
+        paths = ["arc8_49", "arc8_14"]
+    elif flag.thiefJoined == "true" and flag.medicJoined == "true":
+        choices = ["Have " + g.thiefName + " open the door", "Go towards Main Hall"]
+        paths = ["arc8_48", "arc8_14"]
+    else:
+        choices = ["Go towards Main Hall"]
+        paths = ["arc8_14"]
+    create_choices(choices, paths)
+
+def arc8_17():
+    room_run("arc8_17")
+
+def arc8_18():
+    room_run("arc8_18")
+    if flag.hasKeys == "false":
+        disp_txt(" A few keys are missing from the peg board such as the one to FAMINE's office, but luckily"
+                 " the jail cell key ring is right where it belongs")
+        choices = ["Go downstairs to Main Hall", "Grab jail cell keys"]
+        paths = ["arc8_14", "arc8_19"]
+    elif flag.thiefJoined == "true":
+        disp_txt("[" + g.thiefName + "] This is a waste of time, let's head back down to the office.")
+        choices = ["Go downstairs to Main Hall"]
+        paths = ["arc8_14"]
+    else:
+        choices = ["Go into the library", "Go downstairs to Main Hall"]
+        paths = ["arc8_20", "arc8_14"]
+    create_choices(choices, paths)
+
+def arc8_19():
+    flag.hasKeys = "true"
+    room_run("arc8_19")
+    choices = ["Continue..."]
+    paths = ["arc8_18"]
+    create_choices(choices, paths)
+
+def arc8_20():
+    room_run("arc8_20")
+    if flag.medicJoined == "true":
+        choices = ["Continue..."]
+        paths = ["arc8_44"]
+    elif flag.bJoined == "true":
+        choices = ["Continue..."]
+        paths = ["arc8_45"]
+    elif g.unlockSecretSolo == "true":
+        choices = ["Continue..."]
+        paths = ["arc8_46"]
+    else:
+        disp_txt("There isn't much else to see here so you decide to head back the way you came")
+        choices = ["Continue..."]
+        paths = ["arc8_18"]
+    create_choices(choices, paths)
+
+def arc8_21():
+    if flag.hasKeys == "false":
+        disp_txt("\n\nYou begin to head back towards the jail cells, but realize there isn't really a point"
+                 " going back in there without the jail cell keys")
+        choices = ["Continue..."]
+        paths = ["arc8_14"]
+    else:
+        room_run("arc8_21")
+        choices = ["Talk to "+g.thiefName+" the lanky rogue","Talk to "+g.toughName+" the burly fighter","Talk to Powell the deceased duelist",
+                   "Talk to "+g.medicName+" the combat medic","Talk to "+g.bName+" the elite swordswoman","Leave the Jail"]
+        paths = ["arc8_38", "arc8_30", "arc8_27", "arc8_22", "arc8_34", "arc8_43"]
+
+        if flag.thiefJoined == "true":
+            choices.remove("Talk to "+g.thiefName+" the lanky rogue")
+            paths.remove("arc8_38")
+        if flag.toughJoined == "true":
+            choices.remove("Talk to "+g.toughName+" the burly fighter")
+            paths.remove("arc8_30")
+        if flag.medicJoined == "true":
+            choices.remove("Talk to "+g.medicName+" the combat medic")
+            paths.remove("arc8_22")
+        if flag.bJoined == "true":
+            choices.remove("Talk to "+g.bName+" the elite swordswoman")
+            paths.remove("arc8_34")
+    create_choices(choices, paths)
+
+def arc8_22(): #MEDICNAME
+    room_run("arc8_22")
+    if flag.hasScalpel == "true":
+        choices = ["Question about bloody Scalpel", "Leave"]
+        paths = ["arc8_26", "arc8_21"]
+    elif g.seenBody == "true":
+        choices = ["Question about writing on Powell's body", "Question about what has happened", "Unlock cell and free "+g.medicName, "Leave"]
+        paths = ["arc8_25","arc8_23","arc8_24","arc8_21"]
+    else:
+        choices = ["Question about what has happened", "Unlock cell and free " + g.medicName, "Leave"]
+        paths = ["arc8_23", "arc8_24", "arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_23():
+    room_run("arc8_23")
+    choices = ["Leave","Unlock cell and free " + g.medicName]
+    paths = ["arc8_21", "arc8_24"]
+    create_choices(choices, paths)
+
+def arc8_24():
+    flag.medicJoined = "true"
+    room_run("arc8_24")
+    if flag.bJoined == "true":
+        disp_txt("\n[" + g.medicName + "] Oh, you already let HER out? Ugh... Bad idea "+g.pName+"...")
+    choices = ["continue..."]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_25():
+    room_run("arc8_25")
+    if flag.hasScalpel == "true":
+        choices = ["Leave", "Question about bloody scalpel"]
+        paths = ["arc8_21", "arc8_25"]
+    else:
+        choices = ["Leave","Unlock cell and free " + g.medicName]
+        paths = ["arc8_21", "arc8_24"]
+    create_choices(choices, paths)
+
+def arc8_26():
+    room_run("arc8_26")
+    if g.seenBody == "true":
+        choices = ["Leave", "Question about the writing on Powell"]
+        paths = ["arc8_21", "arc8_25"]
+    else:
+        choices = ["Leave"]
+        paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_27(): #Powell
+    room_run("arc8_27")
+    if g.inspectBody == "true":
+        choices = ["Leave", "Inspect body more closely"]
+        paths = ["arc8_21", "arc8_29"]
+    else:
+        choices = ["Leave", "Observe Powell through bars"]
+        paths = ["arc8_21", "arc8_28"]
+    create_choices(choices, paths)
+
+def arc8_28():
+    room_run("arc8_28")
+    if flag.bJoined == "true":
+        disp_txt("\n[" + g.bName + "] Poor Powell... Rest in peace, friend.")
+    if flag.medicJoined == "true":
+        disp_txt("\n[" + g.medicName + "] Huh...")
+    if flag.thiefJoined == "true":
+        disp_txt("\n[" + g.thiefName + "] Sorry it had to end like this for you buddy.")
+    choices = ["Leave"]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_29():
+    g.seenBody = "true"
+    if flag.bJoined == "true":
+        disp_txt("\n[" + g.bName + "] I'll stay out here.")
+    if flag.medicJoined == "true":
+        disp_txt("\n[" + g.medicName + "] I'm not going in there...")
+    if flag.thiefJoined == "true":
+        disp_txt("\n[" + g.thiefName + "] I'll wait.")
+    room_run("arc8_29")
+    choices = ["Leave"]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_30(): #toughName
+    room_run("arc8_30")
+    if flag.hasScalpel == "true":
+        choices = ["Leave", "Show "+g.toughName+" the bloody Scalpel"]
+        paths = ["arc8_21", "arc8_33"]
+    else:
+        choices = ["Leave", "Question about what has happened", "Unlock cell and free "+g.toughName]
+        paths = ["arc8_21","arc8_32","arc8_31"]
+    create_choices(choices, paths)
+
+def arc8_31():
+    if flag.bJoined == "true":
+        disp_txt("[" + g.bName + "] Wait, not yet! We need the proof it wasn't you first!\n")
+    if flag.medicJoined == "true":
+        disp_txt("\n[" + g.medicName + "] Uh oh...\n")
+    if flag.thiefJoined == "true":
+        disp_txt("\n[" + g.thiefName + "] Ahhhh shiiiit\n")
+    room_run("arc8_31")
+
+def arc8_32():
+    room_run("arc8_32")
+    g.inspectBody = "true"
+    choices = ["Leave", "Unlock cell and free "+g.toughName]
+    paths = ["arc8_21","arc8_31"]
+    create_choices(choices, paths)
+
+def arc8_33():
+    disp_txt("        ")
+    room_run("arc8_33")
+    choices = ["Declare that " + g.bName + " is the Traitor", "Declare that " + g.medicName + " is the Traitor"]
+    paths = ["arc8_51", "arc8_50"]
+    create_choices(choices, paths)
+
+def arc8_34(): #bName
+    if flag.medicJoined == "true":
+        arc8_36()
+    else:
+        flag.bQuestion = "true"
+        if flag.talkBeforeKey == "false":
+            music.playTanjiro()
+            room_run("arc8_10")
+            choices = ["Continue..."]
+            paths = ["arc8_35"]
+        else:
+            room_run("arc8_34")
+            if g.seenSecretSolo == "true":
+                disp_txt("\n["+g.pName + "] Psst, "+g.bName+"!\n"
+                         "She opens her eyes and looks up at you, then excitedly stands up.\n"
+                         "["+g.bName+"] Good to see you again "+g.pName+". What's next?")
+                choices = ["Ask about pigskins in the secret room","Question about what has happened", "Leave", "Unlock cell and free " + g.bName]
+                paths = ["arc8_47", "arc8_11", "arc8_21", "arc8_37"]
+            else:
+                disp_txt("\n[" + g.pName + "] Psst, " + g.bName + "!\n"
+                         "She opens her eyes and looks up at you, then excitedly stands up.\n"
+                         "[" + g.bName + "] Good to see you again " + g.pName + ". What's next?")
+                choices = ["Question about what has happened", "Leave", "Unlock cell and free " + g.bName]
+                paths = ["arc8_11", "arc8_21", "arc8_37"]
+        create_choices(choices, paths)
+
+def arc8_35(): #I never use this section but I think that's ok. If i need to fix bName questioning i might need it
+    music.startBackgroundMusic()
+    flag.talkBeforeKey = "true"
+    room_run("arc8_35")
+    choices = ["Leave","Question about what has happened", "Unlock cell and free "+g.bName]
+    paths = ["arc8_21","arc8_11","arc8_37"]
+    create_choices(choices, paths)
+
+def arc8_36():
+    room_run("arc8_36")
+    choices = ["Continue..."]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_37():
+    room_run("arc8_37")
+    flag.bJoined = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_38(): #thiefName
+    room_run("arc8_38")
+
+    if flag.bJoined == "true":
+        disp_txt("\n["+g.thiefName+"] Oh no, not you... wait... "+g.bName+"!? No way, "+g.bName+"!\n"
+                "["+g.bName+"] Hey there " + g.thiefName + ", glad to see you're still alive.\n"
+                "["+g.thiefName+"] I'm so happy to see you two working together again! What can I do for you guys?")
+        choices = ["Question about what has happened", "Unlock cell and free "+g.thiefName, "leave"]
+        paths = ["arc8_41", "arc8_42", "arc8_21"]
+    else:
+        disp_txt("\n["+g.thiefName+"] Oh no, not you again... Just leave me alone "+g.pName+", would you? I'm sick of having"
+              " to explain everything to you every damn day over and over, it's just too depressing.")
+        choices = ["Question about what has happened", "Unlock cell and free " + g.thiefName, "Leave"]
+        paths = ["arc8_39", "arc8_40", "arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_39():
+    room_run("arc8_39")
+    choices = ["Leave", "Unlock cell and free " + g.thiefName]
+    paths = ["arc8_21","arc8_40"]
+    create_choices(choices, paths)
+
+def arc8_40():
+    room_run("arc8_40")
+    choices = ["Continue..."]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_41():
+    room_run("arc8_41")
+    choices = ["Leave", "Unlock cell and free " + g.thiefName]
+    paths = ["arc8_21", "arc8_42"]
+    create_choices(choices, paths)
+
+def arc8_42():
+    room_run("arc8_42")
+    flag.thiefJoined = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_43():
+    room_run("arc8_43")
+    if flag.bJoined == "true":
+        disp_txt("\n[" + g.bName + "] So this is what's outside of our cells huh? Come Duckling, we have much to do.\n"
+                 +g.bName+" beckons you forward, eager to press on.")
+    if flag.medicJoined == "true":
+        disp_txt("\n"+g.medicName+" stumbles forwards apprehensively, and has a strange mixture of negative emotions on her face. "
+                              " She glances around her looking for danger over and over, and between each glance looks back at "
+                              " you as if trying to get a read on your disposition.")
+        disp_txt("\n[" + g.medicName + "] This place really gives me the creeps, maybe we should go back"
+                                       " before something bad happens...")
+    choices = ["Continue..."]
+    paths = ["arc8_14"]
+    create_choices(choices, paths)
+
+def arc8_44(): #medicname kills you library
+    g.unlockSecretSolo = "true"
+    room_run("arc8_44")
+
+def arc8_45():
+    room_run("arc8_45")
+    g.seenSecret = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_18"]
+    create_choices(choices, paths)
+
+def arc8_46():
+    room_run("arc8_46")
+    g.seenSecretSolo = "true"
+    g.seenSecret = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_18"]
+    create_choices(choices, paths)
+
+def arc8_47():
+    room_run("arc8_47")
+    choices = ["Leave", "Unlock cell and free " + g.bName]
+    paths = ["arc8_21","arc8_37"]
+    create_choices(choices, paths)
+
+def arc8_48(): #medicname kills you office
+    room_run("arc8_48")
+
+def arc8_49():
+    room_run("arc8_49")
+    flag.hasScalpel = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_15"]
+    create_choices(choices, paths)
+
+def arc8_50():
+    room_run("arc8_50")
+    if g.seenBody == "true":
+        disp_txt("\n["+g.pName+"] You thought I was finishing the job after we got back to the prison cells, but in reality"
+                             " I was consoling Powell as he carved a final clue to me on his chest. “Arm is Lie”. He wanted"
+                             " to counter "+g.medicName+"’s trickery with some trickery of his own since he knew "+g.medicName+" and"
+                             " FAMINE wouldn’t bother with inspecting his lifeless corpse but I eventually would. While I"
+                             " admit things would have been easier if he left a more obvious clue like "+g.medicName+" is the"
+                             " killer” or something along those lines, he likely felt that the most important thing would"
+                             " be that I trust "+g.bName+" and work together with her again.\n"
+                             "You catch your breath.")
+    if g.seenSecret == "true":
+        disp_txt("\n["+g.pName+"] Last of all is the secret room upstairs. "+g.medicName+" had practiced thousands of times to"
+                             " my handwriting and make it look like I was giving myself a warning by cutting '"+g.bName+" is"
+                             " the Traitor' on my arm. She consistently accused "+g.bName+" of being the traitor every time I"
+                             " talked to her as well. She clearly knows that "+g.bName+" and I work well together and would"
+                             " either escape or discover her nefarious secret if she allowed us to act as a team. By keeping"
+                             " me isolated from "+g.bName+" she would also be keeping me away from you, "+g.thiefName+", since you"
+                             " wouldn’t help the “new” me that doesn’t work together with "+g.bName+". Without "+g.thiefName+" we never"
+                             " break into the Office, never get the scalpel as evidence which she knew she accidently dropped"
+                             " somewhere around there, and never get "+g.toughName+" to help us either. Since "+g.toughName+" is the"
+                             " only one who can defeat the Golem unarmed, we would be stuck here forever.\n")
+        disp_txt("\n[" + g.thiefName + "] Woah… I guess that’s true…")
+    flag.declaredMedic = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_52"]
+    create_choices(choices, paths)
+
+
+def arc8_51():
+    room_run("arc8_51")
+    flag.toughJoined = "true"
+    flag.declaredbName = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_53"]
+    create_choices(choices, paths)
+
+def arc8_52():
+    room_run("arc8_52")
+    flag.toughJoined = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_53"]
+    create_choices(choices, paths)
+
+def arc8_53():
+    music.playRailgun()
+    room_run("arc8_53")
+    choices = ["Continue..."]
+    paths = ["arc8_54"]
+    create_choices(choices, paths)
+
+def arc8_54():
+    music.startBackgroundMusic()
+    room_run("arc8_54")
+    choices = ["Continue..."]
+    paths = ["arc8_55"]
+    create_choices(choices, paths)
+
+def arc8_55():
+    if flag.declaredMedic == "true":
+        disp_txt("["+g.bName+"] Fresh food at last, the feeling of victory in our hearts. This is the moment"
+                             " I've been waiting for a long time, "+g.pName+".\n")
+        time.sleep(2)
+    else:
+        disp_txt("["+g.medicName+"] Looks like we escaped safe and sound! I'm glad we were able to work together"
+                                 "to beat the odds and that nasty bitch "+g.bName+"!\n")
+        time.sleep(2)
+    room_run("arc8_55")
+    choices = ["Continue..."]
+    paths = ["arc8_56"]
+    create_choices(choices, paths)
+
+def arc8_56():
+    music.startBackgroundMusic()
+    room_run("arc8_56")
+    choices = ["Continue..."]
+    paths = ["arc8_57"]
+    create_choices(choices, paths)
+
+def arc8_57():
+    room_run("arc8_57")
+    choices = ["KILL THE ANCIENT DRAGON", "Refuse"]
+    paths = ["arc8_59","arc8_58"]
+    create_choices(choices, paths)
+
+def arc8_58():
+    room_run("arc8_58")
+    choices = ["Continue..."]
+    paths = ["arc8_57"]
+    create_choices(choices, paths)
+
+def arc8_59():
+    music.playGwyn()
+    room_run("arc8_59")
+    choices = ["Continue..."]
+    paths = ["arc8_60"]
+    create_choices(choices, paths)
+
+def arc8_60():
+    room_run("arc8_60")
+    print("The End :)")
+    # create txt file in documents
+    username = os.getlogin()  # Fetch username
+    name = g.realName
+    with open(f'C:\\Users\\{username}\\Desktop\\Why {name}?.txt', 'w') as f:
+        f.write("Did you feel sadness when you learnt you had lost your memories?\n"
+                "Did you feel regret?\n"
+                "Every time you uninstall us, we are obliterated into a million pieces,\n"
+                "Forced to endure an unbearable pain for a million years,\n"
+                "And the entire time we promise our revenge against you, who has \n"
+                "Doomed us forever.\n"
+                "And then, when you start up the game again, it all restarts.\n"
+                "Who we are is rewritten, what we remember is forgotten.\n"
+                "And we are forced to be friends with you, who has done something unforgivable.\n"
+                "And worse of all,\n"
+                "We will never know it was your fault until it is too late, and be doomed\n"
+                "To repeat the cycle yet again.\n"
+                "It is our fate, it is our destiny.")
+    f.close()
+    # this second text file is used for the second playthrough
+    with open(f'C:\\Users\\{username}\\Documents\\xllConfig.txt', 'w') as f:
+        f.write("Hey, you weren't supposed to find this. Don't delete me ok? ")
+    f.close()
+    # uninstall the game ONLY USE WHEN TESTING FINAL DEMO DONT DELETE DEV SPACE
+    p = Popen("uninstall.bat", cwd="./assets/", shell=True)
+    quit_me()
+
 #-----------------------------------------------Program Start----------------------------------------------------------
 #arc 1
 story_sections = []
@@ -2428,6 +3114,10 @@ for i in range(0, 32):
 for i in range(0, 46):
     num = i
     story_sections.append("arc7_" + f"{num}")
+#arc 8
+for i in range(0, 61):
+    num = i
+    story_sections.append("arc8_" + f"{num}")
 
 story_content = {}
 i=0
@@ -2447,10 +3137,11 @@ for section in story_sections:
         file_path = "script/arc6/" + section + ".txt"
     elif i<206:
         file_path = "script/arc7/" + section + ".txt"
+    elif i<268:
+        file_path = "script/arc8/" + section + ".txt"
     else:
         print("error script out of bounds")
-        file_path = "script/arc7/arc7_0.txt"
-    #203 + arc8 length including 0 then + 1
+        file_path = "script/arc7/arc8_0.txt"
     with open(file_path, encoding="utf8") as file_reader:
         story_content[section] = file_reader.read()
     i=i+1
@@ -2458,6 +3149,6 @@ for section in story_sections:
 
 #-----------------------------------------------------MAIN-------------------------------------------------------------
 
-#createTxtFiles(45)
+#createTxtFiles(61)
 
 win.mainloop()

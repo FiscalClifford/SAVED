@@ -1,0 +1,3 @@
+[$medicName] Wait!
+You move towards $bName’s cell, but $medicName grabs hold of your tattered shirt and doesn’t let go.
+[$medicName] You let me out of that cell because you trusted me, right? Well trust me on this one. DO NOT TALK TO HER! I am almost positive $bName is the traitor! You should not only trust me, but trust the version of yourself who learnt that lesson before getting his memory wiped. Let’s talk to someone else, or explore the castle.

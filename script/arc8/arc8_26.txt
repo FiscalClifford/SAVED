@@ -1,0 +1,20 @@
+[$pName] Look what we found In Famine’s office, $medicName.
+You show the bloody scalpel to her, and her eyes widen in surprise.
+[$medicName] How did you find that? I don’t… uh…
+[$pName] What do you have to say for yourself? Did you kill Powell?
+Her face scrunches up in frustration and she raises her voice at you, spitting out words coated with venom.
+[$medicName] how dare you!? I did no such thing! I mean come on, isn’t this all too obvious!? A bloody scalpel? This whole thing is a massive setup, $bName is clearly framing me! You gotta believe me $pName, we’re getting played right now!
+[$pName] $thiefName says that this is one of your medical tools. You used it during the confusion of our last escape attempt to try and kill Powell, who suspected you were the traitor.
+[$medicName] WHAT!?
+Her eyes are wide open, and she is visibly flustered.
+[$medicName] This is all a huge setup! I’m getting framed!
+She runs her hands through her hair in frustration and paces around her cell, trying to calm down. Finally, she manages to get her emotions back under control and presses her head against the metal bars of her cell.
+[$medicName] Tell me… who found the scalpel then? Was it you $pName?
+[$pName] Well, no…
+[$medicName] It was $bName wasn’t it? She found it?
+[$bName] That doesn’t make a difference…
+[$medicName] That makes all the difference in the world!
+$medicName glares angrily at $bName and grips the cell bars tightly.
+[$medicName] She probably had the knife hidden in her pocket the whole time then pretended to discover it there! You got to believe me $pName!
+[$pName] hmm…
+[$bName] Let’s stop listening to this Traitor before she fills you up with any more lies. Don’t allow her to squirm out of this.

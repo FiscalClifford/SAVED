@@ -1,0 +1,4 @@
+All this information is a bit too overwhelming for you so you back up and pace along the jail hallway. You give yourself a few minutes to chew over the information before returning to $bName.
+[$pName] Let’s say I decided to let you out. What would you suggest we do next?
+[$bName] Well it’s simple really, we explore the castle looking for clues. I have a pretty sharp eye for that kind of stuff you know. Alternatively, we could talk to $thiefName. His cell is next to yours so he might know something nobody else does.
+[$pName] Hmm, alright…
