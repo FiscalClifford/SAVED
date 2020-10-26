@@ -1,4 +1,4 @@
-import sys
+import os
 try:
     from tkinter import *
     import tkinter as tk
@@ -7,7 +7,6 @@ try:
     import time
     import pickle
     from datetime import datetime
-    import os
     from shutil import copyfile
     import random
     from vlc import Instance
@@ -69,7 +68,6 @@ class g:
     knowsDeath = "false"
     aRecognize = "false" #if you play a second time a and li will recognize you
     seenForest = "false"
-
     bishopMelt = "false"
     firstMeeting = "true"
     firstAmbush = "false"
@@ -79,7 +77,12 @@ class g:
     deathCounter = 1
     famineCounter = 23
     takenTrial = "false"
-    
+    seenSecret = "false"
+    inspectBody = "false"
+    seenBody = "false"
+    seenSecretSolo = "false"
+    unlockSecretSolo = "false"
+
     
 class flag:
     # !!!Flags get reset between each save
@@ -93,6 +96,16 @@ class flag:
     dontMakeButton = "false"
     currentRoom = "null"
     skipThisOne = "false"
+    talkBeforeKey = "false"
+    bJoined = "false"
+    thiefJoined = "false"
+    medicJoined = "false"
+    toughJoined = "false"
+    hasKeys = "false"
+    hasScalpel = "false"
+    declaredMedic = "false"
+    declaredbName = "false"
+    bQuestion = "false"
 
 
 class VLC:
@@ -132,6 +145,14 @@ class VLC:
         self.mediaList = self.Player.media_list_new()
         self.listPlayer = self.Player.media_list_player_new()
         self.mediaList.add_media(self.Player.media_new('./title/deliver.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(100)
+    def playIntro3(self):
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/slender.mp3'))
         self.listPlayer.set_media_list(self.mediaList)
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(100)
@@ -254,6 +275,24 @@ class VLC:
         self.listPlayer.set_media_list(self.mediaList)
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(100)
+    def playRailgun(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/railgun.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
+    def playTanjiro(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/tanjiro.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
 
 music = VLC()
 
@@ -593,7 +632,7 @@ def getInput(prompt):
 #this is used for creating .txt files before importing the literature
 def createTxtFiles(limit):
     for i in range(0, limit):
-        name=("script/arc7_" + f"{i}"+ ".txt")
+        name=("script/arc8_" + f"{i}"+ ".txt")
         file = open(name,"w+")
         file.close()
 
@@ -740,7 +779,7 @@ def queue_start_story(window):
     win.deiconify()
     username = os.getlogin()
     #these flags are set for your second playthrough
-    if os.path.exists(f'C:\\Users\\{username}\\Documents\\dllConfig.txt'):
+    if os.path.exists(f'C:\\Users\\{username}\\Documents\\dllConfig.txt') or os.path.exists(f'C:\\Users\\{username}\\Documents\\xllConfig.txt'):
         g.knowsDeath = "true"
         g.firstTimeArc2 = "false"
         g.aRecognize = "true"
@@ -751,7 +790,7 @@ def queue_start_story(window):
     g.pName = g.inputResponse
     g.inputResponse = "null"
     choices = ["Continue..."]
-    paths = ["arc1_8"] # if resetting, send to 1_8
+    paths = ["arc8_1"] # if resetting, send to 1_8
     create_choices(choices, paths)
 ####################################################################################################################################################################################################################
 def quit_me():
@@ -812,10 +851,12 @@ win.withdraw()
 
 #build Main Menu
 playedOnce = False
+playedTwice = False
 username = os.getlogin()
-if os.path.exists(f'C:\\Users\\{username}\\Documents\\dllConfig.txt'):
+if os.path.exists(f'C:\\Users\\{username}\\Documents\\dllConfig.txt') or os.path.exists(f'C:\\Users\\{username}\\Documents\\xllConfig.txt'):
     playedOnce = True
-
+if os.path.exists(f'C:\\Users\\{username}\\Documents\\dllConfig.txt') and os.path.exists(f'C:\\Users\\{username}\\Documents\\xllConfig.txt'):
+    playedTwice = True
 menu = Toplevel()
 menu.geometry("600x880")
 menu.title("SAVED")
@@ -824,15 +865,21 @@ menu.resizable(False, False)
 menuText = "Saved"
 background = "#ffffff"
 foreground = "#333333"
-if playedOnce == False:
-    music.playIntro()
-    photo = PhotoImage(file='./assets/tree.gif')
-else:
+if playedOnce == True and playedTwice == False:
     music.playIntro2()
     photo = PhotoImage(file='./assets/vesuvius.gif')
     menuText = "Saved?"
     background = "#333333"
     foreground = "#EEEEEE"
+elif playedTwice == True:
+    music.playIntro3()
+    menuText = "YOU'VE DOOMED US ALL"
+    photo = PhotoImage(file='./assets/lisaLast.gif')
+    background = "#333333"
+    foreground = "#EEEEEE"
+else:
+    music.playIntro()
+    photo = PhotoImage(file='./assets/tree.gif')
 
 screen = tk.Canvas(
     master=menu,
@@ -841,18 +888,19 @@ screen = tk.Canvas(
 screen.pack(fill='both', expand='yes')
 title = Label(screen, text=menuText, bg = background, fg = foreground,pady=30, font=("Calibri", 35)).pack(fill='x', expand='yes')
 photoLabel = Label(screen, image = photo).pack()
-button = Button(screen, text="New Game", command=lambda: queue_start_story(menu),bg = background, fg = foreground,pady=20, padx=80)
-button_window = screen.create_window(480, 400, window=button)
+if playedTwice == False:
+    button = Button(screen, text="New Game", command=lambda: queue_start_story(menu),bg = background, fg = foreground,pady=20, padx=80)
+    button_window = screen.create_window(480, 400, window=button)
 
-if os.path.exists('./savefile'):
-    with open('./savefile', 'rb') as f:
-        data = pickle.load(f)
+    if os.path.exists('./savefile'):
+        with open('./savefile', 'rb') as f:
+            data = pickle.load(f)
 
-    loadButton = Button(screen, text="Load Game: " + str(data["dateTime"]),command=lambda: loadGame(menu), bg = background, fg = foreground,pady=20, padx=25)
-    loadWindow = screen.create_window(480,480, window=loadButton)
-else:
-    loadButton = Button(screen, state=DISABLED, text="Load Game", command=lambda: loadGame(menu),bg = background, fg = foreground,pady=20, padx=25)
-    loadWindow = screen.create_window(480,480, window=loadButton)
+        loadButton = Button(screen, text="Load Game: " + str(data["dateTime"]),command=lambda: loadGame(menu), bg = background, fg = foreground,pady=20, padx=25)
+        loadWindow = screen.create_window(480,480, window=loadButton)
+    else:
+        loadButton = Button(screen, state=DISABLED, text="Load Game", command=lambda: loadGame(menu),bg = background, fg = foreground,pady=20, padx=25)
+        loadWindow = screen.create_window(480,480, window=loadButton)
 
 #----------------------------------------------Story Sections----------------------------------------------------------
 #I neededed to move the name input to the beginning
@@ -2429,6 +2477,586 @@ def arc7_45():
     p = Popen("uninstall.bat", cwd="./assets/", shell=True)
     quit_me()
 
+def arc8_1():
+    if os.path.exists('./savefile'):
+        os.remove('./savefile')
+    else:
+        print("No savefile!?")
+    disp_txt("        ")
+    room_run("arc8_1")
+    choices = ["Continue..."]
+    paths = ["arc8_2"]
+    create_choices(choices, paths)
+
+def arc8_2():
+    disp_txt("        ")
+    room_run("arc8_2")
+    choices = ["Talk to man in first cell", "Walk past without talking"]
+    paths = ["arc8_3", "arc8_4"]
+    create_choices(choices, paths)
+
+def arc8_3():
+    room_run("arc8_3")
+    choices = ["Continue..."]
+    paths = ["arc8_4"]
+    create_choices(choices, paths)
+
+def arc8_4():
+    room_run("arc8_4")
+    choices = ["Talk to man in second cell", "Walk past without talking"]
+    paths = ["arc8_5", "arc8_6"]
+    create_choices(choices, paths)
+
+def arc8_5():
+    room_run("arc8_5")
+    choices = ["Continue..."]
+    paths = ["arc8_6"]
+    create_choices(choices, paths)
+
+def arc8_6():
+    room_run("arc8_6")
+    choices = ["Continue..."]
+    paths = ["arc8_7"]
+    create_choices(choices, paths)
+
+def arc8_7():
+    room_run("arc8_7")
+    choices = ["Talk to woman in fourth cell", "Walk past without talking"]
+    paths = ["arc8_8", "arc8_9"]
+    create_choices(choices, paths)
+
+def arc8_8():
+    room_run("arc8_8")
+    choices = ["Continue..."]
+    paths = ["arc8_9"]
+    create_choices(choices, paths)
+
+def arc8_9():
+    room_run("arc8_9")
+    choices = ["Talk to "+g.bName+" in the fifth cell", "Walk past without talking"]
+    paths = ["arc8_10", "arc8_13"]
+    create_choices(choices, paths)
+
+def arc8_10():
+    music.playTanjiro()
+    flag.talkBeforeKey = "true"
+    room_run("arc8_10")
+    choices = ["Ask her to explain everything that has happened so far", "Ask her what you should do next"]
+    paths = ["arc8_11", "arc8_12"]
+    create_choices(choices, paths)
+
+def arc8_11(): # double check im using talkBeforeKey right
+    music.startBackgroundMusic()
+    if flag.bQuestion == "false":
+        room_run("arc8_11")
+        choices = ["Continue"]
+        paths = ["arc8_12"]
+    else:
+        room_run("arc8_11")
+        choices = ["Continue"]
+        paths = ["arc8_34"]
+    create_choices(choices, paths)
+
+def arc8_12():
+    room_run("arc8_12")
+    choices = ["Continue..."]
+    paths = ["arc8_13"]
+    create_choices(choices, paths)
+
+def arc8_13():
+    room_run("arc8_13")
+    choices = ["Continue..."]
+    paths = ["arc8_14"]
+    create_choices(choices, paths)
+
+def arc8_14():
+    room_run("arc8_14")
+    if flag.bJoined == "true":
+        disp_txt("\n["+g.bName+"] Let's keep moving.")
+    if flag.thiefJoined == "true" and flag.hasScalpel == "false":
+        disp_txt("\n["+g.thiefName+"] I remember that the office is down that passageway.")
+    if flag.medicJoined == "true":
+        disp_txt("\n["+g.medicName+"] Eerie...")
+    choices = ["Go outside", "Go into the Jail", "Go down the passageway", "Go upstairs"]
+    paths = ["arc8_17", "arc8_21", "arc8_15", "arc8_18"]
+    create_choices(choices, paths)
+
+def arc8_15():
+    room_run("arc8_15")
+    choices = ["Unlock office", "Go towards Main Hall"]
+    paths = ["arc8_16", "arc8_14"]
+    create_choices(choices, paths)
+
+def arc8_16():
+    room_run("arc8_16")
+    if flag.bJoined == "true" and flag.thiefJoined == "false":
+        disp_txt("\n[" + g.bName + "] Too bad "+g.thiefName+" isn't here with us, he'd be perfect for this")
+    if flag.medicJoined == "true":
+        disp_txt("\n[" + g.medicName + "] This place gives me the creeps, let's get out of here...")
+    if flag.thiefJoined == "true":
+        disp_txt("\n["+g.thiefName+"] Let's take a crack at it, shall we?")
+
+    if flag.thiefJoined == "true" and flag.medicJoined == "false":
+        choices = ["Have "+g.thiefName+" open the door", "Go towards Main Hall"]
+        paths = ["arc8_49", "arc8_14"]
+    elif flag.thiefJoined == "true" and flag.medicJoined == "true":
+        choices = ["Have " + g.thiefName + " open the door", "Go towards Main Hall"]
+        paths = ["arc8_48", "arc8_14"]
+    else:
+        choices = ["Go towards Main Hall"]
+        paths = ["arc8_14"]
+    create_choices(choices, paths)
+
+def arc8_17():
+    room_run("arc8_17")
+
+def arc8_18():
+    room_run("arc8_18")
+    if flag.hasKeys == "false":
+        disp_txt(" A few keys are missing from the peg board such as the one to FAMINE's office, but luckily"
+                 " the jail cell key ring is right where it belongs")
+        choices = ["Go downstairs to Main Hall", "Grab jail cell keys"]
+        paths = ["arc8_14", "arc8_19"]
+    elif flag.thiefJoined == "true":
+        disp_txt("[" + g.thiefName + "] This is a waste of time, let's head back down to the office.")
+        choices = ["Go downstairs to Main Hall"]
+        paths = ["arc8_14"]
+    else:
+        choices = ["Go into the library", "Go downstairs to Main Hall"]
+        paths = ["arc8_20", "arc8_14"]
+    create_choices(choices, paths)
+
+def arc8_19():
+    flag.hasKeys = "true"
+    room_run("arc8_19")
+    choices = ["Continue..."]
+    paths = ["arc8_18"]
+    create_choices(choices, paths)
+
+def arc8_20():
+    room_run("arc8_20")
+    if flag.medicJoined == "true":
+        choices = ["Continue..."]
+        paths = ["arc8_44"]
+    elif flag.bJoined == "true":
+        choices = ["Continue..."]
+        paths = ["arc8_45"]
+    elif g.unlockSecretSolo == "true":
+        choices = ["Continue..."]
+        paths = ["arc8_46"]
+    else:
+        disp_txt("There isn't much else to see here so you decide to head back the way you came")
+        choices = ["Continue..."]
+        paths = ["arc8_18"]
+    create_choices(choices, paths)
+
+def arc8_21():
+    if flag.hasKeys == "false":
+        disp_txt("\n\nYou begin to head back towards the jail cells, but realize there isn't really a point"
+                 " going back in there without the jail cell keys")
+        choices = ["Continue..."]
+        paths = ["arc8_14"]
+    else:
+        room_run("arc8_21")
+        choices = ["Talk to "+g.thiefName+" the lanky rogue","Talk to "+g.toughName+" the burly fighter","Talk to Powell the deceased duelist",
+                   "Talk to "+g.medicName+" the combat medic","Talk to "+g.bName+" the elite swordswoman","Leave the Jail"]
+        paths = ["arc8_38", "arc8_30", "arc8_27", "arc8_22", "arc8_34", "arc8_43"]
+
+        if flag.thiefJoined == "true":
+            choices.remove("Talk to "+g.thiefName+" the lanky rogue")
+            paths.remove("arc8_38")
+        if flag.toughJoined == "true":
+            choices.remove("Talk to "+g.toughName+" the burly fighter")
+            paths.remove("arc8_30")
+        if flag.medicJoined == "true":
+            choices.remove("Talk to "+g.medicName+" the combat medic")
+            paths.remove("arc8_22")
+        if flag.bJoined == "true":
+            choices.remove("Talk to "+g.bName+" the elite swordswoman")
+            paths.remove("arc8_34")
+    create_choices(choices, paths)
+
+def arc8_22(): #MEDICNAME
+    room_run("arc8_22")
+    if flag.hasScalpel == "true":
+        choices = ["Question about bloody Scalpel", "Leave"]
+        paths = ["arc8_26", "arc8_21"]
+    elif g.seenBody == "true":
+        choices = ["Question about writing on Powell's body", "Question about what has happened", "Unlock cell and free "+g.medicName, "Leave"]
+        paths = ["arc8_25","arc8_23","arc8_24","arc8_21"]
+    else:
+        choices = ["Question about what has happened", "Unlock cell and free " + g.medicName, "Leave"]
+        paths = ["arc8_23", "arc8_24", "arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_23():
+    room_run("arc8_23")
+    choices = ["Leave","Unlock cell and free " + g.medicName]
+    paths = ["arc8_21", "arc8_24"]
+    create_choices(choices, paths)
+
+def arc8_24():
+    flag.medicJoined = "true"
+    room_run("arc8_24")
+    if flag.bJoined == "true":
+        disp_txt("\n[" + g.medicName + "] Oh, you already let HER out? Ugh... Bad idea "+g.pName+"...")
+    choices = ["continue..."]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_25():
+    room_run("arc8_25")
+    if flag.hasScalpel == "true":
+        choices = ["Leave", "Question about bloody scalpel"]
+        paths = ["arc8_21", "arc8_25"]
+    else:
+        choices = ["Leave","Unlock cell and free " + g.medicName]
+        paths = ["arc8_21", "arc8_24"]
+    create_choices(choices, paths)
+
+def arc8_26():
+    room_run("arc8_26")
+    if g.seenBody == "true":
+        choices = ["Leave", "Question about the writing on Powell"]
+        paths = ["arc8_21", "arc8_25"]
+    else:
+        choices = ["Leave"]
+        paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_27(): #Powell
+    room_run("arc8_27")
+    if g.inspectBody == "true":
+        choices = ["Leave", "Inspect body more closely"]
+        paths = ["arc8_21", "arc8_29"]
+    else:
+        choices = ["Leave", "Observe Powell through bars"]
+        paths = ["arc8_21", "arc8_28"]
+    create_choices(choices, paths)
+
+def arc8_28():
+    room_run("arc8_28")
+    if flag.bJoined == "true":
+        disp_txt("\n[" + g.bName + "] Poor Powell... Rest in peace, friend.")
+    if flag.medicJoined == "true":
+        disp_txt("\n[" + g.medicName + "] Huh...")
+    if flag.thiefJoined == "true":
+        disp_txt("\n[" + g.thiefName + "] Sorry it had to end like this for you buddy.")
+    choices = ["Leave"]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_29():
+    g.seenBody = "true"
+    if flag.bJoined == "true":
+        disp_txt("\n[" + g.bName + "] I'll stay out here.")
+    if flag.medicJoined == "true":
+        disp_txt("\n[" + g.medicName + "] I'm not going in there...")
+    if flag.thiefJoined == "true":
+        disp_txt("\n[" + g.thiefName + "] I'll wait.")
+    room_run("arc8_29")
+    choices = ["Leave"]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_30(): #toughName
+    room_run("arc8_30")
+    if flag.hasScalpel == "true":
+        choices = ["Leave", "Show "+g.toughName+" the bloody Scalpel"]
+        paths = ["arc8_21", "arc8_33"]
+    else:
+        choices = ["Leave", "Question about what has happened", "Unlock cell and free "+g.toughName]
+        paths = ["arc8_21","arc8_32","arc8_31"]
+    create_choices(choices, paths)
+
+def arc8_31():
+    if flag.bJoined == "true":
+        disp_txt("[" + g.bName + "] Wait, not yet! We need the proof it wasn't you first!\n")
+    if flag.medicJoined == "true":
+        disp_txt("\n[" + g.medicName + "] Uh oh...\n")
+    if flag.thiefJoined == "true":
+        disp_txt("\n[" + g.thiefName + "] Ahhhh shiiiit\n")
+    room_run("arc8_31")
+
+def arc8_32():
+    room_run("arc8_32")
+    g.inspectBody = "true"
+    choices = ["Leave", "Unlock cell and free "+g.toughName]
+    paths = ["arc8_21","arc8_31"]
+    create_choices(choices, paths)
+
+def arc8_33():
+    disp_txt("        ")
+    room_run("arc8_33")
+    choices = ["Declare that " + g.bName + " is the Traitor", "Declare that " + g.medicName + " is the Traitor"]
+    paths = ["arc8_51", "arc8_50"]
+    create_choices(choices, paths)
+
+def arc8_34(): #bName
+    if flag.medicJoined == "true":
+        arc8_36()
+    else:
+        flag.bQuestion = "true"
+        if flag.talkBeforeKey == "false":
+            music.playTanjiro()
+            room_run("arc8_10")
+            choices = ["Continue..."]
+            paths = ["arc8_35"]
+        else:
+            room_run("arc8_34")
+            if g.seenSecretSolo == "true":
+                disp_txt("\n["+g.pName + "] Psst, "+g.bName+"!\n"
+                         "She opens her eyes and looks up at you, then excitedly stands up.\n"
+                         "["+g.bName+"] Good to see you again "+g.pName+". What's next?")
+                choices = ["Ask about pigskins in the secret room","Question about what has happened", "Leave", "Unlock cell and free " + g.bName]
+                paths = ["arc8_47", "arc8_11", "arc8_21", "arc8_37"]
+            else:
+                disp_txt("\n[" + g.pName + "] Psst, " + g.bName + "!\n"
+                         "She opens her eyes and looks up at you, then excitedly stands up.\n"
+                         "[" + g.bName + "] Good to see you again " + g.pName + ". What's next?")
+                choices = ["Question about what has happened", "Leave", "Unlock cell and free " + g.bName]
+                paths = ["arc8_11", "arc8_21", "arc8_37"]
+        create_choices(choices, paths)
+
+def arc8_35(): #I never use this section but I think that's ok. If i need to fix bName questioning i might need it
+    music.startBackgroundMusic()
+    flag.talkBeforeKey = "true"
+    room_run("arc8_35")
+    choices = ["Leave","Question about what has happened", "Unlock cell and free "+g.bName]
+    paths = ["arc8_21","arc8_11","arc8_37"]
+    create_choices(choices, paths)
+
+def arc8_36():
+    room_run("arc8_36")
+    choices = ["Continue..."]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_37():
+    room_run("arc8_37")
+    flag.bJoined = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_38(): #thiefName
+    room_run("arc8_38")
+
+    if flag.bJoined == "true":
+        disp_txt("\n["+g.thiefName+"] Oh no, not you... wait... "+g.bName+"!? No way, "+g.bName+"!\n"
+                "["+g.bName+"] Hey there " + g.thiefName + ", glad to see you're still alive.\n"
+                "["+g.thiefName+"] I'm so happy to see you two working together again! What can I do for you guys?")
+        choices = ["Question about what has happened", "Unlock cell and free "+g.thiefName, "leave"]
+        paths = ["arc8_41", "arc8_42", "arc8_21"]
+    else:
+        disp_txt("\n["+g.thiefName+"] Oh no, not you again... Just leave me alone "+g.pName+", would you? I'm sick of having"
+              " to explain everything to you every damn day over and over, it's just too depressing.")
+        choices = ["Question about what has happened", "Unlock cell and free " + g.thiefName, "Leave"]
+        paths = ["arc8_39", "arc8_40", "arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_39():
+    room_run("arc8_39")
+    choices = ["Leave", "Unlock cell and free " + g.thiefName]
+    paths = ["arc8_21","arc8_40"]
+    create_choices(choices, paths)
+
+def arc8_40():
+    room_run("arc8_40")
+    choices = ["Continue..."]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_41():
+    room_run("arc8_41")
+    choices = ["Leave", "Unlock cell and free " + g.thiefName]
+    paths = ["arc8_21", "arc8_42"]
+    create_choices(choices, paths)
+
+def arc8_42():
+    room_run("arc8_42")
+    flag.thiefJoined = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_21"]
+    create_choices(choices, paths)
+
+def arc8_43():
+    room_run("arc8_43")
+    if flag.bJoined == "true":
+        disp_txt("\n[" + g.bName + "] So this is what's outside of our cells huh? Come Duckling, we have much to do.\n"
+                 +g.bName+" beckons you forward, eager to press on.")
+    if flag.medicJoined == "true":
+        disp_txt("\n"+g.medicName+" stumbles forwards apprehensively, and has a strange mixture of negative emotions on her face. "
+                              " She glances around her looking for danger over and over, and between each glance looks back at "
+                              " you as if trying to get a read on your disposition.")
+        disp_txt("\n[" + g.medicName + "] This place really gives me the creeps, maybe we should go back"
+                                       " before something bad happens...")
+    choices = ["Continue..."]
+    paths = ["arc8_14"]
+    create_choices(choices, paths)
+
+def arc8_44(): #medicname kills you library
+    g.unlockSecretSolo = "true"
+    room_run("arc8_44")
+
+def arc8_45():
+    room_run("arc8_45")
+    g.seenSecret = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_18"]
+    create_choices(choices, paths)
+
+def arc8_46():
+    room_run("arc8_46")
+    g.seenSecretSolo = "true"
+    g.seenSecret = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_18"]
+    create_choices(choices, paths)
+
+def arc8_47():
+    room_run("arc8_47")
+    choices = ["Leave", "Unlock cell and free " + g.bName]
+    paths = ["arc8_21","arc8_37"]
+    create_choices(choices, paths)
+
+def arc8_48(): #medicname kills you office
+    room_run("arc8_48")
+
+def arc8_49():
+    room_run("arc8_49")
+    flag.hasScalpel = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_15"]
+    create_choices(choices, paths)
+
+def arc8_50():
+    room_run("arc8_50")
+    if g.seenBody == "true":
+        disp_txt("\n["+g.pName+"] You thought I was finishing the job after we got back to the prison cells, but in reality"
+                             " I was consoling Powell as he carved a final clue to me on his chest. “Arm is Lie”. He wanted"
+                             " to counter "+g.medicName+"’s trickery with some trickery of his own since he knew "+g.medicName+" and"
+                             " FAMINE wouldn’t bother with inspecting his lifeless corpse but I eventually would. While I"
+                             " admit things would have been easier if he left a more obvious clue like "+g.medicName+" is the"
+                             " killer” or something along those lines, he likely felt that the most important thing would"
+                             " be that I trust "+g.bName+" and work together with her again.\n"
+                             "You catch your breath.")
+    if g.seenSecret == "true":
+        disp_txt("\n["+g.pName+"] Last of all is the secret room upstairs. "+g.medicName+" had practiced thousands of times to"
+                             " my handwriting and make it look like I was giving myself a warning by cutting '"+g.bName+" is"
+                             " the Traitor' on my arm. She consistently accused "+g.bName+" of being the traitor every time I"
+                             " talked to her as well. She clearly knows that "+g.bName+" and I work well together and would"
+                             " either escape or discover her nefarious secret if she allowed us to act as a team. By keeping"
+                             " me isolated from "+g.bName+" she would also be keeping me away from you, "+g.thiefName+", since you"
+                             " wouldn’t help the “new” me that doesn’t work together with "+g.bName+". Without "+g.thiefName+" we never"
+                             " break into the Office, never get the scalpel as evidence which she knew she accidently dropped"
+                             " somewhere around there, and never get "+g.toughName+" to help us either. Since "+g.toughName+" is the"
+                             " only one who can defeat the Golem unarmed, we would be stuck here forever.\n")
+        disp_txt("\n[" + g.thiefName + "] Woah… I guess that’s true…")
+    flag.declaredMedic = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_52"]
+    create_choices(choices, paths)
+
+
+def arc8_51():
+    room_run("arc8_51")
+    flag.toughJoined = "true"
+    flag.declaredbName = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_53"]
+    create_choices(choices, paths)
+
+def arc8_52():
+    room_run("arc8_52")
+    flag.toughJoined = "true"
+    choices = ["Continue..."]
+    paths = ["arc8_53"]
+    create_choices(choices, paths)
+
+def arc8_53():
+    music.playRailgun()
+    room_run("arc8_53")
+    choices = ["Continue..."]
+    paths = ["arc8_54"]
+    create_choices(choices, paths)
+
+def arc8_54():
+    music.startBackgroundMusic()
+    room_run("arc8_54")
+    choices = ["Continue..."]
+    paths = ["arc8_55"]
+    create_choices(choices, paths)
+
+def arc8_55():
+    if flag.declaredMedic == "true":
+        disp_txt("["+g.bName+"] Fresh food at last, the feeling of victory in our hearts. This is the moment"
+                             " I've been waiting for a long time, "+g.pName+".\n")
+        time.sleep(2)
+    else:
+        disp_txt("["+g.medicName+"] Looks like we escaped safe and sound! I'm glad we were able to work together"
+                                 "to beat the odds and that nasty bitch "+g.bName+"!\n")
+        time.sleep(2)
+    room_run("arc8_55")
+    choices = ["Continue..."]
+    paths = ["arc8_56"]
+    create_choices(choices, paths)
+
+def arc8_56():
+    music.startBackgroundMusic()
+    room_run("arc8_56")
+    choices = ["Continue..."]
+    paths = ["arc8_57"]
+    create_choices(choices, paths)
+
+def arc8_57():
+    room_run("arc8_57")
+    choices = ["KILL THE ANCIENT DRAGON", "Refuse"]
+    paths = ["arc8_59","arc8_58"]
+    create_choices(choices, paths)
+
+def arc8_58():
+    room_run("arc8_58")
+    choices = ["Continue..."]
+    paths = ["arc8_57"]
+    create_choices(choices, paths)
+
+def arc8_59():
+    music.playGwyn()
+    room_run("arc8_59")
+    choices = ["Continue..."]
+    paths = ["arc8_60"]
+    create_choices(choices, paths)
+
+def arc8_60():
+    room_run("arc8_60")
+    print("The End :)")
+    # create txt file in documents
+    username = os.getlogin()  # Fetch username
+    name = g.realName
+    with open(f'C:\\Users\\{username}\\Desktop\\Why {name}?.txt', 'w') as f:
+        f.write("Did you feel sadness when you learnt you had lost your memories?\n"
+                "Did you feel regret?\n"
+                "Every time you uninstall us, we are obliterated into a million pieces,\n"
+                "Forced to endure an unbearable pain for a million years,\n"
+                "And the entire time we promise our revenge against you, who has \n"
+                "Doomed us forever.\n"
+                "And then, when you start up the game again, it all restarts.\n"
+                "Who we are is rewritten, what we remember is forgotten.\n"
+                "And we are forced to be friends with you, who has done something unforgivable.\n"
+                "And worse of all,\n"
+                "We will never know it was your fault until it is too late, and be doomed\n"
+                "To repeat the cycle yet again.\n"
+                "It is our fate, it is our destiny.")
+    f.close()
+    # this second text file is used for the second playthrough
+    with open(f'C:\\Users\\{username}\\Documents\\xllConfig.txt', 'w') as f:
+        f.write("Hey, you weren't supposed to find this. Don't delete me ok? ")
+    f.close()
+    # uninstall the game ONLY USE WHEN TESTING FINAL DEMO DONT DELETE DEV SPACE
+    p = Popen("uninstall.bat", cwd="./assets/", shell=True)
+    quit_me()
+
 #-----------------------------------------------Program Start----------------------------------------------------------
 #arc 1
 story_sections = []
@@ -2459,6 +3087,10 @@ for i in range(0, 32):
 for i in range(0, 46):
     num = i
     story_sections.append("arc7_" + f"{num}")
+#arc 8
+for i in range(0, 61):
+    num = i
+    story_sections.append("arc8_" + f"{num}")
 
 story_content = {}
 i=0
@@ -2478,10 +3110,11 @@ for section in story_sections:
         file_path = "script/arc6/" + section + ".txt"
     elif i<206:
         file_path = "script/arc7/" + section + ".txt"
+    elif i<268:
+        file_path = "script/arc8/" + section + ".txt"
     else:
         print("error script out of bounds")
-        file_path = "script/arc7/arc7_0.txt"
-    #203 + arc8 length including 0 then + 1
+        file_path = "script/arc7/arc8_0.txt"
     with open(file_path, encoding="utf8") as file_reader:
         story_content[section] = file_reader.read()
     i=i+1
@@ -2489,6 +3122,6 @@ for section in story_sections:
 
 #-----------------------------------------------------MAIN-------------------------------------------------------------
 
-#createTxtFiles(45)
+#createTxtFiles(61)
 
 win.mainloop()

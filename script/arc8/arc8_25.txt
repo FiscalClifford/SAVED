@@ -1,0 +1,5 @@
+[$pName] I found “Arm is LIE” written on Powell’s body. I think it is some sort of clue.
+[$medicName] What!? Written on his… er… huh. What do you think it means?
+[$pName] It is probably referencing the writing on my arm saying $bName is the traitor, right?
+[$medicName] Maybe. Or maybe Powell was also a traitor along with $bName and the two were working together to trick you. Don’t forget $pName, that clue on your arm is in your own handwriting. You must have thought it very important that you remember that clue! I wouldn’t trust that Arm is LIE crap.
+[$pName] Hmmm…

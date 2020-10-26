@@ -1,0 +1,7 @@
+You approach the bars of his cell and whisper towards him.
+[$pName] Psst! Hey! What’s going on? Where are we?
+The huge man slowly turns around, and upon seeing you on the other side of the bars clenches his hands and yells in anger.
+[Huge Man] OI! YOO FOOKER!
+His voice sounds vaguely Scottish and has a deep, powerful tone. In the back of your head you worry he might be too loud and alert whatever guard may be around this jail, but you can’t dwell on it for long as the huge man rushes over to the bars slamming into them and shoves his arm in between, reaching for you. With a gasp you jump back just in time and stare dumbly at the enraged man.
+[Huge Man] YA KILLED EM’! OW COULD YA BETRAY US!?!?
+You don’t want him to keep yelling because of all the noise it is making, and the man clearly is not in the mood to help you. You decide to retreat further along down the hallway.

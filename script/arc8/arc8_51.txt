@@ -1,0 +1,27 @@
+[$pName] $bName is the traitor!
+$toughName’s eyebrows raise up in surprise, but he doesn’t interrupt you. $bName stares at you with furious silence, and you can practically feel a hole being bore into your skull by her gaze alone. Surprisingly she doesn’t try to stop you from speaking, likely because she wants to understand your logic first.
+[$thiefName] $bName!? But I thought $medicName was the traitor!?
+[$pName] Of course at face value that’s what it looks like, but in reality it was $bName all along. Let me explain. $thiefName, please be on guard in case $bName tries to interrupt me.
+[$thiefName] …
+$thiefName uneasily faces off against $bName, who has her arms crossed and continues to drill into your head with the intensity of her stare.
+[$pName] Evidence one is simply how uninvolved she has been this entire time. Taking her word at face value, she claims that I left with $medicName the first escape attempt and left with $thiefName, $medicName, Powell, and $toughName the second attempt. Both times she stayed in her cell, and we never even spoke? I just don’t see how I would allow that to happen if we ‘loved’ each other before my memory was wiped. Plus if she is “stuck in her cell” during both of my escape attempts then that gives her the perfect alibi. She likely was following us during both attempts and thwarting our plans.
+[$toughName] …
+[$pName] Second piece of evidence is the bloody scalpel. Who the hell carries around a scalpel? And who the hell kills somebody with a murder weapon so easily identifiable to them? Am I really supposed to believe $medicName killed Powell then just tossed that damning evidence to the side like that? It seems to me like obvious bait and $bName is trying to frame $medicName.
+$bName is absolutely fuming now. She looks like she could lash out at any second.
+[$pName] Last of all is the writing on my arm saying $bName is the traitor. I think $medicName was starting to figure out that $bName was behind all this, and would do her best to convince me not to trust her on the next escape attempt. While $bName could just tell me straight up $medicName was lying, it wouldn’t be very effective since it would devolve into a “my word vs. yours” situation. In the end she decided to use a double negative, and play some serious mind games to protect herself and make $medicName look bad. First she cast suspicion on herself by putting the writing on my arm, then made the counter evidence extremely obvious with a completely cliché secret room hidden behind a book case. By making it look like I had found absolute proof it wasn’t her and the writing was done by $medicName, she would be able to avoid any suspicion from then on. As a bonus, by making $medicName’s claim that $bName is the traitor look fake then I wouldn’t trust $medicName despite her being correct. Well guess what $bName, you may be clever but your advanced strategies didn’t work on me!
+[$bName] $pName how could you say that? How could you betray me like this? After all we have been through…
+[$pName] I literally don’t know what you are talking about. We practically only just met, from my perspective.
+[$bName] I guess this means that from the moment I met you, you have always been filled with hate. It’s only because your memory was wiped that you… ACK!
+While you were arguing with $bName $medicName had been fiddling with the latch on her cell door and managed to somehow break it open and escape. Now she stands behind $bName, and triumphantly thrusts a knife deeper and deeper into $bName’s back.
+[$bName] Wha…? You… Bitch…
+$bName staggers in shock around the prison hallway, grasping feebly at the knife embedded into her back. She glances back and forth between you and $medicName in disbelief and pain before leaning against a stone wall and slowly sliding down to her knees.
+[$bName] Please…
+$bName falls backwards and lays limply on the cold floor, dead.
+[$medicName] We finally did it $pName! I can’t believe you figured it all out!
+[$thiefName] What the fuck have you done $medicName!?
+$thiefName makes a move to attack $medicName, but you stop him in his tracks.
+[$pName] $bName got what she deserved for betraying us, $thiefName. Now you can either whine about what happened and be trapped here forever, or accept it and escape. Time to choose.
+[$thiefName] Wha… Er… Alright I’m still going to escape with you guys. But you’re going to have to convince me how she’s the traitor again once we get out of here.
+[$pName] That’s fine. $toughName, Powell has just been avenged and it is time to leave. Will you help us defeat the Golem and escape?
+[$toughName] Ah S’pose wha’ ye said makes a wee bit a sense… Even iffa didn’ ehts too late now... Eh, lets git goin’.
+You unlock $toughName, and he joins your party. The four of you exit the jail and leave the corpses of Powell and $bName behind you to never be seen again.

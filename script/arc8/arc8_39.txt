@@ -1,0 +1,13 @@
+[$pName] I’m sorry to press you $thiefName but this is important. I need you to explain everything that’s happened so far.
+[$thiefName] For cryin’ out loud, you just don’t quit do you? It’s pointless! I’m not going to waste my time and energy…
+[$pName] What are you talking about?
+[$thiefName] Every damn day $pName… every stinkin’ day you wake up after getting your memories eaten and beg for me to explain what the heck is going on to you. I’ve been doing it for MONTHS. I’m going crazy having to repeat myself over and over, it’s just too heartbreaking to see you like this. And the worst part is you don’t even recognize me, don’t even remember all this effort I have put in for you! You’re such a shell of your former self. Ugh, and here I go again, wasting my time…
+[$pName] Well maybe I wasted your time before but look, I escaped and even managed to steal the jail cell keys! Doesn’t that count for something?
+You dangle the jail cell keys in front of him, and he groans. $thiefName rubs at his forehead in frustration.
+[$thiefName] Oh for cryin’ out loud, look what you went and did! Ah jeez…
+[$pName] Seriously $thiefName, help me out here!
+[$thiefName] Don’t go getting my hopes up again only for them to get crushed! I can only take so much! Getting the keys is only half the battle, we still need clues and to fight that stupid Golem… Besides, it’s clear to me you haven’t gotten your old incredible self back yet either. It’s hopeless.
+[$pName] Hopeless!? What the hell is your deal, giving up before we have even started? And what do you mean my “old self”, I’m still me! I’m still doing my best and I’m going to figure this all out!
+[$thiefName] How could you say you are the real you when you don’t even have $bName at your side right now? The real $pName would have freed her first the chance he got and you two would have worked together to do something incredible. I’m not putting in any more effort for your sake until she joins you.
+[$pName] …
+$thiefName turns his back to you and hugs his knees tightly. He doesn’t seem like he’s going to say anything else for now.

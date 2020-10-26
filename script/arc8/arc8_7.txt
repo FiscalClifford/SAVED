@@ -1,0 +1,8 @@
+The fourth cell is next, and despite it being extremely dark you can see the silhouette of a woman trapped inside.
+[Woman] $pName! Come here, quick!
+You approach the bars and she reaches out gently, spinning you around so that she can grip the ropes binding your wrists together. 
+[Woman] Poor thing…
+Her soothing voice calms you as she pulls something out of her pant pocket and uses it to saw at the ropes. Within a few seconds she has cut you free and you gratefully rub at the tender skin where the ropes had chafed it. You feel much better now that your hands are independent again.
+[Woman] That’s better.
+[$pName] Thanks.
+[Woman] Listen $pName, there is some seriously shady stuff going on around here. We need to talk.

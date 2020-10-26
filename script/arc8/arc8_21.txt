@@ -1,0 +1,2 @@
+You are inside the gloomy darkness of the jail area. At this point you have some very important decisions to make. Who will you question? Who will you free? Most importantly of all, who is the traitor? Feel free to walk around the jail and take your time questioning each person, then later utilize their skillsets to explore the castle further. If you declare the wrong person is the traitor, there may be dire consequences down the line. 
+| your cell | $thiefName | $toughName | Powell | $medicName | $bName | Jail exit |
