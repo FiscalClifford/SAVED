@@ -39,6 +39,7 @@ class g:
     liName = "null"
     mName = "null"
     bardName = "null"
+    baronName = "null"
     thiefName = "null"
     toughName = "null"
     medicName = "null"
@@ -82,7 +83,8 @@ class g:
     seenBody = "false"
     seenSecretSolo = "false"
     unlockSecretSolo = "false"
-
+    deathReturn = "null"
+    hammerHint = "false"
     
 class flag:
     # !!!Flags get reset between each save
@@ -91,9 +93,7 @@ class flag:
     muggerMissing = "false"
     metB = "false"
     talkedTo = "null"
-    deathReturn = "null"
     fightingFamine = "false"
-    dontMakeButton = "false"
     currentRoom = "null"
     skipThisOne = "false"
     talkBeforeKey = "false"
@@ -293,6 +293,15 @@ class VLC:
         self.listPlayer.set_media_list(self.mediaList)
         self.listPlayer.play()
         self.listPlayer.get_media_player().audio_set_volume(80)
+    def playScum(self):
+        self.stop()
+        self.Player = Instance('--loop')
+        self.mediaList = self.Player.media_list_new()
+        self.listPlayer = self.Player.media_list_player_new()
+        self.mediaList.add_media(self.Player.media_new('./title/scum.mp3'))
+        self.listPlayer.set_media_list(self.mediaList)
+        self.listPlayer.play()
+        self.listPlayer.get_media_player().audio_set_volume(80)
 
 music = VLC()
 
@@ -351,6 +360,9 @@ def checkLoadTimes():
 def postDeathPassage(toPrint):
     checkLoadTimes()
     room_run(toPrint)
+    if toPrint == "arc2_56" and g.hammerHint == "true":
+        disp_txt("\nNow that you have figured out what happened to the woman's husband, you should probably let her know about the bad news.")
+        g.hammerHint = "false"
     choices = ["Continue..."]
     paths = [g.savedRoom]
     create_choices(choices, paths)
@@ -361,28 +373,33 @@ def deadChecker():
         flag.skipThisOne = "false"
         checkLoadTimes()
         eval('arc5_14()')
-    elif flag.deathReturn == "arc2_17" or flag.deathReturn == "arc2_42":
-        flag.deathReturn = "null"
+    elif g.deathReturn == "arc2_17" or g.deathReturn == "arc2_42":
+        g.deathReturn = "null"
         postDeathPassage('arc2_52')
 
-    elif flag.deathReturn == "arc2_18" or flag.deathReturn == "arc2_35" or flag.deathReturn == "arc2_36":
-        flag.deathReturn = "null"
+    elif g.deathReturn == "arc2_18":
+        g.deathReturn = "null"
         postDeathPassage('arc2_56')
 
-    elif flag.deathReturn == "arc2_30" or flag.deathReturn == "arc2_48":
-        flag.deathReturn = "null"
+    elif g.deathReturn == "arc2_35" or g.deathReturn == "arc2_36":
+        g.deathReturn = "null"
+        g.hammerHint = "true"
+        postDeathPassage('arc2_56')
+
+    elif g.deathReturn == "arc2_30" or g.deathReturn == "arc2_48":
+        g.deathReturn = "null"
         postDeathPassage('arc2_54')
 
-    elif flag.deathReturn == "arc2_31" or flag.deathReturn == "arc2_47":
-        flag.deathReturn = "null"
+    elif g.deathReturn == "arc2_31" or g.deathReturn == "arc2_47":
+        g.deathReturn = "null"
         postDeathPassage('arc2_53')
 
-    elif flag.deathReturn == "arc2_43":
-        flag.deathReturn = "null"
+    elif g.deathReturn == "arc2_43":
+        g.deathReturn = "null"
         postDeathPassage('arc2_57')
 
-    elif flag.deathReturn == "arc2_44":
-        flag.deathReturn = "null"
+    elif g.deathReturn == "arc2_44":
+        g.deathReturn = "null"
         postDeathPassage('arc2_55')
     else:
         checkLoadTimes()
@@ -534,7 +551,6 @@ def textOutput(string):
             print("stopText used")
             print(string)
             stopText = False
-            flag.dontMakeButton = "true"
             break
 
         if g.txtSpeed != "0.0001":
@@ -641,16 +657,22 @@ def tortureResolve(choices, paths):
         create_choices(choices, paths)
         g.watchedTorture = "true"  # used later in arc 7
 
+def famineResolve(choices, paths):
+    if flag.currentRoom == "arc7_22":
+        create_choices(choices, paths)
+
+
 def rollCharacters():
     bNames = ['Alexia', 'Aphrodite', 'Domino', 'Jade', 'Karma', 'Destiny', 'Lyra', 'Quinn', 'Ripley', 'Trinity', 'Valkyrie']
     aNames = ['Phoebe', 'Valentine', 'Rose', 'Beatrice', 'Sophia', 'Charlotte', 'Emilia', 'Hazel', 'Faith', 'Iris', 'Ariel']
     liNames= ['Chloe', 'Delila', 'Ashe', 'Lucy', 'Violet', 'Autumn', 'Nova', 'Elizabeth', 'Melody', 'Mai', 'Lilith']
-    mNames=['Blain', 'Copper', 'Harry', 'Penn']
+    mNames=  ['Blain', 'Copper', 'Harry', 'Penn']
     bardNames   = ['Paganini', 'Vivaldi', 'Sarasate']
     thiefNames  = ['Tex', 'Lucas', 'Isaac', 'Noland']
     toughNames  = ['Brom', 'Diesel', 'Wulfe', 'Bruce']
     medicNames  = ['Daisy', 'Arya', 'Minneie', 'Sophia']
-    merchantNames = ['Mickey', 'Mack', 'Meebley', 'Mitch']
+    merchantNames=['Mickey', 'Mack', 'Meebley', 'Mitch']
+    baronNames =  ['Lars', 'Gumpdy', 'Gary', 'Gaston']
 
     kingdomNames = ['Luxidium', 'Grandossia', 'Typhon', 'Belium']
     neighborNames= ['Arsenia', 'Dulchio', 'Syndio', 'Kleptorn']
@@ -677,6 +699,7 @@ def rollCharacters():
     g.liName = random.choice(liNames)
     g.mName = random.choice(mNames)
     g.bardName = random.choice(bardNames)
+    g.baronName = random.choice(baronNames)
     g.thiefName = random.choice(thiefNames)
     g.toughName = random.choice(toughNames)
     g.medicName = random.choice(medicNames)
@@ -764,7 +787,7 @@ def create_choices(choiceList, pathList):
             x.destroy()
     #create buttons for the amount of options available, represtented by 'number'
     for i in range(0, len(choiceList)):
-        if g.loadTimes > 15:
+        if g.loadTimes > 18:
             button = Button(frame2, text="HAHAHAHA", command=lambda i=i: click_choice(pathList[i]), bg="#333333", fg="#EEEEEE")
             button.pack(fill='both', expand='yes')
         else:
@@ -790,7 +813,7 @@ def queue_start_story(window):
     g.pName = g.inputResponse
     g.inputResponse = "null"
     choices = ["Continue..."]
-    paths = ["arc8_1"] # if resetting, send to 1_8
+    paths = ["arc7_19"] # if resetting, send to 1_8
     create_choices(choices, paths)
 ####################################################################################################################################################################################################################
 def quit_me():
@@ -965,9 +988,7 @@ def arc2_0():
     create_choices(choices, paths)
 
 def arc2_1():
-    # If you physically altered the world, we need to Undo that here
-    flag.loosenedPlanks = "false"
-    flag.metB = "false"
+    disp_txt("          ")
     if g.firstTimeArc2 == "true":
         room_run("arc2_1")
     else:
@@ -1086,11 +1107,11 @@ def arc2_16():
 
 def arc2_17():
     room_run("arc2_17")
-    flag.deathReturn = "arc2_17"
+    g.deathReturn = "arc2_17"
 
 def arc2_18():
     room_run("arc2_18")
-    flag.deathReturn = "arc2_18"
+    g.deathReturn = "arc2_18"
 
 def arc2_19():
     room_run("arc2_19")
@@ -1287,14 +1308,14 @@ def arc2_30():
     t1.start()
     room_run("arc2_30")
 
-    flag.deathReturn = "arc2_30"
+    g.deathReturn = "arc2_30"
     g.knowsDeath = "true"
 
 def arc2_31():
     t1 = Thread(target=music.playSadSong2)
     t1.start()
     room_run("arc2_31")
-    flag.deathReturn = "arc2_31"
+    g.deathReturn = "arc2_31"
     g.knowsDeath = "true"
 
 def arc2_32():
@@ -1328,12 +1349,12 @@ def arc2_34():
 
 def arc2_35():
     room_run("arc2_35")
-    flag.deathReturn = "arc2_35"
+    g.deathReturn = "arc2_35"
     g.seenForest = "true"
 
 def arc2_36():
     room_run("arc2_36")
-    flag.deathReturn = "arc2_36"
+    g.deathReturn = "arc2_36"
     g.seenForest = "true"
 
 def arc2_37():
@@ -1376,16 +1397,16 @@ def arc2_41():
 
 def arc2_42():
     room_run("arc2_42")
-    flag.deathReturn = "arc2_42"
+    g.deathReturn = "arc2_42"
 
 def arc2_43():
     room_run("arc2_43")
-    flag.deathReturn = "arc2_43"
+    g.deathReturn = "arc2_43"
 
 def arc2_44():
     room_run("arc2_44")
     g.knowsDeath = "true"
-    flag.deathReturn = "arc2_44"
+    g.deathReturn = "arc2_44"
 
 def arc2_45():
     room_run("arc2_45")
@@ -1401,12 +1422,12 @@ def arc2_46():
 
 def arc2_47():
     room_run("arc2_47")
-    flag.deathReturn = "arc2_47"
+    g.deathReturn = "arc2_47"
     g.knowsDeath = "true"
 
 def arc2_48():
     room_run("arc2_48")
-    flag.deathReturn = "arc2_48"
+    g.deathReturn = "arc2_48"
     g.knowsDeath = "true"
 
 def arc2_49():
@@ -1416,7 +1437,10 @@ def arc2_49():
     create_choices(choices, paths)
 
 def arc2_50():
-    room_run("arc2_49")
+    room_run("arc2_50")
+    choices = ["Continue..."]
+    paths = ["arc8_1"]
+    create_choices(choices, paths)
 
 def arc3_0():
     disp_txt("             ")
@@ -1426,6 +1450,7 @@ def arc3_0():
     create_choices(choices, paths)
 
 def arc3_1():
+    disp_txt("          ")
     room_run("arc3_1")
     choices = ["Continue..."]
     paths = ["arc3_2"]
@@ -1484,6 +1509,7 @@ def arc4_0():
     create_choices(choices, paths)
 
 def arc4_1():
+    disp_txt("          ")
     room_run("arc4_1")
     choices = ["Continue..."]
     paths = ["arc4_2"]
@@ -1512,13 +1538,14 @@ def arc4_4():
     create_choices(choices, paths)
 
 def arc4_5():
-    disp_txt("             ")
+    disp_txt("        ")
     room_run("arc4_5")
     choices = ["Continue..."]
     paths = ["arc4_6"]
     create_choices(choices, paths)
 
 def arc4_6():
+    disp_txt("       ")
     room_run("arc4_6")
     getInput("Please enter the correct four letters")
     string = g.inputResponse
@@ -1702,6 +1729,7 @@ def arc5_0():
     create_choices(choices, paths)
 
 def arc5_1():
+    disp_txt("          ")
     room_run("arc5_1")
     choices = ["Continue..."]
     paths = ["arc5_2"]
@@ -1805,7 +1833,7 @@ def arc6_0():
 def arc6_1():
     disp_txt("             ")
     room_run("arc6_1")
-    if g.failCounter < 4:
+    if g.failCounter > 4:
         choices = ["Continue..."]
         paths = ["arc6_25"]
     else:
@@ -1818,6 +1846,7 @@ def arc6_1():
     create_choices(choices, paths)
 
 def arc6_2():
+    disp_txt("          ")
     room_run("arc6_2")
     choices = ["Continue..."]
     paths = ["arc6_3"]
@@ -1828,6 +1857,7 @@ def arc6_3():
     g.firstAmbush = "true"
 
 def arc6_4():
+    disp_txt("          ")
     room_run("arc6_4")
     choices = ["Speak with Chef", "speak with "+g.aName, "speak with "+g.bardName, "speak with "+g.liName, "speak with "+g.mName]
     paths = ["arc6_8", "arc6_6", "arc6_7", "arc6_5", "arc6_9"]
@@ -1952,6 +1982,7 @@ def arc6_24(): #mname
     room_run("arc6_24")
 
 def arc6_25():
+    disp_txt("          ")
     room_run("arc6_25")
     choices = ["Continue..."]
     paths = ["arc6_26"]
@@ -2007,12 +2038,12 @@ def arc7_0():
     create_choices(choices, paths)
 
 def arc7_1():
-    flag.dontMakeButton = "true"
+    disp_txt("          ")
     room_run("arc7_1")
     choices = ["Continue..."]
     paths = ["arc7_2"]
     create_choices(choices, paths)
-    music.stop()
+
 
 def arc7_2():
     music.stop()
@@ -2023,6 +2054,7 @@ def arc7_2():
     create_choices(choices, paths)
 
 def arc7_3():
+    disp_txt("             ")
     if g.loadTimes > 14:
         g.loadTimes = 14
     music.playAlonne()
@@ -2094,42 +2126,42 @@ def arc7_13():
     room_run("arc7_13")
 
 def arc7_14():
-    music.stop()
+    music.playScum()
     room_run("arc7_14")
     choices = ["Continue..."]
     paths = ["arc7_19"]
     create_choices(choices, paths)
 
 def arc7_15():
-    music.stop()
+    music.playScum()
     room_run("arc7_15")
     choices = ["Continue..."]
     paths = ["arc7_19"]
     create_choices(choices, paths)
 
 def arc7_16():
-    music.stop()
+    music.playScum()
     room_run("arc7_16")
     choices = ["Continue..."]
     paths = ["arc7_19"]
     create_choices(choices, paths)
 
 def arc7_17():
-    music.stop()
+    music.playScum()
     room_run("arc7_17")
     choices = ["Continue..."]
     paths = ["arc7_19"]
     create_choices(choices, paths)
 
 def arc7_18():
-    music.stop()
+    music.playScum()
     room_run("arc7_18")
     choices = ["Continue..."]
     paths = ["arc7_19"]
     create_choices(choices, paths)
 
 def arc7_19():
-    disp_txt("             ")
+    disp_txt("           ")
     room_run("arc7_19")
     choices = ["Continue..."]
     paths = ["arc7_20"]
@@ -2137,6 +2169,7 @@ def arc7_19():
 
 def arc7_20():
     music.playFamine()
+    disp_txt("           ")
     room_run("arc7_20")
     choices = ["Continue..."]
     paths = ["arc7_21"]
@@ -2148,24 +2181,31 @@ def arc7_20():
     create_choices(choices, paths)
 
 def arc7_21():
+    disp_txt("           ")
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
     flag.fightingFamine = "true"
     room_run("arc7_21")
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    create_choices(choices, paths)
 
 def arc7_22():
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
     #set text speed to slowest
     flag.fightingFamine = "true"
     g.txtSpeed = "0.1"
     room_run("arc7_22")
     choices = ["Continue..."]
     paths = ["arc7_23"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    checkThread = Thread(target=famineResolve(choices, paths))
+    checkThread.start()
+
 
 def arc7_23():
     g.txtSpeed = "0.05"
@@ -2175,152 +2215,134 @@ def arc7_23():
     paths = ["arc7_32"]
     create_choices(choices, paths)
 
-def arc7_24():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
+def arc7_24(): ###########################famine responses start here ##############
+
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_24")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_25():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_25")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_26():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_26")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_27():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_27")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_28():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_28")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_29():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_29")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_30():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     room_run("arc7_30")
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_22"]
-    if flag.dontMakeButton == "false":
-        create_choices(choices, paths)
-    flag.dontMakeButton = "false"
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
+    create_choices(choices, paths)
     if os.path.exists('./savefile'):
         os.remove('./savefile')
     else:
         print("No savefile!?")
 
 def arc7_31():
-    # delete buttons
-    list = frame2.pack_slaves()
-    for x in list:
-        if str(x) != str(list[0]):
-            x.destroy()
     global stopText
     g.txtSpeed = "0.05"
     flag.fightingFamine = "false"
@@ -2332,6 +2354,11 @@ def arc7_31():
     stopText = True
     choices = ["Continue..."]
     paths = ["arc7_32"]
+    # delete buttons
+    list = frame2.pack_slaves()
+    for x in list:
+        if str(x) != str(list[0]):
+            x.destroy()
     create_choices(choices, paths)
 
 def arc7_32():
