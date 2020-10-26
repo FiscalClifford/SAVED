@@ -787,7 +787,7 @@ def create_choices(choiceList, pathList):
             x.destroy()
     #create buttons for the amount of options available, represtented by 'number'
     for i in range(0, len(choiceList)):
-        if g.loadTimes > 18:
+        if g.loadTimes > 17:
             button = Button(frame2, text="HAHAHAHA", command=lambda i=i: click_choice(pathList[i]), bg="#333333", fg="#EEEEEE")
             button.pack(fill='both', expand='yes')
         else:
@@ -807,13 +807,14 @@ def queue_start_story(window):
         g.firstTimeArc2 = "false"
         g.aRecognize = "true"
         g.seenForest = "true"
-
+    else:
+        print("haven't played yet")
     room_run("arc1_0")
     getInput("Please Enter Character Name:")
     g.pName = g.inputResponse
     g.inputResponse = "null"
     choices = ["Continue..."]
-    paths = ["arc7_19"] # if resetting, send to 1_8
+    paths = ["arc1_8"] # if resetting, send to 1_8
     create_choices(choices, paths)
 ####################################################################################################################################################################################################################
 def quit_me():

@@ -1,0 +1,37 @@
+You stroll around the library looking for anything of interest. $bName investigates alongside you, carefully examining every aspect of the library.
+[$pName] Find anything yet?
+[$bName] No not yet… wait… Ah ha!
+$bName points at a red book that you hadn’t noticed before leaning at a strange angle out of a bookshelf.
+[$bName] Watch and learn Duckling.
+$bName pulls at the red book, which only comes slightly forward and out of the bookshelf before locking into place. A loud click sounds out and the bookshelf trembles.
+[$pName] It’s a secret room hidden behind the bookshelf!
+The bookshelf slowly swings open, and you can see the faint glow of light proving a secret room hidden behind it. After much scraping and whirring, the bookshelf opens entirely and reveals the secret room inside.
+[$bName] Holy shit…
+[$pName] What the Fuck!?
+The secret area is a 15 by 15 foot square room with a single torch lighting the space. A chair and table are neatly tucked into one corner of the room, where a knife and pigskin rest on top. Covering the walls are dozens and dozens of pig skins, some still with chunks of dried pig flesh still attached. Stacked in huge piles are even more pigskins all around the inside of the room, and there could easily be hundreds of these small paper sized slices of pigskin precariously placed on top of each other. You are overwhelmed by the stench of rotting meat and gag.
+[$bName] $pName, look.
+She points at the skins and you notice something even more shocking. Written on these pig skins is the same phrase cut into the flesh over and over:
+$bName is the Traitor.
+$bName is the Traitor.
+$bName is the Traitor.
+Over and over and over again, every single pigskin is completely filled with that phrase. It looks like whoever used this room had painstakingly made the effort of cutting that phrase into each pigskin with the dagger on the table, and by now had written it at least a few thousand times.
+[$pName] But… why?
+Despite the horrid smell you venture deeper into the room, and yet again you make a discovery that floors you. The handwriting of the person that cut into the skins… is yours.
+[$pName] What the hell…? Did I do this?
+You cover your face with one arm and inspect the skins closer. Without a doubt, every single pig skin covering the wall and even the one on the table has your handwriting. 
+[$pName] *cough* but… how? When?
+You turn to the huge piles of skins stacked on the other side of the room and rifle through them, scattering the rotten meat across the floor behind you. These too, have your handwriting, but something seems off. Almost like the writing is familiar but not quite right.
+[$pName] …
+You grab huge armfuls of pigskins and hurl them behind you, ignoring the clumps of maggots that spill out from the skins as you move them out of the way. The further and further you get down the pile, the stranger and stranger the handwriting becomes. By the time you get to the bottom, the phrase is the same but the handwriting is unrecognizable. Someone else must have written these.
+[$bName] It’s obvious then, isn’t it?
+You leave the Pigskin room and take a grateful gulp of fresh air.
+[$pName] What is?
+[$bName] What this room is. What it is for.
+[$pName] Alright then genius, tell me what’s on your mind.
+[$bName] Someone is trying to imitate your handwriting, and needed somewhere to practice. But they didn’t practice on paper… they had a different surface in mind…
+$bName grabs your forearm, and brings it up to her eyes. The scarred tissue reads and looks exactly the same as the phrasing on the pigskins. She nods in affirmation.
+[$bName] I knew it. Someone is trying to take advantage of your memory wipe, and steer you the wrong way. The Traitor among us is trying to make you avoid me.
+[$pName] No way… that’s so fucked up…
+[$bName] And how could you know? The practice was well worth it, and the writing on your arm is clearly exactly the same as your normal handwriting. I’m more impressed you decided to trust me despite your “warning” to yourself.
+[$pName] I guess despite what was on my arm I just had a gut feeling about you. My intuition is usually right.
+[$bName] We have spent years together $pName, I know more than anyone how good your intuition is. That’s part of why I became so close to you… Anyways, we need to move. Let’s get out of here.

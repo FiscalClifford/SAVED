@@ -1,0 +1,2 @@
+You approach $medicName’s cell, and she walks up to speak to you through the bars. She glances around suspiciously as if trying to spot the traitor listening in on your conversation, and talks in a whisper only you can hear.
+[$medicName] What can I do for you?

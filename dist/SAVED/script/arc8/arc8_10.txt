@@ -1,0 +1,53 @@
+You lean against the bars and speak gently, trying to wake up $bName.
+[$pName] Psst, hey $bName…
+She stirs, and sits up rubbing her eyes. After taking a few seconds to unsteadily rise to her feet, $bName finally looks towards you and her eyes light up.
+[$bName] $pName!
+She immediately bursts into tears and rushes towards the bars, shooting her arms out through them in an effort to hug you. Startled by her sudden act of intimacy you automatically back up a little and look at her in surprise. What happened to the thorny $bName you knew from before?
+[$bName] $pName…?
+The smile vanishes from her face and she is stricken with confusion and hurt. Her arms fall limply across the bars and she gazes at you woefully.
+[$bName] $pName, What’s wrong?
+[$pName] Nothing… I just… I don’t…
+You feel awkward. She feels crushed.
+[$bName] What’s wrong Duckling, why won’t you hold me!?
+She backs up a little and grips the bars separating the two of you tightly, the frustration showing on her face clearer and clearer as the seconds go by.
+[$bName] Don’t you remember me? I’m $bName! Your one and only $bName! What is wrong!?
+[$pName] I… I don’t…
+[$bName] Are you trying to escape again? Why didn’t you bring me last time? I was the only one you left behind, I thought you loved me!?
+[$pName] Loved you!? What are you talking about?
+It looks like $bName has just been slapped in the face. She is so taken back by what you just said she literally sinks to her knees and stares at you in disbelief. She whispers in a tiny voice.
+[$bName] How could you say something like that…
+You feel terrible and guilty despite having done nothing incorrect. The whole situation just feels wrong, like both of you have entirely different perceptions of the other but you are too naïve to read the room. You walk up to the bars and reach forward with your palm open.
+[$pName] Hey, I’m sorry. Here, hold my hand. I don’t know what’s going on but let’s figure it out.
+$bName reaches out and holds your hand with one hand while covering her face with her other. She sits against the cell bars and weakly looks up at you. Never in a million years would you expect her to look or act like this.
+[$bName] What’s wrong with you $pName? Do you not know who I am? After all the years we have spent together, do you not remember?
+You look down at her sympathetically.
+[$pName] I’m so sorry $bName, but I don’t know what you are talking about. All I remember is leaving Kingsbridge together… and then waking up here. That’s the truth.
+[$bName] Oh no…
+$bName huddles into a ball while still holding your hand and sobs uncontrollably, tears streaming down her face. Her grief is so powerful that it is unmistakably similar to a person’s reaction to hearing a loved one has just died. In a way, you forgetting about all your supposed time spent with her and dying aren’t too dissimilar. She stops crying a few times but every time she looks back up at you she remembers something and breaks down again. You feel too awkward to say anything so you just crouch down next to her on the opposite side of the bars silently.
+[$bName] Then you don’t remember anything?
+She chokes out the words between tearful breaths.
+[$bName] You don’t remember Durango? Or when we met Powell for the first time?
+[$pName] Nothing.
+[$bName] Oh no… then you don’t even remember in the barn by the border, when we…?
+[$pName] …
+[$bName] Oh no…
+She breaks down into another fit of crying. It feels extremely strange for you to sit there while she cries so hard for you and the memories you should have been sharing with her, and you look around the cell uncomfortably. It feels like she is crying over someone else entirely, a person separate from you.
+[$bName] …So you have no memories at all then? The last thing you remember is Kingsbridge?
+[$pName] The last thing I remember is leaving the town after defeating DEATH.
+[$bName] And you are sure? You are sure you remember nothing else? Nothing at all about our adventures, or about… us?
+[$pName] I’m afraid so.
+She looks crestfallen, and hopeless. It pains your heart to see her like this.
+[$bName] FAMINE. FAMINE stole your memories then… We have to get them back. We have to kill him so that I can get you back.
+Her eyebrows furrow in determination.
+[$pName] What do you mean get me back? I’m right here…
+$bName lets go of your hand and stares at you. She looks fired up.
+[$bName] I can tell, just from your demeanor. I knew it the instant I saw you, how different you are. You aren’t the $pName I know at all, the $pName I fell in love with. You are the weak idiot I met at the very beginning. Oh no, now we have to restart all over again… Unless we can get your memories back from FAMINE…
+[$pName] Woah, ok now…
+$bName stands up and adopts a confident and aggressive stance. This is a lot more like the $bName you remember from Kingsbridge.
+[$bName] I’ll rip your memories out of his head myself, I’ll cut off each of his limbs until he agrees to help, then I’ll slice off…
+[$pName] WOAH! Ok now, calm down!
+[$bName] … slice off his… Ah… ok… yes, I’ll calm down…
+She pauses and rubs at the mole on her chin fretfully, one hand on her hip. She thinks for a few seconds and paces around the cell until finally turning back to you.
+[$bName] I suspect we don’t have much time until FAMINE returns then. If he catches you then he will imprison you and wipe your memories again, which would be a disaster. And that’s not all…
+You take a deep breath.
+[$bName] FAMINE captured us because someone in our group is a traitor, I have no doubt about it. If you manage to free us but also free the traitor, then we will end up in this exact same situation again. So you will have to choose who you let out very carefully…

@@ -93,6 +93,5 @@ You groan loudly, throwing your hands up into the air. $bName chuckles to hersel
 [$bName] Alright then Duckling, it’s a deal. Don’t waddle too far off now.
 
 And so, the pair of you continued along the path until you made it to Dottle without incident. From then on, the two of you adventured together and $bName even offered to teach you how to defend yourself with a sword. A week passed, and the two of you decide that next up the best way to…
-This is going to be the end of this path for now, and this paragraph is a temporary placeholder. I already have the next sections planned out but I likely will not have enough time to finish this before UPT. Bit of a shame because I had some cool stuff coming up, but oh well. For now, Let’s just say you and $bName go on some cool adventures and live happily ever after. The end!
 
 END OF ARC 2, THE TOWN

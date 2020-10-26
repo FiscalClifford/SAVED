@@ -1,0 +1,15 @@
+[THE ANCIENT DRAGON] Thank you. I will give you one last goodbye, even if it’s meaningless.
+In front of you materializes your friends $bName, $thiefName, $toughName, Powell, and $medicName. They look confused at first, then when they recognize you they sprint forward and give you a big group hug.
+[$bName] You did it! Well done!
+[$thiefName] That’s my best bud right there!
+[$toughName] Great fookin job ay!
+[Powell] Great Job $pName. Wish I could have spent more time with you.
+[$medicName] Wow, you’re a genius!
+
+$bName moves forward to speak on behalf of the entire group.
+[$bName] $pName, the two years we spent together were the best of my life. You may not be able to remember it, but I will never be able to forget it. Even if this is the last time we ever see each other, I want you to know that every single one of us is grateful to have been a part of your life at some point. We wish you the best in whatever you decide to do next… good luck $pName!
+[Everyone] Goodbye! We’ll miss you!
+The sun shines brightly within the destroyed jail cell, obscuring your vision and making you squint. Then just as suddenly as they appeared, your friends all disappear into a flash of dust. It’s time to finish this.
+Turning to the Ancient Dragon, a sword materializes in your hand and you hold it at the ready. He lowers his massive head and closes his eyes, resting just in front of you. You bring the sword up and hold it above your head, prepared to strike.
+[THE ANCIENT DRAGON] At last… I am SAVED.
+Your sword flies down and stabs straight through the dragon’s scaly skull, impaling him. Empowered by the memory of your friends, you push with all your might until a terrific explosion engulfs you and the Castle, sending it smashing apart in all directions. The sky shatters, the earth heaves in tremors, and enormous spouts of molten flame and lava spew out of the ground. The air implodes, gravity reverses, the very laws of physics twist themselves apart until finally the…

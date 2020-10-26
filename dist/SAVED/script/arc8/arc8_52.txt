@@ -1,0 +1,18 @@
+You are about to continue your speech when you notice $bName walk up behind you, breathing heavily. You turn and see that there are scratch marks covering her hands and face, and she is completely out of breath. 
+[$bName] Here, you can have these back.
+$bName tosses the jail keys to you, and you catch them in your hands awkwardly. Befuddled, you check your pocket where you thought the keys were and realize it is empty.
+[$pName] What? How did you…?
+[$bName] I remember you lacked situational awareness when we first met so I’m not surprised you didn’t notice me pilfer those keys a minute ago. I’ve taken care of the traitor problem.
+[$pName] What!?
+You rush over to $medicName’s cell and see that the door is unlocked and swung open. $medicName’s body lies in the corner, and her face is completely purple. She doesn’t breathe.
+[$pName] What did you just do!?
+[$bName] While you were talking I took care of the traitor problem, like I just said. Since we determined she was the cause of all our suffering, it became clear she had to die. I just saved you the effort of killing her yourself.
+[$pName] But you can’t just…
+[$bName] Can’t just what, $pName? Kill the woman who is singly responsible for us all being imprisoned for half a year? Kill the woman who murdered our close friend Powell? Kill the woman who tried to come between myself and those who I care about most? I regret nothing.
+[$pName] …
+You stare back at her speechless. If you are right, and $medicName really was the traitor, then $bName didn’t do anything wrong.
+[$pName] So be it.
+You walk back to $toughName’s cell and speak through the bars.
+[$pName] $toughName, Powell has just been avenged and it is time to leave before FAMINE finds us. Will you help us defeat the Golem and escape?
+[$toughName] Ah S’pose wha’ ye said makes a wee bit a sense… Even iffa didn’ ehts too late now... Eh, lets git goin’.
+You unlock $toughName, and he joins your party. The four of you exit the jail and leave the corpses of Powell and $medicName behind you to never be seen again.

@@ -1,0 +1,8 @@
+[$pName] I know we don’t exactly see eye to eye right now but I really need your help. Can you tell me your version of what’s been going on?
+$toughName slowly turns to face you and glares angrily.
+[$toughName] How boot ye goe fook yerself an’ die, $pName. Ah’ll avenge Powell an’ kill ye with mah bare hans eff et’s th’ lass thing ah dew.
+[$pName] Why do you think I killed Powell? Weren’t we supposed to be friends?
+[$toughName] Ah thought at’ tew, til’ ye killed em’! Durin are lass escape attempt, Ah was holdin’ Powell ehn me arms as we ran back tah th’ cells. Wi’ some a his lass remainin’ strength he lifted a fingar an’ pointed ahn yer direction! Ah thought aht was a mistake at ferst, but once we gawt back we ahll took shelter een our jail cells while you an’ Powell talked. Ah couldn’ see anything, bu’ ah could hear em’ gettin’ cut up. Then ya left covered in hees blood, an’ he was dead! Fook you $pName, Ah knoe ya tried tah kill em’ durin’ th’ escape, an’ when it didn’t work th’ ferst time ya finished th’ job! Ah shuddar tah think of wha’ a grotesque state yer’ve left em’ in…
+[$pName] No… No I couldn’t do something like that… It must be something else…
+[$toughName] Fook you. Ah’ll nevar believe yer innocence until ya show meh proof it wasn’t you.
+$toughName tries reaching through the bars to grab you but you back up just in time. You decide to give him some space and think for a second.

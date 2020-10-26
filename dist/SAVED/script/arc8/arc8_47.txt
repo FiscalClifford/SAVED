@@ -1,0 +1,13 @@
+[$pName] Listen, I discovered something extremely strange and I need your input on it…
+You explain everything you had found in the library, and all about the pigskins. After you finish, $bName rubs at the mole on her chin in deep thought. Finally, she responds.
+[$bName] It’s obvious then, isn’t it?
+[$pName] What is?
+[$bName] What that room is. What it is for.
+[$pName] Alright then genius, tell me what’s on your mind.
+[$bName] Someone is trying to imitate your handwriting, and needed somewhere to practice. But they didn’t practice on paper… they had a different surface in mind…
+$bName grabs your forearm through the cell bars, and brings it up to her eyes. She nods in affirmation.
+[$bName] I knew it. Someone is trying to take advantage of your memory wipe, and steer you the wrong way. The Traitor among us is trying to make you avoid me.
+[$pName] No way… that’s so fucked up…
+[$bName] And how could you know? The practice was well worth it, and the writing on your arm is clearly exactly the same as your normal handwriting. I’m more impressed you decided to trust me despite your “warning” to yourself.
+[$pName] I guess despite what was on my arm I just had a gut feeling about you. My intuition is usually right.
+[$bName] We have spent years together $pName, I know more than anyone how good your intuition is. That’s part of why I became so close to you…

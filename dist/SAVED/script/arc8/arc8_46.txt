@@ -1,0 +1,25 @@
+You stroll around the library looking for anything of interest. There are hundreds of books around you, each with a title more boring than the last, but you are really only looking for a single one. It takes you only a few moments to notice it again; the red book that leads to the secret room.
+[$pName] Ah ha…
+You pull at the red book, which only comes slightly forward and out of the bookshelf before locking into place. A loud click sounds out and the bookshelf trembles.
+[$pName] Time to find out what is hidden in this room.
+The bookshelf slowly swings open, and you can see the faint glow of light proving a secret room hidden behind it. After much scraping and whirring, the bookshelf opens entirely and reveals the secret room inside.
+[$pName] What the Fuck!?
+The secret area is a 15 by 15 foot square room with a single torch lighting the space. A chair and table are neatly tucked into one corner of the room, where a knife and pigskin rest on top. Covering the walls are dozens and dozens of pig skins, some still with chunks of dried pig flesh attached. Stacked in huge piles are even more pigskins, in fact there could easily be hundreds of small paper sized slices of pigskin stacked on top of each other all around the inside of the room. You are overwhelmed by the stench of rotting meat and gag.
+[$pName] Urk… what the hell…
+You look back up at the room and notice something even worse. Written on these pig skins is the same phrase cut into the flesh over and over:
+$bName is the Traitor.
+$bName is the Traitor.
+$bName is the Traitor.
+Over and over and over again, every single pigskin is completely filled with that phrase. It looks like whoever used this room had painstakingly made the effort of cutting that phrase into each pigskin with the dagger on the table, and by now had written it at least a few thousand times.
+[$pName] But… why?
+Despite the horrid smell you venture deeper into the room, and yet again you make a discovery that floors you. The handwriting of the person that cut into the skins… is yours.
+[$pName] What the hell…? Did I do this?
+You cover your face with one arm and inspect the skins closer. Without a doubt, every single pig skin covering the wall and even the one on the table has your handwriting. 
+[$pName] *cough* but… how? When?
+You turn to the huge piles of skins stacked on the other side of the room and rifle through them, scattering the rotten meat across the floor behind you. These too, have your handwriting, but something seems off. Almost like the writing is familiar but not quite right.
+[$pName] …
+You grab huge armfuls of pigskins and hurl them behind you, ignoring the clumps of maggots that spill out from the skins as you move them out of the way. The further and further you get down the pile, the stranger and stranger the handwriting becomes. By the time you get to the bottom, the phrase is the same but the handwriting is unrecognizable. Someone else must have written these.
+[$pName] This is so fucked up…
+You glance down at your forearm and inspect the jagged phrase scarred into it. It is certainly your handwriting, and it certainly matches the handwriting on the wall. Something about all this doesn’t add up.
+[$pName] Was someone… practicing?
+A loud thudding of footsteps echo out from somewhere far away in the castle, and you remember that the library is a dead end. If the Golem found you here you would be trapped, and a bad ending would surely come next… nervous, you decide to leave.

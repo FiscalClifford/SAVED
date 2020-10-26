@@ -1,0 +1,4 @@
+[$pName] Stand back for a second, I’m letting you out.
+[$medicName] Yay, thank you $pName! I knew you would make the right choice!
+You shove the jail key into the lock on her cell door and twist. With a heavy mechanical thunk the latch is undone and the door swings open, allowing $medicName to escape with you. $medicName has now joined your party.
+[$pName] How about you help me look for clues? Maybe in the library…

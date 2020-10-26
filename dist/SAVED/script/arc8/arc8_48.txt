@@ -1,0 +1,14 @@
+$thiefName heads for the kitchen, and quickly searches through drawers until triumphantly returning to where you wait by the office. In his hand is a pair of tweezers and a wooden fork. He snaps the prongs off the fork until there is only one left, and surprisingly it ends up looking not too dissimilar from a proper lockpick. He uses the tweezers as a tension wrench and gets to work.
+[$thiefName] let’s see here… c’mon now, work with me buddy…
+He pokes and prods with the tools, gently attempting to coax the lock into compliance. After several tense moments, you finally hear a loud click and the lock spins.
+[$thiefName] Got it!
+[$medicName] EEEEEEEEEEEEeeeekkkk!
+Startled, you whip around to see what $medicName is screaming at. Flashing dust swirls in front of you and suddenly a green portal appears out of thin air. The portal’s center spins with hypnotic color and makes you dizzy if you look for any longer than half a second. With a tremendous smash, the portal is filled up with the figure of a massive Stone Golem that shoots out of it and cracks the floor beneath it.
+[$thiefName] It’s just like last time! RUN!
+[$bName] Watch out!
+The Golem swipes at $thiefName and manages to grab him by the leg before he even has a chance to escape. Using Its tremendous strength, the Golem raises $thiefName by the leg and he hangs there upside down, trapped in its grip.
+[$thiefName] it’s got me! Help $pName!
+The Golem raises $thiefName as high as possible and swings him straight back down at the ground as hard as it can. With a sickening crunch every single bone in $thiefName’s body is simultaneously smashed into a million pieces and the pile of flesh that used to be $thiefName oozes across the newly created crater on the stone floor. The Golem doesn’t enjoy its victory for even a second before immediately turning to its next target: $bName. You feel like you are frozen in fear but manage to stutter out a warning.
+[$pName] Watch out!
+The Golem reaches out to snatch up $bName, but she lithely dodges and summersaults underneath its legs. While the Golem is staggered, she leaps up and uses a nearby wall to bounce off it and gain additional height. With incredible skill and grace she manages to grapple onto the back of the Golems head and she puts it into a headlock. She flexes as hard as she can but is unable to subdue the Golem, and as hard as the Golem tries it cannot reach back far enough to dislodge her from its back. The two stumble around haphazardly and the Golem flails its arms around wildly in an attempt to get her off. You try to get close enough to help but one of the Golem’s arms flails straight towards your and by sheer bad luck hits you straight in the forehead. The force of the blow cracks your skull open and sends you flying backwards into a wall. Everything goes black, and you never wake up.
+THE END.

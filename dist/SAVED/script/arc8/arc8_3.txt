@@ -1,0 +1,11 @@
+You approach the bars of his cell and whisper towards him.
+[$pName] Psst! Hey! What’s going on? Where are we?
+The man looks up from his knees at you with a face of pure frustration, as if he has completely given up. With a groan he shakes his head and buries his face back into his knees.
+[$pName] Psst! What’s your problem?
+He looks up again angrily and spits out a retort.
+[Man] Listen $pName, I’m really not in the mood to explain everything to you again. Go back to your cell and fuck off.
+[$pName] What are you talking about? Who are you?
+[Man] For goodness sake, fuck off! Every damn day you do this…
+The man buries his head into his knees again and won’t respond to you anymore. You test the lock on his door but it is sealed shut and doesn’t budge without a key.
+[$pName] alright…
+You move away from his cell.

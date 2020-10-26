@@ -1,5 +1,5 @@
 [$pName] Can you by chance tell me where exactly I am?
 [$merchantName the Merchant] Kingsbridge of course. Can’t you read?
 [$pName] Can you be more specific? As in, what country, or in what world this is?
-[$merchantName the Merchant] Are you high? $kingdom of course! $wName! Begone from mine stall!
+[$merchantName the Merchant] Are you high? $kingdomName of course! $worldName! Begone from mine stall!
 $merchantName flicks his hand at you in a shooing motion, and realizing you won’t get anything more out of him you leave the stall.

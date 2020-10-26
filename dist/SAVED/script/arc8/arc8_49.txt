@@ -1,0 +1,21 @@
+$thiefName heads for the kitchen, and quickly searches through drawers until triumphantly returning to where you wait by the office. In his hand is a pair of tweezers and a wooden fork. He snaps the prongs off the fork until there is only one left, and surprisingly it ends up looking not too dissimilar from a proper lockpick. He uses the tweezers as a tension wrench and gets to work.
+[$thiefName] let’s see here… c’mon now, work with me buddy…
+He pokes and prods with the tools, gently attempting to coax the lock into compliance. After several tense moments, you finally hear a loud click and the lock spins.
+[$thiefName] Got it!
+$thiefName pushes on the door to reveal a small office, with a plush chair and large wooden desk. There are papers and notes scattered around the room and on the desk, but most interesting of all is a strange diagram on the wall. It shows a series of boxes connected by strings, and inside the boxes are different locations and events. You even recognize a few: Kingsbridge, $bName, Durango, $aName, FAMINE, $merchantName, DEATH, Oak Tree, Castle. There are hundreds of little boxes with all kinds of labels and places, all connected together by the strings like tree roots branching out through the soil.
+[$thiefName] The last time we tried to escape, we only just barely got inside this room before $medicName screamed and the Golem showed up. I never had the chance to get a good look around…
+$thiefName inspects a stack of papers.
+[$thiefName] Say $pName, are you familiar with a “Bishop Wurian”? Or perhaps a mercenary named “Axel”? Man look at all this writing, this is so bizarre. I can’t tell if it’s the crazed writings of a madman or just a wannabe author writing shitty fiction…
+[$pName] It’s all very odd…
+You grab a random piece of paper covered in FAMINE’s messy handwriting and read a little.
+“How do you halt an unstoppable force? Some say by blocking it with an unmovable object, but I think that’s foolish, ridiculous, stupid. The true method to stopping CONQUEST is by using their own power against them. First, corner them into a situation where they are at a disadvantage and unable to use their ability effectively. Second, put a traitor in their midst so that your undercover asset can steer them away from victory at all times. Third, remove their memories so that they cannot ever learn how dire their situation is and rectify it. In this way, it can be properly…”
+You lose track of where you are reading when $bName calls out behind you.
+[$bName] Look what I found!
+You turn to look at $bName, who pulls something out from underneath the desk. It is a small scalpel, with dried blood covering the blade. It looks like it must have been sitting underneath there unnoticed for some time.
+[$thiefName] Say… Isn’t that $medicName’s old scalpel?
+[$bName] Yes… and it’s covered in blood. But who’s?
+[$thiefName] It could only be Powell’s blood, who was bleeding so much last time we were here.
+[$bName] Then that means the traitor…
+[$thiefName] Is none other than $medicName. 
+[$bName] We have no time to lose, we must show this evidence to $toughName, take care of $medicName, and then escape the Castle together.
+[$pName] Let’s go!

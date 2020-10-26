@@ -1,0 +1,6 @@
+With a loud jangle you raise the keys up and begin to slot one of them into $thiefName’s cell door.
+[$thiefName] Stop, $pName.
+[$pName] …?
+You freeze.
+[$thiefName] Even if you unlock that door, I’m not going anywhere. The last thing I want is to try to escape and fail again, then be forced to watch my best friend get his memories wiped for the millionth time. Come back when the REAL you has returned.
+You return the keys back to your pocket and silently back away.
