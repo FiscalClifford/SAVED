@@ -26,7 +26,7 @@ badInput = ["!","@","#","$","%","^","&","*","^_^",":)"," ","",".",",","-","_","$
 maudAnswers = ["0", 0, "zero", "none", "nothing", "no fingers", "there aren't any"]
 stopText = False
 
-
+#If you are ever trying to recompile this, use >pyinstaller SAVED.spec and it will take care of the rest
 class g:
     #these globals are "remembered" after saves
     inputResponse = "null"
